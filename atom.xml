@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tashi711.xyz/"/>
-  <updated>2018-03-30T16:08:03.901Z</updated>
+  <updated>2018-04-01T16:38:28.884Z</updated>
   <id>http://tashi711.xyz/</id>
   
   <author>
@@ -17,9 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>「LeetCode 805. Split Array With Same Average」解题报告</title>
+    <link href="http://tashi711.xyz/programming/leetcode/leetcode-805"/>
+    <id>http://tashi711.xyz/programming/leetcode/leetcode-805</id>
+    <published>2018-04-01T16:25:42.000Z</published>
+    <updated>2018-04-01T16:38:28.884Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="programming" scheme="http://tashi711.xyz/categories/programming/"/>
+    
+      <category term="leetcode" scheme="http://tashi711.xyz/categories/programming/leetcode/"/>
+    
+    
+      <category term="搜索" scheme="http://tashi711.xyz/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://tashi711.xyz/2018/03/24/hello-world/"/>
-    <id>http://tashi711.xyz/2018/03/24/hello-world/</id>
+    <link href="http://tashi711.xyz/Testing1/hello-world"/>
+    <id>http://tashi711.xyz/Testing1/hello-world</id>
     <published>2018-03-24T14:39:34.367Z</published>
     <updated>2018-03-30T16:08:03.901Z</updated>
     
