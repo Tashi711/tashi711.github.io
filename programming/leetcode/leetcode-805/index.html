@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
+<meta name="description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析简单描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
 <meta name="keywords" content="搜索">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「LeetCode 805. Split Array With Same Average」解题报告">
 <meta property="og:url" content="http://tashi711.xyz/programming/leetcode/leetcode-805/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
+<meta property="og:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析简单描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T12:40:21.897Z">
+<meta property="og:updated_time" content="2018-04-04T18:10:32.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「LeetCode 805. Split Array With Same Average」解题报告">
-<meta name="twitter:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
+<meta name="twitter:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析简单描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
 
 
 
@@ -451,10 +451,10 @@
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。<br>比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="简单描述"><a href="#简单描述" class="headerlink" title="简单描述"></a>简单描述</h3><p>给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。<br>比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。</p>
 <a id="more"></a>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>初看题目直觉是NP的，看完数据范围更加确定了这一点，暴搜复杂度 $2^{30}$，不好剪枝，显然会TLE。<br>首先N=1时一定返回false，因为无论怎么分总有一堆为空，于是只需考虑N≥2。<br>先将这组数字分成数量相同的两堆，N为奇数时任意一堆多放一个即可。<br>暴搜出两堆各自能产生的所有组合的均值，复杂度为 $2^{15}$。<br>如果存在一个合理的分法满足题目要求，那么最终结果的两堆数字的均值应该都等于整组数据的均值。<br>此时要么在某一堆里能计算出这个均值，要么从两堆里各取一组加权平均后等于这个均值。<br>如果尝试两两组合算出所有的可能性，那么复杂度依旧为 $(2^{15})^2=2^{30}$。<br>有一个直观的想法是，两个堆算出的均值结果进行排序。<br>用两个指针分别指向一个堆均值的最小值（小堆），以及另一个堆均值的最大值（大堆）。<br>若当前指针指向的两组数加权平均比总体均值要大，那么将大堆指针往小的方向移，否则将小堆指针往大的方向移。<br>这样就只需要线性的复杂度扫描了，但这样做的前提是指针移走后的值不会继续用到了。<br>实际实现这个算法提交后发现WA了，分析一波错的数据，发现这个做法会出现问题的原因在于，可能出现这种情况：<br>例如小堆中目前指向的那组数个数非常多，而大堆中目前以及往小方向的连续几组数个数都比较少。<br>在此时算出的加权均值小于总体均值，由于小堆的一方数量上的优势会使大堆的指针往小方向连续移好几个。<br>若此时算出的加权均值又大于了总体均值，且小堆中往大方向连续几组数个数都更少，<br>那么小堆的指针又会往大的方向移很多个，那么可能在两次连续移动的中间分别存在一组数能凑成最终的答案。<br>一个解决这个问题的方法是，一开始将数据都去均值化。<br>如果存在一个合理的分法，那么最终结果的两堆数字的均值应该都等于0，等价于和为0。<br>如果将均值考虑成求和，那么上面说到的问题就不存在了，因为数量只对加权平均有影响，而对求和没有影响。<br>可以简单的证明，一旦指针移走，前面的值就不会再考虑到了。<br>因此上面的算法，将所有求平均的地方换成求和，这个问题就可以圆满解决了。</p>
-<h3 id="注意细节"><a href="#注意细节" class="headerlink" title="注意细节"></a>注意细节</h3><ol>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>初看题目直觉是NP的，看完数据范围更加确定了这一点，暴搜复杂度 $2^{30}$，不好剪枝，显然会TLE。<br>首先N=1时一定返回false，因为无论怎么分总有一堆为空，于是只需考虑N≥2。<br>先将这组数字分成数量相同的两堆，N为奇数时任意一堆多放一个即可。<br>暴搜出两堆各自能产生的所有组合的均值，复杂度为 $2^{15}$。<br>如果存在一个合理的分法满足题目要求，那么最终结果的两堆数字的均值应该都等于整组数据的均值。<br>此时要么在某一堆里能计算出这个均值，要么从两堆里各取一组加权平均后等于这个均值。<br>如果尝试两两组合算出所有的可能性，那么复杂度依旧为 $(2^{15})^2=2^{30}$。<br>有一个直观的想法是，两个堆算出的均值结果进行排序。<br>用两个指针分别指向一个堆均值的最小值（小堆），以及另一个堆均值的最大值（大堆）。<br>若当前指针指向的两组数加权平均比总体均值要大，那么将大堆指针往小的方向移，否则将小堆指针往大的方向移。<br>这样就只需要线性的复杂度扫描了，但这样做的前提是指针移走后的值不会继续用到了。<br>实际实现这个算法提交后发现WA了，分析一波错的数据，发现这个做法会出现问题的原因在于，可能出现这种情况：<br>例如小堆中目前指向的那组数个数非常多，而大堆中目前以及往小方向的连续几组数个数都比较少。<br>在此时算出的加权均值小于总体均值，由于小堆的一方数量上的优势会使大堆的指针往小方向连续移好几个。<br>若此时算出的加权均值又大于了总体均值，且小堆中往大方向连续几组数个数都更少，<br>那么小堆的指针又会往大的方向移很多个，那么可能在两次连续移动的中间分别存在一组数能凑成最终的答案。<br>一个解决这个问题的方法是，一开始将数据都去均值化。<br>如果存在一个合理的分法，那么最终结果的两堆数字的均值应该都等于0，等价于和为0。<br>如果将均值考虑成求和，那么上面说到的问题就不存在了，因为数量只对加权平均有影响，而对求和没有影响。<br>可以简单的证明，一旦指针移走，前面的值就不会再考虑到了。<br>因此上面的算法，将所有求平均的地方换成求和，这个问题就可以圆满解决了。</p>
+<h3 id="细节处理"><a href="#细节处理" class="headerlink" title="细节处理"></a>细节处理</h3><ol>
 <li>虽然浮点数在乘除法上的迭代不多，但是还是要用相差在一定精度范围来判断两个浮点数是否相等。</li>
 <li>在考虑从两堆和里面各取一部分时，可能出现在两堆中都取了全部的数字，此时形成的另一堆会是空集。<br>要解决这个问题还是要记录组成当前和的元素个数，若求和的两组数的数量之和等于N了就跳过。</li>
 </ol>
@@ -663,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意细节"><span class="nav-number">2.3.</span> <span class="nav-text">注意细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.4.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码（C-）"><span class="nav-number">3.</span> <span class="nav-text">AC代码（C++）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题心得"><span class="nav-number">4.</span> <span class="nav-text">解题心得</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单描述"><span class="nav-number">2.1.</span> <span class="nav-text">简单描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#细节处理"><span class="nav-number">2.3.</span> <span class="nav-text">细节处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.4.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码（C-）"><span class="nav-number">3.</span> <span class="nav-text">AC代码（C++）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题心得"><span class="nav-number">4.</span> <span class="nav-text">解题心得</span></a></li></ol></div>
             
 
           </div>
