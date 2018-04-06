@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/3.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/2.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="模拟," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="比赛信息  链接：Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2) 来源：Codeforces 时间：Start - Mar/24/2018 23:35 (UTC+8) | Length - 02:15 成绩：Solved - A, B, C, D | Standing - 257/5016 | Rating -">
+<meta name="keywords" content="模拟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「Codeforces Round #472 Div. 2」参赛小结">
+<meta property="og:url" content="http://tashi711.xyz/programming/codeforces/round-472-div-2/index.html">
+<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:description" content="比赛信息  链接：Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2) 来源：Codeforces 时间：Start - Mar/24/2018 23:35 (UTC+8) | Length - 02:15 成绩：Solved - A, B, C, D | Standing - 257/5016 | Rating -">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-06T18:19:13.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「Codeforces Round #472 Div. 2」参赛小结">
+<meta name="twitter:description" content="比赛信息  链接：Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2) 来源：Codeforces 时间：Start - Mar/24/2018 23:35 (UTC+8) | Length - 02:15 成绩：Solved - A, B, C, D | Standing - 257/5016 | Rating -">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'ICEDL16U0X',
+      apiKey: '5c42d4ba7a4b37462a336dfe67fe7c95',
+      indexName: 'Tashi711',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"请输入关键字","hits_empty":"没有找到与「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://tashi711.xyz/programming/codeforces/round-472-div-2/"/>
+
+
+
+
+
+  <title>「Codeforces Round #472 Div. 2」参赛小结 | Tashi711的博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9b0ac071ec6b80a9aaca551f4f40725d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tashi711的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">過去（きのう）に傷付きながらも、信じ続ける理想（ゆめ）を求める。いつか無限（なないろ）に輝き放って、青空（そら）に橋を描く。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-comment">
+          <a href="/comment/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/codeforces/round-472-div-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">「Codeforces Round #472 Div. 2」参赛小结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-06T09:57:24+08:00">
+                2018-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/Codeforces/" itemprop="url" rel="index">
+                    <span itemprop="name">Codeforces</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/codeforces/round-472-div-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/codeforces/round-472-div-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/codeforces/round-472-div-2/" class="leancloud_visitors" data-flag-title="「Codeforces Round #472 Div. 2」参赛小结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="比赛信息"><a href="#比赛信息" class="headerlink" title="比赛信息"></a>比赛信息</h2><blockquote>
+<ul>
+<li>链接：<a href="http://codeforces.com/contest/957" target="_blank" rel="noopener">Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2)</a></li>
+<li>来源：Codeforces</li>
+<li>时间：Start - Mar/24/2018 23:35 (UTC+8) | Length - 02:15</li>
+<li>成绩：Solved - A, B, C, D | Standing - 257/5016 | Rating - 1819→1842 (+23)</li>
+</ul>
+</blockquote>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="A-Tritonic-Iridescence-957-A"><a href="#A-Tritonic-Iridescence-957-A" class="headerlink" title="A. Tritonic Iridescence (957 - A)"></a><a href="http://codeforces.com/contest/957/problem/A" target="_blank" rel="noopener">A. Tritonic Iridescence (957 - A)</a></h3><h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>按照以下顺序依次判断即可：<br>如果已经有连续两个相同的非“?”返回“No”。<br>如果长度为1 ? “?”返回“Yes” : 非“?”返回“No”。<br>如果有两个连续的“?”返回“Yes”。<br>如果任意一端为“?”返回“Yes”。<br>如果存在问号两边为同色返回“Yes”。<br>其他情况返回“No”。<br>时间复杂度为 $O(N)$。</p>
+<a id="more"></a>
+<h4 id="AC代码（GNU-G-17-7-2-0）"><a href="#AC代码（GNU-G-17-7-2-0）" class="headerlink" title="AC代码（GNU G++17 7.2.0）"></a>AC代码（GNU G++17 7.2.0）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == s[i + <span class="number">1</span>] &amp;&amp; s[i] != <span class="string">'?'</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'?'</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == s[i + <span class="number">1</span>]) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'?'</span> || s[n - <span class="number">1</span>] == <span class="string">'?'</span>) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'?'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (s[i - <span class="number">1</span>] == s[i + <span class="number">1</span>]) &#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="B-Mystical-Mosaic-957-B"><a href="#B-Mystical-Mosaic-957-B" class="headerlink" title="B. Mystical Mosaic (957 - B)"></a><a href="http://codeforces.com/contest/957/problem/B" target="_blank" rel="noopener">B. Mystical Mosaic (957 - B)</a></h3><h4 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h4><p>依次考虑每一行，假设当前考虑第i行。<br>第i行上有“#”的列是取第i行这一轮必须且仅须取的。<br>那么这些列上有“#”的行也是这一轮必须且仅须取的。<br>检查这组行、列是否在交点处都是“#”且其他地方都是“.”。<br>若满足要求，则继续考虑后面没考虑过的行，否则返回“No”。<br>所有行检查完毕后返回“Yes”。<br>时间复杂度为 $O(N^4)$。</p>
+<h4 id="AC代码（GNU-G-17-7-2-0）-1"><a href="#AC代码（GNU-G-17-7-2-0）-1" class="headerlink" title="AC代码（GNU G++17 7.2.0）"></a>AC代码（GNU G++17 7.2.0）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">60</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N][N];</span><br><span class="line"><span class="keyword">bool</span> vst[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, m;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">			a[i][j + <span class="number">1</span>] = (s[j] == <span class="string">'.'</span> ? <span class="number">1</span> : <span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (vst[i]) &#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		vst[i] = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">bool</span> now[N];</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; adj;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; ++j) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i][j] == <span class="number">2</span>) &#123;</span><br><span class="line">				adj.push_back(j);</span><br><span class="line">				now[j] = <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				now[j] = <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; (<span class="keyword">int</span>)adj.size(); ++j) &#123;</span><br><span class="line">			<span class="keyword">int</span> u = adj[j];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = i + <span class="number">1</span>; k &lt;= n; ++k) &#123;</span><br><span class="line">				<span class="keyword">if</span> (!vst[k] &amp;&amp; a[k][u] == <span class="number">2</span>) &#123;</span><br><span class="line">					vst[k] = <span class="literal">true</span>;</span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">1</span>; p &lt;= m; ++p) &#123;</span><br><span class="line">						<span class="keyword">if</span> ((a[k][p] == <span class="number">1</span>) != (now[p] == <span class="literal">false</span>)) &#123;</span><br><span class="line">							<span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">							<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-Three-level-Laser-957-C"><a href="#C-Three-level-Laser-957-C" class="headerlink" title="C. Three-level Laser (957 - C)"></a><a href="http://codeforces.com/contest/957/problem/C" target="_blank" rel="noopener">C. Three-level Laser (957 - C)</a></h3><h4 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h4><p>考虑每个点作为i，那么j一定在i紧跟的后一个位置最优，这时k越远越好。<br>每次i往后移，就将k移到离i不超过U的最远位置。<br>k最多移动n次，因此每次移动k的均摊复杂度只有 $O(1)$。<br>注意每次更新的时候i、j、k这3个点不重合即可。<br>总的时间复杂度为 $O(N)$。</p>
+<h4 id="AC代码（GNU-G-17-7-2-0）-2"><a href="#AC代码（GNU-G-17-7-2-0）-2" class="headerlink" title="AC代码（GNU G++17 7.2.0）"></a>AC代码（GNU G++17 7.2.0）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">110000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">int</span> n, u;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; u;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">double</span> ans = <span class="number">-1.</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">while</span> (pos != n &amp;&amp; a[pos + <span class="number">1</span>] - a[i] &lt;= u) &#123;</span><br><span class="line">			pos++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (pos &gt; i + <span class="number">1</span>) &#123;</span><br><span class="line">			ans = max(ans, (<span class="keyword">long</span> <span class="keyword">double</span>)(a[pos] - a[i + <span class="number">1</span>]) / (a[pos] - a[i]));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; fixed &lt;&lt; setprecision(<span class="number">15</span>) &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="D-Riverside-Curio-957-D"><a href="#D-Riverside-Curio-957-D" class="headerlink" title="D. Riverside Curio (957 - D)"></a><a href="http://codeforces.com/contest/957/problem/D" target="_blank" rel="noopener">D. Riverside Curio (957 - D)</a></h3><h4 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h4><p>先从后往前扫一遍，记录如果要满足当前位置的要求，前面一天至少要有几条线。<br>然后再从前往后扫即可，如果为了满足当前位置的要求需要加一条就往下加一条（这一天没有线累加到答案上）。<br>否则最优的放法是恰好在某条线上，答案加的最少且不用增加新的线，除非根据之前预处理的记录发现必须要增加。<br>这时相当于就在中间的那个位置增加一条，并且最终答案也要加1。<br>总的时间复杂度为 $O(N)$。</p>
+<h4 id="AC代码（GNU-G-17-7-2-0）-3"><a href="#AC代码（GNU-G-17-7-2-0）-3" class="headerlink" title="AC代码（GNU G++17 7.2.0）"></a>AC代码（GNU G++17 7.2.0）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">110000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> u[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> need = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; --i) &#123;</span><br><span class="line">		need = u[i] = max(a[i], need);</span><br><span class="line">		need--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (a[i] == cnt) &#123;</span><br><span class="line">			cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			ans += cnt - a[i] - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (u[i + <span class="number">1</span>] &gt; cnt) &#123;</span><br><span class="line">			cnt++;</span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参赛心得"><a href="#参赛心得" class="headerlink" title="参赛心得"></a>参赛心得</h2><p>虽然做出了4道题，不过都挺水的，rating也只涨了一点点。<br>貌似除了第一题都是VK Cup的原题，相当于只做了这场比赛最水的一半（一共6道题）。<br>希望赶紧做到Div. 1去。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.xyz/programming/codeforces/round-472-div-2/" title="「Codeforces Round #472 Div. 2」参赛小结">http://tashi711.xyz/programming/codeforces/round-472-div-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/nihongo/benkyou/jitadoushi/" rel="next" title="「自動詞、他動詞」区分">
+                <i class="fa fa-chevron-left"></i> 「自動詞、他動詞」区分
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/Tashi711.jpg"
+                alt="Tashi711" />
+            
+              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#比赛信息"><span class="nav-number">1.</span> <span class="nav-text">比赛信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Tritonic-Iridescence-957-A"><span class="nav-number">2.1.</span> <span class="nav-text">A. Tritonic Iridescence (957 - A)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解题思路"><span class="nav-number">2.1.1.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AC代码（GNU-G-17-7-2-0）"><span class="nav-number">2.1.2.</span> <span class="nav-text">AC代码（GNU G++17 7.2.0）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Mystical-Mosaic-957-B"><span class="nav-number">2.2.</span> <span class="nav-text">B. Mystical Mosaic (957 - B)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解题思路-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AC代码（GNU-G-17-7-2-0）-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">AC代码（GNU G++17 7.2.0）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Three-level-Laser-957-C"><span class="nav-number">2.3.</span> <span class="nav-text">C. Three-level Laser (957 - C)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解题思路-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AC代码（GNU-G-17-7-2-0）-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">AC代码（GNU G++17 7.2.0）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Riverside-Curio-957-D"><span class="nav-number">2.4.</span> <span class="nav-text">D. Riverside Curio (957 - D)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解题思路-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AC代码（GNU-G-17-7-2-0）-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">AC代码（GNU G++17 7.2.0）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参赛心得"><span class="nav-number">3.</span> <span class="nav-text">参赛心得</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 站点访问量统计
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

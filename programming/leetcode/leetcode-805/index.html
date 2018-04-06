@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-05T10:53:13.307Z">
+<meta property="og:updated_time" content="2018-04-06T18:19:00.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「LeetCode 805. Split Array With Same Average」解题报告">
 <meta name="twitter:description" content="题目信息  链接：LeetCode 805. Split Array With Same Average 来源：LeetCode 难度：Hard   题目分析描述给定N个整数，判断是否能分成均值相同的两堆（非空），N范围为1到30，数值范围为0到10000。比如样例 [1,2,3,4,5,6,7,8] 可以分成 [1,4,5,8] 和 [2,3,6,7] 两组，均值为4.5。">
@@ -375,8 +375,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming/" itemprop="url" rel="index">
-                    <span itemprop="name">programming</span>
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
                   </a>
                 </span>
 
@@ -386,8 +386,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -458,7 +469,7 @@
 <li>虽然浮点数在乘除法上的迭代不多，但是还是要用相差在一定精度范围来判断两个浮点数是否相等。</li>
 <li>在考虑从两堆和里面各取一部分时，可能出现在两堆中都取了全部的数字，此时形成的另一堆会是空集。<br>要解决这个问题还是要记录组成当前和的元素个数，若求和的两组数的数量之和等于N了就跳过。</li>
 </ol>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>考虑排序在内，时间复杂度为：$O(2^{N/2}\log 2^{N/2})=O(\frac{N}{2}\cdot2^{N/2})$。<br>N为数组长度，在N≤30时是可以接受的。<br>空间复杂度为：$O(2^{N/2})$。</p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>考虑排序在内，时间复杂度为 $O(2^{N/2}\log 2^{N/2})=O(\frac{N}{2}\cdot2^{N/2})$。<br>N为数组长度，在N≤30时是可以接受的。<br>空间复杂度为 $O(2^{N/2})$。</p>
 <h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">35</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">double</span> EPS = <span class="number">1e-6</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">double</span> a[N];</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">double</span> res;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">splitArraySameAverage</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">		n = (<span class="keyword">int</span>)A.size();</span><br><span class="line">		res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">			res += A[i];</span><br><span class="line">		&#125;</span><br><span class="line">		res /= n;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">			a[i] = A[i - <span class="number">1</span>] - res;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> work();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">		<span class="keyword">double</span> sum;</span><br><span class="line">		<span class="keyword">int</span> cnt;</span><br><span class="line">		node(<span class="keyword">double</span> _sum = <span class="number">0</span>, <span class="keyword">int</span> _cnt = <span class="number">0</span>) : sum(_sum), cnt(_cnt) &#123;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node &amp;r) <span class="keyword">const</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> sum &lt; r.sum;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> ed, <span class="built_in">vector</span>&lt;node&gt; &amp;adj, <span class="keyword">double</span> sum, <span class="keyword">int</span> cnt)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (p == ed + <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (cnt != <span class="number">0</span>) &#123;</span><br><span class="line">				adj.emplace_back(sum, cnt);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		dfs(p + <span class="number">1</span>, ed, adj, sum + a[p], cnt + <span class="number">1</span>);</span><br><span class="line">		dfs(p + <span class="number">1</span>, ed, adj, sum, cnt);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">my_equal</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">fabs</span>(x - y) &lt; EPS;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> m = n / <span class="number">2</span>;</span><br><span class="line">		<span class="built_in">vector</span>&lt;node&gt; left, right;</span><br><span class="line">		dfs(<span class="number">1</span>, m, left, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">		dfs(m + <span class="number">1</span>, n, right, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">		sort(left.begin(), left.end());</span><br><span class="line">		sort(right.begin(), right.end());</span><br><span class="line">		<span class="keyword">int</span> u = <span class="number">0</span>, v = (<span class="keyword">int</span>)right.size() - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; left.size(); ++i) &#123;</span><br><span class="line">			<span class="keyword">double</span> avg = left[i].sum;</span><br><span class="line">			<span class="keyword">if</span> (my_equal(avg, <span class="number">0</span>)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (u &lt; (<span class="keyword">int</span>)left.size() &amp;&amp; v &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> tot = left[u].cnt + right[v].cnt;</span><br><span class="line">			<span class="keyword">double</span> avg = left[u].sum + right[v].sum;</span><br><span class="line">			<span class="keyword">if</span> (my_equal(avg, <span class="number">0</span>) &amp;&amp; tot != n) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (avg &lt; <span class="number">0</span>) &#123;</span><br><span class="line">				++u;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				--v;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="解题心得"><a href="#解题心得" class="headerlink" title="解题心得"></a>解题心得</h2><p>最近在前室友的带领下刚入坑LeetCode，这种提交接口而不是整个程序的方式还是第一次尝试。<br>当然刚开始也踩了许多坑，比如全局变量的使用。<br>看了官方文档才发现，实际测试时，同一个全局变量是会被多个实例反复调用的。<br>因此全局变量必须每次都初始化，根据文档的提醒最好的方式是不要使用全局变量。</p>
 
@@ -601,7 +612,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -612,7 +623,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -623,7 +634,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
