@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tashi711.xyz/"/>
-  <updated>2018-04-14T05:08:30.319Z</updated>
+  <updated>2018-04-18T13:20:59.200Z</updated>
   <id>http://tashi711.xyz/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「LeetCode 810. Chalkboard XOR Game」解题报告</title>
+    <link href="http://tashi711.xyz/programming/leetcode/leetcode-810/"/>
+    <id>http://tashi711.xyz/programming/leetcode/leetcode-810/</id>
+    <published>2018-04-16T13:51:37.000Z</published>
+    <updated>2018-04-18T13:20:59.200Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote><ul><li>链接：<a href="https://leetcode.com/problems/chalkboard-xor-game/description/" target="_blank" rel="noopener">LeetCode 810. Chalkboard XOR Game</a></li><li>来源：LeetCode</li><li>难度：Hard</li></ul></blockquote><h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定N个数，A和B轮流各取一个数，谁取之后剩下的所有数异或为0就输，A先取，如果一开始所有数异或为0也算A赢。<br>两个人同样聪明，求问A能不能赢。N范围为1到1000，数的范围0到2的16次方。<br>比如样例路线为 [1, 1, 2]，则A输。</p><a id="more"></a><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>一开始想是一个博弈论的模型，不过建博弈树的复杂度貌似有点高。<br>其实仔细想想会发现如果当前有至少两种数剩下时，一定可以取到异或不为0的情况。<br>因此一定会取到最后一个数，直接判断数量的奇偶就好了，奇数个数一定是A输。<br>即使不用取到最后一个数，必输的状态也一定是奇数个相同的数。</p><h3 id="细节处理"><a href="#细节处理" class="headerlink" title="细节处理"></a>细节处理</h3><p>注意如果一开始所有数异或为0也算A赢，无论奇偶。</p><h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为 $O(N)$，主要是要扫一遍看看是不是一开始就是异或为0。<br>空间复杂度为 $O(1)$，不考虑输入的空间的话。</p><h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">xorGame</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> n = (<span class="keyword">int</span>)nums.size();</span><br><span class="line"><span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">s ^= nums[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s == <span class="number">0</span> || n % <span class="number">2</span> == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="解题心得"><a href="#解题心得" class="headerlink" title="解题心得"></a>解题心得</h2><p>这道题非常有意思，10行代码解决。标签为Hard，且在短时间比赛里面。<br>数据范围也给的非常性感，1K、2的16次方，这些都给做题者放了一个烟雾弹。<br>以至于哪怕想到了正确的解法，也会怀疑自己一定是哪里想的不对。<br>所以难题是有难题的道理的，可以在任何方面难住做题者。<br>而这道难题解出来的时刻，并不是想出这个 $O(N)$ 算法的时刻，而是敢于提交这10行代码的时刻。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目信息&quot;&gt;&lt;a href=&quot;#题目信息&quot; class=&quot;headerlink&quot; title=&quot;题目信息&quot;&gt;&lt;/a&gt;题目信息&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;链接：&lt;a href=&quot;https://leetcode.com/problems/chalkboard-xor-game/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LeetCode 810. Chalkboard XOR Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;来源：LeetCode&lt;/li&gt;
+&lt;li&gt;难度：Hard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;题目分析&quot;&gt;&lt;a href=&quot;#题目分析&quot; class=&quot;headerlink&quot; title=&quot;题目分析&quot;&gt;&lt;/a&gt;题目分析&lt;/h2&gt;&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;p&gt;给定N个数，A和B轮流各取一个数，谁取之后剩下的所有数异或为0就输，A先取，如果一开始所有数异或为0也算A赢。&lt;br&gt;两个人同样聪明，求问A能不能赢。N范围为1到1000，数的范围0到2的16次方。&lt;br&gt;比如样例路线为 [1, 1, 2]，则A输。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="解题报告" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="LeetCode" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+    
+    
+      <category term="博弈论" scheme="http://tashi711.xyz/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>「Google Code Jam Round 1A 2018」参赛小结</title>
