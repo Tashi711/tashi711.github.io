@@ -4,6 +4,84 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-828/</loc>
+    <lastmod>2018-05-31T12:15:25.477Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 828. Unique Letter String」解题报告</title>
+        <pubTime>2018-05-31T12:00:32.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/technologies/SSH/</loc>
+    <lastmod>2018-05-28T12:39:35.580Z</lastmod>
+    <data>
+        <display>
+        <title>PuTTY与Atom上SSH与SFTP的Public Key认证总结</title>
+        <pubTime>2018-05-25T03:15:34.000Z</pubTime>
+        
+        <tag>SSH</tag>
+         
+        <tag>Public Key</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="技术" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-803/</loc>
+    <lastmod>2018-05-25T14:42:24.491Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 803. Bricks Falling When Hit」解题报告</title>
+        <pubTime>2018-05-25T08:00:34.000Z</pubTime>
+        
+        <tag>种子填充算法</tag>
+         
+        <tag>并查集</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://tashi711.xyz/programming/notes/others/google-code-style/</loc>
     <lastmod>2018-05-23T14:05:38.370Z</lastmod>
     <data>
@@ -53,7 +131,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://tashi711.xyz/nihongo/benkyou/condition/</loc>
