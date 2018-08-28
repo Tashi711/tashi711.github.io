@@ -4,6 +4,136 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-854/</loc>
+    <lastmod>2018-08-28T03:12:48.855Z</lastmod>
+    <data>
+        <display>
+        <title>「854. K-Similar Strings」解题报告</title>
+        <pubTime>2018-08-28T03:57:02.000Z</pubTime>
+        
+        <tag>回溯</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://tashi711.xyz/nihongo/uta/sid-butterfly-effect/</loc>
+    <lastmod>2018-08-28T02:43:30.588Z</lastmod>
+    <data>
+        <display>
+        <title>「シド - バタフライエフェクト」鑑賞</title>
+        <pubTime>2018-08-27T17:03:54.000Z</pubTime>
+        
+        <tag>シド</tag>
+         
+         
+           
+             
+              <breadCrumb title="ニホンゴ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/"/>
+          
+             
+              <breadCrumb title="ウタ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/%E3%82%A6%E3%82%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-850/</loc>
+    <lastmod>2018-06-10T04:08:18.507Z</lastmod>
+    <data>
+        <display>
+        <title>「850. Rectangle Area II」解题报告</title>
+        <pubTime>2018-06-10T03:57:02.000Z</pubTime>
+        
+        <tag>离散化</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-843/</loc>
+    <lastmod>2018-06-08T12:56:22.243Z</lastmod>
+    <data>
+        <display>
+        <title>「843. Guess the Word」解题报告</title>
+        <pubTime>2018-06-08T12:39:10.000Z</pubTime>
+        
+        <tag>交互题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-839/</loc>
+    <lastmod>2018-06-07T14:09:21.113Z</lastmod>
+    <data>
+        <display>
+        <title>「839. Similar String Groups」解题报告</title>
+        <pubTime>2018-06-07T14:00:06.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>连通分量</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-847/</loc>
     <lastmod>2018-06-07T03:13:07.437Z</lastmod>
     <data>
@@ -131,7 +261,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://tashi711.xyz/programming/notes/others/google-code-style/</loc>
