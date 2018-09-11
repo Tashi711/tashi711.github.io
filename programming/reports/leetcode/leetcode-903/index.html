@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="动态规划,DP," />
+  <meta name="keywords" content="动态规划," />
 
 
 
@@ -82,14 +82,14 @@
 
 
 <meta name="description" content="题目信息  链接：903. Valid Permutations for DI Sequence 来源：LeetCode 难度：Hard   题目分析描述　　We are given S, a length n string of characters from the set {‘D’, ‘I’}. (These letters stand for “decreasing” and “incre">
-<meta name="keywords" content="动态规划,DP">
+<meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「903. Valid Permutations for DI Sequence」解题报告">
 <meta property="og:url" content="http://tashi711.xyz/programming/reports/leetcode/leetcode-903/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="题目信息  链接：903. Valid Permutations for DI Sequence 来源：LeetCode 难度：Hard   题目分析描述　　We are given S, a length n string of characters from the set {‘D’, ‘I’}. (These letters stand for “decreasing” and “incre">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-10T17:19:37.937Z">
+<meta property="og:updated_time" content="2018-09-11T15:47:18.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「903. Valid Permutations for DI Sequence」解题报告">
 <meta name="twitter:description" content="题目信息  链接：903. Valid Permutations for DI Sequence 来源：LeetCode 难度：Hard   题目分析描述　　We are given S, a length n string of characters from the set {‘D’, ‘I’}. (These letters stand for “decreasing” and “incre">
@@ -462,13 +462,14 @@
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　We are given S, a length n string of characters from the set {‘D’, ‘I’}. (These letters stand for “decreasing” and “increasing”.)<br>　　A valid permutation is a permutation P[0], P[1], …, P[n] of integers {0, 1, …, n}, such that for all i:<br>　　If S[i] == ‘D’, then P[i] &gt; P[i+1], and;<br>　　If S[i] == ‘I’, then P[i] &lt; P[i+1].<br>　　How many valid permutations are there?  Since the answer may be large, return 　　your answer modulo 10^9 + 7.</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　We are given S, a length n string of characters from the set {‘D’, ‘I’}. (These letters stand for “decreasing” and “increasing”.)<br>　　A valid permutation is a permutation P[0], P[1], …, P[n] of integers {0, 1, …, n}, such that for all i:<br>　　If S[i] == ‘D’, then P[i] &gt; P[i+1], and;<br>　　If S[i] == ‘I’, then P[i] &lt; P[i+1].<br>　　How many valid permutations are there?  Since the answer may be large, return your answer modulo 10^9 + 7.</p>
 <p>　　Example:<br>　　Input: “DID”<br>　　Output: 5<br>　　Explanation:<br>　　The 5 valid permutations of (0, 1, 2, 3) are:<br>　　(1, 0, 3, 2)<br>　　(2, 0, 3, 1)<br>　　(2, 1, 3, 0)<br>　　(3, 0, 2, 1)<br>　　(3, 1, 2, 0)</p>
 <p>　　Note:<br>　　1 &lt;= S.length &lt;= 200<br>　　S consists only of characters from the set {‘D’, ‘I’}.</p>
 <a id="more"></a>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>　　因为很容易想到从子状态递推过去，典型的DP题。<br>　　用f[i][j]表示算到字符串第i个位置结尾为j的方案个数。<br>　　容易得到，如果当前S[i]为”D”，那么f[i][j] = sigma(f[i-1][k])，k从j到i，因为如果当前位置放j，那么等价的方案是前面放的1到j-1不变，j到i分别变成j+1到i+1，而需要的是前一个结尾为j+1到i+1的，那么枚举的k为j到i；同理，如果当前S[i]为”I”，那么f[i][j] = sigma(f[i-1][k])，k从1到j-1，因为需要的是前一个结尾为1到j-1（在等价方案中不变）。<br>　　容易想到初始状态为f[0][1] = 1，每次计算f[i][j]时j要从1枚举到i+1。<br>　　最终答案为sigma(f[n][i])，i从1到n+1。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>　　因为很容易想到从子状态递推过去，典型的DP题。<br>　　用f[i][j]表示算到字符串第i个位置结尾为j的方案个数。<br>　　容易得到，如果当前S[i]为“D”，那么f[i][j] = sigma(f[i-1][k])，k从j到i，因为如果当前位置放j，那么等价的方案是前面放的1到j-1不变，j到i分别变成j+1到i+1，而需要的是前一个结尾为j+1到i+1的，那么枚举的k为j到i；同理，如果当前S[i]为“I”，那么f[i][j] = sigma(f[i-1][k])，k从1到j-1，因为需要的是前一个结尾为1到j-1（在等价方案中不变）。<br>　　容易想到初始状态为f[0][1] = 1，每次计算f[i][j]时j要从1枚举到i+1。<br>　　最终答案为sigma(f[n][i])，i从1到n+1。</p>
 <h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>　　空间复杂度为状态复杂度，即$O(N^2)$。<br>　　时间复杂度为状态复杂度×转移复杂度，即$O(N^3)$。</p>
 <h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> kMaxN = <span class="number">220</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> kModule = <span class="number">1000000007</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> f[kMaxN][kMaxN];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">my_add_equal</span><span class="params">(<span class="keyword">int</span>&amp; s, <span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">		s = (s + p) % kModule;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">numPermsDISequence</span><span class="params">(<span class="built_in">string</span> S)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(S.size());</span><br><span class="line">		<span class="built_in">string</span> s = <span class="string">'\0'</span> + S;</span><br><span class="line">		<span class="built_in">memset</span>(f, <span class="number">0</span>, <span class="keyword">sizeof</span> f);</span><br><span class="line">		f[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i + <span class="number">1</span>; ++j) &#123;</span><br><span class="line">				<span class="keyword">int</span> u = (s[i] == <span class="string">'D'</span> ? j : <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">int</span> v = (s[i] == <span class="string">'D'</span> ? i : j - <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> k = u; k &lt;= v; ++k) &#123;</span><br><span class="line">					my_add_equal(f[i][j], f[i - <span class="number">1</span>][k]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n + <span class="number">1</span>; ++i) &#123;</span><br><span class="line">			my_add_equal(ans, f[n][i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="解题心得"><a href="#解题心得" class="headerlink" title="解题心得"></a>解题心得</h2><p>　　看了下官方的题解，时间可以优化到N方，有个启发就是枚举k的时候其实都是连续的一段和，那么其实可以在枚举j之前先把f[i][1]到f[i][k]，k从1到i的累和算出来，之后可以直接用了（相减），时间就可以降一维。题解上说的是通过观察直接得到了没有累加的转移方程，其实自己琢磨一下那个方程会发现是有实际意义在里面的，道理差不多，利用连续和均摊复杂度。至于题解中的分治做法就没有太研究了，时间也可以到N方。</p>
 
       
     </div>
@@ -506,8 +507,6 @@
           
             <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
           
-            <a href="/tags/DP/" rel="tag"># DP</a>
-          
         </div>
       
 
@@ -519,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/programming/notes/effective-cpp/effective-cpp/" rel="next" title="「Effective C++ (3rd)」小结">
-                <i class="fa fa-chevron-left"></i> 「Effective C++ (3rd)」小结
+              <a href="/programming/notes/cpp-primer/cpp-primer-3/" rel="next" title="「C++ Primer (5th) 第3章」小结">
+                <i class="fa fa-chevron-left"></i> 「C++ Primer (5th) 第3章」小结
               </a>
             
           </div>
@@ -528,6 +527,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/programming/reports/leetcode/leetcode-902/" rel="prev" title="「902. Numbers At Most N Given Digit Set」解题报告">
+                「902. Numbers At Most N Given Digit Set」解题报告 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -611,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -673,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.3.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码（C-）"><span class="nav-number">3.</span> <span class="nav-text">AC代码（C++）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.3.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码（C-）"><span class="nav-number">3.</span> <span class="nav-text">AC代码（C++）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题心得"><span class="nav-number">4.</span> <span class="nav-text">解题心得</span></a></li></ol></div>
             
 
           </div>

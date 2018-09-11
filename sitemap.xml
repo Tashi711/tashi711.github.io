@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-903/</loc>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-902/</loc>
     
-    <lastmod>2018-09-10T17:19:37.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer/</loc>
-    
-    <lastmod>2018-09-10T13:38:18.602Z</lastmod>
+    <lastmod>2018-09-11T16:42:31.257Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/</loc>
     
-    <lastmod>2018-09-10T13:29:04.826Z</lastmod>
+    <lastmod>2018-09-11T16:02:12.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-1-2/</loc>
+    
+    <lastmod>2018-09-11T15:49:37.231Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/</loc>
+    
+    <lastmod>2018-09-11T15:49:33.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-903/</loc>
+    
+    <lastmod>2018-09-11T15:47:18.513Z</lastmod>
     
   </url>
   

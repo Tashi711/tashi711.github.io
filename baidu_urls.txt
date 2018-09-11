@@ -1,6 +1,8 @@
+http://tashi711.xyz/programming/reports/leetcode/leetcode-902/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-903/
+http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/
 http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/
-http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer/
+http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-1-2/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-854/
 http://tashi711.xyz/nihongo/uta/sid-butterfly-effect/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-850/
