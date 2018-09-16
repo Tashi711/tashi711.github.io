@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="Effective C++ (3rd)  第一部分：Accustoming Yourself to C++ 第二部分：Constructors, Destructors, and Assignment Operators">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T16:02:12.360Z">
+<meta property="og:updated_time" content="2018-09-13T17:12:36.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「Effective C++ (3rd) 第一、二部分」小结">
 <meta name="twitter:description" content="Effective C++ (3rd)  第一部分：Accustoming Yourself to C++ 第二部分：Constructors, Destructors, and Assignment Operators">
@@ -479,6 +479,10 @@
 <h3 id="第二部分：Constructors-Destructors-and-Assignment-Operators"><a href="#第二部分：Constructors-Destructors-and-Assignment-Operators" class="headerlink" title="第二部分：Constructors, Destructors, and Assignment Operators"></a>第二部分：Constructors, Destructors, and Assignment Operators</h3><ul>
 <li>内含引用成员或const成员的类不能自动生成拷贝赋值函数</li>
 <li>如果基类的拷贝赋值函数是为私有的，派生类不会自动生成拷贝赋值函数</li>
+<li>为了删除自动生成的成员函数，可以声明为private或者继承有这样private成员函数的类</li>
+<li>一般，类中有至少一个virtual时才把析构声明成virtual</li>
+<li>使用纯虚析构可以让类成为纯虚类，但必须有虚构函数的定义</li>
+<li>某些不是为了多态的基类（比如上面说的将成员函数声明为private来删除自动生成的成员函数）不应该声明virtual的析构。</li>
 </ul>
 
       
@@ -624,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -646,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

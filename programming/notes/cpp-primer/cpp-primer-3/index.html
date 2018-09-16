@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T15:49:33.885Z">
+<meta property="og:updated_time" content="2018-09-13T17:36:40.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「C++ Primer (5th) 第3章」小结">
 <meta name="twitter:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
@@ -463,8 +463,15 @@
 </blockquote>
 <a id="more"></a>
 <h3 id="第一部分：C-基础-第3章"><a href="#第一部分：C-基础-第3章" class="headerlink" title="第一部分：C++基础 (第3章)"></a>第一部分：C++基础 (第3章)</h3><ul>
-<li>初始化时使用花括号但提供的值不能用来列表初始化，那么就会调用构造函数:<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v1&#123;<span class="number">10</span>&#125;; <span class="comment">// 10个元素</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v2(<span class="number">10</span>, <span class="string">"hi"</span>&#125;; <span class="comment">// 10个"hi"</span></span><br></pre></td></tr></table></figure>
+<li><p>初始化时使用花括号但提供的值不能用来列表初始化，那么就会调用构造函数:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v1&#123;<span class="number">10</span>&#125;; <span class="comment">// 10个元素</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v2(<span class="number">10</span>, <span class="string">"hi"</span>&#125;; <span class="comment">// 10个"hi"</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p><code>vector&lt;int&gt;</code>的size type为<code>vector&lt;int&gt;::size_type</code></p>
+</li>
+<li>容器是常量只能用const_iterator，不是的话iterator、const_iterator都可以用</li>
+<li>如果对象是常量，begin、end返回const_iterator，否则是iterator，而cbegin、cend永远返回const_iterator</li>
+<li>不能在for中、或者使用迭代器时push_back</li>
+<li>可以相减的迭代器相减结果为difference_type（带符号整数）</li>
 </ul>
 
       
@@ -610,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -632,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

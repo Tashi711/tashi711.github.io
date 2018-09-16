@@ -1,3 +1,6 @@
+http://tashi711.xyz/programming/reports/leetcode/leetcode-906/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-895/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-899/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-902/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-903/
 http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/
