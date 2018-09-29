@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-13T17:36:40.379Z">
+<meta property="og:updated_time" content="2018-09-18T17:18:43.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「C++ Primer (5th) 第3章」小结">
 <meta name="twitter:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
@@ -472,6 +472,20 @@
 <li>如果对象是常量，begin、end返回const_iterator，否则是iterator，而cbegin、cend永远返回const_iterator</li>
 <li>不能在for中、或者使用迭代器时push_back</li>
 <li>可以相减的迭代器相减结果为difference_type（带符号整数）</li>
+<li>数组不能用auto声明，元素只能是对象不能是引用（与vector一样）</li>
+<li><p>数组的指针与引用：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> (*parr)[<span class="number">10</span>] = &amp;arr;  <span class="comment">// parr指向一个含有10个整数的数组</span></span><br><span class="line"><span class="keyword">int</span> (&amp;rarr)[<span class="number">10</span>] = arr;  <span class="comment">// rarr引用一个含有10个整数的数组</span></span><br><span class="line"><span class="keyword">int</span> *ptrs[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *(&amp;rptrs)[<span class="number">10</span>] = ptrs;  <span class="comment">// rptrs引用一个含有10个指针的数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto 数组：指针</p>
+</li>
+<li>decltype(数组)：含有X个元素的数组</li>
+<li>begin(数组)：指向首元素的指针，end(数组)：指向尾元素下一位置的指针</li>
+<li>尾指针不能自增，指向之后的指针会出错</li>
+<li>指针相减的type为ptrdiff_t，带符号</li>
+<li>内置下标运算时有符的，标准库是无符的</li>
+<li>c_str返回的的数组不一定一直有效，需拷贝</li>
+<li>令<code>int a[3][4]</code>：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  	<span class="comment">// c: 引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  	<span class="comment">// c: 非引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> c : r) &#123;</span><br><span class="line">  	<span class="comment">// 无法编译，因为r为int*，那么内层循环没有意义</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = begin(a); p != end(a); ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = begin(*p); q != end(*p); ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">using</span> ia = <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ia[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">for</span> (ia *p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> *q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
@@ -521,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/programming/notes/effective-cpp/effective-cpp/" rel="next" title="「Effective C++ (3rd) 第一、二部分」小结">
-                <i class="fa fa-chevron-left"></i> 「Effective C++ (3rd) 第一、二部分」小结
+              <a href="/programming/notes/effective-cpp/effective-cpp/" rel="next" title="「Effective C++ (3rd) 第一、二、三部分」小结">
+                <i class="fa fa-chevron-left"></i> 「Effective C++ (3rd) 第一、二、三部分」小结
               </a>
             
           </div>
@@ -531,8 +545,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/programming/reports/leetcode/leetcode-903/" rel="prev" title="「903. Valid Permutations for DI Sequence」解题报告">
-                「903. Valid Permutations for DI Sequence」解题报告 <i class="fa fa-chevron-right"></i>
+              <a href="/programming/notes/cpp-primer/cpp-primer-4/" rel="prev" title="「C++ Primer (5th) 第4章」小结">
+                「C++ Primer (5th) 第4章」小结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -617,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -639,7 +653,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

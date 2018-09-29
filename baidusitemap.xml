@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-906/</loc>
-    <lastmod>2018-09-16T05:45:54.790Z</lastmod>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-878/</loc>
+    <lastmod>2018-09-29T17:34:54.427Z</lastmod>
     <data>
         <display>
-        <title>「906. Super Palindromes」解题报告</title>
-        <pubTime>2018-09-16T03:57:02.000Z</pubTime>
+        <title>「878. Nth Magical Number」解题报告</title>
+        <pubTime>2018-09-30T03:57:02.000Z</pubTime>
         
-        <tag>水题</tag>
+        <tag>二分答案</tag>
          
          
            
@@ -30,8 +30,90 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-887/</loc>
+    <lastmod>2018-09-29T17:02:52.763Z</lastmod>
+    <data>
+        <display>
+        <title>「887. Super Egg Drop」解题报告</title>
+        <pubTime>2018-09-29T03:57:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>数学</tag>
+         
+        <tag>二分查找</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/</loc>
+    <lastmod>2018-09-20T18:08:14.747Z</lastmod>
+    <data>
+        <display>
+        <title>「Effective C++ (3rd) 第一、二、三部分」小结</title>
+        <pubTime>2018-09-08T03:17:59.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="读书笔记" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="Effective C++" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-4/</loc>
+    <lastmod>2018-09-19T17:50:48.793Z</lastmod>
+    <data>
+        <display>
+        <title>「C++ Primer (5th) 第4章」小结</title>
+        <pubTime>2018-09-11T03:17:59.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="读书笔记" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="C++ Primer" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/C-Primer/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/</loc>
-    <lastmod>2018-09-13T17:36:40.379Z</lastmod>
+    <lastmod>2018-09-18T17:18:43.143Z</lastmod>
     <data>
         <display>
         <title>「C++ Primer (5th) 第3章」小结</title>
@@ -56,14 +138,16 @@
 
     
   <url>
-    <loc>http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/</loc>
-    <lastmod>2018-09-13T17:12:36.582Z</lastmod>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-891/</loc>
+    <lastmod>2018-09-17T16:53:52.299Z</lastmod>
     <data>
         <display>
-        <title>「Effective C++ (3rd) 第一、二部分」小结</title>
-        <pubTime>2018-09-08T03:17:59.000Z</pubTime>
+        <title>「891. Sum of Subsequence Widths」解题报告</title>
+        <pubTime>2018-09-18T03:57:02.000Z</pubTime>
         
-        <tag>C++</tag>
+        <tag>思考题</tag>
+         
+        <tag>数学</tag>
          
          
            
@@ -71,10 +155,36 @@
               <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
           
              
-              <breadCrumb title="读书笔记" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
           
              
-              <breadCrumb title="Effective C++" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective-C/"/>
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-906/</loc>
+    <lastmod>2018-09-16T05:45:54.790Z</lastmod>
+    <data>
+        <display>
+        <title>「906. Super Palindromes」解题报告</title>
+        <pubTime>2018-09-16T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
           
         </display>
     </data>

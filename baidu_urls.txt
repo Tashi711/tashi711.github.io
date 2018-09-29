@@ -1,8 +1,12 @@
+http://tashi711.xyz/programming/reports/leetcode/leetcode-878/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-887/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-891/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-906/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-895/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-899/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-902/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-903/
+http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-4/
 http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/
 http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/
 http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-1-2/
