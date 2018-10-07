@@ -4,14 +4,169 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/nihongo/uta/oor-deeper-deeper/</loc>
+    <lastmod>2018-10-07T06:44:15.378Z</lastmod>
+    <data>
+        <display>
+        <title>「ONE OK ROCK - Deeper Deeper」鑑賞</title>
+        <pubTime>2018-10-06T17:03:54.000Z</pubTime>
+        
+        <tag>ONE OK ROCK</tag>
+         
+         
+           
+             
+              <breadCrumb title="ニホンゴ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/"/>
+          
+             
+              <breadCrumb title="ウタ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/%E3%82%A6%E3%82%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/others/gamma-function/</loc>
+    <lastmod>2018-10-07T05:55:00.130Z</lastmod>
+    <data>
+        <display>
+        <title>「Γ函数」小结</title>
+        <pubTime>2018-10-07T04:17:59.000Z</pubTime>
+        
+        <tag>Γ函数</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="读书笔记" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/others/divide-and-conquer/</loc>
+    <lastmod>2018-10-06T13:47:24.863Z</lastmod>
+    <data>
+        <display>
+        <title>「分治算法」复杂度分析</title>
+        <pubTime>2018-10-07T03:17:59.000Z</pubTime>
+        
+        <tag>分治</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="读书笔记" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-878/</loc>
-    <lastmod>2018-09-29T17:34:54.427Z</lastmod>
+    <lastmod>2018-10-04T07:55:39.431Z</lastmod>
     <data>
         <display>
         <title>「878. Nth Magical Number」解题报告</title>
         <pubTime>2018-09-30T03:57:02.000Z</pubTime>
         
         <tag>二分答案</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-891/</loc>
+    <lastmod>2018-10-04T07:55:21.759Z</lastmod>
+    <data>
+        <display>
+        <title>「891. Sum of Subsequence Widths」解题报告</title>
+        <pubTime>2018-09-18T03:57:02.000Z</pubTime>
+        
+        <tag>思考题</tag>
+         
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-902/</loc>
+    <lastmod>2018-10-04T07:53:51.427Z</lastmod>
+    <data>
+        <display>
+        <title>「902. Numbers At Most N Given Digit Set」解题报告</title>
+        <pubTime>2018-09-12T03:57:02.000Z</pubTime>
+        
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-913/</loc>
+    <lastmod>2018-10-04T07:51:26.176Z</lastmod>
+    <data>
+        <display>
+        <title>「913. Cat and Mouse」解题报告</title>
+        <pubTime>2018-10-04T03:57:02.000Z</pubTime>
+        
+        <tag>BFS</tag>
          
          
            
@@ -138,34 +293,6 @@
 
     
   <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-891/</loc>
-    <lastmod>2018-09-17T16:53:52.299Z</lastmod>
-    <data>
-        <display>
-        <title>「891. Sum of Subsequence Widths」解题报告</title>
-        <pubTime>2018-09-18T03:57:02.000Z</pubTime>
-        
-        <tag>思考题</tag>
-         
-        <tag>数学</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-906/</loc>
     <lastmod>2018-09-16T05:45:54.790Z</lastmod>
     <data>
@@ -232,32 +359,6 @@
         <tag>思考题</tag>
          
         <tag>水题</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-902/</loc>
-    <lastmod>2018-09-11T16:42:31.257Z</lastmod>
-    <data>
-        <display>
-        <title>「902. Numbers At Most N Given Digit Set」解题报告</title>
-        <pubTime>2018-09-12T03:57:02.000Z</pubTime>
-        
-        <tag>模拟</tag>
          
          
            

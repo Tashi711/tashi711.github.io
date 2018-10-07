@@ -1,3 +1,7 @@
+http://tashi711.xyz/programming/notes/others/gamma-function/
+http://tashi711.xyz/programming/notes/others/divide-and-conquer/
+http://tashi711.xyz/nihongo/uta/oor-deeper-deeper/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-913/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-878/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-887/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-891/

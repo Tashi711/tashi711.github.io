@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.xyz/nihongo/uta/oor-deeper-deeper/</loc>
+    
+    <lastmod>2018-10-07T06:44:15.378Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/others/gamma-function/</loc>
+    
+    <lastmod>2018-10-07T05:55:00.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/others/divide-and-conquer/</loc>
+    
+    <lastmod>2018-10-06T13:47:24.863Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-878/</loc>
     
-    <lastmod>2018-09-29T17:34:54.427Z</lastmod>
+    <lastmod>2018-10-04T07:55:39.431Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-891/</loc>
+    
+    <lastmod>2018-10-04T07:55:21.759Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-902/</loc>
+    
+    <lastmod>2018-10-04T07:53:51.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-913/</loc>
+    
+    <lastmod>2018-10-04T07:51:26.176Z</lastmod>
     
   </url>
   
@@ -37,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-891/</loc>
-    
-    <lastmod>2018-09-17T16:53:52.299Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-906/</loc>
     
     <lastmod>2018-09-16T05:45:54.790Z</lastmod>
@@ -61,13 +96,6 @@
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-899/</loc>
     
     <lastmod>2018-09-12T18:33:35.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-902/</loc>
-    
-    <lastmod>2018-09-11T16:42:31.257Z</lastmod>
     
   </url>
   
