@@ -4,8 +4,31 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/tech-and-algos/binary-indexed-tree/</loc>
+    <lastmod>2018-10-19T18:08:43.905Z</lastmod>
+    <data>
+        <display>
+        <title>「树状数组」浅析</title>
+        <pubTime>2018-10-10T03:15:34.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="技术与算法" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/</loc>
-    <lastmod>2018-10-19T18:04:02.145Z</lastmod>
+    <lastmod>2018-10-19T18:07:40.523Z</lastmod>
     <data>
         <display>
         <title>「hihoCoder - 1848, 1849」解题报告</title>
@@ -23,29 +46,6 @@
           
              
               <breadCrumb title="其他" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.xyz/programming/tech-and-algos/binary-indexed-tree/</loc>
-    <lastmod>2018-10-19T17:59:58.872Z</lastmod>
-    <data>
-        <display>
-        <title>「树状数组」浅析</title>
-        <pubTime>2018-10-10T03:15:34.000Z</pubTime>
-        
-        <tag>树状数组</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="技术与算法" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
