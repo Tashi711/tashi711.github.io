@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.xyz/programming/notes/divide-and-conquer/</loc>
+    
+    <lastmod>2018-11-21T15:27:14.076Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/effective-cpp-1-3/</loc>
+    
+    <lastmod>2018-11-21T15:27:11.249Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/gamma-function/</loc>
+    
+    <lastmod>2018-11-21T15:27:06.082Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/google-code-style/</loc>
+    
+    <lastmod>2018-11-21T15:26:52.343Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/cpp-primer-3/</loc>
+    
+    <lastmod>2018-11-21T15:26:44.178Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/effective-cpp-4/</loc>
+    
+    <lastmod>2018-11-21T15:26:40.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/notes/cpp-primer-1-2/</loc>
+    
+    <lastmod>2018-11-21T15:26:33.163Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/nihongo/uta/sasanomaly-takarabako/</loc>
+    
+    <lastmod>2018-11-12T17:15:40.071Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.xyz/programming/tech-and-algos/bipartite-graph-matching/</loc>
+    
+    <lastmod>2018-11-12T17:01:27.568Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.xyz/programming/tech-and-algos/binary-indexed-tree/</loc>
     
     <lastmod>2018-10-19T18:08:43.905Z</lastmod>
@@ -79,20 +142,6 @@
   </url>
   
   <url>
-    <loc>http://tashi711.xyz/programming/notes/others/gamma-function/</loc>
-    
-    <lastmod>2018-10-07T05:55:00.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/others/divide-and-conquer/</loc>
-    
-    <lastmod>2018-10-06T13:47:24.863Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-878/</loc>
     
     <lastmod>2018-10-04T07:55:39.431Z</lastmod>
@@ -128,27 +177,6 @@
   </url>
   
   <url>
-    <loc>http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/</loc>
-    
-    <lastmod>2018-09-20T18:08:14.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-4/</loc>
-    
-    <lastmod>2018-09-19T17:50:48.793Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/</loc>
-    
-    <lastmod>2018-09-18T17:18:43.143Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-906/</loc>
     
     <lastmod>2018-09-16T05:45:54.790Z</lastmod>
@@ -166,13 +194,6 @@
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-899/</loc>
     
     <lastmod>2018-09-12T18:33:35.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-1-2/</loc>
-    
-    <lastmod>2018-09-11T15:49:37.231Z</lastmod>
     
   </url>
   
@@ -243,13 +264,6 @@
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-803/</loc>
     
     <lastmod>2018-05-25T14:42:24.491Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.xyz/programming/notes/others/google-code-style/</loc>
-    
-    <lastmod>2018-05-23T14:05:38.370Z</lastmod>
     
   </url>
   

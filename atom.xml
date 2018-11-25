@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tashi711.xyz/"/>
-  <updated>2018-10-19T18:07:40.523Z</updated>
+  <updated>2018-11-12T17:01:27.568Z</updated>
   <id>http://tashi711.xyz/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「二分图匹配算法」浅析</title>
+    <link href="http://tashi711.xyz/programming/tech-and-algos/bipartite-graph-matching/"/>
+    <id>http://tashi711.xyz/programming/tech-and-algos/bipartite-graph-matching/</id>
+    <published>2018-11-13T03:15:34.000Z</published>
+    <updated>2018-11-12T17:01:27.568Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h2><p>二分图（Bipartite Graph）又叫二部图，是图的一种。</p><h3 id="二分图的定义"><a href="#二分图的定义" class="headerlink" title="二分图的定义"></a>二分图的定义</h3><p>设 G = (V, E) 是一个无向图。如果顶点集 V 可分割为两个互不相交的子集 X 和 Y，并且图中每条边连接的两个顶点一个在 X 中，另一个在 Y 中，则称图 G 为二分图。</p><h3 id="二分图的匹配"><a href="#二分图的匹配" class="headerlink" title="二分图的匹配"></a>二分图的匹配</h3><p>给定一个二分图 G，在 G 的某个子图 M 中，任意两条边都不依附于同一个顶点，则称 M 是 G 的一个匹配（Matching）。</p><a id="more"></a><h2 id="二分图的最大匹配"><a href="#二分图的最大匹配" class="headerlink" title="二分图的最大匹配"></a>二分图的最大匹配</h2><p>匹配的边数尽量多</p><p>选择边数最大的匹配称为二分图的最大匹配问题（Maximal Matching Problem）</p><h3 id="增广路径"><a href="#增广路径" class="headerlink" title="增广路径"></a>增广路径</h3><p>增广路径（Augmenting Path）的定义：设 M 为二分图 G 已匹配边的集合，若 P 是图 G 中一条连通两个未匹配顶点的路径（P 的起点在 X 部，终点在 Y 部，反之亦可），并且属 M 的边和不属 M 的边（即已匹配和待匹配的边）在 P 上交替出现，则称 P 为相对于 M 的一条增广路径。</p><p>单独的一条连接两个未匹配点的边显然也是增广路径。</p><p>不属于匹配的边要多一条</p><p>如果从 M 中抽走增广路径 P 中属于匹配的边，并在 M 中加入 P 中不属于匹配的边，也就是将增广路所有的边进行“反色”，则可以得到匹配 M’</p><p>容易发现这样修改以后，匹配仍然是合法的，但是匹配数增加了一对。</p><p>当不能再找到增广路径时，就得到了一个最大匹配，这就是匈牙利算法的思路。</p><h3 id="匈牙利算法（Hungarian-Algorithm）"><a href="#匈牙利算法（Hungarian-Algorithm）" class="headerlink" title="匈牙利算法（Hungarian Algorithm）"></a>匈牙利算法（Hungarian Algorithm）</h3><p>匈牙利数学家Edmonds于1965年提出</p><p>算法步骤：<br>(1) 置 M 为空<br>(2) 找出一条增广路径 P，通过取反操作获得更大的匹配 M’ 代替 M<br>(3) 重复 (2) 操作直到找不出增广路径为止</p><h3 id="如何寻找增广路径"><a href="#如何寻找增广路径" class="headerlink" title="如何寻找增广路径"></a>如何寻找增广路径</h3><p>dfs（深度优先搜索）</p><p>从 X 部一个未匹配的顶点 u 开始，找一个未访问的邻接点 v（v 一定是 Y 部顶点）。对于 v，分两种情况：<br>(1) 如果 v 未匹配，则已经找到一条增广路<br>(2) 如果 v 已经匹配，则取出 v 的匹配顶点 w（w 一定是 X 部顶点)，边 (w, v) 目前是匹配的，根据“取反”的想法，要将 (w, v) 改为未匹配，(u, v) 改为匹配，能实现这一点的条件是看从 w 为起点能否新找到一条增广路径 P’。如果行，则 u – v – P’ 就是一条以 u 为起点的增广路径。每个起点找一次，最多找 O(V) 次。</p><h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>在dfs时，注意标记访问过的 Y 部的顶点，这样如果一个 Y 部的点 v 被证实无法增广后，后面 X 部有连向 v 的边就不用再访问了，可以保证每次dfs最多只将整张图访问一次，时间复杂度为 O(E)  ，每次在主过程中开始一次dfs前，所有的顶点都是未标记的。</p><p>总的时间复杂度：O(VE) </p><h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><p>1957年，Kuhn和Munkras提出（居然比匈牙利算法早？？？）</p><p>解决最佳完美匹配（最佳完备匹配可以等价转换）</p><p>最佳：权值和最大</p><p>匹配数最大：完备匹配；X 部点数等于 Y 部的完备匹配：完美匹配</p><p>通常要求完全二分图（任意 (x, y) 间一定有边，完备匹配一定存在，用虚拟点补足，添加权值为 0 的边，则完美匹配一定存在）</p><h3 id="可行顶标"><a href="#可行顶标" class="headerlink" title="可行顶标"></a>可行顶标</h3><p>对于原图中的任意一个结点定义一个顶标值。一般用数组 lx(x) 记录集合 X 中的结点顶标值，用数组 ly(y) 记录集合 Y 中的结点顶标值。 </p><p>可行顶标：对于原图中任意一条边 (x, y) 都有：lx(x) + ly(y) &gt;= w(x, y)</p><p>如果原图一个完美匹配 M 中所有的边 (i, j) 都有 lx[i] + ly[j] = w[i,j] 成立，则 M 是图 G 的一个最佳匹配（因为任意一个匹配的权值之和肯定小于等于所有结点的顶标之和）。</p><h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><p>算法步骤：<br>(1) 初始化可行顶标的值<br>(2) 用匈牙利算法寻找完美匹配<br>(3) 若未找到完美匹配则修改可行顶标的值<br>(4) 重复 (2) (3) 直到找到完美匹配为止</p><p>初始化：<br>l(x) = maxw(x, y)<br>l(y) = 0<br>一定可行</p><h3 id="如何修改顶标"><a href="#如何修改顶标" class="headerlink" title="如何修改顶标"></a>如何修改顶标</h3><p>对于正在增广的增广路径上属于集合 X 的所有点减去一个常数delta，属于集合 Y 的所有点加上一个常数delta。<br>考虑图中任意一条边 (i, j) ，i∈X，j∈Y，有以下4种情况：<br>i 和 j 都属于增广路，那么 lx[i] − delta + ly[j] + delta = lx[i] + ly[j]，值不变，(i, j) 可行性不变，能匹配的还能，不能的还不能<br>i 属于增广路，j 不属于增广路，那么 lx[i] − delta + ly[j] 的值减小，也就是原来不能匹配的现在可能匹配了。<br>i 不属于增广路，j 属于增广路，那么 lx[i] + ly[j] + delta 的值增大，也就是说原来不能匹配的现在也不能匹配。<br>i, j 都不属于增广路，那么 lx[i] 和 ly[j] 都不会加减常数delta值不变， (i, j) 可行性不变，能匹配的还能，不能的还不能。</p><h3 id="如何取delta"><a href="#如何取delta" class="headerlink" title="如何取delta"></a>如何取delta</h3><p>为了保证 lx(i) + ly(j) &gt;= w(i, j)，取第二种情况的 lx[i] + ly[j] − w(i, j) 的最小值作为delta。（寻找复杂度：完全图 O(E) = O(V^2)）</p><h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>每次标号一定有一条边加入可匹配，即每次增广最多标号 O(V) 次 </p><p>总体：增广 O(V) 次 * 标号 O(V) 次 * 找 delta O(V^2) = O(V^4) </p><p>优化：找 delta 的边正好是匈牙利算法访问时不能匹配的边，因此在做匈牙利算法时记录更新跟当前节点 j 相连的节点 i 的 lx[i] + ly[j] − w(i, j) 的最小值，找 delta O(V) 遍历没有在增广路径上的 j 即可。</p><p>总体：增广 O(V) 次 * 标号 O(V) 次 * 找 delta O(V) = O(V^3) </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题提出&quot;&gt;&lt;a href=&quot;#问题提出&quot; class=&quot;headerlink&quot; title=&quot;问题提出&quot;&gt;&lt;/a&gt;问题提出&lt;/h2&gt;&lt;p&gt;二分图（Bipartite Graph）又叫二部图，是图的一种。&lt;/p&gt;
+&lt;h3 id=&quot;二分图的定义&quot;&gt;&lt;a href=&quot;#二分图的定义&quot; class=&quot;headerlink&quot; title=&quot;二分图的定义&quot;&gt;&lt;/a&gt;二分图的定义&lt;/h3&gt;&lt;p&gt;设 G = (V, E) 是一个无向图。如果顶点集 V 可分割为两个互不相交的子集 X 和 Y，并且图中每条边连接的两个顶点一个在 X 中，另一个在 Y 中，则称图 G 为二分图。&lt;/p&gt;
+&lt;h3 id=&quot;二分图的匹配&quot;&gt;&lt;a href=&quot;#二分图的匹配&quot; class=&quot;headerlink&quot; title=&quot;二分图的匹配&quot;&gt;&lt;/a&gt;二分图的匹配&lt;/h3&gt;&lt;p&gt;给定一个二分图 G，在 G 的某个子图 M 中，任意两条边都不依附于同一个顶点，则称 M 是 G 的一个匹配（Matching）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术与算法" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="二分图匹配" scheme="http://tashi711.xyz/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「ササノマリイ - タカラバコ」鑑賞</title>
+    <link href="http://tashi711.xyz/nihongo/uta/sasanomaly-takarabako/"/>
+    <id>http://tashi711.xyz/nihongo/uta/sasanomaly-takarabako/</id>
+    <published>2018-11-12T16:15:55.000Z</published>
+    <updated>2018-11-12T17:15:40.071Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="歌曲信息"><a href="#歌曲信息" class="headerlink" title="歌曲信息"></a>歌曲信息</h2><blockquote><ul><li>歌曲：タカラバコ</li><li>歌手：ササノマリイ</li><li>作词：ササノマリイ</li><li>作曲：ササノマリイ</li><li>专辑：タカラバコ(期間生産限定盤)（2016年11月30日发行）</li><li>其他：「夏目友人帳 伍」 OP</li></ul></blockquote><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>夏目友人帐第五季的OP，挺暖的一首歌。</p><a id="more"></a><h2 id="假名歌词"><a href="#假名歌词" class="headerlink" title="假名歌词"></a>假名歌词</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">空（うつ）ろに空見（そらみ）た</span><br><span class="line">君（きみ）はまだ覚（おぼ）えてるかな</span><br><span class="line">見過（みす）ごした季節（きせつ）も</span><br><span class="line">不確（ふたし）かな感情（かんじょう）で</span><br><span class="line"></span><br><span class="line">心（こころ）の隅（すみ）っこでも</span><br><span class="line">欠片（かけら）になれたなら</span><br><span class="line">君（きみ）のあの笑顔（えがお）が</span><br><span class="line">あるべき場所（ばしょ）にあるといいな</span><br><span class="line"></span><br><span class="line">この時間（じかん）が　過（す）ぎてゆくなら</span><br><span class="line">君（きみ）と共（とも）に　いられたのなら</span><br><span class="line">見（み）たことのない世界（せかい）</span><br><span class="line">見（み）られるような気（き）がして</span><br><span class="line"></span><br><span class="line">いつかこの言葉（ことば）も　伝（つた）わるのなら</span><br><span class="line">空（そら）へ落（お）ちて　しまわぬように</span><br><span class="line">何処（どこ）かの裏（うら）に残（のこ）した思（おも）い出（で）も</span><br><span class="line">宝箱（たからばこ）にしまって</span><br><span class="line"></span><br><span class="line">夕暮夢見（ゆうぐれゆめみ）た</span><br><span class="line">今（いま）はもう望（のぞ）まない夢（ゆめ）</span><br><span class="line">変（か）わってく感覚（かんかく）も</span><br><span class="line">置（お）いてかないように</span><br><span class="line"></span><br><span class="line">未（ま）だ見（み）ぬ不安（ふあん）ならば</span><br><span class="line">立（た）ち止（ど）まればいいの</span><br><span class="line">君（きみ）のその心（こころ）が</span><br><span class="line">あるべき場所（ばしょ）にあればいいよ</span><br><span class="line"></span><br><span class="line">声繋（こえつな）いで　願（ねが）い届（とど）いて</span><br><span class="line">へたくそでも　少（すこ）しずつでも</span><br><span class="line">描（えか）いた想（おも）いも明日（あす）も</span><br><span class="line">ひとつになると信（しん）じて</span><br><span class="line"></span><br><span class="line">いつかその言葉（ことば）も　きっと届（とど）くよ</span><br><span class="line">空（そら）にとけて　忘（わす）れぬように</span><br><span class="line">思（おも）い出（だ）す声（こえ）も色（いろ）も褪（あ）せないように</span><br><span class="line">宝箱（たからばこ）にしまって</span><br><span class="line"></span><br><span class="line">ひとりぼっちにしてほしい僕（ぼく）が</span><br><span class="line">消（き）えてしまいたいと願（ねが）ったあの日（ひ）も</span><br><span class="line">悲（かな）しみで染（そ）まる記憶（きおく）も抱（だ）きしめて</span><br><span class="line">そっと未来（みらい）を書（か）き足（た）すよ</span><br><span class="line"></span><br><span class="line">きっと空落（そらお）ちてく僕（ぼく）を</span><br><span class="line">笑（わら）っている君（きみ）のことも</span><br><span class="line">居（い）ない僕（ぼく）が遺（のこ）せたもの</span><br><span class="line">居（い）ない君（きみ）が伝（つた）えたこと</span><br><span class="line"></span><br><span class="line">この時間（じかん）が　いつか消（き）えても</span><br><span class="line">君（きみ）と共（とも）に　いられたのなら</span><br><span class="line">まだ見（み）えない世界（せかい）も</span><br><span class="line">見（み）られる気（き）がしてるよ</span><br><span class="line"></span><br><span class="line">きっとその想（おも）いも　届（とど）けにゆくよ</span><br><span class="line">もう落（お）として　しまわぬように</span><br><span class="line">芽生（めば）え始（はじ）めた心（こころ）のありったけを</span><br><span class="line">宝箱（たからばこ）にしまって</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;歌曲信息&quot;&gt;&lt;a href=&quot;#歌曲信息&quot; class=&quot;headerlink&quot; title=&quot;歌曲信息&quot;&gt;&lt;/a&gt;歌曲信息&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;歌曲：タカラバコ&lt;/li&gt;
+&lt;li&gt;歌手：ササノマリイ&lt;/li&gt;
+&lt;li&gt;作词：ササノマリイ&lt;/li&gt;
+&lt;li&gt;作曲：ササノマリイ&lt;/li&gt;
+&lt;li&gt;专辑：タカラバコ(期間生産限定盤)（2016年11月30日发行）&lt;/li&gt;
+&lt;li&gt;其他：「夏目友人帳 伍」 OP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;夏目友人帐第五季的OP，挺暖的一首歌。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ニホンゴ" scheme="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/"/>
+    
+      <category term="ウタ" scheme="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/%E3%82%A6%E3%82%BF/"/>
+    
+    
+      <category term="ササノマリイ" scheme="http://tashi711.xyz/tags/%E3%82%B5%E3%82%B5%E3%83%8E%E3%83%9E%E3%83%AA%E3%82%A4/"/>
+    
+      <category term="夏目友人帳" scheme="http://tashi711.xyz/tags/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「Effective C++ (3rd) 第四部分」小结</title>
+    <link href="http://tashi711.xyz/programming/notes/effective-cpp-4/"/>
+    <id>http://tashi711.xyz/programming/notes/effective-cpp-4/</id>
+    <published>2018-10-21T03:17:59.000Z</published>
+    <updated>2018-11-21T15:26:40.156Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Effective-C-3rd"><a href="#Effective-C-3rd" class="headerlink" title="Effective C++ (3rd)"></a>Effective C++ (3rd)</h2><blockquote><ul><li>第四部分：Designs and Declarations</li></ul></blockquote><a id="more"></a><h3 id="第四部分：Designs-and-Declarations"><a href="#第四部分：Designs-and-Declarations" class="headerlink" title="第四部分：Designs and Declarations"></a>第四部分：Designs and Declarations</h3><ul><li><p>shared_ptr支持定制删除器：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">shared_ptr</span>&lt;XXX&gt; create() &#123;</span><br><span class="line">  shared_ptr ret(static_cast&lt;XXX*&gt;(0), getRidOfXXX);</span><br><span class="line">  ret = ...;</span><br><span class="line">  <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>pass-by-reference-to-const是有多态的</p></li><li>pass-by-reference-to-const不适用于内置类型、STL迭代器以及函数对象</li><li>不能返回指针或者引用：局部stack、heap、可能同时需要多个的局部static对象</li><li>不使用protected，因为一旦去掉这个变量，所有派生类都会遭到破坏</li><li>用non-member non-friend函数替换member函数可以增加封装性（更少的代码访问private），将便利函数放在不同文件同一命名空间中</li><li>只有当参数在参数列表中才可能被隐式转换，因此如果需要为某个函数的所有参数（包括被this指针所指的隐喻参数）进行类型转换，这个函数必须是non-member的。</li></ul><p>107</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Effective-C-3rd&quot;&gt;&lt;a href=&quot;#Effective-C-3rd&quot; class=&quot;headerlink&quot; title=&quot;Effective C++ (3rd)&quot;&gt;&lt;/a&gt;Effective C++ (3rd)&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;第四部分：Designs and Declarations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C++" scheme="http://tashi711.xyz/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>「hihoCoder - 1848, 1849」解题报告</title>
@@ -199,10 +289,10 @@
   
   <entry>
     <title>「Γ函数」小结</title>
-    <link href="http://tashi711.xyz/programming/notes/others/gamma-function/"/>
-    <id>http://tashi711.xyz/programming/notes/others/gamma-function/</id>
+    <link href="http://tashi711.xyz/programming/notes/gamma-function/"/>
+    <id>http://tashi711.xyz/programming/notes/gamma-function/</id>
     <published>2018-10-07T04:17:59.000Z</published>
-    <updated>2018-10-07T05:55:00.130Z</updated>
+    <updated>2018-11-21T15:27:06.082Z</updated>
     
     <content type="html"><![CDATA[<h2 id="分治算法复杂度分析"><a href="#分治算法复杂度分析" class="headerlink" title="分治算法复杂度分析"></a>分治算法复杂度分析</h2><p>Γ函数，也叫做伽玛函数（Gamma函数），是阶乘函数在实数与复数域上的扩展。<br>此处给出一些常见结论。</p><a id="more"></a><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对于实数部分为正的复数z，伽玛函数定义为：<br>$$\Gamma(z)=\int_0^{+\infty} {x^{z-1}e^{-x}} \,{\rm d}x$$<br>特别地，对于正实数s&gt;0，伽玛函数定义为：<br>$$\Gamma(s)=\int_0^{+\infty} {x^{s-1}e^{-x}} \,{\rm d}x$$<br>容易得到：<br>$$\Gamma(1)=1$$</p><h3 id="递推结论"><a href="#递推结论" class="headerlink" title="递推结论"></a>递推结论</h3><p>对于正实数s&gt;0：<br>$$\Gamma(s+1)=s\Gamma(s)$$<br>特别地，如果n为非负整数，则：<br>$$\Gamma(n+1)=n!\Gamma(1)=n!$$</p><h3 id="数值性质"><a href="#数值性质" class="headerlink" title="数值性质"></a>数值性质</h3><p>对非正整数，Γ函数没有定义。<br>如果n为非负整数，则：<br>$$\Gamma(\frac{1}{2}+n)=\frac{(2n-1)!!}{2^n}\sqrt{\pi}=\frac{(2n)!}{4^nn!}\sqrt{\pi}$$<br>$$\Gamma(\frac{1}{2}-n)=\frac{(-2)^n}{(2n-1)!!}\sqrt{\pi}=\frac{(-4)^nn!}{(2n)!}\sqrt{\pi}$$<br>特别地，n=0时：<br>$$\Gamma(\frac{1}{2})=\sqrt{\pi}$$<br>一些其他特殊值：<br>$$\Gamma(\frac{3}{2})=\frac{1}{2}\sqrt{\pi}$$<br>$$\Gamma(\frac{5}{2})=\frac{3}{4}\sqrt{\pi}$$<br>$$\Gamma(\frac{7}{2})=\frac{15}{8}\sqrt{\pi}$$<br>$$\Gamma(-\frac{1}{2})=-2\sqrt{\pi}$$<br>$$\Gamma(-\frac{3}{2})=\frac{3}{4}\sqrt{\pi}$$<br>$$\Gamma(-\frac{5}{2})=-\frac{8}{15}\sqrt{\pi}$$</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://zh.wikipedia.org/wiki/%CE%93%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">Γ函数</a></p>]]></content>
     
@@ -216,8 +306,6 @@
     
       <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="其他" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96/"/>
-    
     
       <category term="Γ函数" scheme="http://tashi711.xyz/tags/%CE%93%E5%87%BD%E6%95%B0/"/>
     
@@ -225,10 +313,10 @@
   
   <entry>
     <title>「分治算法」复杂度分析</title>
-    <link href="http://tashi711.xyz/programming/notes/others/divide-and-conquer/"/>
-    <id>http://tashi711.xyz/programming/notes/others/divide-and-conquer/</id>
+    <link href="http://tashi711.xyz/programming/notes/divide-and-conquer/"/>
+    <id>http://tashi711.xyz/programming/notes/divide-and-conquer/</id>
     <published>2018-10-07T03:17:59.000Z</published>
-    <updated>2018-10-06T13:47:24.863Z</updated>
+    <updated>2018-11-21T15:27:14.076Z</updated>
     
     <content type="html"><![CDATA[<h2 id="分治算法复杂度分析"><a href="#分治算法复杂度分析" class="headerlink" title="分治算法复杂度分析"></a>分治算法复杂度分析</h2><p>最近遇到许多分治的算法题，而分治算法的复杂度估计在《数据结构与算法分析》这本书中进行了推导，有兴趣可以跟着推导一下，此处给出结论。</p><a id="more"></a><h3 id="分治方程"><a href="#分治方程" class="headerlink" title="分治方程"></a>分治方程</h3><p>$$T(N) = aT(N/b) + O(N^k\log^pN), (a≥1, b&gt;1, p≥1)$$</p><h3 id="解（结论）"><a href="#解（结论）" class="headerlink" title="解（结论）"></a>解（结论）</h3><p>$$T(N) =<br>\begin{cases}<br>O(N^{\log_ba}), &amp; a&gt;b^k \\<br>O(N^k\log^{p+1}N), &amp; a=b^k \\<br>O(N^k\log^pN), &amp; a&lt;b^k<br>\end{cases}$$</p>]]></content>
     
@@ -241,8 +329,6 @@
       <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="其他" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96/"/>
     
     
       <category term="分治" scheme="http://tashi711.xyz/tags/%E5%88%86%E6%B2%BB/"/>
@@ -613,100 +699,6 @@
     
     
       <category term="动态规划" scheme="http://tashi711.xyz/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「C++ Primer (5th) 第4章」小结</title>
-    <link href="http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-4/"/>
-    <id>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-4/</id>
-    <published>2018-09-11T03:17:59.000Z</published>
-    <updated>2018-09-19T17:50:48.793Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="C-Primer-5th"><a href="#C-Primer-5th" class="headerlink" title="C++ Primer (5th)"></a>C++ Primer (5th)</h2><blockquote><ul><li>第一部分：C++基础</li><li>第4章</li></ul></blockquote><a id="more"></a><h3 id="第一部分：C-基础-第4章"><a href="#第一部分：C-基础-第4章" class="headerlink" title="第一部分：C++基础 (第4章)"></a>第一部分：C++基础 (第4章)</h3><ul><li><code>decltype</code>会判断左值与右值：假设<code>p</code>为<code>int*</code>，那么<code>decltype(*p)</code>为<code>int&amp;</code>，<code>decltype(&amp;p)</code>为<code>int**</code></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;C-Primer-5th&quot;&gt;&lt;a href=&quot;#C-Primer-5th&quot; class=&quot;headerlink&quot; title=&quot;C++ Primer (5th)&quot;&gt;&lt;/a&gt;C++ Primer (5th)&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;第一部分：C++基础&lt;/li&gt;
-&lt;li&gt;第4章&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="C++ Primer" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/C-Primer/"/>
-    
-    
-      <category term="C++" scheme="http://tashi711.xyz/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「C++ Primer (5th) 第3章」小结</title>
-    <link href="http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/"/>
-    <id>http://tashi711.xyz/programming/notes/cpp-primer/cpp-primer-3/</id>
-    <published>2018-09-11T03:17:59.000Z</published>
-    <updated>2018-09-18T17:18:43.143Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="C-Primer-5th"><a href="#C-Primer-5th" class="headerlink" title="C++ Primer (5th)"></a>C++ Primer (5th)</h2><blockquote><ul><li>第一部分：C++基础</li><li>第3章</li></ul></blockquote><a id="more"></a><h3 id="第一部分：C-基础-第3章"><a href="#第一部分：C-基础-第3章" class="headerlink" title="第一部分：C++基础 (第3章)"></a>第一部分：C++基础 (第3章)</h3><ul><li><p>初始化时使用花括号但提供的值不能用来列表初始化，那么就会调用构造函数:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v1&#123;<span class="number">10</span>&#125;; <span class="comment">// 10个元素</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v2(<span class="number">10</span>, <span class="string">"hi"</span>&#125;; <span class="comment">// 10个"hi"</span></span><br></pre></td></tr></table></figure></li><li><p><code>vector&lt;int&gt;</code>的size type为<code>vector&lt;int&gt;::size_type</code></p></li><li>容器是常量只能用const_iterator，不是的话iterator、const_iterator都可以用</li><li>如果对象是常量，begin、end返回const_iterator，否则是iterator，而cbegin、cend永远返回const_iterator</li><li>不能在for中、或者使用迭代器时push_back</li><li>可以相减的迭代器相减结果为difference_type（带符号整数）</li><li>数组不能用auto声明，元素只能是对象不能是引用（与vector一样）</li><li><p>数组的指针与引用：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> (*parr)[<span class="number">10</span>] = &amp;arr;  <span class="comment">// parr指向一个含有10个整数的数组</span></span><br><span class="line"><span class="keyword">int</span> (&amp;rarr)[<span class="number">10</span>] = arr;  <span class="comment">// rarr引用一个含有10个整数的数组</span></span><br><span class="line"><span class="keyword">int</span> *ptrs[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *(&amp;rptrs)[<span class="number">10</span>] = ptrs;  <span class="comment">// rptrs引用一个含有10个指针的数组</span></span><br></pre></td></tr></table></figure></li><li><p>auto 数组：指针</p></li><li>decltype(数组)：含有X个元素的数组</li><li>begin(数组)：指向首元素的指针，end(数组)：指向尾元素下一位置的指针</li><li>尾指针不能自增，指向之后的指针会出错</li><li>指针相减的type为ptrdiff_t，带符号</li><li>内置下标运算时有符的，标准库是无符的</li><li>c_str返回的的数组不一定一直有效，需拷贝</li><li>令<code>int a[3][4]</code>：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  <span class="comment">// c: 引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  <span class="comment">// c: 非引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> c : r) &#123;</span><br><span class="line">  <span class="comment">// 无法编译，因为r为int*，那么内层循环没有意义</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  <span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = begin(a); p != end(a); ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = begin(*p); q != end(*p); ++q) &#123;</span><br><span class="line">  <span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">using</span> ia = <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ia[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">for</span> (ia *p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> *q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  <span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;C-Primer-5th&quot;&gt;&lt;a href=&quot;#C-Primer-5th&quot; class=&quot;headerlink&quot; title=&quot;C++ Primer (5th)&quot;&gt;&lt;/a&gt;C++ Primer (5th)&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;第一部分：C++基础&lt;/li&gt;
-&lt;li&gt;第3章&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="C++ Primer" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/C-Primer/"/>
-    
-    
-      <category term="C++" scheme="http://tashi711.xyz/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「Effective C++ (3rd) 第一、二、三部分」小结</title>
-    <link href="http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/"/>
-    <id>http://tashi711.xyz/programming/notes/effective-cpp/effective-cpp/</id>
-    <published>2018-09-08T03:17:59.000Z</published>
-    <updated>2018-09-20T18:08:14.747Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Effective-C-3rd"><a href="#Effective-C-3rd" class="headerlink" title="Effective C++ (3rd)"></a>Effective C++ (3rd)</h2><blockquote><ul><li>第一部分：Accustoming Yourself to C++</li><li>第二部分：Constructors, Destructors, and Assignment Operators</li><li>第三部分：Resource Management</li></ul></blockquote><a id="more"></a><h3 id="第一部分：Accustoming-Yourself-to-C"><a href="#第一部分：Accustoming-Yourself-to-C" class="headerlink" title="第一部分：Accustoming Yourself to C++"></a>第一部分：Accustoming Yourself to C++</h3><ul><li><p>使用enum定义常数不占空间：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">enum</span> &#123; Num = <span class="number">5</span> &#125;;</span><br><span class="line">  <span class="keyword">int</span> a[Num];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p><code>const xxx::iterator</code>相当于<code>T* const</code>，<code>xxx::const_iterator</code>相当于<code>const T*</code></p></li><li>mutable成员变量可以在const成员变量中改变</li><li><p>const与non-const成员函数避免代码重复，non-const调用const：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TextBlock</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">char</span>&amp; <span class="keyword">operator</span>[](<span class="built_in">std</span>::<span class="keyword">size_t</span> position) <span class="keyword">const</span> <span class="comment">// same as before</span></span><br><span class="line">  &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> text[position];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span>&amp; <span class="keyword">operator</span>[](<span class="built_in">std</span>::<span class="keyword">size_t</span> position) <span class="comment">// now just calls const op[]</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">      <span class="keyword">const_cast</span>&lt;<span class="keyword">char</span>&amp;&gt;( <span class="comment">// cast away const on op[]’s return type;</span></span><br><span class="line">        <span class="keyword">static_cast</span>&lt;<span class="keyword">const</span> TextBlock&amp;&gt;(*<span class="keyword">this</span>) <span class="comment">// add const to *this’s type;</span></span><br><span class="line">          [position] <span class="comment">// call const version of op[]</span></span><br><span class="line">      );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><p>成员变量总是以声明顺序初始化，与初始化列表顺序无关</p></li><li>因为跨编译单元初始化顺序问题，用local static代替non-local static对象</li></ul><h3 id="第二部分：Constructors-Destructors-and-Assignment-Operators"><a href="#第二部分：Constructors-Destructors-and-Assignment-Operators" class="headerlink" title="第二部分：Constructors, Destructors, and Assignment Operators"></a>第二部分：Constructors, Destructors, and Assignment Operators</h3><ul><li>内含引用成员或const成员的类不能自动生成拷贝赋值函数</li><li>如果基类的拷贝赋值函数是为私有的，派生类不会自动生成拷贝赋值函数</li><li>为了删除自动生成的成员函数，可以声明为private或者继承有这样private成员函数的类</li><li>一般，类中有至少一个virtual时才把析构声明成virtual</li><li>使用纯虚析构可以让类成为纯虚类，但必须有虚构函数的定义</li><li>某些不是为了多态的基类（比如上面说的将成员函数声明为private来删除自动生成的成员函数）不应该声明virtual的析构。</li><li>析构函数不能抛出异常，如果析构函数中被调用的函数抛出异常，析构函数应该捕捉到，吞下它（不传播）或者结束程序（<code>std::abort()</code>）</li><li>构造、析构函数类不要调用virtual函数或者调用了virtual函数的函数，因为在子类构造时会先构造父类，此时virtual以及dynamic_cast都是父类的，为了防止访问还没有初始化的子类local的成员变量，析构同理</li><li>构造中使用的函数声明为static，防止使用未初始化的成员变量</li><li>赋值操作符返回<code>*this</code>的引用</li><li>确保赋值操作符在自我赋值时不会出错（比较两个对象的地址、先复制后delete、copy-and-swap）</li><li>copying函数（copy构造和copy赋值）应该确保base class的部分也复制</li><li>copy赋值函数中基类的赋值：<code>Base::operator=(rhs)</code></li><li>在某个copying函数里面不能调用另一个copying函数（可以写第三个函数、两者共同调用）</li></ul><h3 id="第三部分：Resource-Management"><a href="#第三部分：Resource-Management" class="headerlink" title="第三部分：Resource Management"></a>第三部分：Resource Management</h3><ul><li>RAII: auto_ptr（copy后指向null）、shared_ptr，这两者不能用于数组，因为是delete操作而不是delete[]操作</li><li>RAII的copy时要复制其管理的资源，可以：1、禁止复制（private）；2、引用计数（shared_ptr）；3、深度复制；4、转交拥有权（auto_ptr）</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Effective-C-3rd&quot;&gt;&lt;a href=&quot;#Effective-C-3rd&quot; class=&quot;headerlink&quot; title=&quot;Effective C++ (3rd)&quot;&gt;&lt;/a&gt;Effective C++ (3rd)&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;第一部分：Accustoming Yourself to C++&lt;/li&gt;
-&lt;li&gt;第二部分：Constructors, Destructors, and Assignment Operators&lt;/li&gt;
-&lt;li&gt;第三部分：Resource Management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="读书笔记" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Effective C++" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective-C/"/>
-    
-    
-      <category term="C++" scheme="http://tashi711.xyz/tags/C/"/>
     
   </entry>
   
