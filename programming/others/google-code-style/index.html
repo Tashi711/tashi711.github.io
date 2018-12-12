@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/3.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/2.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Google,C++," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Google C++ Style Guide刚进公司的时候看过一遍、现在需要重新再学习一下、顺便写点笔记。（如果记得没错的话这份文档的名字改过了、以前叫coding style、现在叫style guide了）。对于一些平时一直习惯使用的（比如#define保护）以及一些不推荐使用但是基本不会用到的（比如前置声明）就不再赘述了。下面附上链接：  英文版链接 中文版链接">
+<meta name="keywords" content="Google,C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「Google C++ Style Guide」小结">
+<meta property="og:url" content="http://tashi711.xyz/programming/others/google-code-style/index.html">
+<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:description" content="Google C++ Style Guide刚进公司的时候看过一遍、现在需要重新再学习一下、顺便写点笔记。（如果记得没错的话这份文档的名字改过了、以前叫coding style、现在叫style guide了）。对于一些平时一直习惯使用的（比如#define保护）以及一些不推荐使用但是基本不会用到的（比如前置声明）就不再赘述了。下面附上链接：  英文版链接 中文版链接">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-12T16:42:29.633Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「Google C++ Style Guide」小结">
+<meta name="twitter:description" content="Google C++ Style Guide刚进公司的时候看过一遍、现在需要重新再学习一下、顺便写点笔记。（如果记得没错的话这份文档的名字改过了、以前叫coding style、现在叫style guide了）。对于一些平时一直习惯使用的（比如#define保护）以及一些不推荐使用但是基本不会用到的（比如前置声明）就不再赘述了。下面附上链接：  英文版链接 中文版链接">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'ICEDL16U0X',
+      apiKey: '5c42d4ba7a4b37462a336dfe67fe7c95',
+      indexName: 'Tashi711',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"请输入关键字","hits_empty":"没有找到与「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://tashi711.xyz/programming/others/google-code-style/"/>
+
+
+
+
+
+  <title>「Google C++ Style Guide」小结 | Tashi711的博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9b0ac071ec6b80a9aaca551f4f40725d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tashi711的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">過去（きのう）に傷付きながらも、信じ続ける理想（ゆめ）を求める。いつか無限（なないろ）に輝き放って、青空（そら）に橋を描く。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-comment">
+          <a href="/comment/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/others/google-code-style/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">「Google C++ Style Guide」小结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T11:17:59+08:00">
+                2018-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/others/google-code-style/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/google-code-style/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/others/google-code-style/" class="leancloud_visitors" data-flag-title="「Google C++ Style Guide」小结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Google-C-Style-Guide"><a href="#Google-C-Style-Guide" class="headerlink" title="Google C++ Style Guide"></a>Google C++ Style Guide</h2><p>刚进公司的时候看过一遍、现在需要重新再学习一下、顺便写点笔记。<br>（如果记得没错的话这份文档的名字改过了、以前叫coding style、现在叫style guide了）。<br>对于一些平时一直习惯使用的（比如#define保护）以及一些不推荐使用但是基本不会用到的（比如前置声明）就不再赘述了。<br>下面附上链接：</p>
+<ul>
+<li><a href="http://google.github.io/styleguide/cppguide.html" target="_blank" rel="noopener">英文版链接</a></li>
+<li><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">中文版链接</a></li>
+</ul>
+<a id="more"></a>
+<h3 id="include的路径及顺序"><a href="#include的路径及顺序" class="headerlink" title="#include的路径及顺序"></a>#include的路径及顺序</h3><p>项目内头文件应按照项目源代码目录树结构排列, 避免使用 UNIX 特殊的快捷目录 . (当前目录) 或 .. (上级目录)。<br>xxx.cc 中包含头文件的次序如下(按字母顺序分别对每种类型的头文件进行二次排序):</p>
+<ol>
+<li>xxx.h</li>
+<li>C 系统文件</li>
+<li>C++ 系统文件</li>
+<li>其他库的 .h 文件</li>
+<li>本项目内 .h 文件</li>
+</ol>
+<p>举例来说, google-awesome-project/src/foo/internal/fooserver.cc 的包含次序如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;foo/public/fooserver.h&quot; // 优先位置</span><br><span class="line"></span><br><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line"></span><br><span class="line">#include &lt;hash_map&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line"></span><br><span class="line">#include &quot;base/basictypes.h&quot;</span><br><span class="line">#include &quot;base/commandlineflags.h&quot;</span><br><span class="line">#include &quot;foo/public/bar.h&quot;</span><br></pre></td></tr></table></figure>
+<p>例外：有时平台特定代码需要条件编译，这些代码可以放到其它 includes 之后，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;foo/public/fooserver.h&quot;</span><br><span class="line"></span><br><span class="line">#include &quot;base/port.h&quot;  // For LANG_CXX11.</span><br><span class="line"></span><br><span class="line">#ifdef LANG_CXX11</span><br><span class="line">#include &lt;initializer_list&gt;</span><br><span class="line">#endif  // LANG_CXX11</span><br></pre></td></tr></table></figure>
+<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><p>不应该使用 using 指示引入整个命名空间的标识符号。比如：using namespace xxx。</p>
+<p>不要在头文件中使用命名空间别名除非显式标记内部命名空间使用。<br>因为任何在头文件中引入的命名空间都会成为公开API的一部分。<br>在 .cc 中使用别名缩短常用的命名空间，比如：namespace baz = ::foo::bar::baz;<br>如果要在 .h 中使用，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 在 .h 中使用别名缩短常用的命名空间</span><br><span class="line">namespace librarian &#123;</span><br><span class="line">namespace impl &#123;  // 仅限内部使用</span><br><span class="line">namespace sidetable = ::pipeline_diagnostics::sidetable;</span><br><span class="line">&#125;  // namespace impl</span><br><span class="line"></span><br><span class="line">inline void my_inline_function() &#123;</span><br><span class="line">  // 限制在一个函数中的命名空间别名</span><br><span class="line">  namespace baz = ::foo::bar::baz;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line">&#125;  // namespace librarian</span><br></pre></td></tr></table></figure>
+<p>注意：所有置于匿名命名空间的声明都具有内部链接性，<br>函数和变量可以经由声明为 static 拥有内部链接性。<br>这意味着你在这个文件中声明的这些标识符都不能在另一个文件中被访问。<br>即使两个文件声明了完全一样名字的标识符，它们所指向的实体实际上是完全不同的。<br>因此：推荐、鼓励在 .cc 中对于不需要在其他地方引用的标识符使用内部链接性声明，<br>但是不要在 .h 中使用。</p>
+<p>另外举例而言，对于头文件 myproject/foo_bar.h , 应当使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">namespace myproject &#123;</span><br><span class="line">namespace foo_bar &#123;</span><br><span class="line">void Function1();</span><br><span class="line">void Function2();</span><br><span class="line">&#125;  // namespace foo_bar</span><br><span class="line">&#125;  // namespace myproject</span><br></pre></td></tr></table></figure>
+<p>而非</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">namespace myproject &#123;</span><br><span class="line">class FooBar &#123;</span><br><span class="line"> public:</span><br><span class="line">  static void Function1();</span><br><span class="line">  static void Function2();</span><br><span class="line">&#125;;</span><br><span class="line">&#125;  // namespace myproject</span><br></pre></td></tr></table></figure>
+<p>注意：禁止定义静态储存周期非POD变量。</p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>构造函数不得调用虚函数, 考虑使用明确的 Init() 方法或使用工厂模式。</p>
+<p>在类型定义中, 类型转换运算符和单参数构造函数都应当用 explicit 进行标记。<br>例外： 拷贝和移动构造函数不应当被标记为 explicit, 因为它们并不执行类型转换。<br>不能以一个参数进行调用的构造函数不应当加上 explicit。<br>接受一个 std::initializer_list 作为参数的构造函数也应当省略 explicit，<br>以便支持拷贝初始化 (例如 MyType m = {1, 2};) 。</p>
+<p>所有继承必须是 public 的。<br>对于重载的虚函数或虚析构函数, 使用 override,<br>或 (较不常用的) final 关键字显式地进行标记。</p>
+<p>声明顺序：<br>类型 (包括 typedef, using 和嵌套的结构体与类),<br>常量<br>工厂函数<br>构造函数<br>赋值运算符<br>析构函数<br>其它函数<br>数据成员</p>
+<p>接口类类名以 Interface 为后缀, 除提供带实现的虚析构函数。<br>静态成员函数外, 其他均为纯虚函数, 不定义非静态数据成员。<br>不提供构造函数, 提供的话, 声明为 protected。</p>
+<h3 id="列表初始化"><a href="#列表初始化" class="headerlink" title="列表初始化"></a>列表初始化</h3><p>一些trick：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// Vector 接收了一个初始化列表。</span><br><span class="line">vector&lt;string&gt; v&#123;&quot;foo&quot;, &quot;bar&quot;&#125;;</span><br><span class="line"></span><br><span class="line">// 不考虑细节上的微妙差别，大致上相同。</span><br><span class="line">// 您可以任选其一。</span><br><span class="line">vector&lt;string&gt; v = &#123;&quot;foo&quot;, &quot;bar&quot;&#125;;</span><br><span class="line"></span><br><span class="line">// 可以配合 new 一起用。</span><br><span class="line">auto p = new vector&lt;string&gt;&#123;&quot;foo&quot;, &quot;bar&quot;&#125;;</span><br><span class="line"></span><br><span class="line">// map 接收了一些 pair, 列表初始化大显神威。</span><br><span class="line">map&lt;int, string&gt; m = &#123;&#123;1, &quot;one&quot;&#125;, &#123;2, &quot;2&quot;&#125;&#125;;</span><br><span class="line"></span><br><span class="line">// 初始化列表也可以用在返回类型上的隐式转换。</span><br><span class="line">vector&lt;int&gt; test_function() &#123; return &#123;1, 2, 3&#125;; &#125;</span><br><span class="line"></span><br><span class="line">// 初始化列表可迭代。</span><br><span class="line">for (int i : &#123;-1, -2, -3&#125;) &#123;&#125;</span><br><span class="line"></span><br><span class="line">// 在函数调用里用列表初始化。</span><br><span class="line">void TestFunction2(vector&lt;int&gt; v) &#123;&#125;</span><br><span class="line">TestFunction2(&#123;1, 2, 3&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>用户自定义 std::initializer_list<t> ：</t></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class MyType &#123;</span><br><span class="line"> public:</span><br><span class="line">  // std::initializer_list 专门接收 init 列表。</span><br><span class="line">  // 得以值传递。</span><br><span class="line">  MyType(std::initializer_list&lt;int&gt; init_list) &#123;</span><br><span class="line">    for (int i : init_list) append(i);</span><br><span class="line">  &#125;</span><br><span class="line">  MyType&amp; operator=(std::initializer_list&lt;int&gt; init_list) &#123;</span><br><span class="line">    clear();</span><br><span class="line">    for (int i : init_list) append(i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">MyType m&#123;2, 3, 5, 7&#125;;</span><br></pre></td></tr></table></figure>
+<p>列表初始化也适用于常规数据类型的构造，<br>哪怕没有接收 std::initializer_list<t> 的构造函数：</t></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">double d&#123;1.23&#125;;</span><br><span class="line">// MyOtherType 没有 std::initializer_list 构造函数，</span><br><span class="line"> // 直接上接收常规类型的构造函数。</span><br><span class="line">class MyOtherType &#123;</span><br><span class="line"> public:</span><br><span class="line">  explicit MyOtherType(string);</span><br><span class="line">  MyOtherType(int, string);</span><br><span class="line">&#125;;</span><br><span class="line">MyOtherType m = &#123;1, &quot;b&quot;&#125;;</span><br><span class="line">// 不过如果构造函数是显式的（explict），您就不能用 `= &#123;&#125;` 了。</span><br><span class="line">MyOtherType m&#123;&quot;b&quot;&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.xyz/programming/others/google-code-style/" title="「Google C++ Style Guide」小结">http://tashi711.xyz/programming/others/google-code-style/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Google/" rel="tag"># Google</a>
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/nihongo/benkyou/condition/" rel="next" title="「日语条件表达方式」小结">
+                <i class="fa fa-chevron-left"></i> 「日语条件表达方式」小结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/nihongo/uta/kamikaze-ekusupuresu/" rel="prev" title="「焚吐 / みやかわくん - 神風エクスプレス」">
+                「焚吐 / みやかわくん - 神風エクスプレス」 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/Tashi711.jpg"
+                alt="Tashi711" />
+            
+              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-C-Style-Guide"><span class="nav-number">1.</span> <span class="nav-text">Google C++ Style Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#include的路径及顺序"><span class="nav-number">1.1.</span> <span class="nav-text">#include的路径及顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间"><span class="nav-number">1.2.</span> <span class="nav-text">命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类"><span class="nav-number">1.3.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表初始化"><span class="nav-number">1.4.</span> <span class="nav-text">列表初始化</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
