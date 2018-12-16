@@ -4,6 +4,83 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/nihongo/uta/yasudarei-kiminouta/</loc>
+    <lastmod>2018-12-16T11:24:57.247Z</lastmod>
+    <data>
+        <display>
+        <title>「安田レイ - きみのうた」</title>
+        <pubTime>2018-12-16T11:03:54.000Z</pubTime>
+        
+        <tag>夏目友人帳</tag>
+         
+        <tag>安田レイ</tag>
+         
+         
+           
+             
+              <breadCrumb title="ニホンゴ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/"/>
+          
+             
+              <breadCrumb title="ウタ" url="http://tashi711.xyz/categories/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B4/%E3%82%A6%E3%82%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-42/</loc>
+    <lastmod>2018-12-16T11:02:59.432Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 42. Trapping Rain Water」解题报告</title>
+        <pubTime>2018-12-16T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-32/</loc>
+    <lastmod>2018-12-12T17:28:24.646Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 32. Longest Valid Parentheses」解题报告</title>
+        <pubTime>2018-12-13T03:57:02.000Z</pubTime>
+        
+        <tag>思考题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-10/</loc>
     <lastmod>2018-12-12T17:23:25.014Z</lastmod>
     <data>
@@ -472,32 +549,6 @@
         <tag>链表</tag>
          
         <tag>优先队列</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-32/</loc>
-    <lastmod>2018-12-12T17:20:58.348Z</lastmod>
-    <data>
-        <display>
-        <title>「LeetCode 32. Longest Valid Parentheses」解题报告</title>
-        <pubTime>2018-12-13T03:57:02.000Z</pubTime>
-        
-        <tag>思考题</tag>
          
          
            

@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="题目信息  链接：LeetCode 23. Merge k Sorted Lists 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1:输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2:输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
+<meta name="description" content="题目信息  链接：LeetCode 32. Longest Valid Parentheses 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2: 输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
 <meta name="keywords" content="思考题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「LeetCode 32. Longest Valid Parentheses」解题报告">
 <meta property="og:url" content="http://tashi711.xyz/programming/reports/leetcode/leetcode-32/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="题目信息  链接：LeetCode 23. Merge k Sorted Lists 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1:输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2:输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
+<meta property="og:description" content="题目信息  链接：LeetCode 32. Longest Valid Parentheses 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2: 输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T17:20:58.348Z">
+<meta property="og:updated_time" content="2018-12-12T17:28:24.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「LeetCode 32. Longest Valid Parentheses」解题报告">
-<meta name="twitter:description" content="题目信息  链接：LeetCode 23. Merge k Sorted Lists 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1:输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2:输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
+<meta name="twitter:description" content="题目信息  链接：LeetCode 32. Longest Valid Parentheses 来源：LeetCode 难度：Hard   题目分析描述给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。 示例 1: 输入: “(()”输出: 2解释: 最长有效括号子串为 “()” 示例 2: 输入: “)()())”输出: 4解释: 最长有效括号子串为 “()()”">
 
 
 
@@ -457,14 +457,16 @@
       
         <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank" rel="noopener">LeetCode 23. Merge k Sorted Lists</a></li>
+<li>链接：<a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank" rel="noopener">LeetCode 32. Longest Valid Parentheses</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
 <h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。</p>
-<p><strong>示例 1:</strong><br>输入: “(()”<br>输出: 2<br>解释: 最长有效括号子串为 “()”</p>
-<p><strong>示例 2:</strong><br>输入: “)()())”<br>输出: 4<br>解释: 最长有效括号子串为 “()()”</p>
+<p><strong>示例 1:</strong></p>
+<p>输入: “(()”<br>输出: 2<br>解释: 最长有效括号子串为 “()”</p>
+<p><strong>示例 2:</strong></p>
+<p>输入: “)()())”<br>输出: 4<br>解释: 最长有效括号子串为 “()()”</p>
 <a id="more"></a>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>基本按照官方题解走就行了，对于额外优化空间不考虑的话，推荐栈的做法。<br>考虑一个子问题：假如知道起点，那么从起点开始扫，看到‘(’就++，‘)’就--，减到负数停止。<br>那么枚举起点，就有了一个n方的算法，也是我最先能想到的，官方题解直接忽略了这个级别的复杂度。<br>其实最后优化空间的做法就是在这个算法的基础上，某些子串因为‘(’过多而计算不到。<br>那么这些子串在反向扫的时候一定能算到，因此只需做来回两次扫描。<br>每次不光以最开始为起点，如果中间断掉了，新的‘(’开始也要继续扫下去，最优解一定在这种情况下能找到。<br>下面的解法换一种记录方式，也就是官方题解中left与right的差，与起始位置。</p>
 <h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为$O(N)$。<br>（额外）空间复杂度为$O(1)$。</p>
@@ -526,6 +528,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/programming/reports/leetcode/leetcode-42/" rel="prev" title="「LeetCode 42. Trapping Rain Water」解题报告">
+                「LeetCode 42. Trapping Rain Water」解题报告 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -609,7 +615,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -631,7 +637,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
