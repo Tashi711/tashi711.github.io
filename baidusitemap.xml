@@ -4,8 +4,83 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/dsaa/kmp/</loc>
+    <lastmod>2018-12-23T10:35:29.393Z</lastmod>
+    <data>
+        <display>
+        <title>「KMP算法」浅析</title>
+        <pubTime>2018-12-23T03:17:59.000Z</pubTime>
+        
+        <tag>KMP</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-72/</loc>
+    <lastmod>2018-12-22T17:14:33.712Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 72. Edit Distance」解题报告</title>
+        <pubTime>2018-12-23T03:57:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-952/</loc>
+    <lastmod>2018-12-21T17:43:15.436Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 952. Largest Component Size by Common Factor」解题报告</title>
+        <pubTime>2018-12-22T14:57:02.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-956/</loc>
-    <lastmod>2018-12-16T14:42:39.922Z</lastmod>
+    <lastmod>2018-12-21T17:18:59.169Z</lastmod>
     <data>
         <display>
         <title>「LeetCode 956. Tallest Billboard」解题报告</title>
