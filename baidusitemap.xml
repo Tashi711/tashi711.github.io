@@ -4,6 +4,84 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-97/</loc>
+    <lastmod>2018-12-24T17:24:20.384Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 97. Interleaving String」解题报告</title>
+        <pubTime>2018-12-25T03:57:03.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-84/</loc>
+    <lastmod>2018-12-24T16:51:48.110Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 84. Largest Rectangle in Histogram」解题报告</title>
+        <pubTime>2018-12-25T03:57:02.000Z</pubTime>
+        
+        <tag>思考题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-76/</loc>
+    <lastmod>2018-12-23T15:02:14.459Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 76. Minimum Window Substring」解题报告</title>
+        <pubTime>2018-12-23T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/dsaa/kmp/</loc>
     <lastmod>2018-12-23T10:35:29.393Z</lastmod>
     <data>
