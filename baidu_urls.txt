@@ -1,7 +1,8 @@
+http://tashi711.xyz/programming/reports/leetcode/leetcode-128/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-97/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-84/
-http://tashi711.xyz/programming/reports/leetcode/leetcode-76/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-72/
+http://tashi711.xyz/programming/reports/leetcode/leetcode-76/
 http://tashi711.xyz/programming/dsaa/kmp/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-952/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-956/
