@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="C++ Primer (5th)  第一部分：C++基础 第1、2章">
+<meta name="description" content="Effective C++ (3rd)  第一部分：Accustoming Yourself to C++ 第二部分：Constructors, Destructors, and Assignment Operators 第三部分：Resource Management 第四部分：Designs and Declarations（部分） 其他">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「C++ Primer (5th) 第1、2章」小结">
-<meta property="og:url" content="http://tashi711.xyz/programming/others/cpp-primer-1-2/index.html">
+<meta property="og:title" content="「Effective C++ (3rd)」简单小结">
+<meta property="og:url" content="http://tashi711.xyz/programming/others/effective-cpp-note/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="C++ Primer (5th)  第一部分：C++基础 第1、2章">
+<meta property="og:description" content="Effective C++ (3rd)  第一部分：Accustoming Yourself to C++ 第二部分：Constructors, Destructors, and Assignment Operators 第三部分：Resource Management 第四部分：Designs and Declarations（部分） 其他">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T16:42:16.648Z">
+<meta property="og:updated_time" content="2018-12-27T16:26:07.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「C++ Primer (5th) 第1、2章」小结">
-<meta name="twitter:description" content="C++ Primer (5th)  第一部分：C++基础 第1、2章">
+<meta name="twitter:title" content="「Effective C++ (3rd)」简单小结">
+<meta name="twitter:description" content="Effective C++ (3rd)  第一部分：Accustoming Yourself to C++ 第二部分：Constructors, Destructors, and Assignment Operators 第三部分：Resource Management 第四部分：Designs and Declarations（部分） 其他">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://tashi711.xyz/programming/others/cpp-primer-1-2/"/>
+  <link rel="canonical" href="http://tashi711.xyz/programming/others/effective-cpp-note/"/>
 
 
 
 
 
-  <title>「C++ Primer (5th) 第1、2章」小结 | Tashi711的博客</title>
+  <title>「Effective C++ (3rd)」简单小结 | Tashi711的博客</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/others/cpp-primer-1-2/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/others/effective-cpp-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「C++ Primer (5th) 第1、2章」小结</h1>
+          <h1 class="post-title" itemprop="name headline">「Effective C++ (3rd)」简单小结</h1>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T11:17:59+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T11:17:59+08:00">
+                2018-09-08
               </time>
             
 
@@ -404,8 +404,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/others/cpp-primer-1-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-primer-1-2/" itemprop="commentCount"></span>
+                <a href="/programming/others/effective-cpp-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/effective-cpp-note/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -413,7 +413,7 @@
 
           
           
-             <span id="/programming/others/cpp-primer-1-2/" class="leancloud_visitors" data-flag-title="「C++ Primer (5th) 第1、2章」小结">
+             <span id="/programming/others/effective-cpp-note/" class="leancloud_visitors" data-flag-title="「Effective C++ (3rd)」简单小结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,56 +444,66 @@
       
 
       
-        <h2 id="C-Primer-5th"><a href="#C-Primer-5th" class="headerlink" title="C++ Primer (5th)"></a>C++ Primer (5th)</h2><blockquote>
+        <h2 id="Effective-C-3rd"><a href="#Effective-C-3rd" class="headerlink" title="Effective C++ (3rd)"></a>Effective C++ (3rd)</h2><blockquote>
 <ul>
-<li>第一部分：C++基础</li>
-<li>第1、2章</li>
+<li>第一部分：Accustoming Yourself to C++</li>
+<li>第二部分：Constructors, Destructors, and Assignment Operators</li>
+<li>第三部分：Resource Management</li>
+<li>第四部分：Designs and Declarations（部分）</li>
+<li>其他</li>
 </ul>
 </blockquote>
 <a id="more"></a>
-<h3 id="第一部分：C-基础-第1、2章"><a href="#第一部分：C-基础-第1、2章" class="headerlink" title="第一部分：C++基础 (第1、2章)"></a>第一部分：C++基础 (第1、2章)</h3><ul>
-<li>char不一定是signed char，可能是unsigned char</li>
-<li>double有时比float效率更高</li>
-<li>给一个无符号类型赋值超过其表示范围，得到的是取余的结果，但对有符号类型而言结果未定义，且程序可能崩溃</li>
-<li>int与unsigned int的算术运算得到的是unsigned int</li>
-<li>十进制的字面类型是int，八进制、十六进制的字面类型是能容纳其数值的int、unsigned int、long、unsigned long、long long、unsigned long long中尺寸最小者</li>
-<li>初始化列表在存在信息丢失的风险时编译器会报错</li>
-<li><p>显式访问全局变量：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; ::x &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 输出1</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第一部分：Accustoming-Yourself-to-C"><a href="#第一部分：Accustoming-Yourself-to-C" class="headerlink" title="第一部分：Accustoming Yourself to C++"></a>第一部分：Accustoming Yourself to C++</h3><ul>
+<li><p>使用enum定义常数不占空间：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">enum</span> &#123; Num = <span class="number">5</span> &#125;;</span><br><span class="line">  <span class="keyword">int</span> a[Num];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>指针的引用：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line"><span class="keyword">int</span> *&amp;r = p;</span><br></pre></td></tr></table></figure>
+<li><p><code>const xxx::iterator</code>相当于<code>T* const</code>，<code>xxx::const_iterator</code>相当于<code>const T*</code></p>
 </li>
-<li><p>如果想在多个文件间共享const对象，必须在变量定义前也添加extern</p>
+<li>mutable成员变量可以在const成员变量中改变</li>
+<li><p>const与non-const成员函数避免代码重复，non-const调用const：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TextBlock</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">char</span>&amp; <span class="keyword">operator</span>[](<span class="built_in">std</span>::<span class="keyword">size_t</span> position) <span class="keyword">const</span> <span class="comment">// same as before</span></span><br><span class="line">  &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> text[position];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span>&amp; <span class="keyword">operator</span>[](<span class="built_in">std</span>::<span class="keyword">size_t</span> position) <span class="comment">// now just calls const op[]</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">      <span class="keyword">const_cast</span>&lt;<span class="keyword">char</span>&amp;&gt;( <span class="comment">// cast away const on op[]’s return type;</span></span><br><span class="line">        <span class="keyword">static_cast</span>&lt;<span class="keyword">const</span> TextBlock&amp;&gt;(*<span class="keyword">this</span>) <span class="comment">// add const to *this’s type;</span></span><br><span class="line">          [position] <span class="comment">// call const version of op[]</span></span><br><span class="line">      );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
-<li>非常量引用不能指向常量对象</li>
-<li><p>引用的特殊情况：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r1 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r2 = r1 * <span class="number">2</span>;</span><br><span class="line"><span class="keyword">double</span> y = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r3 = y; <span class="comment">// 等价于 const int t = y; const int &amp;r3 = t;</span></span><br></pre></td></tr></table></figure>
+<li><p>成员变量总是以声明顺序初始化，与初始化列表顺序无关</p>
 </li>
-<li><p>顶层（top-level）const：指针等任意对象本身是常量</p>
-</li>
-<li>底层（low-level）const：指针所指的（包括引用）对象是const</li>
-<li><code>constexpr int *q = nullptr</code>中q是一个指向整数的常量指针（与<code>const int *q</code>不同）</li>
-<li><p>constexpr也可以指向常量：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keyword">int</span> *p = &amp;i;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>typedef指针后const是常量指针而不是指向常量的指针</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> *p;</span><br><span class="line"><span class="keyword">const</span> p c; 等价于 <span class="keyword">char</span> *<span class="keyword">const</span> c;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>auto能在一条语句中声明多个变量，但只能是同一个：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> i = <span class="number">1</span>, *p = &amp;i; <span class="comment">// yes</span></span><br><span class="line"><span class="keyword">auto</span> j = <span class="number">2</span>, k = <span class="number">3.14</span>; <span class="comment">// no</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>auto引用是引用对象的类型:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>, &amp;r = i;</span><br><span class="line"><span class="keyword">auto</span> a = r; <span class="comment">// a是一个整数</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>auto会忽略顶层const，保留底层const：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = i, &amp;cr = ci;</span><br><span class="line"><span class="keyword">auto</span> b = ci; <span class="comment">// b是一个整数</span></span><br><span class="line"><span class="keyword">auto</span> c = cr; <span class="comment">// c是一个整数</span></span><br><span class="line"><span class="keyword">auto</span> d = &amp;i <span class="comment">// d是一个整型指针</span></span><br><span class="line"><span class="keyword">auto</span> e = &amp;ci <span class="comment">// e是一个指向整数常量的指针</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> f = ci <span class="comment">// f是const int</span></span><br><span class="line"><span class="keyword">auto</span> &amp;n = i, *p = &amp;ci <span class="comment">// 是错的，因为i推演是int，&amp;ci推演是const int</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>const int ci = 1, &amp;cj = ci;</code>中，<code>decltype(ci)</code>是const int、<code>decltype(cj)</code>是const int&amp;</p>
-</li>
-<li><code>int i = 1, *p = &amp;i, &amp;r = i;</code>中，<code>decltype(r + 0)</code>是int、<code>decltype(*p)</code>是int&amp;</li>
-<li>如果给变量加上括号编译器会把其变为表达式，则会变为引用类型：<code>decltype(i)</code>是int，<code>decltype((i))</code>是int&amp;</li>
+<li>因为跨编译单元初始化顺序问题，用local static代替non-local static对象</li>
 </ul>
+<h3 id="第二部分：Constructors-Destructors-and-Assignment-Operators"><a href="#第二部分：Constructors-Destructors-and-Assignment-Operators" class="headerlink" title="第二部分：Constructors, Destructors, and Assignment Operators"></a>第二部分：Constructors, Destructors, and Assignment Operators</h3><ul>
+<li>内含引用成员或const成员的类不能自动生成拷贝赋值函数</li>
+<li>如果基类的拷贝赋值函数是为私有的，派生类不会自动生成拷贝赋值函数</li>
+<li>为了删除自动生成的成员函数，可以声明为private或者继承有这样private成员函数的类</li>
+<li>一般，类中有至少一个virtual时才把析构声明成virtual</li>
+<li>使用纯虚析构可以让类成为纯虚类，但必须有虚构函数的定义</li>
+<li>某些不是为了多态的基类（比如上面说的将成员函数声明为private来删除自动生成的成员函数）不应该声明virtual的析构。</li>
+<li>析构函数不能抛出异常，如果析构函数中被调用的函数抛出异常，析构函数应该捕捉到，吞下它（不传播）或者结束程序（<code>std::abort()</code>）</li>
+<li>构造、析构函数类不要调用virtual函数或者调用了virtual函数的函数，因为在子类构造时会先构造父类，此时virtual以及dynamic_cast都是父类的，为了防止访问还没有初始化的子类local的成员变量，析构同理</li>
+<li>构造中使用的函数声明为static，防止使用未初始化的成员变量</li>
+<li>赋值操作符返回<code>*this</code>的引用</li>
+<li>确保赋值操作符在自我赋值时不会出错（比较两个对象的地址、先复制后delete、copy-and-swap）</li>
+<li>copying函数（copy构造和copy赋值）应该确保base class的部分也复制</li>
+<li>copy赋值函数中基类的赋值：<code>Base::operator=(rhs)</code></li>
+<li>在某个copying函数里面不能调用另一个copying函数（可以写第三个函数、两者共同调用）</li>
+</ul>
+<h3 id="第三部分：Resource-Management"><a href="#第三部分：Resource-Management" class="headerlink" title="第三部分：Resource Management"></a>第三部分：Resource Management</h3><ul>
+<li>RAII: auto_ptr（copy后指向null）、shared_ptr，这两者不能用于数组，因为是delete操作而不是delete[]操作</li>
+<li>RAII的copy时要复制其管理的资源，可以：1、禁止复制（private）；2、引用计数（shared_ptr）；3、深度复制；4、转交拥有权（auto_ptr）</li>
+<li>RAII提供访问原始资源的方式：1、显式转换（get函数）；2、隐式转换（operator XXX() const）</li>
+<li>不要对数组做typedef，例如<code>typedef string a[4]</code>，<code>string *s = new a</code>必须使用delete[]</li>
+<li>以独立语句将newed对象存入智能指针内（<code>shared_ptr&lt;XXX&gt; xxx(new XXX)</code>单独一句），防止内存泄露</li>
+</ul>
+<h3 id="第四部分：Designs-and-Declarations"><a href="#第四部分：Designs-and-Declarations" class="headerlink" title="第四部分：Designs and Declarations"></a>第四部分：Designs and Declarations</h3><ul>
+<li><p>shared_ptr支持定制删除器：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">shared_ptr</span>&lt;XXX&gt; create() &#123;</span><br><span class="line">  shared_ptr ret(static_cast&lt;XXX*&gt;(0), getRidOfXXX);</span><br><span class="line">  ret = ...;</span><br><span class="line">  <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pass-by-reference-to-const是有多态的</p>
+</li>
+<li>pass-by-reference-to-const不适用于内置类型、STL迭代器以及函数对象</li>
+<li>不能返回指针或者引用：局部stack、heap、可能同时需要多个的局部static对象</li>
+<li>不使用protected，因为一旦去掉这个变量，所有派生类都会遭到破坏</li>
+<li>用non-member non-friend函数替换member函数可以增加封装性（更少的代码访问private），将便利函数放在不同文件同一命名空间中</li>
+<li>只有当参数在参数列表中才可能被隐式转换，因此如果需要为某个函数的所有参数（包括被this指针所指的隐喻参数）进行类型转换，这个函数必须是non-member的。</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>基本到此做个总结吧，因为一边看一边做笔记太拖进度了，之后基本直接看了。</p>
 
       
     </div>
@@ -514,7 +524,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://tashi711.xyz/programming/others/cpp-primer-1-2/" title="「C++ Primer (5th) 第1、2章」小结">http://tashi711.xyz/programming/others/cpp-primer-1-2/</a>
+    <a href="http://tashi711.xyz/programming/others/effective-cpp-note/" title="「Effective C++ (3rd)」简单小结">http://tashi711.xyz/programming/others/effective-cpp-note/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -542,8 +552,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/programming/reports/leetcode/leetcode-854/" rel="next" title="「LeetCode 854. K-Similar Strings」解题报告">
-                <i class="fa fa-chevron-left"></i> 「LeetCode 854. K-Similar Strings」解题报告
+              <a href="/programming/others/cpp-primer-note/" rel="next" title="「C++ Primer (5th)」简单小结">
+                <i class="fa fa-chevron-left"></i> 「C++ Primer (5th)」简单小结
               </a>
             
           </div>
@@ -552,8 +562,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/programming/others/effective-cpp-1-3/" rel="prev" title="「Effective C++ (3rd) 第一、二、三部分」小结">
-                「Effective C++ (3rd) 第一、二、三部分」小结 <i class="fa fa-chevron-right"></i>
+              <a href="/programming/reports/leetcode/leetcode-903/" rel="prev" title="「LeetCode 903. Valid Permutations for DI Sequence」解题报告">
+                「LeetCode 903. Valid Permutations for DI Sequence」解题报告 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -638,7 +648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -700,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Primer-5th"><span class="nav-number">1.</span> <span class="nav-text">C++ Primer (5th)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分：C-基础-第1、2章"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分：C++基础 (第1、2章)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Effective-C-3rd"><span class="nav-number">1.</span> <span class="nav-text">Effective C++ (3rd)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分：Accustoming-Yourself-to-C"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分：Accustoming Yourself to C++</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二部分：Constructors-Destructors-and-Assignment-Operators"><span class="nav-number">1.2.</span> <span class="nav-text">第二部分：Constructors, Destructors, and Assignment Operators</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三部分：Resource-Management"><span class="nav-number">1.3.</span> <span class="nav-text">第三部分：Resource Management</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四部分：Designs-and-Declarations"><span class="nav-number">1.4.</span> <span class="nav-text">第四部分：Designs and Declarations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.5.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
             
 
           </div>

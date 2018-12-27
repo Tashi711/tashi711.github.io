@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
+<meta name="description" content="C++ Primer (5th)  第一部分C++基础：第1-3章、简单笔记 其他">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「C++ Primer (5th) 第3章」小结">
-<meta property="og:url" content="http://tashi711.xyz/programming/others/cpp-primer-3/index.html">
+<meta property="og:title" content="「C++ Primer (5th)」简单小结">
+<meta property="og:url" content="http://tashi711.xyz/programming/others/cpp-primer-note/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
+<meta property="og:description" content="C++ Primer (5th)  第一部分C++基础：第1-3章、简单笔记 其他">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T16:42:41.545Z">
+<meta property="og:updated_time" content="2018-12-27T16:22:33.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「C++ Primer (5th) 第3章」小结">
-<meta name="twitter:description" content="C++ Primer (5th)  第一部分：C++基础 第3章">
+<meta name="twitter:title" content="「C++ Primer (5th)」简单小结">
+<meta name="twitter:description" content="C++ Primer (5th)  第一部分C++基础：第1-3章、简单笔记 其他">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://tashi711.xyz/programming/others/cpp-primer-3/"/>
+  <link rel="canonical" href="http://tashi711.xyz/programming/others/cpp-primer-note/"/>
 
 
 
 
 
-  <title>「C++ Primer (5th) 第3章」小结 | Tashi711的博客</title>
+  <title>「C++ Primer (5th)」简单小结 | Tashi711的博客</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/others/cpp-primer-3/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.xyz/programming/others/cpp-primer-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「C++ Primer (5th) 第3章」小结</h1>
+          <h1 class="post-title" itemprop="name headline">「C++ Primer (5th)」简单小结</h1>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T11:17:59+08:00">
-                2018-09-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T11:17:59+08:00">
+                2018-09-06
               </time>
             
 
@@ -404,8 +404,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/others/cpp-primer-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-primer-3/" itemprop="commentCount"></span>
+                <a href="/programming/others/cpp-primer-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-primer-note/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -413,7 +413,7 @@
 
           
           
-             <span id="/programming/others/cpp-primer-3/" class="leancloud_visitors" data-flag-title="「C++ Primer (5th) 第3章」小结">
+             <span id="/programming/others/cpp-primer-note/" class="leancloud_visitors" data-flag-title="「C++ Primer (5th)」简单小结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -446,11 +446,54 @@
       
         <h2 id="C-Primer-5th"><a href="#C-Primer-5th" class="headerlink" title="C++ Primer (5th)"></a>C++ Primer (5th)</h2><blockquote>
 <ul>
-<li>第一部分：C++基础</li>
-<li>第3章</li>
+<li>第一部分C++基础：第1-3章、简单笔记</li>
+<li>其他</li>
 </ul>
 </blockquote>
 <a id="more"></a>
+<h3 id="第一部分：C-基础-第1、2章"><a href="#第一部分：C-基础-第1、2章" class="headerlink" title="第一部分：C++基础 (第1、2章)"></a>第一部分：C++基础 (第1、2章)</h3><ul>
+<li>char不一定是signed char，可能是unsigned char</li>
+<li>double有时比float效率更高</li>
+<li>给一个无符号类型赋值超过其表示范围，得到的是取余的结果，但对有符号类型而言结果未定义，且程序可能崩溃</li>
+<li>int与unsigned int的算术运算得到的是unsigned int</li>
+<li>十进制的字面类型是int，八进制、十六进制的字面类型是能容纳其数值的int、unsigned int、long、unsigned long、long long、unsigned long long中尺寸最小者</li>
+<li>初始化列表在存在信息丢失的风险时编译器会报错</li>
+<li><p>显式访问全局变量：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; ::x &lt;&lt; <span class="built_in">endl</span>; <span class="comment">// 输出1</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指针的引用：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line"><span class="keyword">int</span> *&amp;r = p;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果想在多个文件间共享const对象，必须在变量定义前也添加extern</p>
+</li>
+<li>非常量引用不能指向常量对象</li>
+<li><p>引用的特殊情况：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r1 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r2 = r1 * <span class="number">2</span>;</span><br><span class="line"><span class="keyword">double</span> y = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r3 = y; <span class="comment">// 等价于 const int t = y; const int &amp;r3 = t;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>顶层（top-level）const：指针等任意对象本身是常量</p>
+</li>
+<li>底层（low-level）const：指针所指的（包括引用）对象是const</li>
+<li><code>constexpr int *q = nullptr</code>中q是一个指向整数的常量指针（与<code>const int *q</code>不同）</li>
+<li><p>constexpr也可以指向常量：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keyword">int</span> *p = &amp;i;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>typedef指针后const是常量指针而不是指向常量的指针</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> *p;</span><br><span class="line"><span class="keyword">const</span> p c; 等价于 <span class="keyword">char</span> *<span class="keyword">const</span> c;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto能在一条语句中声明多个变量，但只能是同一个：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> i = <span class="number">1</span>, *p = &amp;i; <span class="comment">// yes</span></span><br><span class="line"><span class="keyword">auto</span> j = <span class="number">2</span>, k = <span class="number">3.14</span>; <span class="comment">// no</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto引用是引用对象的类型:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>, &amp;r = i;</span><br><span class="line"><span class="keyword">auto</span> a = r; <span class="comment">// a是一个整数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto会忽略顶层const，保留底层const：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = i, &amp;cr = ci;</span><br><span class="line"><span class="keyword">auto</span> b = ci; <span class="comment">// b是一个整数</span></span><br><span class="line"><span class="keyword">auto</span> c = cr; <span class="comment">// c是一个整数</span></span><br><span class="line"><span class="keyword">auto</span> d = &amp;i <span class="comment">// d是一个整型指针</span></span><br><span class="line"><span class="keyword">auto</span> e = &amp;ci <span class="comment">// e是一个指向整数常量的指针</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> f = ci <span class="comment">// f是const int</span></span><br><span class="line"><span class="keyword">auto</span> &amp;n = i, *p = &amp;ci <span class="comment">// 是错的，因为i推演是int，&amp;ci推演是const int</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>const int ci = 1, &amp;cj = ci;</code>中，<code>decltype(ci)</code>是const int、<code>decltype(cj)</code>是const int&amp;</p>
+</li>
+<li><code>int i = 1, *p = &amp;i, &amp;r = i;</code>中，<code>decltype(r + 0)</code>是int、<code>decltype(*p)</code>是int&amp;</li>
+<li>如果给变量加上括号编译器会把其变为表达式，则会变为引用类型：<code>decltype(i)</code>是int，<code>decltype((i))</code>是int&amp;</li>
+</ul>
 <h3 id="第一部分：C-基础-第3章"><a href="#第一部分：C-基础-第3章" class="headerlink" title="第一部分：C++基础 (第3章)"></a>第一部分：C++基础 (第3章)</h3><ul>
 <li><p>初始化时使用花括号但提供的值不能用来列表初始化，那么就会调用构造函数:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v1&#123;<span class="number">10</span>&#125;; <span class="comment">// 10个元素</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v2(<span class="number">10</span>, <span class="string">"hi"</span>&#125;; <span class="comment">// 10个"hi"</span></span><br></pre></td></tr></table></figure>
@@ -476,6 +519,7 @@
 <li>令<code>int a[3][4]</code>：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  	<span class="comment">// c: 引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : r) &#123;</span><br><span class="line">  	<span class="comment">// c: 非引用</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> r : a) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> c : r) &#123;</span><br><span class="line">  	<span class="comment">// 无法编译，因为r为int*，那么内层循环没有意义</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> p = begin(a); p != end(a); ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> q = begin(*p); q != end(*p); ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">using</span> ia = <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ia[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">for</span> (ia *p = a; p != a + <span class="number">3</span>; ++p) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> *q = *p; q != *p + <span class="number">4</span>; ++q) &#123;</span><br><span class="line">  	<span class="comment">// *q</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>基本到此做个总结吧，因为一边看一边做笔记太拖进度了，之后基本直接看了。</p>
 
       
     </div>
@@ -496,7 +540,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://tashi711.xyz/programming/others/cpp-primer-3/" title="「C++ Primer (5th) 第3章」小结">http://tashi711.xyz/programming/others/cpp-primer-3/</a>
+    <a href="http://tashi711.xyz/programming/others/cpp-primer-note/" title="「C++ Primer (5th)」简单小结">http://tashi711.xyz/programming/others/cpp-primer-note/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -524,8 +568,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/programming/others/effective-cpp-1-3/" rel="next" title="「Effective C++ (3rd) 第一、二、三部分」小结">
-                <i class="fa fa-chevron-left"></i> 「Effective C++ (3rd) 第一、二、三部分」小结
+              <a href="/programming/reports/leetcode/leetcode-854/" rel="next" title="「LeetCode 854. K-Similar Strings」解题报告">
+                <i class="fa fa-chevron-left"></i> 「LeetCode 854. K-Similar Strings」解题报告
               </a>
             
           </div>
@@ -534,8 +578,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/programming/reports/leetcode/leetcode-903/" rel="prev" title="「LeetCode 903. Valid Permutations for DI Sequence」解题报告">
-                「LeetCode 903. Valid Permutations for DI Sequence」解题报告 <i class="fa fa-chevron-right"></i>
+              <a href="/programming/others/effective-cpp-note/" rel="prev" title="「Effective C++ (3rd)」简单小结">
+                「Effective C++ (3rd)」简单小结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,7 +664,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -682,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Primer-5th"><span class="nav-number">1.</span> <span class="nav-text">C++ Primer (5th)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分：C-基础-第3章"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分：C++基础 (第3章)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Primer-5th"><span class="nav-number">1.</span> <span class="nav-text">C++ Primer (5th)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分：C-基础-第1、2章"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分：C++基础 (第1、2章)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分：C-基础-第3章"><span class="nav-number">1.2.</span> <span class="nav-text">第一部分：C++基础 (第3章)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.3.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
             
 
           </div>

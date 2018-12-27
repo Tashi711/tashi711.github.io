@@ -11,7 +11,6 @@ http://tashi711.xyz/programming/reports/leetcode/leetcode-32/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-23/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-10/
 http://tashi711.xyz/programming/dsaa/bipartite-graph-matching/
-http://tashi711.xyz/programming/others/effective-cpp-4/
 http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/
 http://tashi711.xyz/programming/reports/others/poj-2299/
 http://tashi711.xyz/programming/dsaa/binary-indexed-tree/
@@ -28,9 +27,8 @@ http://tashi711.xyz/programming/reports/leetcode/leetcode-895/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-899/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-902/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-903/
-http://tashi711.xyz/programming/others/cpp-primer-3/
-http://tashi711.xyz/programming/others/effective-cpp-1-3/
-http://tashi711.xyz/programming/others/cpp-primer-1-2/
+http://tashi711.xyz/programming/others/effective-cpp-note/
+http://tashi711.xyz/programming/others/cpp-primer-note/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-854/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-850/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-843/
@@ -39,7 +37,7 @@ http://tashi711.xyz/programming/reports/leetcode/leetcode-847/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-834/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-828/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-803/
-http://tashi711.xyz/programming/others/ssh/
+http://tashi711.xyz/programming/others/ssh-public-key/
 http://tashi711.xyz/programming/others/google-code-style/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-827/
 http://tashi711.xyz/programming/reports/leetcode/leetcode-818/

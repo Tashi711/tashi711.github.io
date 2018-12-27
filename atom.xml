@@ -476,34 +476,6 @@ j = 1 2 3 4 5 6 7
   </entry>
   
   <entry>
-    <title>「Effective C++ (3rd) 第四部分」小结</title>
-    <link href="http://tashi711.xyz/programming/others/effective-cpp-4/"/>
-    <id>http://tashi711.xyz/programming/others/effective-cpp-4/</id>
-    <published>2018-10-21T03:17:59.000Z</published>
-    <updated>2018-12-12T16:42:35.962Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Effective-C-3rd"><a href="#Effective-C-3rd" class="headerlink" title="Effective C++ (3rd)"></a>Effective C++ (3rd)</h2><blockquote><ul><li>第四部分：Designs and Declarations</li></ul></blockquote><a id="more"></a><h3 id="第四部分：Designs-and-Declarations"><a href="#第四部分：Designs-and-Declarations" class="headerlink" title="第四部分：Designs and Declarations"></a>第四部分：Designs and Declarations</h3><ul><li><p>shared_ptr支持定制删除器：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">shared_ptr</span>&lt;XXX&gt; create() &#123;</span><br><span class="line">  shared_ptr ret(static_cast&lt;XXX*&gt;(0), getRidOfXXX);</span><br><span class="line">  ret = ...;</span><br><span class="line">  <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>pass-by-reference-to-const是有多态的</p></li><li>pass-by-reference-to-const不适用于内置类型、STL迭代器以及函数对象</li><li>不能返回指针或者引用：局部stack、heap、可能同时需要多个的局部static对象</li><li>不使用protected，因为一旦去掉这个变量，所有派生类都会遭到破坏</li><li>用non-member non-friend函数替换member函数可以增加封装性（更少的代码访问private），将便利函数放在不同文件同一命名空间中</li><li>只有当参数在参数列表中才可能被隐式转换，因此如果需要为某个函数的所有参数（包括被this指针所指的隐喻参数）进行类型转换，这个函数必须是non-member的。</li></ul><p>107</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Effective-C-3rd&quot;&gt;&lt;a href=&quot;#Effective-C-3rd&quot; class=&quot;headerlink&quot; title=&quot;Effective C++ (3rd)&quot;&gt;&lt;/a&gt;Effective C++ (3rd)&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;第四部分：Designs and Declarations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="其他" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="C++" scheme="http://tashi711.xyz/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>「hihoCoder - 1848, 1849」解题报告</title>
     <link href="http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/"/>
     <id>http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/</id>
@@ -705,6 +677,30 @@ j = 1 2 3 4 5 6 7
     
     
       <category term="Γ函数" scheme="http://tashi711.xyz/tags/%CE%93%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「分治算法」复杂度分析</title>
+    <link href="http://tashi711.xyz/programming/dsaa/divide-and-conquer/"/>
+    <id>http://tashi711.xyz/programming/dsaa/divide-and-conquer/</id>
+    <published>2018-10-07T03:17:59.000Z</published>
+    <updated>2018-12-12T16:41:57.081Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="分治算法复杂度分析"><a href="#分治算法复杂度分析" class="headerlink" title="分治算法复杂度分析"></a>分治算法复杂度分析</h2><p>最近遇到许多分治的算法题，而分治算法的复杂度估计在《数据结构与算法分析》这本书中进行了推导，有兴趣可以跟着推导一下，此处给出结论。</p><a id="more"></a><h3 id="分治方程"><a href="#分治方程" class="headerlink" title="分治方程"></a>分治方程</h3><p>$$T(N) = aT(N/b) + O(N^k\log^pN), (a≥1, b&gt;1, p≥1)$$</p><h3 id="解（结论）"><a href="#解（结论）" class="headerlink" title="解（结论）"></a>解（结论）</h3><p>$$T(N) =<br>\begin{cases}<br>O(N^{\log_ba}), &amp; a&gt;b^k \\<br>O(N^k\log^{p+1}N), &amp; a=b^k \\<br>O(N^k\log^pN), &amp; a&lt;b^k<br>\end{cases}$$</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;分治算法复杂度分析&quot;&gt;&lt;a href=&quot;#分治算法复杂度分析&quot; class=&quot;headerlink&quot; title=&quot;分治算法复杂度分析&quot;&gt;&lt;/a&gt;分治算法复杂度分析&lt;/h2&gt;&lt;p&gt;最近遇到许多分治的算法题，而分治算法的复杂度估计在《数据结构与算法分析》这本书中进行了推导，有兴趣可以跟着推导一下，此处给出结论。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="数据结构与算法" scheme="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="分治" scheme="http://tashi711.xyz/tags/%E5%88%86%E6%B2%BB/"/>
     
   </entry>
   
