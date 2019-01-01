@@ -4,6 +4,166 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-943/</loc>
+    <lastmod>2019-01-01T11:32:30.873Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 943. Find the Shortest Superstring」解题报告</title>
+        <pubTime>2019-01-01T03:57:03.000Z</pubTime>
+        
+        <tag>状态压缩DP</tag>
+         
+        <tag>TSP问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-964/</loc>
+    <lastmod>2019-01-01T10:36:24.775Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 964. Least Operators to Express Number」解题报告</title>
+        <pubTime>2018-12-30T03:57:03.000Z</pubTime>
+        
+        <tag>思考题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-960/</loc>
+    <lastmod>2018-12-30T14:22:55.809Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 960. Delete Columns to Make Sorted III」解题报告</title>
+        <pubTime>2018-12-30T03:57:03.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-145/</loc>
+    <lastmod>2018-12-30T06:42:05.337Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 145. Binary Tree Postorder Traversal」解题报告</title>
+        <pubTime>2018-12-25T03:57:03.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-140/</loc>
+    <lastmod>2018-12-29T19:11:51.680Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 140. Word Break II」解题报告</title>
+        <pubTime>2018-12-25T03:57:03.000Z</pubTime>
+        
+        <tag>KMP</tag>
+         
+        <tag>记忆化搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-135/</loc>
+    <lastmod>2018-12-28T17:07:07.912Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 135. Candy」解题报告</title>
+        <pubTime>2018-12-25T03:57:03.000Z</pubTime>
+        
+        <tag>巧妙</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/</loc>
     <lastmod>2018-12-27T16:35:19.006Z</lastmod>
     <data>
@@ -555,11 +715,11 @@
         <title>「LeetCode 899. Orderly Queue」解题报告</title>
         <pubTime>2018-09-13T03:57:02.000Z</pubTime>
         
-        <tag>字符串</tag>
-         
         <tag>思考题</tag>
          
         <tag>水题</tag>
+         
+        <tag>字符串</tag>
          
          
            
@@ -585,9 +745,9 @@
         <title>「LeetCode 895. Maximum Frequency Stack」解题报告</title>
         <pubTime>2018-09-14T03:57:02.000Z</pubTime>
         
-        <tag>栈</tag>
-         
         <tag>巧妙</tag>
+         
+        <tag>栈</tag>
          
          
            
@@ -643,9 +803,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>数学</tag>
-         
         <tag>二分查找</tag>
+         
+        <tag>数学</tag>
          
          
            
@@ -880,9 +1040,9 @@
         <title>「Google C++ Style Guide」小结</title>
         <pubTime>2018-05-06T03:17:59.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>C++</tag>
+         
+        <tag>Google</tag>
          
          
            
@@ -1209,9 +1369,9 @@
         <title>「Google Code Jam Round 1A 2018」参赛小结</title>
         <pubTime>2018-04-14T03:20:10.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>模拟</tag>
          
          
            
