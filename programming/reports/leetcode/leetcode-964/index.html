@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="题目信息  链接：LeetCode 964. Least Operators to Express Number 来源：LeetCode 难度：Hard   题目分析描述给定一个正整数 x，我们将会写出一个形如 x (op1) x (op2) x (op3) x … 的表达式，其中每个运算符 op1，op2，… 可以是加、减、乘、除（+，-，*，或是 /）之一。例如，对于 x = 3，我们可以写出">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T10:36:24.775Z">
+<meta property="og:updated_time" content="2019-01-09T14:22:19.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「LeetCode 964. Least Operators to Express Number」解题报告">
 <meta name="twitter:description" content="题目信息  链接：LeetCode 964. Least Operators to Express Number 来源：LeetCode 难度：Hard   题目分析描述给定一个正整数 x，我们将会写出一个形如 x (op1) x (op2) x (op3) x … 的表达式，其中每个运算符 op1，op2，… 可以是加、减、乘、除（+，-，*，或是 /）之一。例如，对于 x = 3，我们可以写出">
@@ -461,9 +461,9 @@
 </ul>
 </blockquote>
 <h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个正整数 x，我们将会写出一个形如 x (op1) x (op2) x (op3) x … 的表达式，其中每个运算符 op1，op2，… 可以是加、减、乘、除（+，-，*，或是 /）之一。例如，对于 x = 3，我们可以写出表达式 3 * 3 / 3 + 3 - 3，该式的值为 3 。<br>在写这样的表达式时，我们需要遵守下面的惯例：<br>除运算符（/）返回有理数。<br>任何地方都没有括号。<br>我们使用通常的操作顺序：乘法和除法发生在加法和减法之前。<br>不允许使用一元否定运算符（-）。例如，“x - x” 是一个有效的表达式，因为它只使用减法，但是 “-x + x” 不是，因为它使用了否定运算符。<br>我们希望编写一个能使表达式等于给定的目标值 target 且运算符最少的表达式。返回所用运算符的最少数量。</p>
-<p><strong>示例 1：</strong><br>输入：x = 3, target = 19<br>输出：5<br>解释：3 <em> 3 + 3 </em> 3 + 3 / 3 。表达式包含 5 个运算符。</p>
-<p><strong>示例 2：</strong><br>输入：x = 5, target = 501<br>输出：8<br>解释：5 <em> 5 </em> 5 <em> 5 - 5 </em> 5 * 5 + 5 / 5 。表达式包含 8 个运算符。</p>
-<p><strong>示例 3：</strong><br>输入：x = 100, target = 100000000<br>输出：3<br>解释：100 <em> 100 </em> 100 * 100 。表达式包含 3 个运算符。</p>
+<p><strong>示例 1：</strong><br>输入：x = 3, target = 19<br>输出：5<br>解释：3 * 3 + 3 * 3 + 3 / 3 。表达式包含 5 个运算符。</p>
+<p><strong>示例 2：</strong><br>输入：x = 5, target = 501<br>输出：8<br>解释：5 * 5 * 5 * 5 - 5 * 5 * 5 + 5 / 5 。表达式包含 8 个运算符。</p>
+<p><strong>示例 3：</strong><br>输入：x = 100, target = 100000000<br>输出：3<br>解释：100 * 100 * 100 * 100 。表达式包含 3 个运算符。</p>
 <p><strong>提示：</strong><br>2 &lt;= x &lt;= 100<br>1 &lt;= target &lt;= 2 * 10^8</p>
 <a id="more"></a>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>比较难的一道题，感觉题解也说的云里雾里，可以拜读下最高赞的答案，非常清晰，<br>作者还在comment里面写了例子，不太清楚可以看一下。</p>
@@ -613,7 +613,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -635,7 +635,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
