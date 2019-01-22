@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-968/</loc>
+    <lastmod>2019-01-22T16:29:57.147Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 968. Binary Tree Cameras」解题报告</title>
+        <pubTime>2019-01-23T03:57:03.000Z</pubTime>
+        
+        <tag>树形DP</tag>
+         
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-52/</loc>
     <lastmod>2019-01-13T09:36:41.234Z</lastmod>
     <data>
@@ -821,9 +849,9 @@
         <title>「LeetCode 899. Orderly Queue」解题报告</title>
         <pubTime>2018-09-13T03:57:02.000Z</pubTime>
         
-        <tag>思考题</tag>
-         
         <tag>水题</tag>
+         
+        <tag>思考题</tag>
          
         <tag>字符串</tag>
          
