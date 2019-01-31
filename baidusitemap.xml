@@ -4,6 +4,138 @@
 
     
   <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-940/</loc>
+    <lastmod>2019-01-31T13:39:38.024Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 940. Distinct Subsequences II」解题报告</title>
+        <pubTime>2019-02-01T03:57:03.000Z</pubTime>
+        
+        <tag>巧妙</tag>
+         
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-982/</loc>
+    <lastmod>2019-01-31T10:02:44.085Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 982. Triples with Bitwise AND Equal To Zero」解题报告</title>
+        <pubTime>2019-01-31T03:57:03.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-980/</loc>
+    <lastmod>2019-01-31T09:51:33.303Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 980. Unique Paths III」解题报告</title>
+        <pubTime>2019-01-30T03:57:03.000Z</pubTime>
+        
+        <tag>状态压缩DP</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-975/</loc>
+    <lastmod>2019-01-31T09:24:55.583Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 975. Odd Even Jump」解题报告</title>
+        <pubTime>2019-01-28T03:57:03.000Z</pubTime>
+        
+        <tag>平衡树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-972/</loc>
+    <lastmod>2019-01-26T17:59:17.234Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 972. Equal Rational Numbers」解题报告</title>
+        <pubTime>2019-01-27T03:57:03.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.xyz/programming/reports/leetcode/leetcode-968/</loc>
     <lastmod>2019-01-22T16:29:57.147Z</lastmod>
     <data>
