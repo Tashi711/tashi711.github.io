@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="取余那些事通常取余使用在数论中或者程序语言中。这里我们主要考虑C++中的取余操作。 带余除法定义：带余除法（也称为欧几里德除法）是数学中的一种基本算术计算方式。给定一个被除数a和一个除数b，带余除法给出一个整数q和一个介于一定范围的余数r，使得a=bq+r成立。一般限定余数的范围在0与b之间，也有限定在-b/2与b/2之间。这样的限定都是为了使得满足等式的q有且仅有一个。这时候的q称为带余除法的商">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-05T13:09:22.194Z">
+<meta property="og:updated_time" content="2019-02-05T13:12:52.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「取余」那些事">
 <meta name="twitter:description" content="取余那些事通常取余使用在数论中或者程序语言中。这里我们主要考虑C++中的取余操作。 带余除法定义：带余除法（也称为欧几里德除法）是数学中的一种基本算术计算方式。给定一个被除数a和一个除数b，带余除法给出一个整数q和一个介于一定范围的余数r，使得a=bq+r成立。一般限定余数的范围在0与b之间，也有限定在-b/2与b/2之间。这样的限定都是为了使得满足等式的q有且仅有一个。这时候的q称为带余除法的商">
@@ -448,7 +448,7 @@
 <a id="more"></a>
 <h3 id="取余定义"><a href="#取余定义" class="headerlink" title="取余定义"></a>取余定义</h3><p>取余（modulo），又称取模、模除，是一个数除以另一个数的余数。</p>
 <p><strong>一般定义：</strong>给定两个正整数：被除数a和除数n，a modulo n (缩写为a mod n)得到的是使用欧几里德除法时a/n的余数。 举个例子：计算表达式“5 mod 2”得到1，因为5÷2=2…1（5除以2商2余1）；而“9 mod 3”得到0，因为9÷3=3…0。</p>
-<p>通常情况下a和n都是整数，但许多计算系统允许浮点数取模等。在C++中，“%”运算符只能作用于整数类型的取余运算，实数的取余使用fmod与remainder函数（C++11之后使用std::fmod与std::remainder），分别对应上面所述带余除法基本定理中的两种余数范围规定。本文主要考虑整数的取余，实数不多做介绍，有兴趣可以查阅相关资料。</p>
+<p>通常情况下a和n都是整数，但许多计算系统允许浮点数取模等。在C++中，“%”运算符只能作用于整数类型的取余运算，实数的取余使用<code>fmod</code>与<code>remainder</code>函数（C++11之后使用<code>std::fmod</code>与<code>std::remainder</code>），分别对应上面所述带余除法基本定理中的两种余数范围规定。本文主要考虑整数的取余，实数不多做介绍，有兴趣可以查阅相关资料。</p>
 <h3 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h3><p>数学上，同余（congruence modulo）是数论中的一种等价关系。当两个整数除以同一个正整数，若得相同余数，则二整数同余。同余是抽象代数中的同余关系的原型。最先引用同余的概念与同余符号“≡”者为德国数学家高斯。</p>
 <p>两个整数a、b，若它们除以正整数m所得的余数相等，则称a、b对于模m同余，记作a ≡ b (mod m)，读作a同余于b模m，或读作a与b关于模m同余。比如26 ≡ 14 (mod 12)。</p>
 <p>同余是离散数学乃至计算机科学的基础知识点，本文将直接使用同余的相关结论。</p>
