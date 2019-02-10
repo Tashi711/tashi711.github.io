@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="滑动窗口," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="站点简介分享一些编程相关的心得。 公告 2019/02/05：今天是己亥猪年大年初一，小站恭祝各位新春大吉，“zhu”事顺利！ 2018/12/27：本站暂时下线所有日语学习的模块，不定期回归。 2018/11/30：某些文章中的站内链接因分类变更没有更新可能导致跳转失败，欢迎私信指正。  分类说明  编程 解题报告　——　主要是「LeetCode Hard难度的算法题」 数据结构与算法 其他　—">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://tashi711.top/about/index.html">
+<meta name="description" content="题目信息  链接：LeetCode 992. Subarrays with K Different Integers 来源：LeetCode 难度：Hard   题目分析描述">
+<meta name="keywords" content="滑动窗口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「LeetCode 992. Subarrays with K Different Integers」解题报告">
+<meta property="og:url" content="http://tashi711.top/programming/reports/leetcode/leetcode-992/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="站点简介分享一些编程相关的心得。 公告 2019/02/05：今天是己亥猪年大年初一，小站恭祝各位新春大吉，“zhu”事顺利！ 2018/12/27：本站暂时下线所有日语学习的模块，不定期回归。 2018/11/30：某些文章中的站内链接因分类变更没有更新可能导致跳转失败，欢迎私信指正。  分类说明  编程 解题报告　——　主要是「LeetCode Hard难度的算法题」 数据结构与算法 其他　—">
+<meta property="og:description" content="题目信息  链接：LeetCode 992. Subarrays with K Different Integers 来源：LeetCode 难度：Hard   题目分析描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-09T10:30:31.193Z">
+<meta property="og:updated_time" content="2019-02-10T11:59:02.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="站点简介分享一些编程相关的心得。 公告 2019/02/05：今天是己亥猪年大年初一，小站恭祝各位新春大吉，“zhu”事顺利！ 2018/12/27：本站暂时下线所有日语学习的模块，不定期回归。 2018/11/30：某些文章中的站内链接因分类变更没有更新可能导致跳转失败，欢迎私信指正。  分类说明  编程 解题报告　——　主要是「LeetCode Hard难度的算法题」 数据结构与算法 其他　—">
+<meta name="twitter:title" content="「LeetCode 992. Subarrays with K Different Integers」解题报告">
+<meta name="twitter:description" content="题目信息  链接：LeetCode 992. Subarrays with K Different Integers 来源：LeetCode 难度：Hard   题目分析描述">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://tashi711.top/about/"/>
+  <link rel="canonical" href="http://tashi711.top/programming/reports/leetcode/leetcode-992/"/>
 
 
 
 
 
-  <title>关于 | Tashi711的博客</title>
+  <title>「LeetCode 992. Subarrays with K Different Integers」解题报告 | Tashi711的博客</title>
   
 
 
@@ -298,77 +299,237 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-992/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h2 id="站点简介"><a href="#站点简介" class="headerlink" title="站点简介"></a>站点简介</h2><p>分享一些编程相关的心得。</p>
-<h2 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h2><ul>
-<li>2019/02/05：今天是己亥猪年大年初一，小站恭祝各位新春大吉，“zhu”事顺利！</li>
-<li>2018/12/27：本站暂时下线所有日语学习的模块，不定期回归。</li>
-<li>2018/11/30：某些文章中的站内链接因分类变更没有更新可能导致跳转失败，欢迎私信指正。</li>
-</ul>
-<h2 id="分类说明"><a href="#分类说明" class="headerlink" title="分类说明"></a>分类说明</h2><!--
-- ニホンゴ　——　「にほんご」
- - ウタ　——　「うた」一些日语歌推荐，附带自己标注的假名歌词
- - ベンキョウ　——　「べんきょう」一些日语学习相关的东西
--->
+          <h1 class="post-title" itemprop="name headline">「LeetCode 992. Subarrays with K Different Integers」解题报告</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-10T11:57:03+08:00">
+                2019-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/reports/leetcode/leetcode-992/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-992/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/reports/leetcode/leetcode-992/" class="leancloud_visitors" data-flag-title="「LeetCode 992. Subarrays with K Different Integers」解题报告">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li><a href="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul>
-<li><a href="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">解题报告</a>　——　主要是<a href="https://leetcode.com/problemset/algorithms/?difficulty=Hard" target="_blank" rel="noopener">「LeetCode Hard难度的算法题」</a></li>
-<li><a href="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></li>
-<li><a href="http://tashi711.xyz/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/">其他</a>　——　读书心得、文档笔记、技术类等</li>
+<li>链接：<a href="https://leetcode.com/problems/subarrays-with-k-different-integers/description/" target="_blank" rel="noopener">LeetCode 992. Subarrays with K Different Integers</a></li>
+<li>来源：LeetCode</li>
+<li>难度：Hard</li>
 </ul>
-</li>
-</ul>
-<h2 id="笔者"><a href="#笔者" class="headerlink" title="笔者"></a>笔者</h2><h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><ul>
-<li>CCF NOI2012铜牌</li>
-<li>ZJU CS本科&amp;在读硕士</li>
-</ul>
-<!--
-- CCF NOI 2012赛季 段位：倔强青铜，CQBZ OIer -> ZJUer -> CADMLer
-- 早已退役、在Codeforces与LeetCode中不断努力、虽然只会写C++
-- 在新加坡SUTD交流一学期，做了一些nested named entity recognition（NLP相关）的工作
-- だいファン of：林俊杰、杨丞琳、シド、ONE OK ROCK、Aimer
-- 曾经玩红警、DNF、如今沉迷于LOL、战争学院了解下
-- 数码宝贝的怀旧者，柯南的忠实追随者，期待着tri.，No.6、あの日、四月、君名都很喜欢
-- 爱好桌游、LyingMan与旗门镖局热血观众，其他综艺：蒙面、RM、モニタリング、크라임씬都不错
--->
-<!--
-### 个人履历
-- 高中就读于重庆市第八中学
-- CCF NOIP2011（第17届全国青少年信息学奥林匹克联赛）一等奖
-- 重庆市信息奥赛省队选拔赛，进入重庆省队
-- CCF NOI2012（第29届全国青少年信息学奥林匹克竞赛）铜牌
-- 本科就读于浙江大学计算机科学与技术何志均实验班
-- SUTD（新加坡科技设计大学）交流一学期，做了一些NLP相关的工作：nested named entity recognition
-- 浙江大学计算机技术保送研究生，目前硕士一年级
-- 浙江大学计算机辅助设计与图形学（CAD&CG）国家重点实验室机器学习组
--->
-<h3 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h3><p>欢迎邮件骚扰：<a href="mailto:tashi711@foxmail.com" target="_blank" rel="noopener">tashi711@foxmail.com</a> 。</p>
+</blockquote>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><a id="more"></a>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>维护两个窗口，一个是到目前为止个数不超过K的，一个是到目前为止个数小于K的。<br>两者长度相减就是以当前结尾满足要求的个数。</p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为$O(N)$。<br>空间复杂度为$O(N)$。</p>
+<h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">subarraysWithKDistinct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = A.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; cnt_long(n + <span class="number">1</span>, <span class="number">0</span>), cnt_short(n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> num_long = <span class="number">0</span>, num_short = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> idx_long = <span class="number">0</span>, idx_short = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">      <span class="keyword">int</span> cur = A[i];</span><br><span class="line">      <span class="keyword">if</span> (cnt_long[cur]++ == <span class="number">0</span>) &#123;</span><br><span class="line">        ++num_long;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">while</span> (num_long &gt; K) &#123;</span><br><span class="line">        <span class="keyword">if</span> (--cnt_long[A[idx_long++]] == <span class="number">0</span>) &#123;</span><br><span class="line">          --num_long;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (cnt_short[cur]++ == <span class="number">0</span>) &#123;</span><br><span class="line">        ++num_short;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">while</span> (num_short &gt;= K) &#123;</span><br><span class="line">        <span class="keyword">if</span> (--cnt_short[A[idx_short++]] == <span class="number">0</span>) &#123;</span><br><span class="line">          --num_short;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      ans += idx_short - idx_long;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">unique_ptr</span>&lt;Solution&gt; solution(<span class="keyword">new</span> Solution);</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; input1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; input2 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; solution-&gt;subarraysWithKDistinct(input1, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; solution-&gt;subarraysWithKDistinct(input2, <span class="number">3</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.top/programming/reports/leetcode/leetcode-992/" title="「LeetCode 992. Subarrays with K Different Integers」解题报告">http://tashi711.top/programming/reports/leetcode/leetcode-992/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/滑动窗口/" rel="tag"># 滑动窗口</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/programming/reports/others/kick-start-2018-h/" rel="next" title="「Kick Start 2018 Round H」试水">
+                <i class="fa fa-chevron-left"></i> 「Kick Start 2018 Round H」试水
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -377,6 +538,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -481,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#站点简介"><span class="nav-number">1.</span> <span class="nav-text">站点简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公告"><span class="nav-number">2.</span> <span class="nav-text">公告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类说明"><span class="nav-number">3.</span> <span class="nav-text">分类说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#笔者"><span class="nav-number">4.</span> <span class="nav-text">笔者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#个人简介"><span class="nav-number">4.1.</span> <span class="nav-text">个人简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联系我"><span class="nav-number">4.2.</span> <span class="nav-text">联系我</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目分析"><span class="nav-number">2.</span> <span class="nav-text">题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.3.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码（C-）"><span class="nav-number">3.</span> <span class="nav-text">AC代码（C++）</span></a></li></ol></div>
             
 
           </div>
