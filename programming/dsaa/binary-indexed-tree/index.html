@@ -384,9 +384,30 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/dsaa/binary-indexed-tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/binary-indexed-tree/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+             <span id="/programming/dsaa/binary-indexed-tree/" class="leancloud_visitors" data-flag-title="「树状数组」浅析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -417,7 +438,7 @@
 <h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><p>当想要查询一个前缀和sum[1,n]时，可以依据如下算法即可：<br>step1：令sum = 0，转到step2；<br>step2：假如n &lt;= 0，算法结束，返回sum值，否则sum = sum + Cn，转到step3；<br>step3：令n = n – lowbit(n)，转到step2。（这里可以用异或运算加快速度。）<br>可以看出，这个算法就是将这一个个区间的和全部加起来，因为n的二进制里最多有log(n)个1，所以查询效率是log(n)的。</p>
 <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>如果更新一个节点，必须更新其所有祖先，最坏情况下为更新第一个元素，最多有log(n)的祖先。<br>给某个结点i加上x的算法如下：<br>step1：当i &gt; n时，算法结束，否则转到step2；<br>step2：Ci = Ci + x，i = i + lowbit(i)，转到step1。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BinaryIndexedTree</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"></span><br><span class="line">	BinaryIndexedTree(<span class="keyword">int</span> n)</span><br><span class="line">		: n(n), a(n + <span class="number">1</span>, <span class="number">0</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x &amp; -x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (p &lt;= n) &#123;</span><br><span class="line">			a[p] += k;</span><br><span class="line">			p += lowbit(p);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">get_sum</span><span class="params">(<span class="keyword">int</span> p)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (p) &#123;</span><br><span class="line">			sum += a[p];</span><br><span class="line">			p ^= lowbit(p);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sum;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="其他拓展"><a href="#其他拓展" class="headerlink" title="其他拓展"></a>其他拓展</h2><p>树状数组虽然只是解决一类问题（单点更新与区间求和询问），但是由于许多问题都可以巧妙的转变成动态的在单点插值（通常为1）然后随时询问区间和（1的个数）（可以参见<a href="http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/">「hihoCoder - 1848, 1849」解题报告</a>），并且虽然类似线段树之类的数据结构能够以相同的复杂度处理同样甚至更复杂的问题，但是相比之下树状数组更为简洁，方便coding，因此能够使用到树状数组的地方还是有很多的。<br>可以利用树状数组在O(NlogN)的时间复杂度内巧妙地求出一个规模为N的数组中逆序对的个数（可以参见<a href="http://tashi711.xyz/programming/reports/others/poj-2299/">「POJ 2299 - Ultra-QuickSort」解题报告</a>，解法2），此外，树状数组也可以方便的拓展到二维，感兴趣的话可以多多探索。</p>
+<h2 id="其他拓展"><a href="#其他拓展" class="headerlink" title="其他拓展"></a>其他拓展</h2><p>树状数组虽然只是解决一类问题（单点更新与区间求和询问），但是由于许多问题都可以巧妙的转变成动态的在单点插值（通常为1）然后随时询问区间和（1的个数）（可以参见<a href="http://tashi711.xyz/programming/reports/others/hihocoder-1848-1849/" target="_blank" rel="noopener">「hihoCoder - 1848, 1849」解题报告</a>），并且虽然类似线段树之类的数据结构能够以相同的复杂度处理同样甚至更复杂的问题，但是相比之下树状数组更为简洁，方便coding，因此能够使用到树状数组的地方还是有很多的。<br>可以利用树状数组在O(NlogN)的时间复杂度内巧妙地求出一个规模为N的数组中逆序对的个数（可以参见<a href="http://tashi711.xyz/programming/reports/others/poj-2299/" target="_blank" rel="noopener">「POJ 2299 - Ultra-QuickSort」解题报告</a>，解法2），此外，树状数组也可以方便的拓展到二维，感兴趣的话可以多多探索。</p>
 
       
     </div>
@@ -584,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -815,6 +836,28 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 
   
@@ -837,6 +880,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

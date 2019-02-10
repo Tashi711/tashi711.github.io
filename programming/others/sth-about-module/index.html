@@ -384,9 +384,30 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/others/sth-about-module/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/sth-about-module/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+             <span id="/programming/others/sth-about-module/" class="leancloud_visitors" data-flag-title="「取余」那些事">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -424,7 +445,7 @@
 <p>C++11以后规定，整除（/）的商一律向0取整（切除小数部分），如果m%n不等于0，则它的符号与m相同。令m和n是整数且n非0，除了-m导致溢出的特殊情况（C++中最小整数的负数仍是它本身，补码为100…0），其他任何时候，(-m)/n和m/(-n)都等于-(m/n)，m%(-n)等于m%n，(-m)%n等于-(m%n)。比如：21/-5结果是-4，21%-5结果是1；-21/-8结果是2，-21%-8结果是-5。</p>
 <p>此时回到我们的问题，(a-b)%m的结果就不一定等于(a%m-b%m)%m了，但是我们能知道(a-b)%m（令为u）是在-m到m之间，而(a%m-b%m)%m（令为v）也是在-m到m之间，并且他们要么相等，要么相差一个m（且此时他们一定不同符号。为什么？留给读者自行思考）。如果此时能够知道结果的符号，那么就可以确定正确答案了，比如当已知a大于b时，用(v+m)%m一定能得到u（这也是实际编程中最常遇到的情况与最常用的方式）。</p>
 <p>同理，考虑一连串有正有负的加减运算最后取模，先计算出对其中每个参与运算的数字取余后再进行加减（的同时取余后再相加减）的结果再取余的这个数v，再根据实际判断是否需要加上或减去m得到正确结果。</p>
-<h3 id="除法取余"><a href="#除法取余" class="headerlink" title="除法取余"></a>除法取余</h3><p>除法取余就没有以上三种运算那么容易了，毕竟不能对参与除法的运算数先分别取余后再相除（读者很容易就能想出反例），其实这部分内容涉及到互质、模逆元等等，我单独写一篇文章<a href="http://tashi711.xyz/programming/dsaa/extended-euclidean/">「扩展欧几里得算法」与「模逆元」详解</a>来讲述这部分内容，此处不展开讨论了。</p>
+<h3 id="除法取余"><a href="#除法取余" class="headerlink" title="除法取余"></a>除法取余</h3><p>除法取余就没有以上三种运算那么容易了，毕竟不能对参与除法的运算数先分别取余后再相除（读者很容易就能想出反例），其实这部分内容涉及到互质、模逆元等等，我单独写一篇文章<a href="http://tashi711.xyz/programming/dsaa/extended-euclidean/" target="_blank" rel="noopener">「扩展欧几里得算法」与「模逆元」详解</a>来讲述这部分内容，此处不展开讨论了。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%B8%A6%E4%BD%99%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">维基百科 - 带余除法</a>.</li>
 <li><a href="https://zh.wikipedia.org/wiki/%E6%A8%A1%E9%99%A4" target="_blank" rel="noopener">维基百科 - 模除</a>.</li>
@@ -597,7 +618,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -828,6 +849,28 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 
   
@@ -850,6 +893,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
