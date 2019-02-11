@@ -38,15 +38,15 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>扩展欧几里得</tag>
-         
         <tag>Google</tag>
          
-        <tag>容斥原理</tag>
+        <tag>扩展欧几里得</tag>
          
         <tag>Kick Start</tag>
          
         <tag>字典树</tag>
+         
+        <tag>容斥原理</tag>
          
         <tag>组合数学</tag>
          
@@ -148,9 +148,9 @@
         <title>「LeetCode 940. Distinct Subsequences II」解题报告</title>
         <pubTime>2019-01-29T03:57:03.000Z</pubTime>
         
-        <tag>巧妙</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>巧妙</tag>
          
          
            
@@ -1416,9 +1416,9 @@
         <title>「Google C++ Style Guide」小结</title>
         <pubTime>2018-05-06T03:17:59.000Z</pubTime>
         
-        <tag>C++</tag>
-         
         <tag>Google</tag>
+         
+        <tag>C++</tag>
          
          
            
@@ -1535,9 +1535,9 @@
         <title>「Codeforces 955 - C. Sad powers」解题报告</title>
         <pubTime>2018-04-02T16:11:04.000Z</pubTime>
         
-        <tag>快速幂</tag>
-         
         <tag>容斥原理</tag>
+         
+        <tag>快速幂</tag>
          
          
            
