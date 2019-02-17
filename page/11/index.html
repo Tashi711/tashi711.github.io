@@ -89,7 +89,7 @@
 <meta name="description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tashi711的博客">
-<meta property="og:url" content="http://tashi711.top/page/2/index.html">
+<meta property="og:url" content="http://tashi711.top/page/11/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:locale" content="zh-Hans">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://tashi711.top/page/2/"/>
+  <link rel="canonical" href="http://tashi711.top/page/11/"/>
 
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-980/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/cpp-primer-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -326,7 +326,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-980/" itemprop="url">「LeetCode 980. Unique Paths III」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/others/cpp-primer-note/" itemprop="url">「C++ Primer (5th)」简单小结</a></h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T11:57:03+08:00">
-                2019-01-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T11:17:59+08:00">
+                2018-09-06
               </time>
             
 
@@ -372,19 +372,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -401,8 +390,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-980/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-980/" itemprop="commentCount"></span>
+                <a href="/programming/others/cpp-primer-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-primer-note/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,7 +399,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-980/" class="leancloud_visitors" data-flag-title="「LeetCode 980. Unique Paths III」解题报告">
+             <span id="/programming/others/cpp-primer-note/" class="leancloud_visitors" data-flag-title="「C++ Primer (5th)」简单小结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -442,31 +431,15 @@
 
       
         
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
+          <h2 id="C-Primer-5th"><a href="#C-Primer-5th" class="headerlink" title="C++ Primer (5th)"></a>C++ Primer (5th)</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/unique-paths-iii/description/" target="_blank" rel="noopener">LeetCode 980. Unique Paths III</a></li>
-<li>来源：LeetCode</li>
-<li>难度：Hard</li>
+<li>第一部分C++基础：第1-3章、简单笔记</li>
+<li>其他</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>在二维网格 grid 上，有 4 种类型的方格：<br>1 表示起始方格。且只有一个起始方格。<br>2 表示结束方格，且只有一个结束方格。<br>0 表示我们可以走过的空方格。<br>-1 表示我们无法跨越的障碍。<br>返回在四个方向（上、下、左、右）上行走时，从起始方格到结束方格的不同路径的数目，每一个无障碍方格都要通过一次。</p>
-<p><strong>示例 1：</strong><br>输入：[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]<br>输出：2<br>解释：我们有以下两条路径：</p>
-<ol>
-<li>(0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2)</li>
-<li>(0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2)</li>
-</ol>
-<p><strong>示例 2：</strong><br>输入：[[1,0,0,0],[0,0,0,0],[0,0,0,2]]<br>输出：4<br>解释：我们有以下四条路径： </p>
-<ol>
-<li>(0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2),(2,3)</li>
-<li>(0,0),(0,1),(1,1),(1,0),(2,0),(2,1),(2,2),(1,2),(0,2),(0,3),(1,3),(2,3)</li>
-<li>(0,0),(1,0),(2,0),(2,1),(2,2),(1,2),(1,1),(0,1),(0,2),(0,3),(1,3),(2,3)</li>
-<li>(0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2),(2,3)</li>
-</ol>
-<p><strong>示例 3：</strong><br>输入：[[0,1],[2,0]]<br>输出：0<br>解释：<br>没有一条路能完全穿过每一个空的方格一次。<br>请注意，起始和结束方格可以位于网格中的任意位置。</p>
-<p><strong>提示：</strong><br>1 &lt;= grid.length * grid[0].length &lt;= 20</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-980/#more" rel="contents">
+            <a class="btn" href="/programming/others/cpp-primer-note/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -517,7 +490,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-940/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-854/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -536,7 +509,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-940/" itemprop="url">「LeetCode 940. Distinct Subsequences II」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-854/" itemprop="url">「LeetCode 854. K-Similar Strings」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -548,8 +521,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T11:57:03+08:00">
-                2019-01-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-28T11:57:02+08:00">
+                2018-08-28
               </time>
             
 
@@ -611,8 +584,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-940/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-940/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-854/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-854/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -620,7 +593,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-940/" class="leancloud_visitors" data-flag-title="「LeetCode 940. Distinct Subsequences II」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-854/" class="leancloud_visitors" data-flag-title="「LeetCode 854. K-Similar Strings」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -654,19 +627,20 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/distinct-subsequences-ii/description/" target="_blank" rel="noopener">LeetCode 940. Distinct Subsequences II</a></li>
+<li>链接：<a href="https://leetcode.com/problems/k-similar-strings/description/" target="_blank" rel="noopener">LeetCode 854. K-Similar Strings</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个字符串 S，计算 S 的不同非空子序列的个数。<br>因为结果可能很大，所以返回答案模 10^9 + 7.</p>
-<p><strong>示例 1：</strong><br>输入：”abc”<br>输出：7<br>解释：7 个不同的子序列分别是 “a”, “b”, “c”, “ab”, “ac”, “bc”, 以及 “abc”。</p>
-<p><strong>示例 2：</strong><br>输入：”aba”<br>输出：6<br>解释：6 个不同的子序列分别是 “a”, “b”, “ab”, “ba”, “aa” 以及 “aba”。</p>
-<p><strong>示例 3：</strong><br>输入：”aaa”<br>输出：3<br>解释：3 个不同的子序列分别是 “a”, “aa” 以及 “aaa”。</p>
-<p><strong>提示：</strong><br>S 只包含小写字母。<br>1 &lt;= S.length &lt;= 2000</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　Strings A and B are K-similar (for some non-negative integer K) if we can swap the positions of two letters in A exactly K times so that the resulting string equals B.<br>　　Given two anagrams A and B, return the smallest K for which A and B are K-similar.</p>
+<p>　　Example 1:<br>　　Input: A = “ab”, B = “ba”<br>　　Output: 1</p>
+<p>　　Example 2:<br>　　Input: A = “abc”, B = “bca”<br>　　Output: 2</p>
+<p>　　Example 3:<br>　　Input: A = “abac”, B = “baca”<br>　　Output: 2</p>
+<p>　　Example 4:<br>　　Input: A = “aabc”, B = “abca”<br>　　Output: 2</p>
+<p>　　Note:<br>　　1 &lt;= A.length == B.length &lt;= 20<br>　　A and B contain only lowercase letters from the set {‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’}</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-940/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-854/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -717,7 +691,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-975/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-850/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -736,7 +710,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-975/" itemprop="url">「LeetCode 975. Odd Even Jump」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-850/" itemprop="url">「LeetCode 850. Rectangle Area II」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -748,8 +722,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-28T11:57:03+08:00">
-                2019-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-10T11:57:02+08:00">
+                2018-06-10
               </time>
             
 
@@ -811,8 +785,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-975/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-975/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-850/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-850/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -820,7 +794,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-975/" class="leancloud_visitors" data-flag-title="「LeetCode 975. Odd Even Jump」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-850/" class="leancloud_visitors" data-flag-title="「LeetCode 850. Rectangle Area II」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -854,19 +828,15 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/odd-even-jump/description/" target="_blank" rel="noopener">LeetCode 975. Odd Even Jump</a></li>
+<li>链接：<a href="https://leetcode.com/problems/rectangle-area-ii/description/" target="_blank" rel="noopener">LeetCode 850. Rectangle Area II</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数数组 A，你可以从某一起始索引出发，跳跃一定次数。在你跳跃的过程中，第 1、3、5… 次跳跃称为奇数跳跃，而第 2、4、6… 次跳跃称为偶数跳跃。<br>你可以按以下方式从索引 i 向后跳转到索引 j（其中 i &lt; j）：<br>在进行奇数跳跃时（如，第 1，3，5… 次跳跃），你将会跳到索引 j，使得 A[i] &lt;= A[j]，A[j] 是可能的最小值。如果存在多个这样的索引 j，你只能跳到满足要求的最小索引 j 上。<br>在进行偶数跳跃时（如，第 2，4，6… 次跳跃），你将会跳到索引 j，使得 A[i] =&gt; A[j]，A[j] 是可能的最大值。如果存在多个这样的索引 j，你只能跳到满足要求的最小索引 j 上。<br>（对于某些索引 i，可能无法进行合乎要求的跳跃。）<br>如果从某一索引开始跳跃一定次数（可能是 0 次或多次），就可以到达数组的末尾（索引 A.length - 1），那么该索引就会被认为是好的起始索引。<br>返回好的起始索引的数量。</p>
-<p><strong>示例 1：</strong><br>输入：[10,13,12,14,15]<br>输出：2<br>解释：<br>从起始索引 i = 0 出发，我们可以跳到 i = 2，（因为 A[2] 是 A[1]，A[2]，A[3]，A[4] 中大于或等于 A[0] 的最小值），然后我们就无法继续跳下去了。<br>从起始索引 i = 1 和 i = 2 出发，我们可以跳到 i = 3，然后我们就无法继续跳下去了。<br>从起始索引 i = 3 出发，我们可以跳到 i = 4，到达数组末尾。<br>从起始索引 i = 4 出发，我们已经到达数组末尾。<br>总之，我们可以从 2 个不同的起始索引（i = 3, i = 4）出发，通过一定数量的跳跃到达数组末尾。</p>
-<p><strong>示例 2：</strong><br>输入：[2,3,1,1,4]<br>输出：3<br>解释：<br>从起始索引 i=0 出发，我们依次可以跳到 i = 1，i = 2，i = 3：<br>在我们的第一次跳跃（奇数）中，我们先跳到 i = 1，因为 A[1] 是（A[1]，A[2]，A[3]，A[4]）中大于或等于 A[0] 的最小值。<br>在我们的第二次跳跃（偶数）中，我们从 i = 1 跳到 i = 2，因为 A[2] 是（A[2]，A[3]，A[4]）中小于或等于 A[1] 的最大值。A[3] 也是最大的值，但 2 是一个较小的索引，所以我们只能跳到 i = 2，而不能跳到 i = 3。<br>在我们的第三次跳跃（奇数）中，我们从 i = 2 跳到 i = 3，因为 A[3] 是（A[3]，A[4]）中大于或等于 A[2] 的最小值。<br>我们不能从 i = 3 跳到 i = 4，所以起始索引 i = 0 不是好的起始索引。<br>类似地，我们可以推断：<br>从起始索引 i = 1 出发， 我们跳到 i = 4，这样我们就到达数组末尾。<br>从起始索引 i = 2 出发， 我们跳到 i = 3，然后我们就不能再跳了。<br>从起始索引 i = 3 出发， 我们跳到 i = 4，这样我们就到达数组末尾。<br>从起始索引 i = 4 出发，我们已经到达数组末尾。<br>总之，我们可以从 3 个不同的起始索引（i = 1, i = 3, i = 4）出发，通过一定数量的跳跃到达数组末尾。</p>
-<p><strong>示例 3：</strong><br>输入：[5,1,3,4,2]<br>输出：3<br>解释：<br>我们可以从起始索引 1，2，4 出发到达数组末尾。</p>
-<p><strong>提示：</strong><br>A.length &lt;= 20000<br>0 &lt;= A[i] &lt; 100000</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　给定N（1到200）个矩形，坐标范围在0到10^9，求这N个矩形覆盖的面积，结果对10^9+7取模，题目保证总的覆盖范围不超过2^63-1。<br>　　样例1：输入[[0,0,2,2],[1,0,2,3],[1,0,3,1]]，输出6。<br>　　样例2：输入[[0,0,1000000000,1000000000]]，输出49。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-975/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-850/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -917,7 +887,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-972/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-843/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -936,7 +906,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-972/" itemprop="url">「LeetCode 972. Equal Rational Numbers」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-843/" itemprop="url">「LeetCode 843. Guess the Word」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -948,8 +918,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-27T11:57:03+08:00">
-                2019-01-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T20:39:10+08:00">
+                2018-06-08
               </time>
             
 
@@ -1011,8 +981,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-972/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-972/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-843/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-843/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1020,7 +990,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-972/" class="leancloud_visitors" data-flag-title="「LeetCode 972. Equal Rational Numbers」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-843/" class="leancloud_visitors" data-flag-title="「LeetCode 843. Guess the Word」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1054,19 +1024,15 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/equal-rational-numbers/solution/" target="_blank" rel="noopener">LeetCode 972. Equal Rational Numbers</a></li>
+<li>链接：<a href="https://leetcode.com/problems/guess-the-word/description/" target="_blank" rel="noopener">LeetCode 843. Guess the Word</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定两个字符串 S 和 T，每个字符串代表一个非负有理数，只有当它们表示相同的数字时才返回 true；否则，返回 false。字符串中可以使用括号来表示有理数的重复部分。<br>通常，有理数最多可以用三个部分来表示：整数部分 &lt;IntegerPart>、小数非重复部分 &lt;NonRepeatingPart> 和小数重复部分 &lt;(>&lt;RepeatingPart>&lt;)>。数字可以用以下三种方法之一来表示：<br> &lt;IntegerPart>（例：0，12，123）<br> &lt;IntegerPart>&lt;.>&lt;NonRepeatingPart> （例：0.5，2.12，2.0001）<br> &lt;IntegerPart>&lt;.>&lt;NonRepeatingPart>&lt;(>&lt;RepeatingPart>&lt;)>（例：0.1(6)，0.9(9)，0.00(1212)）<br>十进制展开的重复部分通常在一对圆括号内表示。例如：<br>1 / 6 = 0.16666666… = 0.1(6) = 0.1666(6) = 0.166(66)<br>0.1(6) 或 0.1666(6) 或 0.166(66) 都是 1 / 6 的正确表示形式。</p>
-<p><strong>示例 1：</strong><br>输入：S = “0.(52)”, T = “0.5(25)”<br>输出：true<br>解释：因为 “0.(52)” 代表 0.52525252…，而 “0.5(25)” 代表 0.52525252525…..，则这两个字符串表示相同的数字。</p>
-<p><strong>示例 2：</strong><br>输入：S = “0.1666(6)”, T = “0.166(66)”<br>输出：true</p>
-<p><strong>示例 3：</strong><br>输入：S = “0.9(9)”, T = “1.”<br>输出：true<br>解释：<br>“0.9(9)” 代表 0.999999999… 永远重复，等于 1 。<br>“1.” 表示数字 1，其格式正确：(IntegerPart) = “1” 且 (NonRepeatingPart) = “” 。</p>
-<p><strong>提示：</strong><br>每个部分仅由数字组成。<br>整数部分 &lt;IntegerPart> 不会以 2 个或更多的零开头。（对每个部分的数字没有其他限制）。<br>1 &lt;= &lt;IntegerPart>.length &lt;= 4<br>0 &lt;= &lt;NonRepeatingPart>.length &lt;= 4<br>1 &lt;= &lt;RepeatingPart>.length &lt;= 4</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　交互题目：<br>　　给定N（样例为4，测试数据为100）个不同单词的list，都是小写，6位长，采样随机，其中有一个是secret的，通过调用master.guess(word)可以猜词并返回word与secret单词匹配的个数（值和位置都要匹配），但word必须是给定的list里面的，否则返回-1。小于等于10次猜对即为正确。<br>　　样例：secret = “acckzz”，wordlist = [“acckzz”,”ccbazz”,”eiowzz”,”abcczz”]：<br>　　master.guess(“aaaaaa”) returns -1, because “aaaaaa” is not in wordlist.<br>　　master.guess(“acckzz”) returns 6, because “acckzz” is secret and has all 6 matches.<br>　　master.guess(“ccbazz”) returns 3, because “ccbazz” has 3 matches.<br>　　master.guess(“eiowzz”) returns 2, because “eiowzz” has 2 matches.<br>　　master.guess(“abcczz”) returns 4, because “abcczz” has 4 matches.<br>　　上面猜了5次，有一次猜对了，即为正确。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-972/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-843/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1117,7 +1083,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-968/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-839/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -1136,7 +1102,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-968/" itemprop="url">「LeetCode 968. Binary Tree Cameras」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-839/" itemprop="url">「LeetCode 839. Similar String Groups」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -1148,8 +1114,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T11:57:03+08:00">
-                2019-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T22:00:06+08:00">
+                2018-06-07
               </time>
             
 
@@ -1211,8 +1177,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-968/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-968/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-839/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-839/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1220,7 +1186,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-968/" class="leancloud_visitors" data-flag-title="「LeetCode 968. Binary Tree Cameras」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-839/" class="leancloud_visitors" data-flag-title="「LeetCode 839. Similar String Groups」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1254,18 +1220,15 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/binary-tree-cameras/description/" target="_blank" rel="noopener">LeetCode 968. Binary Tree Cameras</a></li>
+<li>链接：<a href="https://leetcode.com/problems/similar-string-groups/description/" target="_blank" rel="noopener">LeetCode 839. Similar String Groups</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定一个二叉树，我们在树的节点上安装摄像头。<br>节点上的每个摄影头都可以监视其父对象、自身及其直接子对象。<br>计算监控树的所有节点所需的最小摄像头数量。</p>
-<p><strong>示例 1：</strong><br>输入：[0,0,null,0,0]<br>输出：1<br>解释：如图所示，一台摄像头足以监控所有节点。</p>
-<p><strong>示例 2：</strong><br>输入：[0,0,null,0,null,0,null,null,0]<br>输出：2<br>解释：需要至少两个摄像头来监视树的所有节点。 上图显示了摄像头放置的有效位置之一。</p>
-<p><strong>提示：</strong><br>给定树的节点数的范围是 [1, 1000]。<br>每个节点的值都是 0。</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　给定N（1到2000）个长度为M（1到1000）的字符串，如果某两个字符串是相似的，当且仅当从某个字符串交换某两个字母位置后可以得到另一个。把这些字符串分成很多组，其中每组当中的每一个字符串至少跟同组的某一个字符串相似。求问这N个字符串被分为多少组。<br>　　给的字符串都是小写且包含的字母相同，另外有N*M≤20000，且judge时间更加充裕。<br>　　样例：输入[“tars”,”rats”,”arts”,”star”]，输出2。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-968/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-839/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1307,7 +1270,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
