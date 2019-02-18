@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-282/</loc>
+    <lastmod>2019-02-18T11:58:14.785Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 282. Expression Add Operators」解题报告</title>
+        <pubTime>2019-02-18T03:57:03.000Z</pubTime>
+        
+        <tag>回溯</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/others/poj-2299/</loc>
     <lastmod>2019-02-17T12:57:37.483Z</lastmod>
     <data>
@@ -165,9 +191,9 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>扩展欧几里得</tag>
-         
         <tag>Google</tag>
+         
+        <tag>扩展欧几里得</tag>
          
         <tag>容斥原理</tag>
          
@@ -1439,9 +1465,9 @@
         <title>「Google C++ Style Guide」小结</title>
         <pubTime>2018-05-06T03:17:59.000Z</pubTime>
         
-        <tag>C++</tag>
-         
         <tag>Google</tag>
+         
+        <tag>C++</tag>
          
          
            
