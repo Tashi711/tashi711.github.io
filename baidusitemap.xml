@@ -4,8 +4,64 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-995/</loc>
+    <lastmod>2019-02-20T07:59:50.468Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 995. Minimum Number of K Consecutive Bit Flips」解题报告</title>
+        <pubTime>2019-02-22T03:57:03.000Z</pubTime>
+        
+        <tag>巧妙</tag>
+         
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-996/</loc>
+    <lastmod>2019-02-20T07:29:11.558Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 996. Number of Squareful Arrays」解题报告</title>
+        <pubTime>2019-02-21T03:57:03.000Z</pubTime>
+        
+        <tag>状态压缩DP</tag>
+         
+        <tag>TSP问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-301/</loc>
-    <lastmod>2019-02-20T05:59:29.281Z</lastmod>
+    <lastmod>2019-02-20T07:29:06.363Z</lastmod>
     <data>
         <display>
         <title>「LeetCode 301. Remove Invalid Parentheses」解题报告</title>
