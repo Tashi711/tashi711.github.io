@@ -4,16 +4,16 @@
 
     
   <url>
-    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-995/</loc>
-    <lastmod>2019-02-20T07:59:50.468Z</lastmod>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-996/</loc>
+    <lastmod>2019-02-20T08:04:12.862Z</lastmod>
     <data>
         <display>
-        <title>「LeetCode 995. Minimum Number of K Consecutive Bit Flips」解题报告</title>
+        <title>「LeetCode 996. Number of Squareful Arrays」解题报告</title>
         <pubTime>2019-02-22T03:57:03.000Z</pubTime>
         
-        <tag>巧妙</tag>
+        <tag>状态压缩DP</tag>
          
-        <tag>贪心</tag>
+        <tag>TSP问题</tag>
          
          
            
@@ -32,16 +32,16 @@
 
     
   <url>
-    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-996/</loc>
-    <lastmod>2019-02-20T07:29:11.558Z</lastmod>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-995/</loc>
+    <lastmod>2019-02-20T08:03:55.271Z</lastmod>
     <data>
         <display>
-        <title>「LeetCode 996. Number of Squareful Arrays」解题报告</title>
+        <title>「LeetCode 995. Minimum Number of K Consecutive Bit Flips」解题报告</title>
         <pubTime>2019-02-21T03:57:03.000Z</pubTime>
         
-        <tag>状态压缩DP</tag>
+        <tag>巧妙</tag>
          
-        <tag>TSP问题</tag>
+        <tag>贪心</tag>
          
          
            
