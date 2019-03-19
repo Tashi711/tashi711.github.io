@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="树状数组," />
 
 
 
@@ -88,16 +88,18 @@
 
 
 
-<meta name="description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tashi711的博客">
-<meta property="og:url" content="http://tashi711.top/page/19/index.html">
+<meta name="description" content="问题提出之前写过一篇“「树状数组」浅析”，详述了一维树状数组，本文主要推广到二维树状数组，也可以类推到更高维。同样用一个问题引出，已知二维数组a[][]，元素个数为n*m，现在要求a数组中某个矩形区域的和。 前缀和">
+<meta name="keywords" content="树状数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「二维树状数组」浅析">
+<meta property="og:url" content="http://tashi711.top/programming/dsaa/2d-bit/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
-<meta property="og:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
+<meta property="og:description" content="问题提出之前写过一篇“「树状数组」浅析”，详述了一维树状数组，本文主要推广到二维树状数组，也可以类推到更高维。同样用一个问题引出，已知二维数组a[][]，元素个数为n*m，现在要求a数组中某个矩形区域的和。 前缀和">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-19T15:00:43.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tashi711的博客">
-<meta name="twitter:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
+<meta name="twitter:title" content="「二维树状数组」浅析">
+<meta name="twitter:description" content="问题提出之前写过一篇“「树状数组」浅析”，详述了一维树状数组，本文主要推广到二维树状数组，也可以类推到更高维。同样用一个问题引出，已知二维数组a[][]，元素个数为n*m，现在要求a数组中某个矩形区域的和。 前缀和">
 
 
 
@@ -127,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://tashi711.top/page/19/"/>
+  <link rel="canonical" href="http://tashi711.top/programming/dsaa/2d-bit/"/>
 
 
 
 
 
-  <title>Tashi711的博客</title>
+  <title>「二维树状数组」浅析 | Tashi711的博客</title>
   
 
 
@@ -152,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,9 +295,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -309,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-878/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/2d-bit/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -326,9 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-878/" itemprop="url">「LeetCode 878. Nth Magical Number」解题报告</a></h1>
+          <h1 class="post-title" itemprop="name headline">「二维树状数组」浅析</h1>
         
 
         <div class="post-meta">
@@ -340,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-30T11:57:02+08:00">
-                2018-09-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T11:15:34+08:00">
+                2019-03-19
               </time>
             
 
@@ -374,19 +373,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -403,8 +391,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-878/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-878/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/2d-bit/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/2d-bit/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +400,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-878/" class="leancloud_visitors" data-flag-title="「LeetCode 878. Nth Magical Number」解题报告">
+             <span id="/programming/dsaa/2d-bit/" class="leancloud_visitors" data-flag-title="「二维树状数组」浅析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -443,28 +431,15 @@
       
 
       
-        
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/nth-magical-number/description/" target="_blank" rel="noopener">LeetCode 878. Nth Magical Number</a></li>
-<li>来源：LeetCode</li>
-<li>难度：Hard</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>A positive integer is magical if it is divisible by either A or B.<br>Return the N-th magical number.  Since the answer may be very large, return it modulo 10^9 + 7.</p>
-<p><strong>Example 1:</strong><br>Input: N = 1, A = 2, B = 3<br>Output: 2</p>
-<p><strong>Example 2:</strong><br>Input: N = 4, A = 2, B = 3<br>Output: 6</p>
-<p><strong>Example 3:</strong><br>Input: N = 5, A = 2, B = 4<br>Output: 10</p>
-<p><strong>Example 4:</strong><br>Input: N = 3, A = 6, B = 4<br>Output: 8</p>
-<p><strong>Note:</strong><br>1 &lt;= N &lt;= 10^9<br>2 &lt;= A &lt;= 40000<br>2 &lt;= B &lt;= 40000</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-878/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h2 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h2><p>之前写过一篇“「树状数组」浅析”，详述了一维树状数组，本文主要推广到二维树状数组，也可以类推到更高维。同样用一个问题引出，已知二维数组a[][]，元素个数为n*m，现在要求a数组中某个矩形区域的和。</p>
+<h3 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h3><a id="more"></a>
+<p>与一维情况一样，我们完全可以存储sum(x, y)表示从左下角到(x, y)的矩形区域的和（注意这里表达的意思与另一篇文章的区别），然后对任意给定的查找区间[x1 ~ x2, y1 ~ y2]，返回sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1)。同样的问题，这只是没有元素改变的情况下的比较优化的解法，那么对于对于数组中的元素随时变更的情况下是否也有像一维树状数组一样优秀的算法呢。</p>
+<h2 id="二维树状数组的思想"><a href="#二维树状数组的思想" class="headerlink" title="二维树状数组的思想"></a>二维树状数组的思想</h2><p>回想一维树状数组，当前index上的值管理了它本身往前到index去掉lowbit后位置的后面一个位置间的数的和，而二维树状数组tree[i][j]其实管理的是x从i-lowbit(i)+1到i，y从j-lowbit(j)+1到j间的数的和，因此二维树状数组的算法也呼之欲出，用两层循环分别遍历i和j的lowbit即可。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TwoDimensionalBIT</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  TwoDimensionalBIT(<span class="keyword">int</span> len_x, <span class="keyword">int</span> len_y, <span class="keyword">int</span> x0 = <span class="number">1</span>, <span class="keyword">int</span> y0 = <span class="number">1</span>)</span><br><span class="line">    : len_x_(len_x), len_y_(len_y), x0_(x0), y0_(y0),</span><br><span class="line">    tree(len_x + <span class="number">1</span>, <span class="built_in">vector</span>&lt;T&gt;(len_y + <span class="number">1</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> px = x - x0_ + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (px &lt;= len_x_) &#123;</span><br><span class="line">      <span class="keyword">int</span> py = y - y0_ + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">while</span> (py &lt;= len_y_) &#123;</span><br><span class="line">        tree[px][py] += k;</span><br><span class="line">        py += Lowbit(py);</span><br><span class="line">      &#125;</span><br><span class="line">      px += Lowbit(px);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function">T <span class="title">GetRange</span><span class="params">(<span class="keyword">int</span> x1, <span class="keyword">int</span> x2, <span class="keyword">int</span> y1, <span class="keyword">int</span> y2)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> GetSum(x2, y2) - GetSum(x1 - <span class="number">1</span>, y2) - GetSum(x2, y1 - <span class="number">1</span>) +</span><br><span class="line">      GetSum(x1 - <span class="number">1</span>, y1 - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">Lowbit</span><span class="params">(<span class="keyword">int</span> p)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> p &amp; -p;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function">T <span class="title">GetSum</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    T sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> px = x - x0_ + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (px) &#123;</span><br><span class="line">      <span class="keyword">int</span> py = y - y0_ + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">while</span> (py) &#123;</span><br><span class="line">        sum += tree[px][py];</span><br><span class="line">        py ^= Lowbit(py);</span><br><span class="line">      &#125;</span><br><span class="line">      px ^= Lowbit(px);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> len_x_ = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">int</span> len_y_ = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">int</span> x0_ = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">int</span> y0_ = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;T&gt;&gt; tree;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h3><p>这段代码相比于一维的那个版本更加推广了几点：1、用模板可以实现各类别的和；2、可选择起点，一般树状数组都是1到n这样规定下标的，毕竟要满足lowbit的约束，有时候会遇到实际是0开始的下标甚至有负下标，可以直接在上面的代码中放进构造函数，内部会在计算时把实际坐标先对应到以1开头。</p>
+<h2 id="复杂度分析与拓展"><a href="#复杂度分析与拓展" class="headerlink" title="复杂度分析与拓展"></a>复杂度分析与拓展</h2><p>这里看到两层循环，每层都遍历了一遍lowbit，因此复杂度为$O(\log n*\log m)$（对于单次更新和求和操作都是）。要注意的是很多处理高维的对数级复杂度的数据结构的复杂度中的对数是取在整体size上的（比如二维线段树的单次操作复杂度是$O(\log (nm))=O(\log n+\log m)$）。</p>
+<p>按照一维到二维的推广思路，树状数组也很容易推广到更高维度，单次复杂度为每个维度对数的乘积，以线段树为比较，高维线段树单次复杂度为每个维度对数的和（高维情况下，线段树不再表现为线段，例如一般把二维线段树叫做矩形树或者四分树，这里姑且先这么叫），因此除了一维的情况，线段树都比树状数组复杂度低，并且线段树功能上更为强大，树状数组只能动态更新单点，线段树可以动态更新线段（或者高维中的矩形、长方体等），此外树状数组只能用于求前缀和，线段树可以解决非常多种类的区间操作问题。当然了，树状数组也有其优势，一是代码简单，二是常数小，在一般的size下，log级别其实也就是常数级别，线段树通常要承担比树状数组大的常数开销，因此最后的表现可能差不多。</p>
+
       
     </div>
     
@@ -476,415 +451,57 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.top/programming/dsaa/2d-bit/" title="「二维树状数组」浅析">http://tashi711.top/programming/dsaa/2d-bit/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-887/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-887/" itemprop="url">「LeetCode 887. Super Egg Drop」解题报告</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-29T11:57:02+08:00">
-                2018-09-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/树状数组/" rel="tag"># 树状数组</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/reports/leetcode/leetcode-887/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-887/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/programming/reports/leetcode/leetcode-887/" class="leancloud_visitors" data-flag-title="「LeetCode 887. Super Egg Drop」解题报告">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/super-egg-drop/description/" target="_blank" rel="noopener">LeetCode 887. Super Egg Drop</a></li>
-<li>来源：LeetCode</li>
-<li>难度：Hard</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>You are given K eggs, and you have access to a building with N floors from 1 to N.<br>Each egg is identical in function, and if an egg breaks, you cannot drop it again.<br>You know that there exists a floor F with 0 &lt;= F &lt;= N such that any egg dropped at a floor higher than F will break, and any egg dropped at or below floor F will not break.<br>Each move, you may take an egg (if you have an unbroken one) and drop it from any floor X (with 1 &lt;= X &lt;= N).<br>Your goal is to know with certainty what the value of F is.<br>What is the minimum number of moves that you need to know with certainty what F is, regardless of the initial value of F?</p>
-<p><strong>Example 1:</strong><br>Input: K = 1, N = 2<br>Output: 2<br>Explanation:<br>Drop the egg from floor 1.  If it breaks, we know with certainty that F = 0.<br>Otherwise, drop the egg from floor 2.  If it breaks, we know with certainty that F = 1.<br>If it didn’t break, then we know with certainty F = 2.<br>Hence, we needed 2 moves in the worst case to know what F is with certainty.</p>
-<p><strong>Example 2:</strong><br>Input: K = 2, N = 6<br>Output: 3</p>
-<p><strong>Example 3:</strong><br>Input: K = 3, N = 14<br>Output: 4</p>
-<p><strong>Note:</strong><br>1 &lt;= K &lt;= 100<br>1 &lt;= N &lt;= 10000</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-887/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/programming/reports/leetcode/leetcode-587/" rel="next" title="「LeetCode 587. Erect the Fence」解题报告">
+                <i class="fa fa-chevron-left"></i> 「LeetCode 587. Erect the Fence」解题报告
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-891/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-891/" itemprop="url">「LeetCode 891. Sum of Subsequence Widths」解题报告</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T11:57:02+08:00">
-                2018-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/reports/leetcode/leetcode-891/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-891/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/programming/reports/leetcode/leetcode-891/" class="leancloud_visitors" data-flag-title="「LeetCode 891. Sum of Subsequence Widths」解题报告">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/sum-of-subsequence-widths/description/" target="_blank" rel="noopener">LeetCode 891. Sum of Subsequence Widths</a></li>
-<li>来源：LeetCode</li>
-<li>难度：Hard</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>Given an array of integers A, consider all non-empty subsequences of A.<br>For any sequence S, let the width of S be the difference between the maximum and minimum element of S.<br>Return the sum of the widths of all subsequences of A.<br>As the answer may be very large, return the answer modulo 10^9 + 7.</p>
-<p><strong>Example 1:</strong><br>Input: [2,1,3]<br>Output: 6<br>Explanation:<br>Subsequences are [1], [2], [3], [2,1], [2,3], [1,3], [2,1,3].<br>The corresponding widths are 0, 0, 0, 1, 1, 2, 2.<br>The sum of these widths is 6.</p>
-<p><strong>Note:</strong><br>1 &lt;= A.length &lt;= 20000<br>1 &lt;= A[i] &lt;= 20000</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-891/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -894,14 +511,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -909,6 +523,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -929,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1001,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题提出"><span class="nav-number">1.</span> <span class="nav-text">问题提出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前缀和"><span class="nav-number">1.1.</span> <span class="nav-text">前缀和</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维树状数组的思想"><span class="nav-number">2.</span> <span class="nav-text">二维树状数组的思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码解释"><span class="nav-number">3.1.</span> <span class="nav-text">代码解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度分析与拓展"><span class="nav-number">4.</span> <span class="nav-text">复杂度分析与拓展</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1143,6 +789,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

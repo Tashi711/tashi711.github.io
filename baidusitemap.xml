@@ -4,6 +4,107 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/2d-bit/</loc>
+    <lastmod>2019-03-19T15:00:43.940Z</lastmod>
+    <data>
+        <display>
+        <title>「二维树状数组」浅析</title>
+        <pubTime>2019-03-19T03:15:34.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-480/</loc>
+    <lastmod>2019-03-06T14:34:26.923Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 480. Sliding Window Median」解题报告</title>
+        <pubTime>2019-02-25T03:57:03.000Z</pubTime>
+        
+        <tag>平衡树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-493/</loc>
+    <lastmod>2019-03-06T14:34:09.895Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 493. Reverse Pairs」解题报告</title>
+        <pubTime>2019-02-26T03:57:03.000Z</pubTime>
+        
+        <tag>分治</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-564/</loc>
+    <lastmod>2019-03-06T14:34:00.373Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 564. Find the Closest Palindrome」解题报告</title>
+        <pubTime>2019-02-27T03:57:03.000Z</pubTime>
+        
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-587/</loc>
     <lastmod>2019-03-05T13:57:29.889Z</lastmod>
     <data>
@@ -48,84 +149,6 @@
           
              
               <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-564/</loc>
-    <lastmod>2019-02-26T16:17:22.524Z</lastmod>
-    <data>
-        <display>
-        <title>「LeetCode 564. Find the Closest Palindrome」解题报告</title>
-        <pubTime>2019-02-27T03:57:03.000Z</pubTime>
-        
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-493/</loc>
-    <lastmod>2019-02-25T15:04:57.440Z</lastmod>
-    <data>
-        <display>
-        <title>「LeetCode 493. Reverse Pairs」解题报告</title>
-        <pubTime>2019-02-26T03:57:03.000Z</pubTime>
-        
-        <tag>分治</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-480/</loc>
-    <lastmod>2019-02-25T05:53:59.867Z</lastmod>
-    <data>
-        <display>
-        <title>「LeetCode 480. Sliding Window Median」解题报告</title>
-        <pubTime>2019-02-25T03:57:03.000Z</pubTime>
-        
-        <tag>平衡树</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-          
-             
-              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
           
         </display>
     </data>
