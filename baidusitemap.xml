@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-730/</loc>
+    <lastmod>2019-03-31T08:27:44.259Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 730. Count Different Palindromic Subsequences」解题报告</title>
+        <pubTime>2019-04-01T03:57:03.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>回文串</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-132/</loc>
     <lastmod>2019-03-31T07:10:57.114Z</lastmod>
     <data>
