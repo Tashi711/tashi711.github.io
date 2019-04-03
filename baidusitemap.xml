@@ -4,6 +4,58 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-1/</loc>
+    <lastmod>2019-04-03T16:26:11.982Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 1. Two Sum」解题报告</title>
+        <pubTime>2019-04-02T03:57:02.000Z</pubTime>
+        
+        <tag>哈希</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-2/</loc>
+    <lastmod>2019-04-03T16:25:53.732Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 2. Add Two Numbers」解题报告</title>
+        <pubTime>2019-04-03T03:57:02.000Z</pubTime>
+        
+        <tag>链表</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-730/</loc>
     <lastmod>2019-03-31T08:27:44.259Z</lastmod>
     <data>
@@ -660,9 +712,9 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>扩展欧几里得</tag>
-         
         <tag>Google</tag>
+         
+        <tag>扩展欧几里得</tag>
          
         <tag>容斥原理</tag>
          

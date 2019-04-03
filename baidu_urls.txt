@@ -1,3 +1,5 @@
+http://tashi711.top/programming/reports/leetcode/leetcode-2/
+http://tashi711.top/programming/reports/leetcode/leetcode-1/
 http://tashi711.top/programming/reports/leetcode/leetcode-730/
 http://tashi711.top/programming/reports/leetcode/leetcode-5/
 http://tashi711.top/programming/reports/leetcode/leetcode-132/
@@ -34,11 +36,11 @@ http://tashi711.top/programming/reports/leetcode/leetcode-233/
 http://tashi711.top/programming/reports/leetcode/leetcode-943/
 http://tashi711.top/programming/reports/leetcode/leetcode-964/
 http://tashi711.top/programming/reports/leetcode/leetcode-960/
-http://tashi711.top/programming/reports/leetcode/leetcode-145/
-http://tashi711.top/programming/reports/leetcode/leetcode-128/
-http://tashi711.top/programming/reports/leetcode/leetcode-135/
 http://tashi711.top/programming/reports/leetcode/leetcode-97/
 http://tashi711.top/programming/reports/leetcode/leetcode-140/
+http://tashi711.top/programming/reports/leetcode/leetcode-145/
+http://tashi711.top/programming/reports/leetcode/leetcode-135/
+http://tashi711.top/programming/reports/leetcode/leetcode-128/
 http://tashi711.top/programming/reports/leetcode/leetcode-84/
 http://tashi711.top/programming/reports/leetcode/leetcode-76/
 http://tashi711.top/programming/reports/leetcode/leetcode-72/
