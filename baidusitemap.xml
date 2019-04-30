@@ -4,11 +4,36 @@
 
     
   <url>
-    <loc>http://tashi711.top/programming/others/queue-max-query/</loc>
-    <lastmod>2019-04-30T17:13:05.649Z</lastmod>
+    <loc>http://tashi711.top/programming/dsaa/manacher/</loc>
+    <lastmod>2019-04-30T18:47:36.040Z</lastmod>
     <data>
         <display>
-        <title>「队列最大值询问」</title>
+        <title>「Manacher算法」模板</title>
+        <pubTime>2019-05-02T03:15:34.000Z</pubTime>
+        
+        <tag>回文串</tag>
+         
+        <tag>Manacher</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/queue-max-query/</loc>
+    <lastmod>2019-04-30T18:35:36.821Z</lastmod>
+    <data>
+        <display>
+        <title>「队列最大值询问」妙解</title>
         <pubTime>2019-05-01T03:17:59.000Z</pubTime>
         
         <tag>巧妙</tag>
