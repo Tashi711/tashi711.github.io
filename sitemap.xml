@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tashi711.top/programming/dsaa/graham_scan/</loc>
+    <loc>http://tashi711.top/programming/dsaa/reversed-pair/</loc>
     
-    <lastmod>2019-05-01T18:23:29.765Z</lastmod>
+    <lastmod>2019-05-02T19:27:55.167Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
+    
+    <lastmod>2019-05-02T19:20:48.870Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/others/triangle-directed-area/</loc>
+    
+    <lastmod>2019-05-02T17:08:22.676Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
+    
+    <lastmod>2019-05-02T05:17:54.986Z</lastmod>
     
   </url>
   

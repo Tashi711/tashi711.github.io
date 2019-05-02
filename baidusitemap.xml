@@ -4,8 +4,79 @@
 
     
   <url>
-    <loc>http://tashi711.top/programming/dsaa/graham_scan/</loc>
-    <lastmod>2019-05-01T18:23:29.765Z</lastmod>
+    <loc>http://tashi711.top/programming/dsaa/reversed-pair/</loc>
+    <lastmod>2019-05-02T19:27:55.167Z</lastmod>
+    <data>
+        <display>
+        <title>「逆序对算法」模板</title>
+        <pubTime>2019-05-06T03:15:34.000Z</pubTime>
+        
+        <tag>归并排序</tag>
+         
+        <tag>逆序对</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
+    <lastmod>2019-05-02T19:20:48.870Z</lastmod>
+    <data>
+        <display>
+        <title>「离散化算法」模板</title>
+        <pubTime>2019-05-05T03:15:34.000Z</pubTime>
+        
+        <tag>离散化</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/triangle-directed-area/</loc>
+    <lastmod>2019-05-02T17:08:22.676Z</lastmod>
+    <data>
+        <display>
+        <title>「三角形有向面积」计算</title>
+        <pubTime>2019-05-04T03:15:34.000Z</pubTime>
+        
+        <tag>计算几何</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
+    <lastmod>2019-05-02T05:17:54.986Z</lastmod>
     <data>
         <display>
         <title>「Graham扫描算法」模板</title>

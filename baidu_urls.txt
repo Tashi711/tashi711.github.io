@@ -1,4 +1,7 @@
-http://tashi711.top/programming/dsaa/graham_scan/
+http://tashi711.top/programming/dsaa/reversed-pair/
+http://tashi711.top/programming/dsaa/discretize/
+http://tashi711.top/programming/others/triangle-directed-area/
+http://tashi711.top/programming/dsaa/graham-scan/
 http://tashi711.top/programming/dsaa/manacher/
 http://tashi711.top/programming/others/queue-max-query/
 http://tashi711.top/programming/dsaa/bign/
@@ -42,14 +45,14 @@ http://tashi711.top/programming/reports/leetcode/leetcode-233/
 http://tashi711.top/programming/reports/leetcode/leetcode-943/
 http://tashi711.top/programming/reports/leetcode/leetcode-960/
 http://tashi711.top/programming/reports/leetcode/leetcode-964/
-http://tashi711.top/programming/reports/leetcode/leetcode-140/
-http://tashi711.top/programming/reports/leetcode/leetcode-145/
 http://tashi711.top/programming/reports/leetcode/leetcode-97/
-http://tashi711.top/programming/reports/leetcode/leetcode-128/
 http://tashi711.top/programming/reports/leetcode/leetcode-135/
+http://tashi711.top/programming/reports/leetcode/leetcode-145/
+http://tashi711.top/programming/reports/leetcode/leetcode-128/
+http://tashi711.top/programming/reports/leetcode/leetcode-140/
 http://tashi711.top/programming/reports/leetcode/leetcode-84/
-http://tashi711.top/programming/reports/leetcode/leetcode-76/
 http://tashi711.top/programming/reports/leetcode/leetcode-72/
+http://tashi711.top/programming/reports/leetcode/leetcode-76/
 http://tashi711.top/programming/dsaa/kmp/
 http://tashi711.top/programming/reports/leetcode/leetcode-952/
 http://tashi711.top/programming/reports/leetcode/leetcode-956/
