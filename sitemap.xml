@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
+    
+    <lastmod>2019-05-03T17:44:15.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/hungarian/</loc>
+    
+    <lastmod>2019-05-03T17:43:37.529Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/km/</loc>
     
-    <lastmod>2019-05-03T17:11:40.580Z</lastmod>
+    <lastmod>2019-05-03T17:43:07.041Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/2d-bit/</loc>
+    
+    <lastmod>2019-05-03T17:36:08.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/kmp/</loc>
+    
+    <lastmod>2019-05-03T17:21:15.951Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/segment-tree/</loc>
+    
+    <lastmod>2019-05-03T17:16:52.233Z</lastmod>
     
   </url>
   
@@ -12,13 +47,6 @@
     <loc>http://tashi711.top/programming/reports/others/zoj-3933/</loc>
     
     <lastmod>2019-05-03T16:54:13.235Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/hungarian/</loc>
-    
-    <lastmod>2019-05-03T11:56:47.109Z</lastmod>
     
   </url>
   
@@ -47,13 +75,6 @@
     <loc>http://tashi711.top/programming/others/triangle-directed-area/</loc>
     
     <lastmod>2019-05-02T17:08:22.676Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
-    
-    <lastmod>2019-05-02T05:17:54.986Z</lastmod>
     
   </url>
   
@@ -89,13 +110,6 @@
     <loc>http://tashi711.top/programming/dsaa/catalan-number/</loc>
     
     <lastmod>2019-04-05T14:40:22.928Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/2d-bit/</loc>
-    
-    <lastmod>2019-04-05T09:17:45.654Z</lastmod>
     
   </url>
   
@@ -145,13 +159,6 @@
     <loc>http://tashi711.top/programming/reports/others/poj-3468/</loc>
     
     <lastmod>2019-03-29T13:56:14.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/segment-tree/</loc>
-    
-    <lastmod>2019-03-29T13:48:37.792Z</lastmod>
     
   </url>
   
@@ -446,13 +453,6 @@
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-76/</loc>
     
     <lastmod>2018-12-23T15:02:14.459Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/kmp/</loc>
-    
-    <lastmod>2018-12-23T10:35:29.393Z</lastmod>
     
   </url>
   
