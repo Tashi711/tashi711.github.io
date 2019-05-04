@@ -4,6 +4,100 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/combinatorial_math/</loc>
+    <lastmod>2019-05-04T17:49:22.666Z</lastmod>
+    <data>
+        <display>
+        <title>「组合数学相关算法」模板</title>
+        <pubTime>2019-05-11T03:15:34.000Z</pubTime>
+        
+        <tag>组合数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/quick-power/</loc>
+    <lastmod>2019-05-04T08:52:51.155Z</lastmod>
+    <data>
+        <display>
+        <title>「快速幂算法」模板</title>
+        <pubTime>2019-05-10T03:15:34.000Z</pubTime>
+        
+        <tag>快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/matrix/</loc>
+    <lastmod>2019-05-04T06:59:12.309Z</lastmod>
+    <data>
+        <display>
+        <title>「矩阵运算相关」模板</title>
+        <pubTime>2019-05-09T03:15:34.000Z</pubTime>
+        
+        <tag>矩阵运算</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/bign-with-gcd/</loc>
+    <lastmod>2019-05-04T06:15:49.642Z</lastmod>
+    <data>
+        <display>
+        <title>「高精度及其最大公约数」模板</title>
+        <pubTime>2019-04-30T03:15:34.000Z</pubTime>
+        
+        <tag>高精度</tag>
+         
+        <tag>最大公约数</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
     <lastmod>2019-05-03T17:44:15.880Z</lastmod>
     <data>
@@ -291,29 +385,6 @@
           
              
               <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/bign/</loc>
-    <lastmod>2019-04-29T17:22:41.875Z</lastmod>
-    <data>
-        <display>
-        <title>「高精度」模板</title>
-        <pubTime>2019-04-30T03:15:34.000Z</pubTime>
-        
-        <tag>高精度</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
