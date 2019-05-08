@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/topological-sort/</loc>
+    
+    <lastmod>2019-05-08T15:46:38.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/kruskal/</loc>
+    
+    <lastmod>2019-05-07T16:06:36.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/disjoint-set/</loc>
+    
+    <lastmod>2019-05-06T15:44:40.560Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/prim/</loc>
+    
+    <lastmod>2019-05-06T15:43:37.628Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/km/</loc>
+    
+    <lastmod>2019-05-06T15:01:16.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/eulerian-path/</loc>
+    
+    <lastmod>2019-05-06T14:36:07.465Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/about/index.html</loc>
+    
+    <lastmod>2019-05-05T13:27:24.467Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/combinatorial_math/</loc>
     
     <lastmod>2019-05-04T17:49:22.666Z</lastmod>
@@ -44,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://tashi711.top/programming/dsaa/km/</loc>
-    
-    <lastmod>2019-05-03T17:43:07.041Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tashi711.top/programming/dsaa/2d-bit/</loc>
     
     <lastmod>2019-05-03T17:36:08.753Z</lastmod>
@@ -75,13 +117,6 @@
     <loc>http://tashi711.top/programming/reports/others/zoj-3933/</loc>
     
     <lastmod>2019-05-03T16:54:13.235Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/about/index.html</loc>
-    
-    <lastmod>2019-05-03T06:58:59.422Z</lastmod>
     
   </url>
   

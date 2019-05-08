@@ -4,6 +4,155 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/topological-sort/</loc>
+    <lastmod>2019-05-08T15:46:38.921Z</lastmod>
+    <data>
+        <display>
+        <title>「拓扑排序算法」模板</title>
+        <pubTime>2019-05-16T03:15:34.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>拓扑排序</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/kruskal/</loc>
+    <lastmod>2019-05-07T16:06:36.263Z</lastmod>
+    <data>
+        <display>
+        <title>「Kruskal算法」模板</title>
+        <pubTime>2019-05-15T03:15:34.000Z</pubTime>
+        
+        <tag>最小生成树</tag>
+         
+        <tag>Kruskal</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/disjoint-set/</loc>
+    <lastmod>2019-05-06T15:44:40.560Z</lastmod>
+    <data>
+        <display>
+        <title>「并查集」模板</title>
+        <pubTime>2019-05-14T03:15:34.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/prim/</loc>
+    <lastmod>2019-05-06T15:43:37.628Z</lastmod>
+    <data>
+        <display>
+        <title>「Prim算法」模板</title>
+        <pubTime>2019-05-13T03:15:34.000Z</pubTime>
+        
+        <tag>Prim</tag>
+         
+        <tag>最小生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/km/</loc>
+    <lastmod>2019-05-06T15:01:16.756Z</lastmod>
+    <data>
+        <display>
+        <title>「KM算法」模板</title>
+        <pubTime>2019-05-08T03:15:34.000Z</pubTime>
+        
+        <tag>二分图匹配</tag>
+         
+        <tag>KM算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/eulerian-path/</loc>
+    <lastmod>2019-05-06T14:36:07.465Z</lastmod>
+    <data>
+        <display>
+        <title>「欧拉路径算法」模板</title>
+        <pubTime>2019-05-12T03:15:34.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>欧拉路径</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/combinatorial_math/</loc>
     <lastmod>2019-05-04T17:49:22.666Z</lastmod>
     <data>
@@ -148,31 +297,6 @@
 
     
   <url>
-    <loc>http://tashi711.top/programming/dsaa/km/</loc>
-    <lastmod>2019-05-03T17:43:07.041Z</lastmod>
-    <data>
-        <display>
-        <title>「KM算法」模板</title>
-        <pubTime>2019-05-08T03:15:34.000Z</pubTime>
-        
-        <tag>二分图匹配</tag>
-         
-        <tag>KM算法</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tashi711.top/programming/dsaa/2d-bit/</loc>
     <lastmod>2019-05-03T17:36:08.753Z</lastmod>
     <data>
@@ -270,7 +394,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://tashi711.top/programming/dsaa/reversed-pair/</loc>
