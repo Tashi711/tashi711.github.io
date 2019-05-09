@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/extended-crt/</loc>
+    <lastmod>2019-05-09T17:47:30.580Z</lastmod>
+    <data>
+        <display>
+        <title>「扩展中国剩余定理」深入思考</title>
+        <pubTime>2019-05-17T03:15:34.000Z</pubTime>
+        
+        <tag>扩展中国剩余定理</tag>
+         
+        <tag>线性同余方程</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/topological-sort/</loc>
     <lastmod>2019-05-08T15:46:38.921Z</lastmod>
     <data>
@@ -36,9 +61,9 @@
         <title>「Kruskal算法」模板</title>
         <pubTime>2019-05-15T03:15:34.000Z</pubTime>
         
-        <tag>最小生成树</tag>
-         
         <tag>Kruskal</tag>
+         
+        <tag>最小生成树</tag>
          
          
            
@@ -84,9 +109,9 @@
         <title>「Prim算法」模板</title>
         <pubTime>2019-05-13T03:15:34.000Z</pubTime>
         
-        <tag>Prim</tag>
-         
         <tag>最小生成树</tag>
+         
+        <tag>Prim</tag>
          
          
            
@@ -134,9 +159,9 @@
         <title>「欧拉路径算法」模板</title>
         <pubTime>2019-05-12T03:15:34.000Z</pubTime>
         
-        <tag>图论</tag>
-         
         <tag>欧拉路径</tag>
+         
+        <tag>图论</tag>
          
          
            
@@ -247,6 +272,29 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
+    <lastmod>2019-05-03T17:46:52.439Z</lastmod>
+    <data>
+        <display>
+        <title>「离散化算法」模板</title>
+        <pubTime>2019-05-05T03:15:34.000Z</pubTime>
+        
+        <tag>离散化</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
     <lastmod>2019-05-03T17:44:15.880Z</lastmod>
     <data>
@@ -282,6 +330,31 @@
         <tag>二分图匹配</tag>
          
         <tag>匈牙利算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/manacher/</loc>
+    <lastmod>2019-05-03T17:39:08.676Z</lastmod>
+    <data>
+        <display>
+        <title>「Manacher算法」模板</title>
+        <pubTime>2019-05-02T03:15:34.000Z</pubTime>
+        
+        <tag>回文串</tag>
+         
+        <tag>Manacher</tag>
          
          
            
@@ -375,9 +448,9 @@
         
         <tag>二分图匹配</tag>
          
-        <tag>费用流</tag>
-         
         <tag>KM算法</tag>
+         
+        <tag>费用流</tag>
          
          
            
@@ -403,32 +476,9 @@
         <title>「逆序对算法」模板</title>
         <pubTime>2019-05-06T03:15:34.000Z</pubTime>
         
-        <tag>归并排序</tag>
-         
         <tag>逆序对</tag>
          
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
-    <lastmod>2019-05-02T19:20:48.870Z</lastmod>
-    <data>
-        <display>
-        <title>「离散化算法」模板</title>
-        <pubTime>2019-05-05T03:15:34.000Z</pubTime>
-        
-        <tag>离散化</tag>
+        <tag>归并排序</tag>
          
          
            
@@ -460,31 +510,6 @@
           
              
               <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/manacher/</loc>
-    <lastmod>2019-04-30T18:47:36.040Z</lastmod>
-    <data>
-        <display>
-        <title>「Manacher算法」模板</title>
-        <pubTime>2019-05-02T03:15:34.000Z</pubTime>
-        
-        <tag>回文串</tag>
-         
-        <tag>Manacher</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -649,9 +674,9 @@
         <title>「LeetCode 730. Count Different Palindromic Subsequences」解题报告</title>
         <pubTime>2019-04-01T03:57:03.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>回文串</tag>
+         
+        <tag>动态规划</tag>
          
          
            
@@ -677,9 +702,9 @@
         <title>「LeetCode 132. Palindrome Partitioning II」解题报告</title>
         <pubTime>2019-03-30T03:57:03.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>回文串</tag>
+         
+        <tag>动态规划</tag>
          
          
            
@@ -1100,9 +1125,9 @@
         
         <tag>树状数组</tag>
          
-        <tag>归并排序</tag>
-         
         <tag>逆序对</tag>
+         
+        <tag>归并排序</tag>
          
          
            
@@ -1251,17 +1276,17 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>Google</tag>
+        <tag>组合数学</tag>
          
         <tag>扩展欧几里得</tag>
+         
+        <tag>Google</tag>
          
         <tag>容斥原理</tag>
          
         <tag>Kick Start</tag>
          
         <tag>字典树</tag>
-         
-        <tag>组合数学</tag>
          
          
            
@@ -1313,9 +1338,9 @@
         <title>「LeetCode 940. Distinct Subsequences II」解题报告</title>
         <pubTime>2019-01-29T03:57:03.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>巧妙</tag>
+         
+        <tag>动态规划</tag>
          
          
            
@@ -2676,9 +2701,9 @@
         <title>「LeetCode 803. Bricks Falling When Hit」解题报告</title>
         <pubTime>2018-05-25T08:00:34.000Z</pubTime>
         
-        <tag>种子填充算法</tag>
-         
         <tag>并查集</tag>
+         
+        <tag>种子填充算法</tag>
          
          
            

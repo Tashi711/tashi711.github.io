@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/extended-crt/</loc>
+    
+    <lastmod>2019-05-09T17:47:30.580Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/topological-sort/</loc>
     
     <lastmod>2019-05-08T15:46:38.921Z</lastmod>
@@ -79,6 +86,13 @@
   </url>
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
+    
+    <lastmod>2019-05-03T17:46:52.439Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/graham-scan/</loc>
     
     <lastmod>2019-05-03T17:44:15.880Z</lastmod>
@@ -89,6 +103,13 @@
     <loc>http://tashi711.top/programming/dsaa/hungarian/</loc>
     
     <lastmod>2019-05-03T17:43:37.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/manacher/</loc>
+    
+    <lastmod>2019-05-03T17:39:08.676Z</lastmod>
     
   </url>
   
@@ -128,23 +149,9 @@
   </url>
   
   <url>
-    <loc>http://tashi711.top/programming/dsaa/discretize/</loc>
-    
-    <lastmod>2019-05-02T19:20:48.870Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tashi711.top/programming/others/triangle-directed-area/</loc>
     
     <lastmod>2019-05-02T17:08:22.676Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/programming/dsaa/manacher/</loc>
-    
-    <lastmod>2019-04-30T18:47:36.040Z</lastmod>
     
   </url>
   
