@@ -309,6 +309,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-843/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-843/" itemprop="url">「LeetCode 843. Guess the Word」解题报告</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T20:39:10+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/reports/leetcode/leetcode-843/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-843/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/reports/leetcode/leetcode-843/" class="leancloud_visitors" data-flag-title="「LeetCode 843. Guess the Word」解题报告">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
+<ul>
+<li>链接：<a href="https://leetcode.com/problems/guess-the-word/description/" target="_blank" rel="noopener">LeetCode 843. Guess the Word</a></li>
+<li>来源：LeetCode</li>
+<li>难度：Hard</li>
+</ul>
+</blockquote>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　交互题目：<br>　　给定N（样例为4，测试数据为100）个不同单词的list，都是小写，6位长，采样随机，其中有一个是secret的，通过调用master.guess(word)可以猜词并返回word与secret单词匹配的个数（值和位置都要匹配），但word必须是给定的list里面的，否则返回-1。小于等于10次猜对即为正确。<br>　　样例：secret = “acckzz”，wordlist = [“acckzz”,”ccbazz”,”eiowzz”,”abcczz”]：<br>　　master.guess(“aaaaaa”) returns -1, because “aaaaaa” is not in wordlist.<br>　　master.guess(“acckzz”) returns 6, because “acckzz” is secret and has all 6 matches.<br>　　master.guess(“ccbazz”) returns 3, because “ccbazz” has 3 matches.<br>　　master.guess(“eiowzz”) returns 2, because “eiowzz” has 2 matches.<br>　　master.guess(“abcczz”) returns 4, because “abcczz” has 4 matches.<br>　　上面猜了5次，有一次猜对了，即为正确。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-843/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-839/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -688,207 +884,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-834/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-834/" itemprop="url">「LeetCode 834. Sum of Distances in Tree」解题报告</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T19:33:46+08:00">
-                2018-06-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/reports/leetcode/leetcode-834/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-834/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/programming/reports/leetcode/leetcode-834/" class="leancloud_visitors" data-flag-title="「LeetCode 834. Sum of Distances in Tree」解题报告">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/sum-of-distances-in-tree/description/" target="_blank" rel="noopener">LeetCode 834. Sum of Distances in Tree</a></li>
-<li>来源：LeetCode</li>
-<li>难度：Hard</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>　　给定N（1到10000）个结点的树，边的长度都是1，输出每个点到其他所有点的距离之和。<br>　　样例：N为6，边为[[0,1],[0,2],[2,3],[2,4],[2,5]]，输出[8,12,6,10,10,10]。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-834/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -938,7 +938,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -960,7 +960,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">73</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

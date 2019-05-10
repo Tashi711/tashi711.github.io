@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/rmq/</loc>
+    <lastmod>2019-05-10T17:34:16.689Z</lastmod>
+    <data>
+        <display>
+        <title>「ST算法解RMQ问题」模板</title>
+        <pubTime>2019-05-18T03:15:34.000Z</pubTime>
+        
+        <tag>ST算法</tag>
+         
+        <tag>RMQ</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/extended-crt/</loc>
     <lastmod>2019-05-09T17:47:30.580Z</lastmod>
     <data>
@@ -2501,9 +2526,9 @@
         <title>「Google C++ Style Guide」小结</title>
         <pubTime>2018-05-06T03:17:59.000Z</pubTime>
         
-        <tag>C++</tag>
-         
         <tag>Google</tag>
+         
+        <tag>C++</tag>
          
          
            
