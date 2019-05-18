@@ -1,3 +1,12 @@
+http://tashi711.top/programming/dsaa/matrix-quick-power/
+http://tashi711.top/programming/others/bit- extend/
+http://tashi711.top/programming/dsaa/trichotomy/
+http://tashi711.top/programming/dsaa/shortest_path/
+http://tashi711.top/programming/reports/others/luogu-4549/
+http://tashi711.top/programming/dsaa/base_hash/
+http://tashi711.top/programming/dsaa/heap/
+http://tashi711.top/programming/dsaa/prime/
+http://tashi711.top/programming/dsaa/quick-sort/
 http://tashi711.top/programming/dsaa/rmq/
 http://tashi711.top/programming/dsaa/extended-crt/
 http://tashi711.top/programming/dsaa/topological-sort/
@@ -58,14 +67,14 @@ http://tashi711.top/programming/reports/leetcode/leetcode-233/
 http://tashi711.top/programming/reports/leetcode/leetcode-943/
 http://tashi711.top/programming/reports/leetcode/leetcode-960/
 http://tashi711.top/programming/reports/leetcode/leetcode-964/
-http://tashi711.top/programming/reports/leetcode/leetcode-135/
-http://tashi711.top/programming/reports/leetcode/leetcode-145/
-http://tashi711.top/programming/reports/leetcode/leetcode-140/
 http://tashi711.top/programming/reports/leetcode/leetcode-97/
 http://tashi711.top/programming/reports/leetcode/leetcode-128/
+http://tashi711.top/programming/reports/leetcode/leetcode-140/
+http://tashi711.top/programming/reports/leetcode/leetcode-145/
+http://tashi711.top/programming/reports/leetcode/leetcode-135/
 http://tashi711.top/programming/reports/leetcode/leetcode-84/
-http://tashi711.top/programming/reports/leetcode/leetcode-76/
 http://tashi711.top/programming/reports/leetcode/leetcode-72/
+http://tashi711.top/programming/reports/leetcode/leetcode-76/
 http://tashi711.top/programming/dsaa/kmp/
 http://tashi711.top/programming/reports/leetcode/leetcode-952/
 http://tashi711.top/programming/reports/leetcode/leetcode-956/
@@ -89,12 +98,3 @@ http://tashi711.top/programming/reports/leetcode/leetcode-906/
 http://tashi711.top/programming/reports/leetcode/leetcode-895/
 http://tashi711.top/programming/reports/leetcode/leetcode-899/
 http://tashi711.top/programming/reports/leetcode/leetcode-902/
-http://tashi711.top/programming/reports/leetcode/leetcode-903/
-http://tashi711.top/programming/others/effective-cpp-note/
-http://tashi711.top/programming/others/cpp-primer-note/
-http://tashi711.top/programming/reports/leetcode/leetcode-854/
-http://tashi711.top/programming/reports/leetcode/leetcode-850/
-http://tashi711.top/programming/reports/leetcode/leetcode-843/
-http://tashi711.top/programming/reports/leetcode/leetcode-839/
-http://tashi711.top/programming/reports/leetcode/leetcode-847/
-http://tashi711.top/programming/reports/leetcode/leetcode-834/

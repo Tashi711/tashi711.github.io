@@ -4,6 +4,216 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/matrix-quick-power/</loc>
+    <lastmod>2019-05-18T18:02:18.810Z</lastmod>
+    <data>
+        <display>
+        <title>「矩阵快速幂」模板</title>
+        <pubTime>2019-05-27T03:15:34.000Z</pubTime>
+        
+        <tag>快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/bit-%20extend/</loc>
+    <lastmod>2019-05-18T15:13:16.512Z</lastmod>
+    <data>
+        <display>
+        <title>「树状数组」扩展</title>
+        <pubTime>2019-05-26T03:15:34.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/trichotomy/</loc>
+    <lastmod>2019-05-18T14:44:46.877Z</lastmod>
+    <data>
+        <display>
+        <title>「三分法」模板</title>
+        <pubTime>2019-05-25T03:15:34.000Z</pubTime>
+        
+        <tag>三分法</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/shortest_path/</loc>
+    <lastmod>2019-05-17T17:51:44.899Z</lastmod>
+    <data>
+        <display>
+        <title>「单源点最短路径」模板</title>
+        <pubTime>2019-05-24T03:15:34.000Z</pubTime>
+        
+        <tag>最短路</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/others/luogu-4549/</loc>
+    <lastmod>2019-05-17T16:44:00.970Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 4549 - 裴蜀定理」解题报告</title>
+        <pubTime>2019-05-22T16:11:04.000Z</pubTime>
+        
+        <tag>裴蜀定理</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/base_hash/</loc>
+    <lastmod>2019-05-15T17:46:22.921Z</lastmod>
+    <data>
+        <display>
+        <title>「进制哈希」模板</title>
+        <pubTime>2019-05-22T03:15:34.000Z</pubTime>
+        
+        <tag>进制哈希</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/heap/</loc>
+    <lastmod>2019-05-15T17:10:46.357Z</lastmod>
+    <data>
+        <display>
+        <title>「堆」简单实现</title>
+        <pubTime>2019-05-21T03:15:34.000Z</pubTime>
+        
+        <tag>堆</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/prime/</loc>
+    <lastmod>2019-05-14T18:09:30.621Z</lastmod>
+    <data>
+        <display>
+        <title>「质数」相关算法讨论</title>
+        <pubTime>2019-05-20T03:15:34.000Z</pubTime>
+        
+        <tag>质数筛法</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/quick-sort/</loc>
+    <lastmod>2019-05-12T05:26:22.309Z</lastmod>
+    <data>
+        <display>
+        <title>「快速排序」正确姿势</title>
+        <pubTime>2019-05-19T03:15:34.000Z</pubTime>
+        
+        <tag>快速排序</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/rmq/</loc>
     <lastmod>2019-05-10T17:34:16.689Z</lastmod>
     <data>
@@ -86,9 +296,9 @@
         <title>「Kruskal算法」模板</title>
         <pubTime>2019-05-15T03:15:34.000Z</pubTime>
         
-        <tag>Kruskal</tag>
-         
         <tag>最小生成树</tag>
+         
+        <tag>Kruskal</tag>
          
          
            
@@ -134,9 +344,9 @@
         <title>「Prim算法」模板</title>
         <pubTime>2019-05-13T03:15:34.000Z</pubTime>
         
-        <tag>最小生成树</tag>
-         
         <tag>Prim</tag>
+         
+        <tag>最小生成树</tag>
          
          
            
@@ -1301,11 +1511,11 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
+        <tag>Google</tag>
+         
         <tag>组合数学</tag>
          
         <tag>扩展欧几里得</tag>
-         
-        <tag>Google</tag>
          
         <tag>容斥原理</tag>
          
@@ -1549,9 +1759,9 @@
         <title>「LeetCode 214. Shortest Palindrome」解题报告</title>
         <pubTime>2019-01-13T03:57:03.000Z</pubTime>
         
-        <tag>KMP</tag>
-         
         <tag>巧妙</tag>
+         
+        <tag>KMP</tag>
          
          
            
@@ -2201,9 +2411,9 @@
         <title>「LeetCode 899. Orderly Queue」解题报告</title>
         <pubTime>2018-09-13T03:57:02.000Z</pubTime>
         
-        <tag>水题</tag>
-         
         <tag>思考题</tag>
+         
+        <tag>水题</tag>
          
         <tag>字符串</tag>
          
@@ -2526,9 +2736,9 @@
         <title>「Google C++ Style Guide」小结</title>
         <pubTime>2018-05-06T03:17:59.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>C++</tag>
+         
+        <tag>Google</tag>
          
          
            
