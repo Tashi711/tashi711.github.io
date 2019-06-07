@@ -4,6 +4,104 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/bipartite-graph/</loc>
+    <lastmod>2019-06-07T06:06:20.883Z</lastmod>
+    <data>
+        <display>
+        <title>「二分图匹配」再探</title>
+        <pubTime>2019-06-12T03:15:34.000Z</pubTime>
+        
+        <tag>二分图匹配</tag>
+         
+        <tag>匈牙利算法</tag>
+         
+        <tag>最大流</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/network-flow/</loc>
+    <lastmod>2019-06-06T17:17:42.816Z</lastmod>
+    <data>
+        <display>
+        <title>「最大流」模板</title>
+        <pubTime>2019-06-11T03:15:34.000Z</pubTime>
+        
+        <tag>最大流</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/advanced-segment-tree/</loc>
+    <lastmod>2019-06-05T13:55:42.691Z</lastmod>
+    <data>
+        <display>
+        <title>「线段树」进化</title>
+        <pubTime>2019-06-10T03:15:34.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/directed-tarjan/</loc>
+    <lastmod>2019-06-04T15:31:11.292Z</lastmod>
+    <data>
+        <display>
+        <title>「缩点」模板</title>
+        <pubTime>2019-06-09T03:15:34.000Z</pubTime>
+        
+        <tag>tarjan</tag>
+         
+        <tag>缩点</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/gaussian-elimination/</loc>
     <lastmod>2019-06-02T09:58:05.795Z</lastmod>
     <data>
@@ -295,11 +393,11 @@
         <title>「RSQ问题」总结</title>
         <pubTime>2019-05-29T03:15:34.000Z</pubTime>
         
+        <tag>线段树</tag>
+         
         <tag>树状数组</tag>
          
         <tag>RSQ</tag>
-         
-        <tag>线段树</tag>
          
          
            
