@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/suffix-array/</loc>
+    
+    <lastmod>2019-06-25T12:09:37.877Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/persistable-tree/</loc>
+    
+    <lastmod>2019-06-20T13:11:39.041Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/chairman-tree/</loc>
+    
+    <lastmod>2019-06-20T13:04:21.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/cost-flow/</loc>
+    
+    <lastmod>2019-06-17T15:16:33.291Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/leftist-heap/</loc>
+    
+    <lastmod>2019-06-16T04:43:25.362Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/graham-redo/</loc>
     
-    <lastmod>2019-06-15T10:26:08.532Z</lastmod>
+    <lastmod>2019-06-15T10:35:31.892Z</lastmod>
     
   </url>
   

@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/others/gcj-1a-2018/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/ssh-public-key/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/others/gcj-1a-2018/" itemprop="url">「Google Code Jam Round 1A 2018」参赛小结</a></h1>
+                <a class="post-title-link" href="/programming/others/ssh-public-key/" itemprop="url">「PuTTY与Atom上SSH与SFTP的Public Key认证」总结</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-14T11:20:10+08:00">
-                2018-04-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T11:15:34+08:00">
+                2018-05-25
               </time>
             
 
@@ -351,50 +351,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -403,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/others/gcj-1a-2018/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/others/gcj-1a-2018/" itemprop="commentCount"></span>
+                <a href="/programming/others/ssh-public-key/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/ssh-public-key/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +368,7 @@
 
           
           
-             <span id="/programming/reports/others/gcj-1a-2018/" class="leancloud_visitors" data-flag-title="「Google Code Jam Round 1A 2018」参赛小结">
+             <span id="/programming/others/ssh-public-key/" class="leancloud_visitors" data-flag-title="「PuTTY与Atom上SSH与SFTP的Public Key认证」总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,18 +400,11 @@
 
       
         
-          <h2 id="比赛信息"><a href="#比赛信息" class="headerlink" title="比赛信息"></a>比赛信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://codejam.withgoogle.com/2018/challenges/0000000000007883/dashboard" target="_blank" rel="noopener">Google Code Jam Round 1A 2018</a></li>
-<li>来源：Google Code Jam</li>
-<li>时间：Start - Apr/14/2018 09:00 (UTC+8) | Length - 02:30</li>
-<li>成绩：Solved - A(all), B(all), C(small case) | Standing - 800/5172</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="A-Waffle-Choppers"><a href="#A-Waffle-Choppers" class="headerlink" title="A. Waffle Choppers"></a><a href="https://codejam.withgoogle.com/2018/challenges/0000000000007883/dashboard" target="_blank" rel="noopener">A. Waffle Choppers</a></h3><h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>假设总的巧克力有N个，那么 N mod ((H+1)(V+1)) != 0 一定是无解的。<br>分别扫描一遍纵向与横向，当分别达到N/(H+1)个与N/(V+1)个的地方一定是切的位置。<br>然后再检查是否切的每块为N/((H+1)(V+1))即可<br>时间复杂度为 $O(RC)$。</p>
+          <h2 id="本机配置"><a href="#本机配置" class="headerlink" title="本机配置"></a>本机配置</h2><p>　　主要是Windows上的配置（前提是远端服务器上已经配置好相应的id_rsa.pub了）。</p>
+<h3 id="PuTTY"><a href="#PuTTY" class="headerlink" title="PuTTY"></a>PuTTY</h3><p>　　1、配置好或者Load已有的密码登录配置；<br>　　2、生成好id_rsa（可以通过Git Bash生成或者从Linux中生成好拷贝过来）；<br>　　3、运行PuTTY安装目录下的puttygen.exe，选择菜单Conversions中的Import key，选择id_rsa文件，载入后看得到key框里面有id_rsa的信息，点击右下方的save private key，保存到一个PuTTY专用的private key文件（.ppk）中；<br>　　4、在PuTTY的左边选择SSH-&gt;Auth，在右边点击Browse按钮，载入刚才存储的.ppk文件；<br>　　5、在PuTTY的左边选择Connection-&gt;Data，在右边Auto-login username输入框中填写SSH的用户名；<br>　　6、在PuTTY的左边选择Session，在右边点击Save把配置保存下来；<br>　　7、完成配置，之后登陆会发现直接能SSH上去不需要输密码了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/others/gcj-1a-2018/#more" rel="contents">
+            <a class="btn" href="/programming/others/ssh-public-key/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -506,7 +455,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-815/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/google-code-style/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -525,7 +474,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-815/" itemprop="url">「LeetCode 815. Bus Routes」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/others/google-code-style/" itemprop="url">「Google C++ Style Guide」小结</a></h1>
         
 
         <div class="post-meta">
@@ -537,8 +486,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-13T19:28:45+08:00">
-                2018-04-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T11:17:59+08:00">
+                2018-05-06
               </time>
             
 
@@ -548,49 +497,154 @@
           </span>
 
           
-            <span class="post-category" >
+
+          
             
-              <span class="post-meta-divider">|</span>
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/others/google-code-style/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/google-code-style/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/others/google-code-style/" class="leancloud_visitors" data-flag-title="「Google C++ Style Guide」小结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Google-C-Style-Guide"><a href="#Google-C-Style-Guide" class="headerlink" title="Google C++ Style Guide"></a>Google C++ Style Guide</h2><p>刚进公司的时候看过一遍、现在需要重新再学习一下、顺便写点笔记。<br>（如果记得没错的话这份文档的名字改过了、以前叫coding style、现在叫style guide了）。<br>对于一些平时一直习惯使用的（比如#define保护）以及一些不推荐使用但是基本不会用到的（比如前置声明）就不再赘述了。<br>下面附上链接：</p>
+<ul>
+<li><a href="http://google.github.io/styleguide/cppguide.html" target="_blank" rel="noopener">英文版链接</a></li>
+<li><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">中文版链接</a></li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/others/google-code-style/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-827/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-827/" itemprop="url">「LeetCode 827. Making A Large Island」解题报告</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T19:34:17+08:00">
+                2018-05-02
+              </time>
+            
 
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
+            
 
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
+            
+          </span>
 
-                
-                
-              
-            </span>
           
 
           
@@ -600,8 +654,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-815/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-815/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-827/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-827/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -609,7 +663,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-815/" class="leancloud_visitors" data-flag-title="「LeetCode 815. Bus Routes」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-827/" class="leancloud_visitors" data-flag-title="「LeetCode 827. Making A Large Island」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -643,212 +697,15 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/bus-routes/description/" target="_blank" rel="noopener">LeetCode 815. Bus Routes</a></li>
+<li>链接：<a href="https://leetcode.com/problems/making-a-large-island/description/" target="_blank" rel="noopener">LeetCode 827. Making A Large Island</a></li>
 <li>来源：LeetCode</li>
 <li>难度：Hard</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定N种路线，每种路线包含不超过M个站，站的编号为0到K-1，N范围为1到500，M的范围为1到500，K为$10^6$。<br>再给定起点S与终点T，求问从起点到终点最少坐几次车，一开始没有上车，如果不能到达返回-1。<br>比如样例路线为 [[1, 2, 7], [3, 6, 7]]，从1到6，最少需要2次：1 -&gt; 7 -&gt; 6。</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>给定N×N的0-1方图（1≤N≤50），求问最多改变其中一个0到1之后最大的1的4-连通分量。<br>比如样例[[1, 0], [0, 1]]，结果为3。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-815/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/others/cf-round-472-div-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/reports/others/cf-round-472-div-2/" itemprop="url">「Codeforces Round #472 Div. 2」参赛小结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-06T09:57:24+08:00">
-                2018-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/reports/others/cf-round-472-div-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/others/cf-round-472-div-2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/programming/reports/others/cf-round-472-div-2/" class="leancloud_visitors" data-flag-title="「Codeforces Round #472 Div. 2」参赛小结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="比赛信息"><a href="#比赛信息" class="headerlink" title="比赛信息"></a>比赛信息</h2><blockquote>
-<ul>
-<li>链接：<a href="http://codeforces.com/contest/957" target="_blank" rel="noopener">Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2)</a></li>
-<li>来源：Codeforces</li>
-<li>时间：Start - Mar/24/2018 23:35 (UTC+8) | Length - 02:15</li>
-<li>成绩：Solved - A, B, C, D | Standing - 257/5016 | Rating - 1819→1842 (+23)</li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="A-Tritonic-Iridescence-957-A"><a href="#A-Tritonic-Iridescence-957-A" class="headerlink" title="A. Tritonic Iridescence (957 - A)"></a><a href="http://codeforces.com/contest/957/problem/A" target="_blank" rel="noopener">A. Tritonic Iridescence (957 - A)</a></h3><h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>按照以下顺序依次判断即可：<br>如果已经有连续两个相同的非“?”返回“No”。<br>如果长度为1 ? “?”返回“Yes” : 非“?”返回“No”。<br>如果有两个连续的“?”返回“Yes”。<br>如果任意一端为“?”返回“Yes”。<br>如果存在问号两边为同色返回“Yes”。<br>其他情况返回“No”。<br>时间复杂度为 $O(N)$。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/others/cf-round-472-div-2/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-827/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -890,7 +747,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -940,7 +797,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">140</span>
+                  <span class="site-state-item-count">145</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -962,7 +819,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

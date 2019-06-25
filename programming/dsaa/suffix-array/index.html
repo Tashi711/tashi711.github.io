@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/3.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/2.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="后缀数组," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="简述这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去（当然也是因为本人太菜了根本学不动）。 后缀排序之倍增先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方">
+<meta name="keywords" content="后缀数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「后缀数组」深入理解">
+<meta property="og:url" content="http://tashi711.top/programming/dsaa/suffix-array/index.html">
+<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:description" content="简述这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去（当然也是因为本人太菜了根本学不动）。 后缀排序之倍增先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-25T12:09:37.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「后缀数组」深入理解">
+<meta name="twitter:description" content="简述这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去（当然也是因为本人太菜了根本学不动）。 后缀排序之倍增先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'ICEDL16U0X',
+      apiKey: '5c42d4ba7a4b37462a336dfe67fe7c95',
+      indexName: 'Tashi711',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"请输入关键字","hits_empty":"没有找到与「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://tashi711.top/programming/dsaa/suffix-array/"/>
+
+
+
+
+
+  <title>「后缀数组」深入理解 | Tashi711的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tashi711的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">過去（きのう）に傷付きながらも、信じ続ける理想（ゆめ）を求める。いつか無限（なないろ）に輝き放って、青空（そら）に橋を描く。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/suffix-array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">「后缀数组」深入理解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T11:15:34+08:00">
+                2019-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/dsaa/suffix-array/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/suffix-array/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/dsaa/suffix-array/" class="leancloud_visitors" data-flag-title="「后缀数组」深入理解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去<del>（当然也是因为本人太菜了根本学不动）</del>。</p>
+<h3 id="后缀排序之倍增"><a href="#后缀排序之倍增" class="headerlink" title="后缀排序之倍增"></a>后缀排序之倍增</h3><p>先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方便起见，这里sa和rk以及下面提到的桶数组cnt的下标i都是从1开始标号）。一般都知道sa和rk是互逆的，但这只是说最终求完的状态，在中间结果，sa始终是将1到n（n为字符串长度）映射到1到n，rk则是将1到n映射到某个值域，满足大小的相对顺序（包括相等关系）一定满足，一般是1到可能的排名个数（下面用m表示，其实只有第一轮是其字符值）。</p>
+<p>倍增算法（简称da，doubling algorithm）其实实现细节不一定唯一，但一般思想差不多，且都涉及基数排序（这里的基数排序其实更趋向于说是每轮一个不同的桶排序）。先进行一个初始化过程，将初始字符串先入桶（下面的cnt数组）做一个基数排序，排序依据先是其前半段rk值，然后是后半段rk值（可能没有，就被认为是最小值），这里用了一个数组pre[i]表示后半段rk值为i的位置（n-w+1到n）设为rk为1到w（即pre[1…w]为[n-w+1…n]，这应该是整个算法最绕的两个部分之一），然后再基数排序时逆序枚举pre，就能保证正确排序的情况下，相等rk的位置保持原始的相对顺序（这是整个算法最绕的第二个部分），总归用下面的做法保证了这个性质。之后更新rk，看看如果rk个数达到n个就说明已经都有序了（小于n说明还有相等的rk，需要进一步判断）。</p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>后缀排序只是后缀数组的一个基本操作罢了，运用这个东西还能实现更强大的功能，比如height数组。</p>
+<p>height[i]定义为排名为i的后缀（sa[i]）与排名为i−1的后缀（sa[i-1]）的最长公共前缀长度（简称lcp，后同），height数组可以线性求，需要用到一个证明，先令H[i]为height[rk[i]] ，即位置i的后缀与它前一名的后缀的lcp。有H[i]≥H[i−1]−1，首先H[i−1]≤1时显然成立，考虑H[i−1]&gt;1，令k为位置i-1的前一名位置，即H[i−1]为位置k与位置i-1后缀的lcp，那么因为H[i−1]&gt;1，位置k+1一定正好是位置i的前一名，则H[i]即为位置k+1与位置i后缀的lcp，显然大于等于H[i−1]-1。证毕。因此求height只需依次从1到n求H即可。</p>
+<h3 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h3><p>不必过度迷信DC3，倍增除了有一点点时间劣势外，常数小、空间小、编码难度低。下面是罗穗骞的集训队论文：后缀数组——处理字符串的有力工具中的实验结果（后面的应用也是参考了这篇论文，值得一看）：</p>
+<p>N的规模 ——- 倍增（ms） ——- DC3（ms）<br>200000 ——- 192 ——- 140<br>300000 ——- 367 ——- 244<br>500000 ——- 750 ——- 499<br>1000000 ——- 1693 ——- 1248</p>
+<p>可见N足够大时，DC3算法所快的对数级复杂度也只有不到2的常数优化效果。在对算法效率要求极致，不在乎空间<del>（且自己不那么菜）</del>时再去考虑钻研DC3吧。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2><a id="more"></a>
+<p>以下代码可过洛谷模板题3809（后缀排序）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MAXN = <span class="number">1000000</span>;</span><br><span class="line"><span class="keyword">int</span> n;  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> sa[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> space1[MAXN + <span class="number">1</span>], *rk = space1;  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> space2[MAXN + <span class="number">1</span>], *pre = space2;  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> cnt[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> height[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">int</span> M = <span class="string">'z'</span>&gt;</span><br><span class="line">struct suffix_array &#123;</span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line"></span><br><span class="line">  suffix_array(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s) : m(M) &#123;</span><br><span class="line">    n = s.size();</span><br><span class="line">    suffix_sort(s);</span><br><span class="line">    calc_height(s);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">radix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">      cnt[i] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      cnt[rk[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">      cnt[i] += cnt[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i; --i) &#123;</span><br><span class="line">      sa[cnt[rk[pre[i]]]--] = pre[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">suffix_sort</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      rk[i] = s[i - <span class="number">1</span>];  <span class="comment">// idx from 1 to n</span></span><br><span class="line">      pre[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    radix_sort();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> w = <span class="number">1</span>; <span class="literal">true</span>; w &lt;&lt;= <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= w; ++i) &#123;</span><br><span class="line">        pre[++p] = n - w + i;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sa[i] &gt; w) &#123;</span><br><span class="line">          pre[++p] = sa[i] - w;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      radix_sort();</span><br><span class="line">      swap(rk, pre);</span><br><span class="line">      rk[sa[<span class="number">1</span>]] = m = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        rk[sa[i]] = (pre[sa[i - <span class="number">1</span>]] == pre[sa[i]] &amp;&amp;</span><br><span class="line">          pre[sa[i - <span class="number">1</span>] + w] == pre[sa[i] + w]) ? m : ++m;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (m == n) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">calc_height</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>, i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (k) &#123;</span><br><span class="line">        --k;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = sa[rk[i] - <span class="number">1</span>]; s[i + k - <span class="number">1</span>] == s[j + k - <span class="number">1</span>];) &#123;</span><br><span class="line">        ++k;</span><br><span class="line">      &#125;</span><br><span class="line">      height[rk[i]] = k;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3809</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="built_in">string</span> s;</span><br><span class="line">  nyuuryoku(s);</span><br><span class="line">  suffix_array&lt;&gt; sarray(s);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    shutsuryokus(sa[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="应用分析"><a href="#应用分析" class="headerlink" title="应用分析"></a>应用分析</h2><p>为方便分析起见，以下问题均考虑sa（后缀排序数组）、rank（上面的rk）以及height（如上定义）已经求出来的情况。已经知道求sa和rank需要O(NlogN)（倍增）或者O(N)（DC3）的复杂度，求height需要O(N)的复杂度。</p>
+<h3 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a>最长公共前缀</h3><p>给定一个字符串，询问某两个后缀的最长公共前缀。</p>
+<p>求两个后缀的最长公共前缀可以转化为求某个区间上的最小值。对于这个RMQ问题可以用O(NlogN)的时间先预处理，以后每次回答询问的时间为O(1)。所以对于本问题，预处理时间为O(NlogN)，每次回答询问的时间为O(1)。如果RMQ问题用O(N)的时间预处理，那么本问题预处理的时间可以做到O(N)，比如线段树，当然每次询问需要O(logn)。</p>
+<h3 id="重复子串"><a href="#重复子串" class="headerlink" title="重复子串"></a>重复子串</h3><p>定义：字符串R在字符串L中至少出现两次，则称R是L的重复子串。</p>
+<h4 id="可重叠最长重复子串"><a href="#可重叠最长重复子串" class="headerlink" title="可重叠最长重复子串"></a>可重叠最长重复子串</h4><p>给定一个字符串，求最长重复子串，这两个子串可以有重叠部分。</p>
+<p>求height数组的最大值即可。 因为求最长重复子串等价于求两个后缀的最长公共前缀的最大值。因为任意两个后缀的最长公共前缀都是height数组里某一段的最小值，那么这个值一定不大于height数组里的最大值。所以最长重复子串的长度就是height数组里的最大值。时间复杂度为O(N)。</p>
+<h4 id="不可重叠最长重复子串"><a href="#不可重叠最长重复子串" class="headerlink" title="不可重叠最长重复子串"></a>不可重叠最长重复子串</h4><p>给定一个字符串，求最长重复子串，这两个子串不可以有重叠部分。</p>
+<p>先二分答案，把题目变成判定性问题：判断是否存在两个长度为k的子串是相同的，且不重叠。解决这个问题的关键还是利用height数组。把排序后的后缀分成若干组<strong>（这种分组思想在后缀数组中很常用）</strong>，其中每组的后缀之间的height值都不小于k。例如，字符串为“aabaaaab”，当k=2时，后缀分成了4组，有希望成为最长公共前缀不小于k的两个后缀一定在同一组。然后对于每组后缀，只须判断每个后缀的sa值的最大值和最小值之差是否不小于k。如果有一组满足，则说明存在，否则不存在。整个做法的时间复杂度为O(NlogN)。</p>
+<h4 id="可重叠的k次最长重复子串"><a href="#可重叠的k次最长重复子串" class="headerlink" title="可重叠的k次最长重复子串"></a>可重叠的k次最长重复子串</h4><p>给定一个字符串，求至少出现k次的最长重复子串，这k个子串可以有重叠部分。</p>
+<p>先二分答案，然后将后缀分成若干组。 这里要判断的是有没有一个组的后缀个数不小于k。如果有，那么存在k个相同的子串满足条件，否则不存在。这个做法的时间复杂度为O(NlogN)。</p>
+<h3 id="不相同的子串的个数"><a href="#不相同的子串的个数" class="headerlink" title="不相同的子串的个数"></a>不相同的子串的个数</h3><p>给定一个字符串，求不相同的子串的个数。</p>
+<p>每个子串一定是某个后缀的前缀，那么原问题等价于求所有后缀之间的不相同的前缀的个数。如果所有的后缀按照suffix(sa[1]), suffix(sa[2]), suffix(sa[3]), ……, suffix(sa[n])的顺序计算，不难发现，对于每一次新加进来的后缀suffix(sa[k])，它将产生 n-sa[k]+1 个新的前缀。但是其中有height[k]个是和前面的字符串的前缀是相同的。所以suffix(sa[k])将贡献出n-sa[k]+1-height[k]个不同的子串。累加后便是原问题的答案。这个做法的时间复杂度为O(N)。</p>
+<h3 id="最长回文子串"><a href="#最长回文子串" class="headerlink" title="最长回文子串"></a>最长回文子串</h3><p>给定一个字符串，求最长回文子串。</p>
+<p>穷举每一位，然后计算以这个字符为中心的最长回文子串。 注意这里要分两种情况，一是回文子串的长度为奇数，二是长度为偶数。两种情况都可以转化为求一个后缀和一个反过来写的后缀的最长公共前缀。 具体的做法是： 将整个字符串反过来写在原字符串后面，中间用一个特殊的字符隔开。 这样就把问题变为了求这个新的字符串的某两个后缀的最长公共前缀。这个做法的时间复杂度为O(NlogN)。如果RMQ问题用时间为O(N)的方法预处理，那么本题的时间复杂度可以降为O(N)。<strong>（当然有更强大的O(N)马拉车算法）</strong></p>
+<h3 id="连续重复子串"><a href="#连续重复子串" class="headerlink" title="连续重复子串"></a>连续重复子串</h3><p>定义：如果一个字符串L是由某个字符串S重复R次而得到的， 则称L是一个连续重复串。 R是这个字符串的重复次数。</p>
+<h4 id="重复次数最大值"><a href="#重复次数最大值" class="headerlink" title="重复次数最大值"></a>重复次数最大值</h4><p>给定一个字符串L，已知这个字符串是由某个字符串S重复R次而得到的，求R的最大值。</p>
+<p>穷举字符串S的长度k，然后判断是否满足。判断的时候，先看字符串L的长度能否被k整除，再看suffix(1)和suffix(k+1)的最长公共前缀是否等于n-k。在询问最长公共前缀的时候，suffix(1)是固定的，所以RMQ问题没有必要做所有的预处理，只需求出height数组中的每一个数到height[rank[1]]之间的最小值即可。整个做法的时间复杂度为O(N)。</p>
+<h4 id="重复次数最多的连续重复子串"><a href="#重复次数最多的连续重复子串" class="headerlink" title="重复次数最多的连续重复子串"></a>重复次数最多的连续重复子串</h4><p>给定一个字符串，求重复次数最多的连续重复子串。</p>
+<p>先穷举长度L，然后求长度为L的子串最多能连续出现几次。首先连续出现1次是肯定可以的，所以这里只考虑至少2次的情况。假设在原字符串中连续出现2次，记这个子字符串为S，那么S肯定包括了字符r[0], r[L], r[L*2], r[L*3], ……中的某相邻的两个。所以只须看字符r[L*i]和r[L*(i+1)]往前和往后各能匹配到多远，记这个总长度为K，那么这里连续出现了K/L+1次。最后看最大值是多少。穷举长度L的时间是n，每次计算的时间是n/L。所以整个做法的时间复杂度是O(n/1+n/2+n/3+……+n/n)=O(NlogN)。</p>
+<h3 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h3><p>给定两个字符串A和B，求最长公共子串。</p>
+<p>字符串的任何一个子串都是这个字符串的某个后缀的前缀。 求A和B的最长公共子串等价于求A的后缀和B的后缀的最长公共前缀的最大值。如果枚举A和B的所有的后缀，那么这样做显然效率低下。 由于要计算A的后缀和B的后缀的最长公共前缀，所以先将第二个字符串写在第一个字符串后面，中间用一个没有出现过的字符隔开，记字符串A和字符串B的长度分别为|A|和|B|。 求新的字符串的后缀数组和height数组，然后求排名相邻但原来不在同一个字符串中的两个后缀的height值的最大值，时间也是O(|A|+|B|)，所以整个做法的时间复杂度为O(|A|+|B|)。</p>
+<h3 id="长度不小于k的公共子串的个数"><a href="#长度不小于k的公共子串的个数" class="headerlink" title="长度不小于k的公共子串的个数"></a>长度不小于k的公共子串的个数</h3><p>给定两个字符串A和B，求长度不小于k的公共子串的个数（可以相同）。<br>样例1:<br>A=“xx” ，B=“xx” ，k=1，长度不小于k的公共子串的个数是5。<br>样例2:<br>A=“aababaa”，B=“abaabaa”，k=2，长度不小于k的公共子串的个数是22。</p>
+<p>基本思路是计算A的所有后缀和B的所有后缀之间的最长公共前缀的长度，把最长公共前缀长度不小于k的部分全部加起来。 先将两个字符串连起来， 中间用一个没有出现过的字符隔开。按height值分组后，接下来的工作便是快速的统计每组中后缀之间的最长公共前缀之和。 扫描一遍， 每遇到一个B的后缀就统计与前面的A的后缀能产生多少个长度不小于k的公共子串，这里A的后缀需要用一个单调的栈来高效的维护。 然后对A也这样做一次。 </p>
+<h3 id="不小于k个字符的最长子串"><a href="#不小于k个字符的最长子串" class="headerlink" title="不小于k个字符的最长子串"></a>不小于k个字符的最长子串</h3><p>给定n个字符串，求出现在不小于k个字符串中的最长子串。</p>
+<p>将n个字符串连起来，中间用不相同的且没有出现在字符串中的字符隔开，求后缀数组。然后二分答案，用和前面同样的方法将后缀分成若干组，判断每组的后缀是否出现在不小于k个的原串中。这个做法的时间复杂度为O(NlogN)。</p>
+<h3 id="每个字符串至少出现两次且不重叠的最长子串"><a href="#每个字符串至少出现两次且不重叠的最长子串" class="headerlink" title="每个字符串至少出现两次且不重叠的最长子串"></a>每个字符串至少出现两次且不重叠的最长子串</h3><p>给定n个字符串，求在每个字符串中至少出现两次且不重叠的最长子串。</p>
+<p>也是先将n个字符串连起来，中间用不相同的且没有出现在字符串中的字符隔开，求后缀数组。然后二分答案，再将后缀分组。判断的时候，要看是否有一组后缀在每个原来的字符串中至少出现两次，并且在每个原来的字符串中，后缀的起始位置的最大值与最小值之差是否不小于当前答案（判断能否做到不重叠，如果题目中没有不重叠的要求，那么不用做此判断）。这个做法的时间复杂度为O(NlogN)。</p>
+<h3 id="出现或反转后出现在每个字符串中的最长子串"><a href="#出现或反转后出现在每个字符串中的最长子串" class="headerlink" title="出现或反转后出现在每个字符串中的最长子串"></a>出现或反转后出现在每个字符串中的最长子串</h3><p>给定n个字符串，求出现或反转后出现在每个字符串中的最长子串。</p>
+<p>只需要先将每个字符串都反过来写一遍，中间用一个互不相同的且没有出现在字符串中的字符隔开，再将n个字符串全部连起来，中间也是用一个互不相同的且没有出现在字符串中的字符隔开，求后缀数组。然后二分答案，再将后缀分组。 判断的时候，要看是否有一组后缀在每个原来的字符串或反转后的字符串中出现。这个做法的时间复杂度为O(NlogN)。</p>
+<h2 id="洛谷2852-牛奶模式题解"><a href="#洛谷2852-牛奶模式题解" class="headerlink" title="洛谷2852 - 牛奶模式题解"></a>洛谷2852 - 牛奶模式题解</h2><p>其实就是上面的可重叠的k次最长重复子串的应用</p>
+<p>这里先将模板略微修改，支持任意类型数组的输入（比如这题就是int数组），外加一个离散化。另外这里可以有一个优化，用优先队列维护按rank顺序的连续k-1个height的最小值，比二分答案快个log级别。（当然了，这道题下限还是O(NlogN)，毕竟即使用DC3，离散化也需要O(NlogN)）。</p>
+<h3 id="C-代码（AC）"><a href="#C-代码（AC）" class="headerlink" title="C++代码（AC）"></a>C++代码（AC）</h3><p>这里也同样略去快读快写的部分了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MAXN = <span class="number">200000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAXN + <span class="number">1</span>];  <span class="comment">// input -&gt; discretized</span></span><br><span class="line"><span class="keyword">int</span> b[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> sa[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> space1[MAXN + <span class="number">1</span>], *rk = space1;  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> space2[MAXN + <span class="number">1</span>], *pre = space2;  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> cnt[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line"><span class="keyword">int</span> height[MAXN + <span class="number">1</span>];  <span class="comment">// cover</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">suffix_array</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line"></span><br><span class="line">  suffix_array(<span class="keyword">int</span> n) : n(n) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    discretize();</span><br><span class="line">    suffix_sort();</span><br><span class="line">    calc_height();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">discretize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      b[i] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    sort(b + <span class="number">1</span>, b + n + <span class="number">1</span>);</span><br><span class="line">    m = unique(b + <span class="number">1</span>, b + n + <span class="number">1</span>) - b - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      a[i] = lower_bound(b + <span class="number">1</span>, b + m + <span class="number">1</span>, a[i]) - b;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">radix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">      cnt[i] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      cnt[rk[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">      cnt[i] += cnt[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i; --i) &#123;</span><br><span class="line">      sa[cnt[rk[pre[i]]]--] = pre[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">suffix_sort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      rk[i] = a[i];</span><br><span class="line">      pre[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    radix_sort();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> w = <span class="number">1</span>; <span class="literal">true</span>; w &lt;&lt;= <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= w; ++i) &#123;</span><br><span class="line">        pre[++p] = n - w + i;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sa[i] &gt; w) &#123;</span><br><span class="line">          pre[++p] = sa[i] - w;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      radix_sort();</span><br><span class="line">      swap(rk, pre);</span><br><span class="line">      rk[sa[<span class="number">1</span>]] = m = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        rk[sa[i]] = (pre[sa[i - <span class="number">1</span>]] == pre[sa[i]] &amp;&amp;</span><br><span class="line">          pre[sa[i - <span class="number">1</span>] + w] == pre[sa[i] + w]) ? m : ++m;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (m == n) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">calc_height</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>, i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (k) &#123;</span><br><span class="line">        --k;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = sa[rk[i] - <span class="number">1</span>]; a[i + k] == a[j + k];) &#123;</span><br><span class="line">        ++k;</span><br><span class="line">      &#125;</span><br><span class="line">      height[rk[i]] = k;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">lcp_over_k_times</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; q;  <span class="comment">// len: k - 1</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      <span class="keyword">while</span> (!q.empty() &amp;&amp; q.front() &lt;= i - k + <span class="number">1</span>) &#123;</span><br><span class="line">        q.pop_front();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">while</span> (!q.empty() &amp;&amp; height[q.back()] &gt;= height[i]) &#123;</span><br><span class="line">        q.pop_back();</span><br><span class="line">      &#125;</span><br><span class="line">      q.push_back(i);</span><br><span class="line">      <span class="keyword">if</span> (i &gt;= k - <span class="number">1</span>) &#123;</span><br><span class="line">        res = max(res, height[q.front()]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2852</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, k;</span><br><span class="line">  nyuuryoku(n, k);</span><br><span class="line">  <span class="function">suffix_array <span class="title">sarray</span><span class="params">(n)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(a[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  sarray.work();</span><br><span class="line">  shutsuryokul(sarray.lcp_over_k_times(k));</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.top/programming/dsaa/suffix-array/" title="「后缀数组」深入理解">http://tashi711.top/programming/dsaa/suffix-array/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/后缀数组/" rel="tag"># 后缀数组</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/programming/dsaa/persistable-tree/" rel="next" title="「可持久化数据结构」思考">
+                <i class="fa fa-chevron-left"></i> 「可持久化数据结构」思考
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/Tashi711.jpg"
+                alt="Tashi711" />
+            
+              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">145</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后缀排序之倍增"><span class="nav-number">1.1.</span> <span class="nav-text">后缀排序之倍增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#height"><span class="nav-number">1.2.</span> <span class="nav-text">height</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DC3"><span class="nav-number">1.3.</span> <span class="nav-text">DC3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-代码"><span class="nav-number">2.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用分析"><span class="nav-number">3.</span> <span class="nav-text">应用分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最长公共前缀"><span class="nav-number">3.1.</span> <span class="nav-text">最长公共前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重复子串"><span class="nav-number">3.2.</span> <span class="nav-text">重复子串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可重叠最长重复子串"><span class="nav-number">3.2.1.</span> <span class="nav-text">可重叠最长重复子串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不可重叠最长重复子串"><span class="nav-number">3.2.2.</span> <span class="nav-text">不可重叠最长重复子串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可重叠的k次最长重复子串"><span class="nav-number">3.2.3.</span> <span class="nav-text">可重叠的k次最长重复子串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不相同的子串的个数"><span class="nav-number">3.3.</span> <span class="nav-text">不相同的子串的个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最长回文子串"><span class="nav-number">3.4.</span> <span class="nav-text">最长回文子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续重复子串"><span class="nav-number">3.5.</span> <span class="nav-text">连续重复子串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重复次数最大值"><span class="nav-number">3.5.1.</span> <span class="nav-text">重复次数最大值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重复次数最多的连续重复子串"><span class="nav-number">3.5.2.</span> <span class="nav-text">重复次数最多的连续重复子串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最长公共子串"><span class="nav-number">3.6.</span> <span class="nav-text">最长公共子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长度不小于k的公共子串的个数"><span class="nav-number">3.7.</span> <span class="nav-text">长度不小于k的公共子串的个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不小于k个字符的最长子串"><span class="nav-number">3.8.</span> <span class="nav-text">不小于k个字符的最长子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每个字符串至少出现两次且不重叠的最长子串"><span class="nav-number">3.9.</span> <span class="nav-text">每个字符串至少出现两次且不重叠的最长子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#出现或反转后出现在每个字符串中的最长子串"><span class="nav-number">3.10.</span> <span class="nav-text">出现或反转后出现在每个字符串中的最长子串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#洛谷2852-牛奶模式题解"><span class="nav-number">4.</span> <span class="nav-text">洛谷2852 - 牛奶模式题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-代码（AC）"><span class="nav-number">4.1.</span> <span class="nav-text">C++代码（AC）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
