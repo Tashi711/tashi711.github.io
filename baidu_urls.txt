@@ -1,3 +1,7 @@
+http://tashi711.top/programming/dsaa/some-thoughts-2/
+http://tashi711.top/programming/reports/leetcode/leetcode-647-739-771/
+http://tashi711.top/programming/dsaa/some-thoughts-1/
+http://tashi711.top/programming/dsaa/cantor-expansion/
 http://tashi711.top/programming/dsaa/suffix-array/
 http://tashi711.top/programming/dsaa/persistable-tree/
 http://tashi711.top/programming/dsaa/chairman-tree/
@@ -38,7 +42,7 @@ http://tashi711.top/programming/dsaa/kruskal/
 http://tashi711.top/programming/dsaa/disjoint-set/
 http://tashi711.top/programming/dsaa/prim/
 http://tashi711.top/programming/dsaa/eulerian-path/
-http://tashi711.top/programming/dsaa/combinatorial_math/
+http://tashi711.top/programming/dsaa/combinatorial-math/
 http://tashi711.top/programming/dsaa/quick-power/
 http://tashi711.top/programming/dsaa/matrix/
 http://tashi711.top/programming/reports/others/zoj-3933/
@@ -89,12 +93,8 @@ http://tashi711.top/programming/reports/leetcode/leetcode-214/
 http://tashi711.top/programming/reports/leetcode/leetcode-164/
 http://tashi711.top/programming/reports/leetcode/leetcode-233/
 http://tashi711.top/programming/reports/leetcode/leetcode-943/
-http://tashi711.top/programming/reports/leetcode/leetcode-960/
 http://tashi711.top/programming/reports/leetcode/leetcode-964/
-http://tashi711.top/programming/reports/leetcode/leetcode-145/
-http://tashi711.top/programming/reports/leetcode/leetcode-135/
+http://tashi711.top/programming/reports/leetcode/leetcode-960/
 http://tashi711.top/programming/reports/leetcode/leetcode-140/
 http://tashi711.top/programming/reports/leetcode/leetcode-97/
-http://tashi711.top/programming/reports/leetcode/leetcode-128/
-http://tashi711.top/programming/reports/leetcode/leetcode-84/
-http://tashi711.top/programming/reports/leetcode/leetcode-72/
+http://tashi711.top/programming/reports/leetcode/leetcode-145/

@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/programming/dsaa/some-thoughts-2/</loc>
+    
+    <lastmod>2019-07-07T15:16:46.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-647-739-771/</loc>
+    
+    <lastmod>2019-07-07T03:07:15.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/some-thoughts-1/</loc>
+    
+    <lastmod>2019-06-27T15:29:57.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/cantor-expansion/</loc>
+    
+    <lastmod>2019-06-26T13:21:24.526Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/dsaa/suffix-array/</loc>
     
-    <lastmod>2019-06-25T12:09:37.877Z</lastmod>
+    <lastmod>2019-06-26T13:17:05.203Z</lastmod>
     
   </url>
   
@@ -296,7 +324,7 @@
   </url>
   
   <url>
-    <loc>http://tashi711.top/programming/dsaa/combinatorial_math/</loc>
+    <loc>http://tashi711.top/programming/dsaa/combinatorial-math/</loc>
     
     <lastmod>2019-05-04T17:49:22.666Z</lastmod>
     
