@@ -1,3 +1,5 @@
+http://tashi711.top/programming/dsaa/qtree-and-lct/
+http://tashi711.top/programming/dsaa/some-thoughts-3/
 http://tashi711.top/programming/dsaa/some-thoughts-2/
 http://tashi711.top/programming/reports/leetcode/leetcode-647-739-771/
 http://tashi711.top/programming/dsaa/some-thoughts-1/
@@ -95,6 +97,4 @@ http://tashi711.top/programming/reports/leetcode/leetcode-233/
 http://tashi711.top/programming/reports/leetcode/leetcode-943/
 http://tashi711.top/programming/reports/leetcode/leetcode-964/
 http://tashi711.top/programming/reports/leetcode/leetcode-960/
-http://tashi711.top/programming/reports/leetcode/leetcode-140/
 http://tashi711.top/programming/reports/leetcode/leetcode-97/
-http://tashi711.top/programming/reports/leetcode/leetcode-145/

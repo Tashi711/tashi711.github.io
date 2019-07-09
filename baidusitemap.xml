@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/dsaa/qtree-and-lct/</loc>
+    <lastmod>2019-07-09T14:05:48.733Z</lastmod>
+    <data>
+        <display>
+        <title>「树链剖分与动态树」详解</title>
+        <pubTime>2019-07-10T03:15:34.000Z</pubTime>
+        
+        <tag>树链剖分</tag>
+         
+        <tag>动态树</tag>
+         
+        <tag>LCT</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/some-thoughts-3/</loc>
+    <lastmod>2019-07-09T13:15:34.091Z</lastmod>
+    <data>
+        <display>
+        <title>「一些其他的数据结构与算法」简单小结（三）</title>
+        <pubTime>2019-07-09T03:15:34.000Z</pubTime>
+        
+        <tag>可持续化并查集</tag>
+         
+        <tag>可持续化平衡树</tag>
+         
+        <tag>后缀自动机</tag>
+         
+        <tag>严格次小生成树</tag>
+         
+        <tag>扩展BSGS算法</tag>
+         
+        <tag>扩展Lucas定理</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/some-thoughts-2/</loc>
     <lastmod>2019-07-07T15:16:46.427Z</lastmod>
     <data>
@@ -64,11 +124,11 @@
         <title>「一些其他的数据结构与算法」简单小结（一）</title>
         <pubTime>2019-06-27T03:15:34.000Z</pubTime>
         
+        <tag>树链剖分</tag>
+         
         <tag>FFT</tag>
          
         <tag>平衡树</tag>
-         
-        <tag>树链剖分</tag>
          
          
            
@@ -684,9 +744,9 @@
         <title>「RSQ问题」总结</title>
         <pubTime>2019-05-29T03:15:34.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>树状数组</tag>
+         
+        <tag>线段树</tag>
          
         <tag>RSQ</tag>
          
