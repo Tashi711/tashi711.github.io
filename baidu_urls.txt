@@ -1,3 +1,11 @@
+http://tashi711.top/programming/dsaa/some-thoughts-5/
+http://tashi711.top/programming/reports/luogu/luogu-2548/
+http://tashi711.top/programming/reports/luogu/luogu-2945/
+http://tashi711.top/programming/reports/luogu/luogu-1008/
+http://tashi711.top/programming/reports/leetcode/leetcode-581-617-621/
+http://tashi711.top/programming/reports/luogu/luogu-1000/
+http://tashi711.top/programming/reports/luogu/luogu-1001/
+http://tashi711.top/programming/dsaa/some-thoughts-4/
 http://tashi711.top/programming/dsaa/qtree-and-lct/
 http://tashi711.top/programming/dsaa/some-thoughts-3/
 http://tashi711.top/programming/dsaa/some-thoughts-2/
@@ -32,7 +40,7 @@ http://tashi711.top/programming/dsaa/matrix-quick-power/
 http://tashi711.top/programming/others/bit-extend/
 http://tashi711.top/programming/dsaa/trichotomy/
 http://tashi711.top/programming/dsaa/shortest_path/
-http://tashi711.top/programming/reports/others/luogu-4549/
+http://tashi711.top/programming/reports/luogu/luogu-4549/
 http://tashi711.top/programming/dsaa/base_hash/
 http://tashi711.top/programming/dsaa/heap/
 http://tashi711.top/programming/dsaa/prime/
@@ -90,11 +98,3 @@ http://tashi711.top/programming/reports/leetcode/leetcode-940/
 http://tashi711.top/programming/reports/leetcode/leetcode-975/
 http://tashi711.top/programming/reports/leetcode/leetcode-972/
 http://tashi711.top/programming/reports/leetcode/leetcode-968/
-http://tashi711.top/programming/reports/leetcode/leetcode-52/
-http://tashi711.top/programming/reports/leetcode/leetcode-214/
-http://tashi711.top/programming/reports/leetcode/leetcode-164/
-http://tashi711.top/programming/reports/leetcode/leetcode-233/
-http://tashi711.top/programming/reports/leetcode/leetcode-943/
-http://tashi711.top/programming/reports/leetcode/leetcode-964/
-http://tashi711.top/programming/reports/leetcode/leetcode-960/
-http://tashi711.top/programming/reports/leetcode/leetcode-97/

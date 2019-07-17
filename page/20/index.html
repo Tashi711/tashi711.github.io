@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/queue-max-query/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/others/zoj-3933/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/queue-max-query/" itemprop="url">「队列最大值询问」妙解</a></h1>
+                <a class="post-title-link" href="/programming/reports/others/zoj-3933/" itemprop="url">「ZOJ 3933 - Team Formation」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T11:17:59+08:00">
-                2019-05-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-09T00:11:04+08:00">
+                2019-05-09
               </time>
             
 
@@ -374,7 +374,18 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/其他/" itemprop="url" rel="index">
                     <span itemprop="name">其他</span>
                   </a>
                 </span>
@@ -392,8 +403,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/others/queue-max-query/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/queue-max-query/" itemprop="commentCount"></span>
+                <a href="/programming/reports/others/zoj-3933/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/others/zoj-3933/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +412,7 @@
 
           
           
-             <span id="/programming/others/queue-max-query/" class="leancloud_visitors" data-flag-title="「队列最大值询问」妙解">
+             <span id="/programming/reports/others/zoj-3933/" class="leancloud_visitors" data-flag-title="「ZOJ 3933 - Team Formation」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,13 +444,18 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>今天看到一个很巧妙的解决队列最大值询问的方法。</p>
-<h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>三种操作：<br>1、队列push(k)<br>2、队列pop<br>3、询问队列中最大值</p>
-<h3 id="初步思考"><a href="#初步思考" class="headerlink" title="初步思考"></a>初步思考</h3><p>首先n方的暴力就不说了。<br>进一步可以想到用堆（优先队列）解决，nlogn。</p>
-<h3 id="巧妙的解法"><a href="#巧妙的解法" class="headerlink" title="巧妙的解法"></a>巧妙的解法</h3>
+          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
+<ul>
+<li>链接：<a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=5542" target="_blank" rel="noopener">ZOJ 3933 - Team Formation</a></li>
+<li>来源：The 16th Zhejiang University Programming Contest</li>
+</ul>
+</blockquote>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>其实应该算是一道比较裸的费用流问题，当时在线赛的时候用费用流A掉了，这里用带权二分图匹配来做。<br>为了保证最大匹配，每个匹配的分数要高过性别带来的最大影响，这里设为1w。然后每个匹配外加女生数量的分数。</p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度均为$O(N^3)$。<br>空间复杂度均为$O(N^2)$。</p>
+<h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/queue-max-query/#more" rel="contents">
+            <a class="btn" href="/programming/reports/others/zoj-3933/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -490,7 +506,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/bign-with-gcd/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/km/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -509,7 +525,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/bign-with-gcd/" itemprop="url">「高精度及其最大公约数」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/km/" itemprop="url">「KM算法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -521,8 +537,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-30T11:15:34+08:00">
-                2019-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-08T11:15:34+08:00">
+                2019-05-08
               </time>
             
 
@@ -573,8 +589,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/bign-with-gcd/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/bign-with-gcd/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/km/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/km/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -582,7 +598,7 @@
 
           
           
-             <span id="/programming/dsaa/bign-with-gcd/" class="leancloud_visitors" data-flag-title="「高精度及其最大公约数」模板">
+             <span id="/programming/dsaa/km/" class="leancloud_visitors" data-flag-title="「KM算法」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -614,14 +630,12 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>类内函数：</strong><br>构造（string、int）<br>赋值（string、int）<br>加法（包括+=）<br>减法（包括-=）<br>乘法（单精度、高精度，包括其各自的*=）<br>除法与取余（单精度，包括/=）<br>大小比较<br>奇偶判断<br>等于0判断</p>
-<p><strong>全局函数：</strong><br>流<br>最大公约数</p>
-<h3 id="功能与局限"><a href="#功能与局限" class="headerlink" title="功能与局限"></a>功能与局限</h3><p><strong>满足：</strong><br>1、过滤前导0（字符串初始化、减法、乘0、除法）<br>2、除0判断</p>
-<p><strong>待完善：</strong><br>1、常数优化：将10进制优化到10^k进制<br>2、符号运算（目前减法不支持小减大）<br>3、高精度除以高精度<br>4、分离除法与取余</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>带权二分图匹配，KM算法</p>
+<h3 id="算法细节"><a href="#算法细节" class="headerlink" title="算法细节"></a>算法细节</h3><p>1、下面实现的是最大权，最小权直接初始化负权值即可。<br>2、x部、y部不用数量相同，下面会自动交换x部更小（KM算法本身在x部不超过y部时正确）。<br>3、可调x部、y部初始序号（offset参数传入，0、1，或者考虑共不共用等）。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/bign-with-gcd/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/km/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -672,7 +686,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-25/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/hungarian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -691,7 +705,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-25/" itemprop="url">「LeetCode 25. Reverse Nodes in k-Group」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/hungarian/" itemprop="url">「匈牙利算法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -703,8 +717,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T11:57:02+08:00">
-                2019-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T11:15:34+08:00">
+                2019-05-07
               </time>
             
 
@@ -737,19 +751,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -766,8 +769,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-25/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-25/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/hungarian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/hungarian/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -775,7 +778,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-25/" class="leancloud_visitors" data-flag-title="「LeetCode 25. Reverse Nodes in k-Group」解题报告">
+             <span id="/programming/dsaa/hungarian/" class="leancloud_visitors" data-flag-title="「匈牙利算法」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -807,17 +810,12 @@
 
       
         
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank" rel="noopener">LeetCode 25. Reverse Nodes in k-Group</a></li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先加dummy方便处理，走k次都没有null说明可以做，再从头换到尾。</p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为$O(N)$。<br>空间复杂度为$O(1)$。</p>
-<h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>之前写过一篇文章介绍二分图匹配匈牙利算法的细节，此处给出模板。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、offset调整序号开始的位置（0、1，或者x部与y部序号共不共用等）<br>2、可以通过dfs顺序控制多个结果时的返回（越小的匹配越小或者越大）<br>3、复杂度是O(NM)，N为x部点数，M为边数，因此交换x部与y部让x部更少。</p>
+<h2 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-25/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/hungarian/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -859,7 +857,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/">53</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -909,7 +907,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">151</span>
+                  <span class="site-state-item-count">159</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -920,7 +918,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -931,7 +929,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">117</span>
+                  <span class="site-state-item-count">121</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

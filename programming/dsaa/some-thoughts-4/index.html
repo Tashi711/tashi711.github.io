@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/3.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/2.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="最小树形图,跳舞链,树套树," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="概述本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。 最小树形图问题提出给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。 算法概述这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对">
+<meta name="keywords" content="最小树形图,跳舞链,树套树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一些其他的数据结构与算法」简单小结（四、告别篇）">
+<meta property="og:url" content="http://tashi711.top/programming/dsaa/some-thoughts-4/index.html">
+<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:description" content="概述本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。 最小树形图问题提出给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。 算法概述这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-11T15:07:20.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「一些其他的数据结构与算法」简单小结（四、告别篇）">
+<meta name="twitter:description" content="概述本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。 最小树形图问题提出给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。 算法概述这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'ICEDL16U0X',
+      apiKey: '5c42d4ba7a4b37462a336dfe67fe7c95',
+      indexName: 'Tashi711',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"请输入关键字","hits_empty":"没有找到与「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://tashi711.top/programming/dsaa/some-thoughts-4/"/>
+
+
+
+
+
+  <title>「一些其他的数据结构与算法」简单小结（四、告别篇） | Tashi711的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tashi711的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">過去（きのう）に傷付きながらも、信じ続ける理想（ゆめ）を求める。いつか無限（なないろ）に輝き放って、青空（そら）に橋を描く。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">「一些其他的数据结构与算法」简单小结（四、告别篇）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T11:15:34+08:00">
+                2019-07-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/dsaa/some-thoughts-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/dsaa/some-thoughts-4/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（四、告别篇）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。</p>
+<h2 id="最小树形图"><a href="#最小树形图" class="headerlink" title="最小树形图"></a>最小树形图</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对每个点都选择一条通向它的最短的边（没有的话就无解）。这样连出来的图有n-1条边，但不一定是树。不过，这个图最多只有几个简单环，因为每个点只连入1条边。所以将这些环搜出并缩起来，然后在缩完后的边（经过处理，减去环中以那个点为终点的边的权值，因为已经统计过但是实际是不需要这条边的）中继续跑最小树形图直到选择的边构成树。时间复杂度O(NM)，但是一般情况会快很多。</p>
+<a id="more"></a>
+<h2 id="跳舞链"><a href="#跳舞链" class="headerlink" title="跳舞链"></a>跳舞链</h2><h3 id="问题提出-1"><a href="#问题提出-1" class="headerlink" title="问题提出"></a>问题提出</h3><p>精确覆盖问题：一个全集S有若干个子集S1，S2，……，Sn，选取其中若干个子集，使得这些集合中出现了S中每个元素各一次。</p>
+<p>重复覆盖问题：与精确覆盖问题一样，只是每个元素可出现任意次。</p>
+<h3 id="算法概述-1"><a href="#算法概述-1" class="headerlink" title="算法概述"></a>算法概述</h3><p>跳舞链（Dangcing-links，DLX），一般认为是回溯解决两种覆盖问题的优化搜索算法。</p>
+<p>精确覆盖：把全集中的每个元素对应成一个矩阵中的列，把每个子集对应成一个行对于矩阵中一点（i，j）若集合Si包含元素j则改点为1，否则为0。递归选取一个集合（一行），把该行和该行上有点的列和包含这些列的行删除，直到矩阵为空，即找到了一组解，或者矩阵未覆盖完但已经无集合可用，覆盖失败，于是回溯。重复覆盖：对应修改删除与恢复操作即可。</p>
+<p>跳舞链是解决数独问题的标配算法<del>（当然八皇后什么的也可以用这个搞一搞）</del>，一个标准数独问题转可以换成一个324列的精确覆盖问题，数独有4个限制条件，将其分别转换为81列：1、每个格子都要填入数字反映到1到81列，表示数独中81个格子是否填入了数字。如果是，则对应那列上为1；2、每一行都要有1~9填入反映到81+1到81*2列，每9列就代表数独中的一行，如果该行有某个数字，则其对应的列上为1；3、每一列都要有1~9填入反映到81*2+1到81*3列，每9列就代表数独中的一列；4、每一宫都要有1~9填入反映到81*3+1到81*4列，每9列就代表数独中的一宫。</p>
+<p>对于已给出数字的格子，例如第3行第5列为7，那么就插入一行，其中第23、106、205、259列为1，其他为0，分别代表：<br>23 = (3 - 1) * 9 + 5（第3行第5列填入了数字）；106 = 81 + (3 - 1) * 9 + 7（第3行填入了7）；205 = 81 * 2 + (5 - 1) *9 + 7（第5列填入了7）；259 = 81 * 3 + (2 - 1) * 9 + 7 （第2宫填入了7）。如果没有给出数字，那这个格子就有9种可能性，插入9行，例如第3行第5列为：第一行：23, 100, 199, 253；第二行：23, 101, 200, 254；……；第九行：23, 108, 207, 261。</p>
+<h2 id="树套树"><a href="#树套树" class="headerlink" title="树套树"></a>树套树</h2><h3 id="问题提出-2"><a href="#问题提出-2" class="headerlink" title="问题提出"></a>问题提出</h3><p>维护一个有序数列的数据结构，支持以下操作：<br>1、查询k在区间内的排名<br>2、查询区间内排名为k的值<br>3、修改某一位值上的数值<br>4、查询k在区间内的前驱<br>5、查询k在区间内的后继</p>
+<h3 id="算法概述-2"><a href="#算法概述-2" class="headerlink" title="算法概述"></a>算法概述</h3><p>这道题最经典的做法是线段树套平衡树，也是一般树套树的定义，当然也有其他各种A套B都可以满足这个需求。</p>
+<p>首先，用一颗线段树管理下标区间[L, R]，然后每个线段树的节点都是一颗平衡树，平衡树中存储了所有下标在[L, R]之间的所有数的信息。这样的话，所有区间都可以被分为O(logN)个线段树的节点，区间问题便转化为了几个平衡树上的问题。然后考虑如何具体实现各个操作：</p>
+<p>1、查询区间内一个数的排名：在线段树上找到区间对应的节点，然后每个节点的平衡树内查询对应数的排名并求和。时间复杂度O(log^2N)；2、查询区间内排名为k的数是几：由于这项操作在线段树上不可加，所以考虑转换为判定一个数是不是区间内排名为k的。这个可以在O(log^2N)的时间内通过操作1完成，二分答案可以解决这个问题，时间复杂度O(log^3N)；3、单点修改：在线段树上找到所有覆盖这个点的区间，然后在所有区间对应的平衡树中删除原数，加入新数即可。时间复杂度O(log^2N)；4和5、 查询区间内一个数前驱、后继：只需要对于所有区间分别查询，然后答案相应的取max或者min即可。时间复杂度O(log^2N)。</p>
+<p>由于序列中的一个数最多被插入O(logN)个平衡树内，考虑到每次修改操作最多增加并删除一个节点，所以空间复杂度为O(NlogN)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tashi711
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tashi711.top/programming/dsaa/some-thoughts-4/" title="「一些其他的数据结构与算法」简单小结（四、告别篇）">http://tashi711.top/programming/dsaa/some-thoughts-4/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/最小树形图/" rel="tag"># 最小树形图</a>
+          
+            <a href="/tags/跳舞链/" rel="tag"># 跳舞链</a>
+          
+            <a href="/tags/树套树/" rel="tag"># 树套树</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/programming/dsaa/qtree-and-lct/" rel="next" title="「树链剖分与动态树」详解">
+                <i class="fa fa-chevron-left"></i> 「树链剖分与动态树」详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/programming/reports/luogu/luogu-1001/" rel="prev" title="「洛谷 1001 - A+B Problem」解题报告">
+                「洛谷 1001 - A+B Problem」解题报告 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/Tashi711.jpg"
+                alt="Tashi711" />
+            
+              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">121</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小树形图"><span class="nav-number">2.</span> <span class="nav-text">最小树形图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题提出"><span class="nav-number">2.1.</span> <span class="nav-text">问题提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法概述"><span class="nav-number">2.2.</span> <span class="nav-text">算法概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳舞链"><span class="nav-number">3.</span> <span class="nav-text">跳舞链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题提出-1"><span class="nav-number">3.1.</span> <span class="nav-text">问题提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法概述-1"><span class="nav-number">3.2.</span> <span class="nav-text">算法概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树套树"><span class="nav-number">4.</span> <span class="nav-text">树套树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题提出-2"><span class="nav-number">4.1.</span> <span class="nav-text">问题提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法概述-2"><span class="nav-number">4.2.</span> <span class="nav-text">算法概述</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
+        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
+        placeholder: '',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
