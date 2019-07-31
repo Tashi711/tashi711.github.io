@@ -4,6 +4,365 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/others/cpp-virtual/</loc>
+    <lastmod>2019-07-31T13:18:10.958Z</lastmod>
+    <data>
+        <display>
+        <title>C++中的「多继承」探讨</title>
+        <pubTime>2019-07-31T03:15:34.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+        <tag>多继承</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/dsaa/balance-tree/</loc>
+    <lastmod>2019-07-30T13:43:41.683Z</lastmod>
+    <data>
+        <display>
+        <title>「红黑树」详解</title>
+        <pubTime>2019-07-30T03:15:34.000Z</pubTime>
+        
+        <tag>平衡树</tag>
+         
+        <tag>红黑树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="数据结构与算法" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/factory/</loc>
+    <lastmod>2019-07-29T13:02:50.363Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式之「工厂模式」</title>
+        <pubTime>2019-07-29T03:15:34.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-438-448-494/</loc>
+    <lastmod>2019-07-24T14:28:07.213Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 438、448、494」解题报告</title>
+        <pubTime>2019-07-28T15:57:02.000Z</pubTime>
+        
+        <tag>LeetCode-top-100</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-1732/</loc>
+    <lastmod>2019-07-24T13:06:45.813Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 1732 - [TJOI2011]序列」解题报告</title>
+        <pubTime>2019-07-27T03:57:02.000Z</pubTime>
+        
+        <tag>平衡树</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-1187/</loc>
+    <lastmod>2019-07-23T13:54:11.818Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 1187 - 3D模型」解题报告</title>
+        <pubTime>2019-07-26T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2755/</loc>
+    <lastmod>2019-07-22T12:55:23.009Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2755 - 洗牌问题」解题报告</title>
+        <pubTime>2019-07-25T03:57:02.000Z</pubTime>
+        
+        <tag>找规律</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2556/</loc>
+    <lastmod>2019-07-22T12:16:20.811Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2556 - [AHOI2002]黑白图像压缩」解题报告</title>
+        <pubTime>2019-07-24T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2965/</loc>
+    <lastmod>2019-07-22T12:15:39.078Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2965 - [USACO09NOV]农活比赛The Grand Farm-off」解题报告</title>
+        <pubTime>2019-07-20T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2909/</loc>
+    <lastmod>2019-07-21T16:31:40.320Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2909 - [USACO08OPEN]牛的车Cow Cars」解题报告</title>
+        <pubTime>2019-07-23T03:57:02.000Z</pubTime>
+        
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-3887/</loc>
+    <lastmod>2019-07-21T16:31:39.372Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 3887 - [GDOI2014]世界杯」解题报告</title>
+        <pubTime>2019-07-22T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-538-543-560/</loc>
+    <lastmod>2019-07-21T03:52:25.019Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 538、543、560」解题报告</title>
+        <pubTime>2019-07-21T15:57:02.000Z</pubTime>
+        
+        <tag>LeetCode-top-100</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2562/</loc>
+    <lastmod>2019-07-20T02:24:15.096Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2562 - [AHOI2002]Kitty猫基因编码」解题报告</title>
+        <pubTime>2019-07-18T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/reports/luogu/luogu-2959/</loc>
+    <lastmod>2019-07-20T02:24:07.178Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 2959 - [USACO09OCT]悠闲漫步」解题报告</title>
+        <pubTime>2019-07-19T03:57:02.000Z</pubTime>
+        
+        <tag>水题</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="洛谷" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E6%B4%9B%E8%B0%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/dsaa/some-thoughts-5/</loc>
     <lastmod>2019-07-17T15:22:28.610Z</lastmod>
     <data>
