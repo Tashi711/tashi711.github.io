@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="设计模式," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,14 +89,13 @@
 
 
 <meta name="description" content="简介最近开始简单学下设计模式，开个新篇。本篇主要参考自此文档，后略。这篇主要写工厂模式。 抽象工厂模式抽象工厂模式（Abstract Factory Pattern），又称为Kit模式，属于对象创建型模式。包含1、AbstractFactory：抽象工厂；2、ConcreteFactory：具体工厂；3、AbstractProduct：抽象产品；4、Product：具体产品。 抽象工厂模式是所有形">
-<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之「工厂模式」">
 <meta property="og:url" content="http://tashi711.top/programming/others/factory/index.html">
 <meta property="og:site_name" content="Tashi711的博客">
 <meta property="og:description" content="简介最近开始简单学下设计模式，开个新篇。本篇主要参考自此文档，后略。这篇主要写工厂模式。 抽象工厂模式抽象工厂模式（Abstract Factory Pattern），又称为Kit模式，属于对象创建型模式。包含1、AbstractFactory：抽象工厂；2、ConcreteFactory：具体工厂；3、AbstractProduct：抽象产品；4、Product：具体产品。 抽象工厂模式是所有形">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-29T13:02:50.363Z">
+<meta property="og:updated_time" content="2019-07-31T16:24:27.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之「工厂模式」">
 <meta name="twitter:description" content="简介最近开始简单学下设计模式，开个新篇。本篇主要参考自此文档，后略。这篇主要写工厂模式。 抽象工厂模式抽象工厂模式（Abstract Factory Pattern），又称为Kit模式，属于对象创建型模式。包含1、AbstractFactory：抽象工厂；2、ConcreteFactory：具体工厂；3、AbstractProduct：抽象产品；4、Product：具体产品。 抽象工厂模式是所有形">
@@ -350,39 +349,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -439,9 +405,9 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">///////////////////////////////////////////////////////////</span></span><br><span class="line"><span class="comment">//  ConcreteFactory1.cpp</span></span><br><span class="line"><span class="comment">///////////////////////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ConcreteFactory1.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ProductA1.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ProductB1.h"</span></span></span><br><span class="line">AbstractProductA * ConcreteFactory1::createProductA()&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> ProductA1();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AbstractProductB * ConcreteFactory1::createProductB()&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> ProductB1();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">///////////////////////////////////////////////////////////</span></span><br><span class="line"><span class="comment">//  ProductA1.cpp</span></span><br><span class="line"><span class="comment">///////////////////////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ProductA1.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">void</span> ProductA1::use()&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"use Product A1"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>增加新的具体工厂和产品族很方便，无须修改已有系统，符合“开闭原则”（系统对扩展开放，对修改封闭，通过扩展达到增强其功能的目的）。但在添加新的产品对象时，难以扩展抽象工厂来生产新种类的产品，这是因为在抽象工厂角色中规定了所有可能被创建的产品集合，要支持新种类的产品就意味着要对该接口进行扩展，而这将涉及到对抽象工厂角色及其所有子类的修改，显然会带来较大的不便。这被称为是开闭原则的倾斜性（增加新的工厂和产品族容易，增加新的产品等级结构麻烦）。一个应用是在很多软件系统中需要更换界面主题，要求界面中的按钮、文本框、背景色等一起发生改变时，可以使用抽象工厂模式进行设计。</p>
-<h3 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h3><p>工厂方法模式（Factory Method Pattern），又称为工厂模式，也叫虚拟构造器（Virtual Constructor）模式或者多态工厂（Polymorphic Factory）模式，它属于类创建型模式。当抽象工厂模式中每一个具体工厂类只创建一个产品对象，也就是只存在一个产品等级结构时，抽象工厂模式退化成工厂方法模式。他也包括抽象工厂模式的4种角色。他是完全符合“开闭原则”的。</p>
+<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><p>工厂方法模式（Factory Method Pattern），又称为工厂模式，也叫虚拟构造器（Virtual Constructor）模式或者多态工厂（Polymorphic Factory）模式，它属于类创建型模式。当抽象工厂模式中每一个具体工厂类只创建一个产品对象，也就是只存在一个产品等级结构时，抽象工厂模式退化成工厂方法模式。他也包括抽象工厂模式的4种角色。他是完全符合“开闭原则”的。</p>
 <p>但在添加新产品时，工厂方法模式需要编写新的具体产品类，而且还要提供与之对应的具体工厂类，系统中类的个数将成对增加，在一定程度上增加了系统的复杂度，有更多的类需要编译和运行，会给系统带来一些额外的开销。</p>
-<h3 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h3><p>简单工厂模式（Simple Factory Pattern），又称为静态工厂方法（Static Factory Method）模式，它属于类创建型模式。在简单工厂模式中，可以根据参数的不同返回不同类的实例。当工厂方法模式中抽象工厂与具体工厂合并，提供一个统一的工厂来创建产品对象，并将创建对象的工厂方法设计为静态方法时，工厂方法模式退化成简单工厂模式。不符合“开闭原则”。</p>
+<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>简单工厂模式（Simple Factory Pattern），又称为静态工厂方法（Static Factory Method）模式，它属于类创建型模式。在简单工厂模式中，可以根据参数的不同返回不同类的实例。当工厂方法模式中抽象工厂与具体工厂合并，提供一个统一的工厂来创建产品对象，并将创建对象的工厂方法设计为静态方法时，工厂方法模式退化成简单工厂模式。不符合“开闭原则”。</p>
 
       
     </div>
@@ -474,12 +440,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
-          
-        </div>
       
 
       
@@ -586,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">173</span>
+                  <span class="site-state-item-count">186</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -608,7 +568,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -648,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象工厂模式"><span class="nav-number">2.</span> <span class="nav-text">抽象工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码（C-）"><span class="nav-number">2.1.</span> <span class="nav-text">代码（C++）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法模式"><span class="nav-number">2.3.</span> <span class="nav-text">工厂方法模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">2.4.</span> <span class="nav-text">简单工厂模式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象工厂模式"><span class="nav-number">2.</span> <span class="nav-text">抽象工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码（C-）"><span class="nav-number">2.1.</span> <span class="nav-text">代码（C++）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂方法模式"><span class="nav-number">3.</span> <span class="nav-text">工厂方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">4.</span> <span class="nav-text">简单工厂模式</span></a></li></ol></div>
             
 
           </div>

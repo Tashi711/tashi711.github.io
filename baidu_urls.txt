@@ -1,3 +1,16 @@
+http://tashi711.top/programming/others/drop-eggs/
+http://tashi711.top/programming/others/mediator - 副本/
+http://tashi711.top/programming/others/mediator/
+http://tashi711.top/programming/others/command/
+http://tashi711.top/programming/others/proxy/
+http://tashi711.top/programming/others/flyweight/
+http://tashi711.top/programming/others/oop/
+http://tashi711.top/programming/others/facade/
+http://tashi711.top/programming/others/decorator/
+http://tashi711.top/programming/others/bridge/
+http://tashi711.top/programming/others/adapter/
+http://tashi711.top/programming/others/singleton/
+http://tashi711.top/programming/others/constructor/
 http://tashi711.top/programming/others/cpp-virtual/
 http://tashi711.top/programming/dsaa/balance-tree/
 http://tashi711.top/programming/others/factory/
@@ -85,16 +98,3 @@ http://tashi711.top/programming/reports/leetcode/leetcode-2/
 http://tashi711.top/programming/reports/leetcode/leetcode-1/
 http://tashi711.top/programming/reports/leetcode/leetcode-730/
 http://tashi711.top/programming/reports/leetcode/leetcode-5/
-http://tashi711.top/programming/reports/leetcode/leetcode-132/
-http://tashi711.top/programming/reports/others/poj-3468/
-http://tashi711.top/programming/dsaa/segment-tree/
-http://tashi711.top/programming/reports/leetcode/leetcode-591/
-http://tashi711.top/programming/dsaa/2d-bit/
-http://tashi711.top/programming/reports/leetcode/leetcode-587/
-http://tashi711.top/programming/dsaa/convex-hull/
-http://tashi711.top/programming/reports/leetcode/leetcode-564/
-http://tashi711.top/programming/reports/leetcode/leetcode-493/
-http://tashi711.top/programming/reports/leetcode/leetcode-480/
-http://tashi711.top/programming/reports/leetcode/leetcode-466/
-http://tashi711.top/programming/reports/leetcode/leetcode-446/
-http://tashi711.top/programming/reports/leetcode/leetcode-996/

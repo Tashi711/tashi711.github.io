@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="凸包," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,7 +89,6 @@
 
 
 <meta name="description" content="简述再次探索平面凸包（Graham扫描法）以及完善代码，本次改动主要有：1、添加了double的快读快写，整理出快读快写的最终版本。2、保留了上次比较有代表性的两个test，添加求周长，保留了是否做留下边上点的判断（虽然与周长无关）。3、全局分配空间，结果依旧用vector保存，但提前reserve(n)，保证不受重分配效率影响。4、改编graham的结构，不去修改循环变量。 注：平面凸包有个可能">
-<meta name="keywords" content="凸包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「平面凸包」再探">
 <meta property="og:url" content="http://tashi711.top/programming/dsaa/graham-redo/index.html">
@@ -350,39 +349,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -468,12 +434,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/凸包/" rel="tag"># 凸包</a>
-          
-        </div>
       
 
       
@@ -580,7 +540,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">173</span>
+                  <span class="site-state-item-count">186</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -602,7 +562,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
