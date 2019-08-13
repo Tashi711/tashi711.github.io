@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="乘法逆元," />
 
 
 
@@ -89,6 +89,7 @@
 
 
 <meta name="description" content="思路求单个乘法逆元需要一次扩展欧几里得，是对数级的复杂度，而若求1到n的乘法逆元，可以利用递推做到均摊常数复杂度。下面代码就是这样做的。 扩展费马小定理可求，需要p是质数且a与p互质，扩展欧几里得只需要a与p互质即可，且比快速幂快，因此费马小定理可以完全被扩展欧几里得替代。 另外有一种递推求阶乘逆元的方法，inv(i!)=inv((i+1)!)*(i+1)，因此可以先求n!的逆元，再逆序求n-1到">
+<meta name="keywords" content="乘法逆元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「递推求乘法逆元与其他求逆元」思路">
 <meta property="og:url" content="http://tashi711.top/programming/dsaa/inverses/index.html">
@@ -349,6 +350,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -435,6 +469,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/乘法逆元/" rel="tag"># 乘法逆元</a>
+          
+        </div>
       
 
       
@@ -563,7 +603,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">126</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

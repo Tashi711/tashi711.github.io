@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tashi711.top/about/index.html</loc>
+    
+    <lastmod>2019-08-13T15:22:34.418Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tashi711.top/programming/others/observer/</loc>
     
-    <lastmod>2019-08-13T15:15:54.358Z</lastmod>
+    <lastmod>2019-08-13T15:18:34.657Z</lastmod>
     
   </url>
   
@@ -250,13 +257,6 @@
     <loc>http://tashi711.top/programming/dsaa/some-thoughts-4/</loc>
     
     <lastmod>2019-07-11T15:07:20.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tashi711.top/about/index.html</loc>
-    
-    <lastmod>2019-07-09T15:00:34.344Z</lastmod>
     
   </url>
   

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="凸包,Graham," />
 
 
 
@@ -89,6 +89,7 @@
 
 
 <meta name="description" content="简介之前写了一篇文章专门讲平面凸包，这里将Graham扫描算法的细节实现为模板。 功能介绍1、实现成template，可以做整数点与浮点数点（注意判断直线的细节，浮点叉乘会出现精度问题）。2、实现了需不需要输出直线上的点两种，通过调整传参的flag，注意当不需要输出直线上的点时，可以不用最后的逆序操作，且注意第二个点可能会被弹出，因此需要判断当前是否至少两个点，否则直接push当前正在判断的点。3">
+<meta name="keywords" content="凸包,Graham">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「Graham扫描算法」模板">
 <meta property="og:url" content="http://tashi711.top/programming/dsaa/graham-scan/index.html">
@@ -349,6 +350,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -433,6 +467,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/凸包/" rel="tag"># 凸包</a>
+          
+            <a href="/tags/Graham/" rel="tag"># Graham</a>
+          
+        </div>
       
 
       
@@ -561,7 +603,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">126</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
