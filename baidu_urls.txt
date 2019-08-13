@@ -1,5 +1,5 @@
 http://tashi711.top/programming/others/drop-eggs/
-http://tashi711.top/programming/others/mediator - 副本/
+http://tashi711.top/programming/others/observer/
 http://tashi711.top/programming/others/mediator/
 http://tashi711.top/programming/others/command/
 http://tashi711.top/programming/others/proxy/
