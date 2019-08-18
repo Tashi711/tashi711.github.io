@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tashi711.top/about/index.html</loc>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-287/</loc>
     
-    <lastmod>2019-08-13T15:22:34.418Z</lastmod>
+    <lastmod>2019-08-18T12:37:49.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/others/padding/</loc>
+    
+    <lastmod>2019-08-15T17:05:02.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/others/strategy/</loc>
+    
+    <lastmod>2019-08-14T13:27:52.350Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/programming/others/state/</loc>
+    
+    <lastmod>2019-08-14T13:21:09.853Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tashi711.top/programming/others/observer/</loc>
     
-    <lastmod>2019-08-13T15:18:34.657Z</lastmod>
+    <lastmod>2019-08-14T12:01:44.937Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tashi711.top/about/index.html</loc>
+    
+    <lastmod>2019-08-13T15:22:34.418Z</lastmod>
     
   </url>
   

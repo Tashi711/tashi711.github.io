@@ -3,10 +3,104 @@
 
 
     
+  <url>
+    <loc>http://tashi711.top/programming/reports/leetcode/leetcode-287/</loc>
+    <lastmod>2019-08-18T12:37:49.466Z</lastmod>
+    <data>
+        <display>
+        <title>「LeetCode 287」解题报告</title>
+        <pubTime>2019-08-18T15:57:02.000Z</pubTime>
+        
+        <tag>巧妙</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="LeetCode" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/padding/</loc>
+    <lastmod>2019-08-15T17:05:02.911Z</lastmod>
+    <data>
+        <display>
+        <title>「内存对齐」问题探究</title>
+        <pubTime>2019-08-17T03:15:34.000Z</pubTime>
+        
+        <tag>内存对齐</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/strategy/</loc>
+    <lastmod>2019-08-14T13:27:52.350Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式之「策略模式」</title>
+        <pubTime>2019-08-16T03:15:34.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/state/</loc>
+    <lastmod>2019-08-14T13:21:09.853Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式之「状态模式」</title>
+        <pubTime>2019-08-15T03:15:34.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://tashi711.top/programming/others/observer/</loc>
-    <lastmod>2019-08-13T15:18:34.657Z</lastmod>
+    <lastmod>2019-08-14T12:01:44.937Z</lastmod>
     <data>
         <display>
         <title>设计模式之「观察者模式」</title>
@@ -26,6 +120,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://tashi711.top/programming/others/mediator/</loc>
@@ -1637,9 +1732,9 @@
         <title>「RSQ问题」总结</title>
         <pubTime>2019-05-29T03:15:34.000Z</pubTime>
         
-        <tag>树状数组</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>树状数组</tag>
          
         <tag>RSQ</tag>
          

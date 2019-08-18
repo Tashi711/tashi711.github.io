@@ -1,3 +1,7 @@
+http://tashi711.top/programming/reports/leetcode/leetcode-287/
+http://tashi711.top/programming/others/padding/
+http://tashi711.top/programming/others/strategy/
+http://tashi711.top/programming/others/state/
 http://tashi711.top/programming/others/drop-eggs/
 http://tashi711.top/programming/others/observer/
 http://tashi711.top/programming/others/mediator/
@@ -94,7 +98,3 @@ http://tashi711.top/programming/others/queue-max-query/
 http://tashi711.top/programming/dsaa/bign-with-gcd/
 http://tashi711.top/programming/reports/leetcode/leetcode-25/
 http://tashi711.top/programming/dsaa/catalan-number/
-http://tashi711.top/programming/reports/leetcode/leetcode-2/
-http://tashi711.top/programming/reports/leetcode/leetcode-1/
-http://tashi711.top/programming/reports/leetcode/leetcode-730/
-http://tashi711.top/programming/reports/leetcode/leetcode-5/
