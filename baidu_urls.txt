@@ -1,3 +1,5 @@
+http://tashi711.top/programming/reports/others/pdd-1/
+http://tashi711.top/programming/others/coin/
 http://tashi711.top/programming/reports/leetcode/leetcode-287/
 http://tashi711.top/programming/others/padding/
 http://tashi711.top/programming/others/strategy/
@@ -96,5 +98,3 @@ http://tashi711.top/programming/dsaa/graham-scan/
 http://tashi711.top/programming/dsaa/manacher/
 http://tashi711.top/programming/others/queue-max-query/
 http://tashi711.top/programming/dsaa/bign-with-gcd/
-http://tashi711.top/programming/reports/leetcode/leetcode-25/
-http://tashi711.top/programming/dsaa/catalan-number/

@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/others/pdd-1/</loc>
+    <lastmod>2019-09-01T08:55:27.883Z</lastmod>
+    <data>
+        <display>
+        <title>「拼多多服务端研发工程师」笔试小结</title>
+        <pubTime>2019-09-01T01:57:24.000Z</pubTime>
+        
+        <tag>拼多多</tag>
+         
+        <tag>笔试</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/coin/</loc>
+    <lastmod>2019-08-19T16:30:02.560Z</lastmod>
+    <data>
+        <display>
+        <title>「真假硬币」——一道有趣的概率题</title>
+        <pubTime>2019-08-19T03:15:34.000Z</pubTime>
+        
+        <tag>概率论</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/leetcode/leetcode-287/</loc>
     <lastmod>2019-08-18T12:37:49.466Z</lastmod>
     <data>
@@ -1732,9 +1783,9 @@
         <title>「RSQ问题」总结</title>
         <pubTime>2019-05-29T03:15:34.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>树状数组</tag>
+         
+        <tag>线段树</tag>
          
         <tag>RSQ</tag>
          
