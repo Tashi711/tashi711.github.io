@@ -4,15 +4,62 @@
 
     
   <url>
+    <loc>http://tashi711.top/programming/reports/others/airbnb-1/</loc>
+    <lastmod>2019-09-27T12:31:08.174Z</lastmod>
+    <data>
+        <display>
+        <title>「Airbnb」笔试小结</title>
+        <pubTime>2019-09-27T01:57:24.000Z</pubTime>
+        
+        <tag>笔试</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="解题报告" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/programming/others/singleton-more/</loc>
+    <lastmod>2019-09-11T09:56:36.226Z</lastmod>
+    <data>
+        <display>
+        <title>「单例模式」再探</title>
+        <pubTime>2019-09-11T03:15:34.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="其他" url="http://tashi711.top/categories/%E7%BC%96%E7%A8%8B/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/programming/reports/others/pdd-1/</loc>
-    <lastmod>2019-09-01T08:55:27.883Z</lastmod>
+    <lastmod>2019-09-01T09:04:26.081Z</lastmod>
     <data>
         <display>
         <title>「拼多多服务端研发工程师」笔试小结</title>
         <pubTime>2019-09-01T01:57:24.000Z</pubTime>
         
-        <tag>拼多多</tag>
-         
         <tag>笔试</tag>
          
          
