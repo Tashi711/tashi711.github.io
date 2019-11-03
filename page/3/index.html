@@ -309,6 +309,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/padding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/Tashi711.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tashi711的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/programming/others/padding/" itemprop="url">「内存对齐」问题探究</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T11:15:34+08:00">
+                2019-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/programming/others/padding/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/padding/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/programming/others/padding/" class="leancloud_visitors" data-flag-title="「内存对齐」问题探究">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>每个特定平台上的编译器都有自己的默认“对齐系数”(也叫对齐模数)。程序员可以通过预编译命令#pragma pack(n)，n=1,2,4,8,16,…来改变这一系数，其中的n就是需要指定的“对齐系数”。</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>1.对于结构的各个成员，第一个成员位于偏移为0的位置，以后的每个数据成员的偏移量必须是min(#pragma pack指定的数,这个数据成员的自身长度)的倍数。</p>
+<p>2.在所有的数据成员完成各自对齐之后，结构或联合体本身也要进行对齐，对齐将按照 #pragram pack指定的数值和结构或者联合体最大数据成员长度中比较小的那个，也就是min(#pragram pack, 长度最长的数据成员)。</p>
+<p>（结合1、2可推断：当#pragma pack的n值等于或超过所有数据成员长度的时候，这个n值的大小将不产生任何效果。）</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/others/padding/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/strategy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,196 +833,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/drop-eggs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/others/drop-eggs/" itemprop="url">「扔鸡蛋问题」深入思考</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-14T11:15:34+08:00">
-                2019-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/drop-eggs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/drop-eggs/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/programming/others/drop-eggs/" class="leancloud_visitors" data-flag-title="「扔鸡蛋问题」深入思考">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一栋楼有L层，在第x层或者更高扔鸡蛋会破，而第x层往下则不会。给K个鸡蛋，求x，要求最差的情况下扔鸡蛋的次数最少。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>不止在一个地方看到这道面试题了，这里小结一下。</p>
-<p>首先，归纳的去思考，K=1的时候，很显然，只能从第一层一个一个往上试，毕竟哪怕多跳一个，如果破了，就没办法知道x为当前层还是当前层减1。</p>
-<p>k=2的时候，很容易想到将楼层划分成多个区间，第一个鸡蛋用来确定x属于哪个区间，第二个鸡蛋想K=1时一样按顺序遍历该区间找到 x。那么问题就转换为怎么划分区间满足最坏情况下扔鸡蛋次数最少。首先，第一个鸡蛋需要从第一个区间开始遍历到最后一个区间。如果按等大小的方式划分区间，即第二个鸡蛋的遍历次数固定。那么最坏的情况是x在最后一个区间，此时第一个鸡蛋遍历的次数最多。为了使最坏情况下两个鸡蛋总共遍历的次数比较少，那么后面的区间大小要比前面的区间更小。具体来说就是，第一个鸡蛋每多遍历一次，第二个鸡蛋就要少遍历一次，才使得x无论在哪个区间，总共遍历的次数一样。设第一个区间大小为x，那么第二个区间的大小为x-1，以此类推。那么x+(x-1)+(x-2)+…+1&gt;=L，得到x的下界（x取解的上取整），此时x为第一个区间的大小，同时也是最少的次数。（具体方案就是，从下到上依次试区间的最上端，如果没破，说明不在这个区间，否则在这个区间下端开始依次遍历，例如L=3，区间组成为2+1，第一次在第2层试，之后看结果在1或3层试，如果x不是正好取到下界，那么只可能区间更少或者区间数相同但对应长度不超过刚好取到时的情况，x次一定能完成，例如按照x+(x-1)+…+(L-sigma)，例如L=4，此时x取到3，区间分成3+1，一定不超过x正好取到3时（L=6）的3+2+1用的次数（当然其实也容易证明次数一定相等），当然也可以从上往下思考，变为1+2+1。）</p>
-<p><strong>以上讨论比较容易理解，但是为了更好地讨论K更大的情况，以上讨论要注意一点，就是这里取的每个区间的最上端其实准确来说是两个区间的分隔，不应当属于任何一个区间，比如考虑求到最后两个区间（2+1）了，其实本质是1+1+1，从中间分隔的1看出应该选上还是下，之所以这么思考，是因为子问题的定义就是每一层都是未知的，如果最后的2+1将2看为子问题并不妥，因为这个2的上面的1是已知的。因此计算式子应当表示为(x-1)+1+(x-2)+1+…+1+2+1+1+1，当然这和原来的本质没区别，只是理解方式不同。</strong></p>
-<p>K=2已经讨论的很清楚了，那么K更大呢，其实已经发现K在从1增加到2时用了K=1的思想（子状态）。那么先考虑K=3是否能用上K=2的情形呢。其实是可以的，可以想到将楼层划分成多个“大”区间，每个区间里面解决K=2的情况（用第二和第三个鸡蛋，每个“大”区间里按照K=2去分“小”区间），第一个鸡蛋就负责遍历“大”区间，而且后面的区间大小也要比前面的区间更小，每上一层就要少用一次，最上面的区间用两个鸡蛋2次就能解决，大小为3（1+2），再往下的区间还是用2次（为什么？结合上一段的思考），大小为3，再下面应该是用3次，大小为6（3+2+1），然后4次……，直到最下面是x-1次，大小为x(x-1)/2，求出x（上取整）。考虑x=3，此时L最大为3+1+3=7，在第4层做第一次判断，决定后两个鸡蛋是在上3层做K=2还是下3层做K=2。</p>
-<p>K&gt;3，相信看到这里应该都会推了。</p>
-<h2 id="代码实现（此处并没有代码）"><a href="#代码实现（此处并没有代码）" class="headerlink" title="代码实现（此处并没有代码）"></a>代码实现<del>（此处并没有代码）</del></h2><p>作为面试题，这道题可以用在各行各业，作为程序猿，当然得写写代码。首先容易看出对x的求解是一个高次方程，因此不能直接用程序接出来<del>（至少我不会，大概可以用一些数值分析的方法，我猜？）</del>，但是观察到f(x)关于x是单调递增的，因此可以二分答案，另外，其实f关于x也不是很明显有一步到位的式子表示的，因此还是需要迭代去求，从K=1的f（就是x）到K=2（x(x+1)/2）到K=3，4，…，可以先预估一下x的范围将所有的K对应的f先预处理一下，然后再对x进行更精细的二分（容易看出来x规模应该是O(L^(1/K))）。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/others/drop-eggs/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/65/">65</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -891,7 +887,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">194</span>
+                  <span class="site-state-item-count">207</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -902,7 +898,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -913,7 +909,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">129</span>
+                  <span class="site-state-item-count">144</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
