@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/nim/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/rational-mod/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/nim/" itemprop="url">「Nim游戏」初探</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/rational-mod/" itemprop="url">「有理数取余」模板</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-01T11:15:34+08:00">
-                2019-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-04T11:15:34+08:00">
+                2019-06-04
               </time>
             
 
@@ -392,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/nim/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/nim/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/rational-mod/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/rational-mod/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +401,7 @@
 
           
           
-             <span id="/programming/dsaa/nim/" class="leancloud_visitors" data-flag-title="「Nim游戏」初探">
+             <span id="/programming/dsaa/rational-mod/" class="leancloud_visitors" data-flag-title="「有理数取余」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,11 +433,11 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>看了下博弈论的Nim游戏、SG函数、Anti-Nim游戏、SJ定理等，简单了解与实现。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题2613 - 有理数取余。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/nim/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/rational-mod/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -488,7 +488,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/lca/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/lucas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -507,7 +507,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/lca/" itemprop="url">「LCA」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/lucas/" itemprop="url">「Lucas定理」应用</a></h1>
         
 
         <div class="post-meta">
@@ -519,8 +519,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-31T11:15:34+08:00">
-                2019-05-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-03T11:15:34+08:00">
+                2019-06-03
               </time>
             
 
@@ -571,8 +571,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/lca/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/lca/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/lucas/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/lucas/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -580,7 +580,7 @@
 
           
           
-             <span id="/programming/dsaa/lca/" class="leancloud_visitors" data-flag-title="「LCA」模板">
+             <span id="/programming/dsaa/lucas/" class="leancloud_visitors" data-flag-title="「Lucas定理」应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -612,13 +612,11 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>这里用倍增做的LCA，此外还可以转化为RMQ问题用ST表做，对于dfs访问序列（包含重复）的深度数组，询问u与v的LCA即u、v第一次出现在访问序列中的那段区间的深度最小值所在点。</p>
-<p>另外还有更快的做法（tarjan）只需线性，但只能做离线。</p>
-<p>此外谈谈卡常数，这道题用vector会卡常数，经过实验，直接开满的vector空间比直接开全局静态要慢很多，本题例差不多1kw级别可以认为是多个500ms左右，并且如果说中间还有push_back造成的内存重分配的话会严重超时，因此不用一般的vector邻接表而用前向星（能事先分配所有边），并且对所有能事先开好大小的vector尽量先分配好空间，虽然静态开数组会更好一点，不过影响了封装性与程序美观，没有必要。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>利用Lucas定理求组合数。同时完善组合数学的模板。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/lca/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/lucas/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -669,7 +667,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/sequence/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/lcs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -688,7 +686,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/sequence/" itemprop="url">「数列递推」矩阵加速</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/lcs/" itemprop="url">「最长公共子序列」快速求法</a></h1>
         
 
         <div class="post-meta">
@@ -700,8 +698,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T11:15:34+08:00">
-                2019-05-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T11:15:34+08:00">
+                2019-06-02
               </time>
             
 
@@ -734,8 +732,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -752,8 +750,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/others/sequence/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/sequence/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/lcs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/lcs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -761,7 +759,7 @@
 
           
           
-             <span id="/programming/others/sequence/" class="leancloud_visitors" data-flag-title="「数列递推」矩阵加速">
+             <span id="/programming/dsaa/lcs/" class="leancloud_visitors" data-flag-title="「最长公共子序列」快速求法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -793,12 +791,12 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>利用矩阵快速幂可以加速求数列的线性递推。</p>
-<h3 id="模板题"><a href="#模板题" class="headerlink" title="模板题"></a>模板题</h3><p><a href="https://www.luogu.org/problemnew/show/P1939" target="_blank" rel="noopener">洛谷 1939 - 矩阵加速（数列）</a></p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>最长公共子序列（LCS）：求第二个数组中每个元素在第一个数组中的位置，这个数列的LIS（最长上升子序列）即为答案。</p>
+<p>LIS有O(NlogN)的求法，比N方DP快。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/sequence/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/lcs/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -840,7 +838,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -890,7 +888,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">207</span>
+                  <span class="site-state-item-count">210</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -901,7 +899,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -912,7 +910,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">144</span>
+                  <span class="site-state-item-count">148</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

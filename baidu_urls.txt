@@ -1,3 +1,6 @@
+http://tashi711.top/nihongo/uta/aimer-stand-alone/
+http://tashi711.top/nichijyou/double11/
+http://tashi711.top/nihongo/uta/ainidekirukotohamadaarukai/
 http://tashi711.top/about/about/
 http://tashi711.top/programming/reports/others/airbnb-1/
 http://tashi711.top/programming/others/singleton-more/
@@ -95,6 +98,3 @@ http://tashi711.top/programming/reports/others/zoj-3933/
 http://tashi711.top/programming/dsaa/km/
 http://tashi711.top/programming/dsaa/hungarian/
 http://tashi711.top/programming/dsaa/reversed-pair/
-http://tashi711.top/programming/dsaa/discretize/
-http://tashi711.top/programming/others/triangle-directed-area/
-http://tashi711.top/programming/dsaa/graham-scan/
