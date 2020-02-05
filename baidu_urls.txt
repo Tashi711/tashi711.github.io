@@ -1,3 +1,4 @@
+http://tashi711.top/maboroshi/42daily/
 http://tashi711.top/maboroshi/nezumi/
 http://tashi711.top/maboroshi/maboroshitabi/
 http://tashi711.top/nihongo/uta/hatamotohiro-rain/
@@ -97,4 +98,3 @@ http://tashi711.top/programming/dsaa/prim/
 http://tashi711.top/programming/dsaa/eulerian-path/
 http://tashi711.top/programming/dsaa/combinatorial-math/
 http://tashi711.top/programming/dsaa/quick-power/
-http://tashi711.top/programming/dsaa/matrix/
