@@ -1177,9 +1177,9 @@
         <title>「一些其他的数据结构与算法」简单小结（五、重启篇）</title>
         <pubTime>2019-07-17T03:15:34.000Z</pubTime>
         
-        <tag>LCA</tag>
-         
         <tag>单调队列</tag>
+         
+        <tag>LCA</tag>
          
          
            
@@ -2144,9 +2144,9 @@
         <title>「RSQ问题」总结</title>
         <pubTime>2019-05-29T03:15:34.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>树状数组</tag>
+         
+        <tag>线段树</tag>
          
         <tag>RSQ</tag>
          
@@ -3621,11 +3621,11 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
+        <tag>Google</tag>
+         
         <tag>组合数学</tag>
          
         <tag>扩展欧几里得</tag>
-         
-        <tag>Google</tag>
          
         <tag>容斥原理</tag>
          
@@ -3869,9 +3869,9 @@
         <title>「LeetCode 214. Shortest Palindrome」解题报告</title>
         <pubTime>2019-01-13T03:57:03.000Z</pubTime>
         
-        <tag>KMP</tag>
-         
         <tag>巧妙</tag>
+         
+        <tag>KMP</tag>
          
          
            
