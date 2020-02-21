@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://tashi711.top/maboroshi/shishousetsu/bokunoshishousetsu-4/</loc>
+    <lastmod>2020-02-21T16:31:23.385Z</lastmod>
+    <data>
+        <display>
+        <title>「当彩虹失去一种颜色」第四章——欠片、再也回不去从前了吗</title>
+        <pubTime>2020-02-22T04:00:00.000Z</pubTime>
+        
+        <tag>シショウセツ</tag>
+         
+         
+           
+             
+              <breadCrumb title="奇幻の私" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/"/>
+          
+             
+              <breadCrumb title="シショウセツ" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/%E3%82%B7%E3%82%B7%E3%83%A7%E3%82%A6%E3%82%BB%E3%83%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/maboroshi/shishousetsu/bokunoshishousetsu-1/</loc>
     <lastmod>2020-02-21T03:15:40.855Z</lastmod>
     <data>
@@ -1578,9 +1601,9 @@
         <title>「一些其他的数据结构与算法」简单小结（五、重启篇）</title>
         <pubTime>2019-07-17T03:15:34.000Z</pubTime>
         
-        <tag>单调队列</tag>
-         
         <tag>LCA</tag>
+         
+        <tag>单调队列</tag>
          
          
            
@@ -2236,9 +2259,9 @@
         <title>「缩点」模板</title>
         <pubTime>2019-06-09T03:15:34.000Z</pubTime>
         
-        <tag>tarjan</tag>
-         
         <tag>缩点</tag>
+         
+        <tag>tarjan</tag>
          
          
            
@@ -4022,11 +4045,11 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>Google</tag>
+        <tag>组合数学</tag>
          
         <tag>扩展欧几里得</tag>
          
-        <tag>组合数学</tag>
+        <tag>Google</tag>
          
         <tag>容斥原理</tag>
          
@@ -4270,9 +4293,9 @@
         <title>「LeetCode 214. Shortest Palindrome」解题报告</title>
         <pubTime>2019-01-13T03:57:03.000Z</pubTime>
         
-        <tag>巧妙</tag>
-         
         <tag>KMP</tag>
+         
+        <tag>巧妙</tag>
          
          
            
