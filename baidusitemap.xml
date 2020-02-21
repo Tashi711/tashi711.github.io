@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://tashi711.top/maboroshi/shishousetsu/bokunoshishousetsu-3/</loc>
+    <lastmod>2020-02-20T17:52:57.023Z</lastmod>
+    <data>
+        <display>
+        <title>「当彩虹失去一种颜色」第三章——啟程、了断不尽的絶望</title>
+        <pubTime>2020-02-20T04:00:00.000Z</pubTime>
+        
+        <tag>シショウセツ</tag>
+         
+         
+           
+             
+              <breadCrumb title="奇幻の私" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/"/>
+          
+             
+              <breadCrumb title="シショウセツ" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/%E3%82%B7%E3%82%B7%E3%83%A7%E3%82%A6%E3%82%BB%E3%83%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tashi711.top/maboroshi/chuunikyoku/k-boom/</loc>
+    <lastmod>2020-02-20T03:27:06.401Z</lastmod>
+    <data>
+        <display>
+        <title>爆炸的街头</title>
+        <pubTime>2020-02-21T04:00:00.000Z</pubTime>
+        
+        <tag>チュウニ</tag>
+         
+         
+           
+             
+              <breadCrumb title="奇幻の私" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/"/>
+          
+             
+              <breadCrumb title="チュウニキョク" url="http://tashi711.top/categories/%E5%A5%87%E5%B9%BB%E3%81%AE%E7%A7%81/%E3%83%81%E3%83%A5%E3%82%A6%E3%83%8B%E3%82%AD%E3%83%A7%E3%82%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tashi711.top/maboroshi/shishousetsu/bokunoshishousetsu-2/</loc>
     <lastmod>2020-02-18T08:07:24.105Z</lastmod>
     <data>
@@ -1532,9 +1578,9 @@
         <title>「一些其他的数据结构与算法」简单小结（五、重启篇）</title>
         <pubTime>2019-07-17T03:15:34.000Z</pubTime>
         
-        <tag>LCA</tag>
-         
         <tag>单调队列</tag>
+         
+        <tag>LCA</tag>
          
          
            
@@ -3976,11 +4022,11 @@
         <title>「Kick Start 2018 Round H」试水</title>
         <pubTime>2019-02-09T01:57:24.000Z</pubTime>
         
-        <tag>组合数学</tag>
+        <tag>Google</tag>
          
         <tag>扩展欧几里得</tag>
          
-        <tag>Google</tag>
+        <tag>组合数学</tag>
          
         <tag>容斥原理</tag>
          
@@ -4224,9 +4270,9 @@
         <title>「LeetCode 214. Shortest Palindrome」解题报告</title>
         <pubTime>2019-01-13T03:57:03.000Z</pubTime>
         
-        <tag>KMP</tag>
-         
         <tag>巧妙</tag>
+         
+        <tag>KMP</tag>
          
          
            
