@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2562/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-538-543-560/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/luogu/luogu-2562/" itemprop="url">「洛谷 2562 - [AHOI2002]Kitty猫基因编码」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-538-543-560/" itemprop="url">「LeetCode 538、543、560」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T11:57:02+08:00">
-                2019-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-21T23:57:02+08:00">
+                2019-07-21
               </time>
             
 
@@ -351,50 +351,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
-                    <span itemprop="name">洛谷</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -403,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/luogu/luogu-2562/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2562/" itemprop="commentCount"></span>
+                <a href="/programming/reports/leetcode/leetcode-538-543-560/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-538-543-560/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +368,7 @@
 
           
           
-             <span id="/programming/reports/luogu/luogu-2562/" class="leancloud_visitors" data-flag-title="「洛谷 2562 - [AHOI2002]Kitty猫基因编码」解题报告">
+             <span id="/programming/reports/leetcode/leetcode-538-543-560/" class="leancloud_visitors" data-flag-title="「LeetCode 538、543、560」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,12 +400,12 @@
 
       
         
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2562" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>数据量不大，直接模拟就好，这里直接上字符串拷贝了，虽然费时间，但是数据规模小。</p>
-<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">all</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s, <span class="keyword">char</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">char</span> c : s) &#123;</span><br><span class="line">    <span class="keyword">if</span> (c != k) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">calc</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (all(s, <span class="string">'0'</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"A"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (all(s, <span class="string">'1'</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"B"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> n = s.size();</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"C"</span> + calc(s.substr(<span class="number">0</span>, n / <span class="number">2</span>)) + calc(s.substr(n / <span class="number">2</span>, n / <span class="number">2</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="built_in">string</span> s;</span><br><span class="line">  nyuuryoku(s);</span><br><span class="line">  shutsuryokul(calc(s));</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="538-Convert-BST-to-Greater-Tree"><a href="#538-Convert-BST-to-Greater-Tree" class="headerlink" title="538. Convert BST to Greater Tree"></a><a href="https://leetcode.com/problems/convert-bst-to-greater-tree/submissions/" target="_blank" rel="noopener">538. Convert BST to Greater Tree</a></h2><p>Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.</p>
+<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>居然调了很久，很像面试题的一道题了，标程用了全局量，这里我使用一种不用全局量的递归方法，其中dfs表示解u的子树，从父亲端得到的比其子树大的sum为fa，返回子树的sum。</p>
+<h3 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(TreeNode* u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!u) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> sum_r = dfs(u-&gt;right, fa);</span><br><span class="line">    <span class="keyword">int</span> sum_l = dfs(u-&gt;left, u-&gt;val + sum_r + fa);</span><br><span class="line">    <span class="keyword">int</span> res = sum_r + sum_l + u-&gt;val;</span><br><span class="line">    u-&gt;val += sum_r + fa;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function">TreeNode * <span class="title">convertBST</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    dfs(root, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/luogu/luogu-2562/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-538-543-560/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -500,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-5/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2965/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -519,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/some-thoughts-5/" itemprop="url">「一些其他的数据结构与算法」简单小结（五、重启篇）</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-2965/" itemprop="url">「洛谷 2965 - [USACO09NOV]农活比赛The Grand Farm-off」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -531,8 +487,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T11:15:34+08:00">
-                2019-07-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-20T11:57:02+08:00">
+                2019-07-20
               </time>
             
 
@@ -542,39 +498,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -583,8 +506,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/some-thoughts-5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-5/" itemprop="commentCount"></span>
+                <a href="/programming/reports/luogu/luogu-2965/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2965/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -592,7 +515,7 @@
 
           
           
-             <span id="/programming/dsaa/some-thoughts-5/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（五、重启篇）">
+             <span id="/programming/reports/luogu/luogu-2965/" class="leancloud_visitors" data-flag-title="「洛谷 2965 - [USACO09NOV]农活比赛The Grand Farm-off」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -624,12 +547,12 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本系列<del>打脸</del>回归，不定期更新一些有趣的思考。</p>
-<h2 id="LCA"><a href="#LCA" class="headerlink" title="LCA"></a>LCA</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>LCA算是经典问题了，之前写过倍增的模板（O(NlogN)预处理，在线询问均摊O(logN)），也提到过运用ST表将LCA问题转换为RMQ问题（O(NlogN)预处理，在线询问均摊O(1)）。这里说说Tarjan算法，用于M个离线询问，可以达到共O(N+M)复杂度。</p>
-<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>1、任选一个点为根节点，从根节点开始；2、遍历该点u所有子节点v，并标记这些子节点v已被访问过；3、若是v还有子节点，返回2，否则下一步；4、合并v到u上；5、寻找与当前点u有询问关系的点v；6、若是v已经被访问过了，则可以确认u和v的最近公共祖先为v被合并到的父亲节点a（并查集）。（当然啦，涉及到并查集，是不是该考虑下反阿克曼函数的复杂度呢<del>（笑）</del>。）</p>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2965" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>比较绕的水题，双关键字排序即可。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">500000</span> * <span class="number">3</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> u, w;</span><br><span class="line">  <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node&amp; r) <span class="keyword">const</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (u != r.u) &#123;</span><br><span class="line">      <span class="keyword">return</span> u &gt; r.u;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> w &lt; r.w;</span><br><span class="line">  &#125;</span><br><span class="line">&#125; cow[MAXN];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> n, a, b, c, d, e, f, g, h, m;</span><br><span class="line">  nyuuryoku(n, a, b, c, d, e, f, g, h, m);</span><br><span class="line">  <span class="keyword">auto</span> mul = [](<span class="keyword">const</span> <span class="built_in">initializer_list</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;&amp; il, <span class="keyword">long</span> <span class="keyword">long</span> mod) &#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp;&amp; k : il) &#123;</span><br><span class="line">      res = res * k % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">auto</span> add = [](<span class="keyword">const</span> <span class="built_in">initializer_list</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;&amp; il, <span class="keyword">long</span> <span class="keyword">long</span> mod) &#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp;&amp; k : il) &#123;</span><br><span class="line">      res = (res + k) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">long</span> <span class="keyword">long</span> i = <span class="number">0</span>; i &lt; n * <span class="number">3</span>; ++i) &#123;</span><br><span class="line">    cow[i].w = add(&#123;mul(&#123;a, i, i, i, i, i&#125;, d), mul(&#123;b, i, i&#125;, d), c&#125;, d);</span><br><span class="line">    cow[i].u = add(&#123;mul(&#123;e, i, i, i, i, i&#125;, h), mul(&#123;f, i, i, i&#125;, h), g&#125;, h);</span><br><span class="line">  &#125;</span><br><span class="line">  sort(cow, cow + n * <span class="number">3</span>);</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    sum = (sum + cow[i].w) % m;</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(sum);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/some-thoughts-5/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-2965/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -680,7 +603,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2548/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2959/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -699,7 +622,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/luogu/luogu-2548/" itemprop="url">「洛谷 2548 - [AHOI2004]智能探险车」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-2959/" itemprop="url">「洛谷 2959 - [USACO09OCT]悠闲漫步」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -711,8 +634,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T11:57:02+08:00">
-                2019-07-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-19T11:57:02+08:00">
+                2019-07-19
               </time>
             
 
@@ -722,50 +645,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
-                    <span itemprop="name">洛谷</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -774,8 +653,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/luogu/luogu-2548/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2548/" itemprop="commentCount"></span>
+                <a href="/programming/reports/luogu/luogu-2959/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2959/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -783,7 +662,7 @@
 
           
           
-             <span id="/programming/reports/luogu/luogu-2548/" class="leancloud_visitors" data-flag-title="「洛谷 2548 - [AHOI2004]智能探险车」解题报告">
+             <span id="/programming/reports/luogu/luogu-2959/" class="leancloud_visitors" data-flag-title="「洛谷 2959 - [USACO09OCT]悠闲漫步」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -815,12 +694,12 @@
 
       
         
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2548" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p><del>（这还需要分析吗？）</del></p>
-<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">string</span> s[MAXN + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, m;</span><br><span class="line">  nyuuryoku(n, m);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">string</span> cur;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</span><br><span class="line">      nyuuryoku(cur);</span><br><span class="line">      <span class="keyword">if</span> (cur != s[j]) &#123;</span><br><span class="line">        s[j] = <span class="string">"*"</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    shutsuryokus(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(s[n]);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2959" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>二叉树的深度。这里用前向星试着做一下，算是一种空间优化吧。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MAXN = <span class="number">1000</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MAXM = <span class="number">1000</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> v;</span><br><span class="line">  <span class="keyword">int</span> tsugi;</span><br><span class="line">&#125; e[MAXM];</span><br><span class="line"><span class="keyword">int</span> ecnt;</span><br><span class="line"><span class="keyword">int</span> adj[MAXN + <span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">graph</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">  graph(<span class="keyword">int</span> n) : n(n) &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MINUS_ONE_UC = <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> INT_SIZE = <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">    ecnt = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">memset</span>(adj + <span class="number">1</span>, MINUS_ONE_UC, INT_SIZE * n);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">add_directed_edge</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[ecnt].v = v;</span><br><span class="line">    e[ecnt].tsugi = adj[u];</span><br><span class="line">    adj[u] = ecnt++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (d &gt; ans) &#123;</span><br><span class="line">      ans = d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = adj[u]; ~i; i = e[i].tsugi) &#123;</span><br><span class="line">      <span class="keyword">int</span> v = e[i].v;</span><br><span class="line">      dfs(v, d + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  nyuuryoku(n);</span><br><span class="line">  <span class="function">graph <span class="title">g</span><span class="params">(n)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> fa, u, v, i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    nyuuryoku(fa, u, v);</span><br><span class="line">    <span class="keyword">auto</span> add = [&amp;g](<span class="keyword">int</span> fa, <span class="keyword">int</span> son) &#123;</span><br><span class="line">      <span class="keyword">if</span> (son) &#123;</span><br><span class="line">        g.add_directed_edge(fa, son);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    add(fa, u);</span><br><span class="line">    add(fa, v);</span><br><span class="line">  &#125;</span><br><span class="line">  g.dfs(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">  shutsuryokul(ans);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/luogu/luogu-2548/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-2959/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -862,7 +741,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/77/">77</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -912,7 +791,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">229</span>
+                  <span class="site-state-item-count">232</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -929,15 +808,6 @@
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">158</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
