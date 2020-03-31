@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/ac-automaton/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/ac-automaton/" itemprop="url">「AC自动机」摸索</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-4/" itemprop="url">「一些其他的数据结构与算法」简单小结（四、告别篇）</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-14T11:15:34+08:00">
-                2019-06-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T11:15:34+08:00">
+                2019-07-11
               </time>
             
 
@@ -392,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/ac-automaton/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/ac-automaton/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/some-thoughts-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-4/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +401,7 @@
 
           
           
-             <span id="/programming/dsaa/ac-automaton/" class="leancloud_visitors" data-flag-title="「AC自动机」摸索">
+             <span id="/programming/dsaa/some-thoughts-4/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（四、告别篇）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,12 +433,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3808、3796 - AC自动机。</p>
-<p>这东西竞赛搞完后就再也没碰过了，其实竞赛也没碰过几次。<br>一般的说法AC自动机是在trie上做kmp，但其实个人感觉只能说是跟kmp思想比较接近，但原理还是稍有些不同。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。</p>
+<h2 id="最小树形图"><a href="#最小树形图" class="headerlink" title="最小树形图"></a>最小树形图</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对每个点都选择一条通向它的最短的边（没有的话就无解）。这样连出来的图有n-1条边，但不一定是树。不过，这个图最多只有几个简单环，因为每个点只连入1条边。所以将这些环搜出并缩起来，然后在缩完后的边（经过处理，减去环中以那个点为终点的边的权值，因为已经统计过但是实际是不需要这条边的）中继续跑最小树形图直到选择的边构成树。时间复杂度O(NM)，但是一般情况会快很多。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/ac-automaton/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-4/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -489,7 +489,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/linear-basis/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/qtree-and-lct/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -508,7 +508,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/linear-basis/" itemprop="url">「线性基」思考</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/qtree-and-lct/" itemprop="url">「树链剖分与动态树」详解</a></h1>
         
 
         <div class="post-meta">
@@ -520,8 +520,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-13T11:15:34+08:00">
-                2019-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-10T11:15:34+08:00">
+                2019-07-10
               </time>
             
 
@@ -572,8 +572,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/linear-basis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/linear-basis/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/qtree-and-lct/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/qtree-and-lct/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -581,7 +581,7 @@
 
           
           
-             <span id="/programming/dsaa/linear-basis/" class="leancloud_visitors" data-flag-title="「线性基」思考">
+             <span id="/programming/dsaa/qtree-and-lct/" class="leancloud_visitors" data-flag-title="「树链剖分与动态树」详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -613,13 +613,17 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3812 - 线性基。</p>
-<p>其实之前都没听说过这个东西，无意中刷到，然后研究了下。其实不难，很容易看懂，而且貌似比较强大，目前除了模板题的求最大值，还能看到有查询某数的用法，甚至更强的应用，这里没有深入去探索了。</p>
-<p>总而言之就是将原来的数组空间映射到另一个线性空间（注意这里的线性并非线性组合，而是异或），那么保证原数组的异或空间与线性基的异或空间一致（也就是很多文章里面说的值域不变）。而线性基最多有$\log_2n$个，其中每个都拥有唯一的最高位。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><del>虽然是详解，然而并没有写代码。</del></p>
+<p>前面有一篇文章简单提到树链剖分（简称树剖），这里详细介绍一波，另外与动态树做联系。</p>
+<h2 id="树链剖分"><a href="#树链剖分" class="headerlink" title="树链剖分"></a>树链剖分</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>前面提到过，树剖可以操作以下四个步骤：将树从x到y结点最短路径上所有节点的值都加上z，求树从x到y结点最短路径上所有节点的值之和，将以x为根节点的子树内所有节点值都加上z，求以x为根节点的子树内所有节点值之和。其实这只是树剖的一个应用，完整地说，树剖用于解决树上的区间操作，包含两点之间的或者以某个点为根结点的子树。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>先是有以下的定义：</p>
+<p>重儿子：对于每一个非叶子节点，它的儿子中以那个儿子为根的子树节点数最大的儿子为该节点的重儿子<br>轻儿子：对于每一个非叶子节点，它的儿子中非重儿子的剩下所有儿子即为轻儿子<br>重边：一个父亲连接他的重儿子的边称为重边<br>轻边：剩下的即为轻边<br>重链：相邻重边连起来的连接一条重儿子的链叫重链（对于叶子节点，若其为轻儿子，则有一条以自己为起点的长度为1的链，每一条重链以轻儿子为起点）</p>
+<p>然后进行两个dfs操作，第一次分别求出deep、fa、size、重儿子编号，第二次标记每个点的新编号，维护每个点所在链的信息，要保证先处理重儿子再处理轻儿子，这样可以保证：1、每一条重链的新编号是连续的；2、每一个子树的新编号也是连续的。于是以上提到的操作就可以变成区间操作啦，区间可以用线段树维护。</p>
+<p>对于两点之间路径：设所在链顶端的深度更深的那个点为x点，处理x点到x所在链顶端这一段区间，把x跳到x所在链顶端的那个点的上面一个点，然后不停执行这两个步骤，直到两个点处于一条链上，这时再处理此时两个点的区间即可。首先最多跳O(logN)次，因为轻边儿子size永远小于等于其父亲数量的一半，那么树中任意两个节点之间的路径中轻边的条数（也就是跳的次数）不会超过O(logN)，又每一段区间在线段树上的操作为O(logN)级别，因此单次操作复杂度为O((logN)^2)。</p>
+<p>对于某点的子树：记录了每个非叶子节点的子树大小，并且每个子树的新编号都是连续的，于是直接线段树区间查询即可，时间复杂度为O(logN)。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/linear-basis/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/qtree-and-lct/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -670,7 +674,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/bipartite-graph/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -689,7 +693,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/bipartite-graph/" itemprop="url">「二分图匹配」再探</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-3/" itemprop="url">「一些其他的数据结构与算法」简单小结（三）</a></h1>
         
 
         <div class="post-meta">
@@ -701,8 +705,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-12T11:15:34+08:00">
-                2019-06-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-09T11:15:34+08:00">
+                2019-07-09
               </time>
             
 
@@ -753,8 +757,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/bipartite-graph/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/bipartite-graph/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/some-thoughts-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-3/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -762,7 +766,7 @@
 
           
           
-             <span id="/programming/dsaa/bipartite-graph/" class="leancloud_visitors" data-flag-title="「二分图匹配」再探">
+             <span id="/programming/dsaa/some-thoughts-3/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（三）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -794,11 +798,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3386 - 二分图匹配。<br>之前用匈牙利算法实现过，改良了一番，见下代码1。<br>最近写了下网络流，试着用网络流解bgm，因为传说中Dinic比匈牙利更快，试了下果然快一点。<br>但没想到的是被说在二分图中比Dinic慢的ISAP居然实际比Dinic快不少。<br>由此可见ISAP几乎算是万能最大流算法了，甚至可以取代匈牙利。<br>毕竟本身已经能证明Dinic复杂度上限比匈牙利小，而ISAP又是Dinic的改良。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第三篇，简单介绍可持续化并查集、可持续化平衡树、后缀自动机、严格次小生成树、扩展BSGS算法与扩展Lucas定理。</p>
+<p><del>预警，本篇水分大，写（看）完跟没写（看）一样。</del></p>
+<h2 id="可持续化并查集"><a href="#可持续化并查集" class="headerlink" title="可持续化并查集"></a>可持续化并查集</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>n个集合、m个操作、操作包括：<br>1、合并a,b所在集合<br>2、k回到第k次操作之后的状态(查询算作操作)<br>3、询问a,b是否属于同一集合，是则输出1否则输出0</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>结合之前一篇分析过可持久化数据结构的文章，运用用可持久化数据结构共用一些点来达到节省空间的效果。首先先是要用不带路径压缩的并查集，这样对于每一次合并只会改一个点的父亲，所以一个版本的相对于上一个版本只会改一个点。其次如果并查集退化成一条链，find复杂度会很高，因此使用启发式合并（深度或者子树结点个数）。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/bipartite-graph/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-3/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -840,7 +846,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/82/">82</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -890,7 +896,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">245</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -901,7 +907,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -912,7 +918,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

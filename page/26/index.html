@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/suffix-array/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2548/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/suffix-array/" itemprop="url">「后缀数组」深入理解</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-2548/" itemprop="url">「洛谷 2548 - [AHOI2004]智能探险车」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T11:15:34+08:00">
-                2019-06-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T11:57:02+08:00">
+                2019-07-16
               </time>
             
 
@@ -374,8 +374,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
+                    <span itemprop="name">洛谷</span>
                   </a>
                 </span>
 
@@ -392,8 +403,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/suffix-array/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/suffix-array/" itemprop="commentCount"></span>
+                <a href="/programming/reports/luogu/luogu-2548/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2548/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +412,7 @@
 
           
           
-             <span id="/programming/dsaa/suffix-array/" class="leancloud_visitors" data-flag-title="「后缀数组」深入理解">
+             <span id="/programming/reports/luogu/luogu-2548/" class="leancloud_visitors" data-flag-title="「洛谷 2548 - [AHOI2004]智能探险车」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,18 +444,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去<del>（当然也是因为本人太菜了根本学不动）</del>。</p>
-<h3 id="后缀排序之倍增"><a href="#后缀排序之倍增" class="headerlink" title="后缀排序之倍增"></a>后缀排序之倍增</h3><p>先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方便起见，这里sa和rk以及下面提到的桶数组cnt的下标i都是从1开始标号）。一般都知道sa和rk是互逆的，但这只是说最终求完的状态，在中间结果，sa始终是将1到n（n为字符串长度）映射到1到n，rk则是将1到n映射到某个值域，满足大小的相对顺序（包括相等关系）一定满足，一般是1到可能的排名个数（下面用m表示，其实只有第一轮是其字符值）。</p>
-<p>倍增算法（简称da，doubling algorithm）其实实现细节不一定唯一，但一般思想差不多，且都涉及基数排序（这里的基数排序其实更趋向于说是每轮一个不同的桶排序）。先进行一个初始化过程，将初始字符串先入桶（下面的cnt数组）做一个基数排序，排序依据先是其前半段rk值，然后是后半段rk值（可能没有，就被认为是最小值），这里用了一个数组pre[i]表示后半段rk值为i的位置（n-w+1到n）设为rk为1到w（即pre[1…w]为[n-w+1…n]，这应该是整个算法最绕的两个部分之一），然后再基数排序时逆序枚举pre，就能保证正确排序的情况下，相等rk的位置保持原始的相对顺序（这是整个算法最绕的第二个部分），总归用下面的做法保证了这个性质。之后更新rk，看看如果rk个数达到n个就说明已经都有序了（小于n说明还有相等的rk，需要进一步判断）。</p>
-<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>后缀排序只是后缀数组的一个基本操作罢了，运用这个东西还能实现更强大的功能，比如height数组。</p>
-<p>height[i]定义为排名为i的后缀（sa[i]）与排名为i−1的后缀（sa[i-1]）的最长公共前缀长度（简称lcp，后同），height数组可以线性求，需要用到一个证明，先令H[i]为height[rk[i]] ，即位置i的后缀与它前一名的后缀的lcp。有H[i]≥H[i−1]−1，首先H[i−1]≤1时显然成立，考虑H[i−1]&gt;1，令k为位置i-1的前一名位置，即H[i−1]为位置k与位置i-1后缀的lcp，那么因为H[i−1]&gt;1，位置k+1一定正好是位置i的前一名，则H[i]即为位置k+1与位置i后缀的lcp，显然大于等于H[i−1]-1。证毕。因此求height只需依次从1到n求H即可。</p>
-<h3 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h3><p>不必过度迷信DC3，倍增除了有一点点时间劣势外，常数小、空间小、编码难度低。下面是罗穗骞的集训队论文：后缀数组——处理字符串的有力工具中的实验结果（后面的应用也是参考了这篇论文，值得一看）：</p>
-<p>N的规模 ——- 倍增（ms） ——- DC3（ms）<br>200000 ——- 192 ——- 140<br>300000 ——- 367 ——- 244<br>500000 ——- 750 ——- 499<br>1000000 ——- 1693 ——- 1248</p>
-<p>可见N足够大时，DC3算法所快的对数级复杂度也只有不到2的常数优化效果。在对算法效率要求极致，不在乎空间<del>（且自己不那么菜）</del>时再去考虑钻研DC3吧。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2548" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p><del>（这还需要分析吗？）</del></p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">string</span> s[MAXN + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, m;</span><br><span class="line">  nyuuryoku(n, m);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">string</span> cur;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</span><br><span class="line">      nyuuryoku(cur);</span><br><span class="line">      <span class="keyword">if</span> (cur != s[j]) &#123;</span><br><span class="line">        s[j] = <span class="string">"*"</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    shutsuryokus(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(s[n]);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/suffix-array/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-2548/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -495,7 +500,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/persistable-tree/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2945/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -514,7 +519,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/persistable-tree/" itemprop="url">「可持久化数据结构」思考</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-2945/" itemprop="url">「洛谷 2945 - [USACO09MAR]沙堡Sand Castle」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -526,8 +531,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T11:15:34+08:00">
-                2019-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T11:57:02+08:00">
+                2019-07-15
               </time>
             
 
@@ -560,8 +565,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
+                    <span itemprop="name">洛谷</span>
                   </a>
                 </span>
 
@@ -578,8 +594,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/persistable-tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/persistable-tree/" itemprop="commentCount"></span>
+                <a href="/programming/reports/luogu/luogu-2945/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2945/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -587,7 +603,7 @@
 
           
           
-             <span id="/programming/dsaa/persistable-tree/" class="leancloud_visitors" data-flag-title="「可持久化数据结构」思考">
+             <span id="/programming/reports/luogu/luogu-2945/" class="leancloud_visitors" data-flag-title="「洛谷 2945 - [USACO09MAR]沙堡Sand Castle」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -619,12 +635,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>按目前本人的理解，可持久化（数组/线段树/平衡树），也叫主席树，是指一类通过重用结点达到实现多个版本的类线段树数据结构。</p>
-<p>之前写的主席树模板其实就是它的一个应用（静态询问区间第k小），这里给出它的通用模板，即满足以下两个操作：1、修改某个版本的某个结点信息（包含其从根到叶节点路径上所有节点）；2、查询某版本某结点信息。（当然静态询问区间第k小不完全是这两种操作，但基本可以看做这两种操作的简单变形）。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2945" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>简单证明一下不难发现排序后按顺序变一定是最优的。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">100000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAXN + <span class="number">1</span>], b[MAXN + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, x, y;</span><br><span class="line">  nyuuryoku(n, x, y);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(a[i], b[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  sort(a + <span class="number">1</span>, a + n + <span class="number">1</span>);</span><br><span class="line">  sort(b + <span class="number">1</span>, b + n + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">auto</span> calc = [x, y](<span class="keyword">int</span> u, <span class="keyword">int</span> v) &#123;</span><br><span class="line">    <span class="keyword">return</span> u &lt; v ? (v - u) * x : (u - v) * y;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    ans += calc(a[i], b[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(ans);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/persistable-tree/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-2945/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -675,7 +691,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/chairman-tree/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-1008/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -694,7 +710,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/chairman-tree/" itemprop="url">「主席树」模板</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-1008/" itemprop="url">「洛谷 1008 - 三连击」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -706,8 +722,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-18T11:15:34+08:00">
-                2019-06-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T11:57:02+08:00">
+                2019-07-14
               </time>
             
 
@@ -740,8 +756,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
+                    <span itemprop="name">洛谷</span>
                   </a>
                 </span>
 
@@ -758,8 +785,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/chairman-tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/chairman-tree/" itemprop="commentCount"></span>
+                <a href="/programming/reports/luogu/luogu-1008/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-1008/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -767,7 +794,7 @@
 
           
           
-             <span id="/programming/dsaa/chairman-tree/" class="leancloud_visitors" data-flag-title="「主席树」模板">
+             <span id="/programming/reports/luogu/luogu-1008/" class="leancloud_visitors" data-flag-title="「洛谷 1008 - 三连击」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -799,11 +826,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>其实也是第一次听说，连英文也不知道怎么翻译。<br>功能：静态查询任意区间第k小值。<br>做法：各个博客都有，比较简洁，带有线段树思想。<br>时间：（单次询问）当然是log。<br>空间：第一颗树（位置0）新建，需要4N个结点，之后只需要重用这棵树（准确说是修改前一颗树），每次只需要修改logN级别的结点。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P1008" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>好水呀、居然交了3次<del>（捂脸）</del>。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; f(<span class="number">10</span>, <span class="literal">false</span>);</span><br><span class="line">  f[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">auto</span> ok = [&amp;f](<span class="keyword">int</span> x) &#123;</span><br><span class="line">    <span class="keyword">if</span> (f[x % <span class="number">10</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x % <span class="number">10</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (f[x / <span class="number">10</span> % <span class="number">10</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x / <span class="number">10</span> % <span class="number">10</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (f[x / <span class="number">100</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x / <span class="number">100</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> ok(a) &amp;&amp; ok(b) &amp;&amp; ok(c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">123</span>; i &lt; <span class="number">333</span>; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> u = i * <span class="number">2</span>, v = i * <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">if</span> (check(i, u, v)) &#123;</span><br><span class="line">      shutsuryokul(i, u, v);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/chairman-tree/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-1008/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -845,7 +873,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/82/">82</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -895,7 +923,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">245</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -906,7 +934,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -917,7 +945,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

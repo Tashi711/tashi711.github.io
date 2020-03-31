@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/catalan-number/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/quick-power/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/catalan-number/" itemprop="url">「Catalan数列」详解</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/quick-power/" itemprop="url">「快速幂算法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-05T11:17:59+08:00">
-                2019-04-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-10T11:15:34+08:00">
+                2019-05-10
               </time>
             
 
@@ -392,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/catalan-number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/catalan-number/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/quick-power/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/quick-power/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +401,7 @@
 
           
           
-             <span id="/programming/dsaa/catalan-number/" class="leancloud_visitors" data-flag-title="「Catalan数列」详解">
+             <span id="/programming/dsaa/quick-power/" class="leancloud_visitors" data-flag-title="「快速幂算法」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,17 +433,11 @@
 
       
         
-          <h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>Catalan（卡塔兰）数列是组合数学中一个常在各种计数问题中出现的数列，通项公式为<br>$$C_n=\frac{1}{n+1}{2n \choose n}=\frac{(2n)!}{(n+1)!n!}$$</p>
-<p>前20项为（OEIS中的数列A000108）：（$C_0=$）1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, 2674440, 9694845, 35357670, 129644790, 477638700, 1767263190。</p>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>对n≥1，$C_n$还可以表示为<br>$$C_n={2n \choose n}-{2n \choose n+1}$$</p>
-<p>可以看出，$C_n$是一个自然数。</p>
-<p>$C_0=1$，$C_n$的递推关系为<br>$$C_{n+1}=\sum_{i=0}^n C_iC_{n-i}=\frac{4n+2}{n+2}C_n$$</p>
-<p>卡塔兰数的渐近增长为<br>$$C_n\sim\frac{4^n}{n^{3/2}\sqrt{\pi}}$$</p>
-<p>因此利用回溯枚举Catalan数列问题的时间复杂度可以被认为是<br>$$T\left(N\right)=O\left(\frac{4^N}{N^{3/2}}\right)$$</p>
-<h2 id="证明与应用"><a href="#证明与应用" class="headerlink" title="证明与应用"></a>证明与应用</h2>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>简单的快速幂，注意溢出（long long乘long long之类的）可能要用高精。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/catalan-number/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/quick-power/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -494,7 +488,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-2/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/matrix/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -513,7 +507,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-2/" itemprop="url">「LeetCode 2. Add Two Numbers」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/matrix/" itemprop="url">「矩阵运算相关」模板</a></h1>
         
 
         <div class="post-meta">
@@ -525,8 +519,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T11:57:02+08:00">
-                2019-04-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-09T11:15:34+08:00">
+                2019-05-09
               </time>
             
 
@@ -559,19 +553,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -588,8 +571,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-2/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/matrix/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/matrix/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -597,7 +580,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-2/" class="leancloud_visitors" data-flag-title="「LeetCode 2. Add Two Numbers」解题报告">
+             <span id="/programming/dsaa/matrix/" class="leancloud_visitors" data-flag-title="「矩阵运算相关」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -629,17 +612,13 @@
 
       
         
-          <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
-<ul>
-<li>链接：<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener">LeetCode 2. Add Two Numbers</a></li>
-</ul>
-</blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>看了题解发现自己写的很痴系列，注意细节即可。</p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为$O(N)$。<br>空间复杂度为$O(N)$。</p>
-<h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>矩阵运算相关模板，持续更新ing…</p>
+<h3 id="目前功能"><a href="#目前功能" class="headerlink" title="目前功能"></a>目前功能</h3><p>局部：<br>1、根据vector的vector构造并判断合理性<br>2、乘法</p>
+<p>全局：<br>1、输出流</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-2/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/matrix/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -690,7 +669,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-1/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/others/zoj-3933/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -709,7 +688,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-1/" itemprop="url">「LeetCode 1. Two Sum」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/reports/others/zoj-3933/" itemprop="url">「ZOJ 3933 - Team Formation」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -721,8 +700,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-02T11:57:02+08:00">
-                2019-04-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-09T00:11:04+08:00">
+                2019-05-09
               </time>
             
 
@@ -766,8 +745,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/编程/解题报告/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -784,8 +763,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/leetcode/leetcode-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/leetcode/leetcode-1/" itemprop="commentCount"></span>
+                <a href="/programming/reports/others/zoj-3933/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/others/zoj-3933/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -793,7 +772,7 @@
 
           
           
-             <span id="/programming/reports/leetcode/leetcode-1/" class="leancloud_visitors" data-flag-title="「LeetCode 1. Two Sum」解题报告">
+             <span id="/programming/reports/others/zoj-3933/" class="leancloud_visitors" data-flag-title="「ZOJ 3933 - Team Formation」解题报告">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -827,15 +806,16 @@
         
           <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><blockquote>
 <ul>
-<li>链接：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">LeetCode 1. Two Sum</a></li>
+<li>链接：<a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=5542" target="_blank" rel="noopener">ZOJ 3933 - Team Formation</a></li>
+<li>来源：The 16th Zhejiang University Programming Contest</li>
 </ul>
 </blockquote>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>哈希，依次检查每个数k有没有target-k存在。</p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度为$O(N)$。<br>空间复杂度为$O(N)$。</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>其实应该算是一道比较裸的费用流问题，当时在线赛的时候用费用流A掉了，这里用带权二分图匹配来做。<br>为了保证最大匹配，每个匹配的分数要高过性别带来的最大影响，这里设为1w。然后每个匹配外加女生数量的分数。</p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度均为$O(N^3)$。<br>空间复杂度均为$O(N^2)$。</p>
 <h2 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/leetcode/leetcode-1/#more" rel="contents">
+            <a class="btn" href="/programming/reports/others/zoj-3933/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -877,7 +857,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/43/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/45/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/43/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/82/">82</a><a class="extend next" rel="next" href="/page/45/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -927,7 +907,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">245</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -938,7 +918,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -949,7 +929,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

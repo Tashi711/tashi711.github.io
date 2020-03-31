@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/kruskal/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/inverses/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/kruskal/" itemprop="url">「Kruskal算法」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/inverses/" itemprop="url">「递推求乘法逆元与其他求逆元」思路</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-15T11:15:34+08:00">
-                2019-05-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T11:15:34+08:00">
+                2019-05-28
               </time>
             
 
@@ -392,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/kruskal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/kruskal/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/inverses/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/inverses/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +401,7 @@
 
           
           
-             <span id="/programming/dsaa/kruskal/" class="leancloud_visitors" data-flag-title="「Kruskal算法」模板">
+             <span id="/programming/dsaa/inverses/" class="leancloud_visitors" data-flag-title="「递推求乘法逆元与其他求逆元」思路">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -433,13 +433,13 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Kruskal算法解决最小生成树问题。</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>本算法仅实现了最基本框架，可扩展以下几个方面：</p>
-<p>1、返回构成最小生成树的边（或者其序号）。<br>2、加入连通性判断（关系到是否有解）。</p>
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>求单个乘法逆元需要一次扩展欧几里得，是对数级的复杂度，而若求1到n的乘法逆元，可以利用递推做到均摊常数复杂度。下面代码就是这样做的。</p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>费马小定理可求，需要p是质数且a与p互质，扩展欧几里得只需要a与p互质即可，且比快速幂快，因此费马小定理可以完全被扩展欧几里得替代。</p>
+<p>另外有一种递推求阶乘逆元的方法，inv(i!)=inv((i+1)!)*(i+1)，因此可以先求n!的逆元，再逆序求n-1到1。然后inv(i)=inv(i!)*(i-1)!。其中阶乘也可以事先递推出来，这样也能均摊常数求1到n的乘法逆元。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/kruskal/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/inverses/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -490,7 +490,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/disjoint-set/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/matrix-quick-power/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -509,7 +509,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/disjoint-set/" itemprop="url">「并查集」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/matrix-quick-power/" itemprop="url">「矩阵快速幂」模板</a></h1>
         
 
         <div class="post-meta">
@@ -521,8 +521,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-14T11:15:34+08:00">
-                2019-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-27T11:15:34+08:00">
+                2019-05-27
               </time>
             
 
@@ -573,8 +573,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/disjoint-set/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/disjoint-set/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/matrix-quick-power/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/matrix-quick-power/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -582,7 +582,7 @@
 
           
           
-             <span id="/programming/dsaa/disjoint-set/" class="leancloud_visitors" data-flag-title="「并查集」模板">
+             <span id="/programming/dsaa/matrix-quick-power/" class="leancloud_visitors" data-flag-title="「矩阵快速幂」模板">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -614,12 +614,11 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>并查集模板。</p>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>1、实现偏移（0、1开始甚至负数）。<br>2、路径压缩。<br>3、对任意两个点合并和对两个根合并。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>之前分别写过矩阵乘法与快速幂的模板，现在将两者结合起来。<br>在原矩阵模板中增加：<br>1、初始化为单位矩阵（一定要是在初始化，因为没有做清零操作）。<br>2、*=模板。<br>3、快速幂模板。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/disjoint-set/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/matrix-quick-power/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -670,7 +669,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/prim/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/bit-extend/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -689,7 +688,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/prim/" itemprop="url">「Prim算法」模板</a></h1>
+                <a class="post-title-link" href="/programming/others/bit-extend/" itemprop="url">「树状数组」扩展</a></h1>
         
 
         <div class="post-meta">
@@ -701,8 +700,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-13T11:15:34+08:00">
-                2019-05-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T11:15:34+08:00">
+                2019-05-26
               </time>
             
 
@@ -735,8 +734,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -753,8 +752,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/prim/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/prim/" itemprop="commentCount"></span>
+                <a href="/programming/others/bit-extend/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/bit-extend/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -762,7 +761,7 @@
 
           
           
-             <span id="/programming/dsaa/prim/" class="leancloud_visitors" data-flag-title="「Prim算法」模板">
+             <span id="/programming/others/bit-extend/" class="leancloud_visitors" data-flag-title="「树状数组」扩展">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -794,13 +793,12 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Prim算法解决最小生成树问题。</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>本算法仅实现了最基本框架，可扩展以下几个方面：</p>
-<p>1、返回构成最小生成树的边（或者其序号）。<br>2、用堆优化（类似于Dijkstra算法的堆优化思想），可将复杂度从O(N)降到O(M+NlogN)。<br>3、加入连通性判断（关系到是否有解）。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>已知一个数列，你需要进行下面两种操作：1、将某区间每一个数数加上k，2、求出某一个数的值。<br>看起来是要用线段树了，其实只需要树状数组即可，bit只需要表示其差分即可。<br>设数组a[]，其差分数组b[i]=a[i]-a[i-1]，其中a[0]=0，易得a[i]=b[1]+….+b[i]。<br>对区间[x,y]加k，只用修改b[x]与b[y+1]：b[x]=b[x]+k，b[y+1]=b[y+1]-k。</p>
+<h3 id="模板题"><a href="#模板题" class="headerlink" title="模板题"></a>模板题</h3><p><a href="https://www.luogu.org/problemnew/show/P3368" target="_blank" rel="noopener">洛谷 3368 - 树状数组 2</a></p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/prim/#more" rel="contents">
+            <a class="btn" href="/programming/others/bit-extend/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -842,7 +840,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/82/">82</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -892,7 +890,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">245</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -903,7 +901,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -914,7 +912,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

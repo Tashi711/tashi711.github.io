@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2562/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/cpp-virtual/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -328,7 +328,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/luogu/luogu-2562/" itemprop="url">「洛谷 2562 - [AHOI2002]Kitty猫基因编码」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/others/cpp-virtual/" itemprop="url">C++中的「多继承」探讨</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T11:57:02+08:00">
-                2019-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-31T11:15:34+08:00">
+                2019-07-31
               </time>
             
 
@@ -374,19 +374,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
-                    <span itemprop="name">洛谷</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -403,8 +392,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/luogu/luogu-2562/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2562/" itemprop="commentCount"></span>
+                <a href="/programming/others/cpp-virtual/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-virtual/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +401,7 @@
 
           
           
-             <span id="/programming/reports/luogu/luogu-2562/" class="leancloud_visitors" data-flag-title="「洛谷 2562 - [AHOI2002]Kitty猫基因编码」解题报告">
+             <span id="/programming/others/cpp-virtual/" class="leancloud_visitors" data-flag-title="C++中的「多继承」探讨">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,12 +433,16 @@
 
       
         
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2562" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>数据量不大，直接模拟就好，这里直接上字符串拷贝了，虽然费时间，但是数据规模小。</p>
-<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">all</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s, <span class="keyword">char</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">char</span> c : s) &#123;</span><br><span class="line">    <span class="keyword">if</span> (c != k) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">calc</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (all(s, <span class="string">'0'</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"A"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (all(s, <span class="string">'1'</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"B"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> n = s.size();</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"C"</span> + calc(s.substr(<span class="number">0</span>, n / <span class="number">2</span>)) + calc(s.substr(n / <span class="number">2</span>, n / <span class="number">2</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="built_in">string</span> s;</span><br><span class="line">  nyuuryoku(s);</span><br><span class="line">  shutsuryokul(calc(s));</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>C++支持绝大部分oop语言不支持的多继承。来看看这里面的一些玄学吧。</p>
+<p>本篇参考了这篇<a href="https://www.cnblogs.com/raichen/p/5744300.html" target="_blank" rel="noopener">博客</a>。值得一看，讲得很清楚。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>作为C++er，最基本的（单继承）虚表一定很清楚了<del>，不然还写什么C++</del>。子类与父类拥有各自的一个虚函数表，若子类并无overwrite父类虚函数，用父类虚函数，若子类重写（overwrite）了父类的虚函数，则子类虚函数将覆盖虚表中对应的父类虚函数，若子声明了自己新的虚函数，则该虚函数地址将扩充到虚函数表最后。</p>
+<h2 id="一般多继承"><a href="#一般多继承" class="headerlink" title="一般多继承"></a>一般多继承</h2><p>若子类新增虚函数，放在声明的<strong>第一个</strong>父类的虚函数表中，若子类重写了父类的虚函数，所有父类的虚函数表都要改变（这里注意是正好多个基类都有同名函数而并非继承自同一函数）。</p>
+<h2 id="虚继承"><a href="#虚继承" class="headerlink" title="虚继承"></a>虚继承</h2><p>这个东西就有点名堂，他是用来解决了菱形继承（多继承时的多个基类又继承了同一个“基基类”）中最派生类拥有多个间接父类实例的情况，虚继承的子类，如果本身定义了新的虚函数，则编译器为其生成一个新的虚函数指针（vptr）以及一张虚函数表。<strong>该vptr位于对象内存最前面（对比非虚继承：直接扩展父类虚函数表），虚继承的子类也单独保留了父类的vprt与虚函数表。</strong>虚继承的子类有虚基类表指针（vbptr）。在C++对象模型中，虚继承而来的子类会生成一个隐藏的虚基类指针（vbptr）。虚基类指针指向了一段地址，里面放着他与其各父类在内存里位置的偏移量。在Microsoft Visual C++中，虚基类表指针总是在虚函数表指针之后，因而，对某个类实例来说，如果它有虚基类指针，那么虚基类指针可能在实例的0字节偏移处（该类没有vptr时，vbptr就处于类实例内存布局的最前面，否则vptr处于类实例内存布局的最前面），也可能在类实例的4字节偏移处。</p>
+<h2 id="多虚继承"><a href="#多虚继承" class="headerlink" title="多虚继承"></a>多虚继承</h2><p>有时也被叫做菱形虚继承，假设有以下多虚继承关系（B、C虚继承A，D多继承B、C）每个类都有一个自己的int，以及重写（定义）了同名虚函数：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> a;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"A"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">  <span class="keyword">int</span> b;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"B"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"B"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">  <span class="keyword">int</span> c;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"C"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"C"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> :</span> <span class="keyword">public</span> B, <span class="keyword">public</span> C &#123;</span><br><span class="line">  <span class="keyword">int</span> d;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"D"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"D"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/luogu/luogu-2562/#more" rel="contents">
+            <a class="btn" href="/programming/others/cpp-virtual/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -500,7 +493,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-5/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/balance-tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -519,7 +512,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/some-thoughts-5/" itemprop="url">「一些其他的数据结构与算法」简单小结（五、重启篇）</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/balance-tree/" itemprop="url">「红黑树」详解</a></h1>
         
 
         <div class="post-meta">
@@ -531,8 +524,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T11:15:34+08:00">
-                2019-07-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-30T11:15:34+08:00">
+                2019-07-30
               </time>
             
 
@@ -583,8 +576,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/dsaa/some-thoughts-5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-5/" itemprop="commentCount"></span>
+                <a href="/programming/dsaa/balance-tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/balance-tree/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -592,7 +585,7 @@
 
           
           
-             <span id="/programming/dsaa/some-thoughts-5/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（五、重启篇）">
+             <span id="/programming/dsaa/balance-tree/" class="leancloud_visitors" data-flag-title="「红黑树」详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -624,12 +617,16 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本系列<del>打脸</del>回归，不定期更新一些有趣的思考。</p>
-<h2 id="LCA"><a href="#LCA" class="headerlink" title="LCA"></a>LCA</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>LCA算是经典问题了，之前写过倍增的模板（O(NlogN)预处理，在线询问均摊O(logN)），也提到过运用ST表将LCA问题转换为RMQ问题（O(NlogN)预处理，在线询问均摊O(1)）。这里说说Tarjan算法，用于M个离线询问，可以达到共O(N+M)复杂度。</p>
-<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>1、任选一个点为根节点，从根节点开始；2、遍历该点u所有子节点v，并标记这些子节点v已被访问过；3、若是v还有子节点，返回2，否则下一步；4、合并v到u上；5、寻找与当前点u有询问关系的点v；6、若是v已经被访问过了，则可以确认u和v的最近公共祖先为v被合并到的父亲节点a（并查集）。（当然啦，涉及到并查集，是不是该考虑下反阿克曼函数的复杂度呢<del>（笑）</del>。）</p>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本来准备写写各平衡树细节，不过偷偷懒，就看了看以前没看过的红黑树，之后有时间看看其他平衡树。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>推荐这篇<a href="https://www.jianshu.com/p/e136ec79235c" target="_blank" rel="noopener">博客</a>。看了几篇关于红黑树的博客，表示这篇写得最清楚。</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>首先，给出红黑树的性质：<br>性质1：每个节点要么是黑色，要么是红色。<br>性质2：根节点是黑色。<br>性质3：每个叶子节点（NIL）是黑色。<br>性质4：每个红色结点的两个子结点一定都是黑色。<br>性质5：任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>红黑树并不是一个完美平衡二叉查找树，红黑树这种平衡被称为黑色完美平衡。红黑树能自平衡，靠的是三种操作：左旋、右旋和变色。<br>左旋：以某个结点作为支点(旋转结点)，其右子结点变为旋转结点的父结点，右子结点的左子结点变为旋转结点的右子结点，左子结点保持不变。<br>右旋：以某个结点作为支点(旋转结点)，其左子结点变为旋转结点的父结点，左子结点的右子结点变为旋转结点的左子结点，右子结点保持不变。<br>变色：结点的颜色由红变黑或由黑变红。</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>查找与普通排序二叉树一样，此处略。由于红黑树总保持黑色完美平衡，所以它的查找最坏时间复杂度为O(2lgN)，也即整颗树刚好红黑相隔的时候。能有这么好的查找效率得益于红黑树自平衡的特性。</p>
+<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>插入操作包括两部分工作：一查找插入的位置；二插入后自平衡。查找插入的父结点很简单，跟查找操作区别不大，也就是二叉排序树的基本操作。当插入位置已经找到，把插入结点放到正确的位置就可以了，插入结点是<strong>红色</strong>，理由很简单，红色在父结点（如果存在）为黑色结点时，红黑树的黑色平衡没被破坏，不需要做自平衡操作。但如果插入结点是黑色，那么插入位置所在的子树黑色结点总是多1，必须做自平衡。</p>
+<p>具体的插入场景建议看上面的博客配着图一点一点走，直接说做法会很懵逼。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/some-thoughts-5/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/balance-tree/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -680,7 +677,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2548/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/factory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tashi711">
@@ -699,7 +696,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/reports/luogu/luogu-2548/" itemprop="url">「洛谷 2548 - [AHOI2004]智能探险车」解题报告</a></h1>
+                <a class="post-title-link" href="/programming/others/factory/" itemprop="url">设计模式之「工厂模式」</a></h1>
         
 
         <div class="post-meta">
@@ -711,8 +708,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T11:57:02+08:00">
-                2019-07-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-29T11:15:34+08:00">
+                2019-07-29
               </time>
             
 
@@ -745,19 +742,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
-                    <span itemprop="name">洛谷</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -774,8 +760,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/programming/reports/luogu/luogu-2548/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/reports/luogu/luogu-2548/" itemprop="commentCount"></span>
+                <a href="/programming/others/factory/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/factory/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -783,7 +769,7 @@
 
           
           
-             <span id="/programming/reports/luogu/luogu-2548/" class="leancloud_visitors" data-flag-title="「洛谷 2548 - [AHOI2004]智能探险车」解题报告">
+             <span id="/programming/others/factory/" class="leancloud_visitors" data-flag-title="设计模式之「工厂模式」">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -815,12 +801,12 @@
 
       
         
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2548" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p><del>（这还需要分析吗？）</del></p>
-<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">string</span> s[MAXN + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, m;</span><br><span class="line">  nyuuryoku(n, m);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">string</span> cur;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</span><br><span class="line">      nyuuryoku(cur);</span><br><span class="line">      <span class="keyword">if</span> (cur != s[j]) &#123;</span><br><span class="line">        s[j] = <span class="string">"*"</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    shutsuryokus(s[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(s[n]);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>最近开始简单学下设计模式，开个新篇。本篇主要参考自<a href="https://design-patterns.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">此文档</a>，后略。这篇主要写工厂模式。</p>
+<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p>抽象工厂模式（Abstract Factory Pattern），又称为Kit模式，属于对象创建型模式。包含1、AbstractFactory：抽象工厂；2、ConcreteFactory：具体工厂；3、AbstractProduct：抽象产品；4、Product：具体产品。</p>
+<p>抽象工厂模式是所有形式的工厂模式中最为抽象和最具一般性的一种形态。用于多个产品等级结构（即产品的继承结构，如一个抽象类是电视机，其子类有海尔电视机、海信电视机、TCL电视机，则抽象电视机与具体品牌的电视机之间构成了一个产品等级结构，抽象电视机是父类，而具体品牌的电视机是其子类），一个工厂等级结构可以负责多个不同产品等级结构中的产品对象的创建。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/reports/luogu/luogu-2548/#more" rel="contents">
+            <a class="btn" href="/programming/others/factory/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -862,7 +848,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/82/">82</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -912,7 +898,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">232</span>
+                  <span class="site-state-item-count">245</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -923,7 +909,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -934,7 +920,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
