@@ -81,8 +81,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
-
 
 
 
@@ -90,13 +88,13 @@
 
 <meta name="description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tashi711的博客">
+<meta property="og:title" content="小拓の小窝">
 <meta property="og:url" content="http://tashi711.top/page/22/index.html">
-<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:site_name" content="小拓の小窝">
 <meta property="og:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tashi711的博客">
+<meta name="twitter:title" content="小拓の小窝">
 <meta name="twitter:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <title>Tashi711的博客</title>
+  <title>小拓の小窝</title>
   
 
 
@@ -164,7 +162,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tashi711的博客</span>
+        <span class="site-title">小拓の小窝</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -215,16 +213,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -309,16 +297,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/constructor/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/decorator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -328,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/constructor/" itemprop="url">设计模式之「建造者模式」</a></h1>
+                <a class="post-title-link" href="/programming/others/decorator/" itemprop="url">设计模式之「装饰模式」</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T11:15:34+08:00">
-                2019-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-06T11:15:34+08:00">
+                2019-08-06
               </time>
             
 
@@ -387,30 +375,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/constructor/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/constructor/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/others/constructor/" class="leancloud_visitors" data-flag-title="设计模式之「建造者模式」">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -433,12 +400,10 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>建造者模式（Builder Pattern）：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。</p>
-<p>建造者模式是一步一步创建一个复杂的对象，它允许用户只通过指定复杂对象的类型和内容就可以构建它们，用户不需要知道内部的具体构建细节。建造者模式属于对象创建型模式。根据中文翻译的不同，建造者模式又可以称为生成器模式。</p>
-<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>Builder：抽象建造者<br>ConcreteBuilder：具体建造者<br>Director：指挥者<br>Product：产品角色</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>装饰模式（Decorator Pattern）：动态地给一个对象增加一些额外的职责（Responsibility），就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为包装器（Wrapper），与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为“油漆工模式”，它是一种对象结构型模式。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/constructor/#more" rel="contents">
+            <a class="btn" href="/programming/others/decorator/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -489,16 +454,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/cpp-virtual/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/bridge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -508,7 +473,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/cpp-virtual/" itemprop="url">C++中的「多继承」探讨</a></h1>
+                <a class="post-title-link" href="/programming/others/bridge/" itemprop="url">设计模式之「桥接模式」</a></h1>
         
 
         <div class="post-meta">
@@ -520,8 +485,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-31T11:15:34+08:00">
-                2019-07-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T11:15:34+08:00">
+                2019-08-05
               </time>
             
 
@@ -567,30 +532,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/cpp-virtual/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/cpp-virtual/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/others/cpp-virtual/" class="leancloud_visitors" data-flag-title="C++中的「多继承」探讨">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -613,16 +557,10 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>C++支持绝大部分oop语言不支持的多继承。来看看这里面的一些玄学吧。</p>
-<p>本篇参考了这篇<a href="https://www.cnblogs.com/raichen/p/5744300.html" target="_blank" rel="noopener">博客</a>。值得一看，讲得很清楚。</p>
-<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>作为C++er，最基本的（单继承）虚表一定很清楚了<del>，不然还写什么C++</del>。子类与父类拥有各自的一个虚函数表，若子类并无overwrite父类虚函数，用父类虚函数，若子类重写（overwrite）了父类的虚函数，则子类虚函数将覆盖虚表中对应的父类虚函数，若子声明了自己新的虚函数，则该虚函数地址将扩充到虚函数表最后。</p>
-<h2 id="一般多继承"><a href="#一般多继承" class="headerlink" title="一般多继承"></a>一般多继承</h2><p>若子类新增虚函数，放在声明的<strong>第一个</strong>父类的虚函数表中，若子类重写了父类的虚函数，所有父类的虚函数表都要改变（这里注意是正好多个基类都有同名函数而并非继承自同一函数）。</p>
-<h2 id="虚继承"><a href="#虚继承" class="headerlink" title="虚继承"></a>虚继承</h2><p>这个东西就有点名堂，他是用来解决了菱形继承（多继承时的多个基类又继承了同一个“基基类”）中最派生类拥有多个间接父类实例的情况，虚继承的子类，如果本身定义了新的虚函数，则编译器为其生成一个新的虚函数指针（vptr）以及一张虚函数表。<strong>该vptr位于对象内存最前面（对比非虚继承：直接扩展父类虚函数表），虚继承的子类也单独保留了父类的vprt与虚函数表。</strong>虚继承的子类有虚基类表指针（vbptr）。在C++对象模型中，虚继承而来的子类会生成一个隐藏的虚基类指针（vbptr）。虚基类指针指向了一段地址，里面放着他与其各父类在内存里位置的偏移量。在Microsoft Visual C++中，虚基类表指针总是在虚函数表指针之后，因而，对某个类实例来说，如果它有虚基类指针，那么虚基类指针可能在实例的0字节偏移处（该类没有vptr时，vbptr就处于类实例内存布局的最前面，否则vptr处于类实例内存布局的最前面），也可能在类实例的4字节偏移处。</p>
-<h2 id="多虚继承"><a href="#多虚继承" class="headerlink" title="多虚继承"></a>多虚继承</h2><p>有时也被叫做菱形虚继承，假设有以下多虚继承关系（B、C虚继承A，D多继承B、C）每个类都有一个自己的int，以及重写（定义）了同名虚函数：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> a;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"A"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">  <span class="keyword">int</span> b;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"B"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"B"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> :</span> <span class="keyword">virtual</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">  <span class="keyword">int</span> c;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"C"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"C"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> :</span> <span class="keyword">public</span> B, <span class="keyword">public</span> C &#123;</span><br><span class="line">  <span class="keyword">int</span> d;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"D"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"D"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>桥接模式（Bridge Pattern）：将抽象部分与它的实现部分分离，使它们都可以独立地变化。它是一种对象结构型模式，又称为柄体（Handle and Body）模式或接口（Interface）模式。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/cpp-virtual/#more" rel="contents">
+            <a class="btn" href="/programming/others/bridge/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -673,16 +611,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/balance-tree/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/adapter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -692,7 +630,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/balance-tree/" itemprop="url">「红黑树」详解</a></h1>
+                <a class="post-title-link" href="/programming/others/adapter/" itemprop="url">设计模式之「适配器模式」</a></h1>
         
 
         <div class="post-meta">
@@ -704,8 +642,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-30T11:15:34+08:00">
-                2019-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-04T11:15:34+08:00">
+                2019-08-04
               </time>
             
 
@@ -738,8 +676,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -751,30 +689,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/dsaa/balance-tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/balance-tree/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/dsaa/balance-tree/" class="leancloud_visitors" data-flag-title="「红黑树」详解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -797,16 +714,11 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本来准备写写各平衡树细节，不过偷偷懒，就看了看以前没看过的红黑树，之后有时间看看其他平衡树。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>推荐这篇<a href="https://www.jianshu.com/p/e136ec79235c" target="_blank" rel="noopener">博客</a>。看了几篇关于红黑树的博客，表示这篇写得最清楚。</p>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>首先，给出红黑树的性质：<br>性质1：每个节点要么是黑色，要么是红色。<br>性质2：根节点是黑色。<br>性质3：每个叶子节点（NIL）是黑色。<br>性质4：每个红色结点的两个子结点一定都是黑色。<br>性质5：任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>红黑树并不是一个完美平衡二叉查找树，红黑树这种平衡被称为黑色完美平衡。红黑树能自平衡，靠的是三种操作：左旋、右旋和变色。<br>左旋：以某个结点作为支点(旋转结点)，其右子结点变为旋转结点的父结点，右子结点的左子结点变为旋转结点的右子结点，左子结点保持不变。<br>右旋：以某个结点作为支点(旋转结点)，其左子结点变为旋转结点的父结点，左子结点的右子结点变为旋转结点的左子结点，右子结点保持不变。<br>变色：结点的颜色由红变黑或由黑变红。</p>
-<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>查找与普通排序二叉树一样，此处略。由于红黑树总保持黑色完美平衡，所以它的查找最坏时间复杂度为O(2lgN)，也即整颗树刚好红黑相隔的时候。能有这么好的查找效率得益于红黑树自平衡的特性。</p>
-<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>插入操作包括两部分工作：一查找插入的位置；二插入后自平衡。查找插入的父结点很简单，跟查找操作区别不大，也就是二叉排序树的基本操作。当插入位置已经找到，把插入结点放到正确的位置就可以了，插入结点是<strong>红色</strong>，理由很简单，红色在父结点（如果存在）为黑色结点时，红黑树的黑色平衡没被破坏，不需要做自平衡操作。但如果插入结点是黑色，那么插入位置所在的子树黑色结点总是多1，必须做自平衡。</p>
-<p>具体的插入场景建议看上面的博客配着图一点一点走，直接说做法会很懵逼。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>适配器模式（Adapter Pattern）：将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器（Wrapper）。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。</p>
+<p>通常情况下，客户端可以通过目标类的接口访问它所提供的服务。有时，现有的类可以满足客户类的功能需要，但是它所提供的接口不一定是客户类所期望的，这可能是因为现有类中方法名与目标类中定义的方法名不一致等原因所导致的。在这种情况下，现有的接口需要转化为客户类期望的接口，这样保证了对现有类的重用。如果不进行这样的转化，客户类就不能利用现有类所提供的功能，适配器模式可以完成这样的转化。在适配器模式中可以定义一个包装类，包装不兼容接口的对象，这个包装类指的就是适配器（Adapter），它所包装的对象就是适配者（Adaptee），即被适配的类。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/balance-tree/#more" rel="contents">
+            <a class="btn" href="/programming/others/adapter/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -848,7 +760,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/21/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/83/">83</a><a class="extend next" rel="next" href="/page/23/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/21/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/85/">85</a><a class="extend next" rel="next" href="/page/23/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -884,10 +796,10 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/Tashi711.jpg"
-                alt="Tashi711" />
+                src="/images/xiaotuo.jpg"
+                alt="XIAO TUO" />
             
-              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-author-name" itemprop="name">XIAO TUO</p>
               <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
           </div>
 
@@ -898,7 +810,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">249</span>
+                  <span class="site-state-item-count">253</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -919,22 +831,15 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">164</span>
+                
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
-                </a>
+                
               </div>
             
 
           </nav>
 
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
           
 
           
@@ -968,7 +873,7 @@
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+  <span class="author" itemprop="copyrightHolder">XIAO TUO</span>
 
   
 </div>
@@ -1131,28 +1036,6 @@
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
-        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
-        placeholder: '',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
@@ -1175,113 +1058,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 

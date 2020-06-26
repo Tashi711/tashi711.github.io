@@ -81,8 +81,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
-
 
 
 
@@ -90,13 +88,13 @@
 
 <meta name="description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tashi711的博客">
+<meta property="og:title" content="小拓の小窝">
 <meta property="og:url" content="http://tashi711.top/page/31/index.html">
-<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:site_name" content="小拓の小窝">
 <meta property="og:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tashi711的博客">
+<meta name="twitter:title" content="小拓の小窝">
 <meta name="twitter:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <title>Tashi711的博客</title>
+  <title>小拓の小窝</title>
   
 
 
@@ -164,7 +162,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tashi711的博客</span>
+        <span class="site-title">小拓の小窝</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -215,16 +213,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -309,16 +297,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-1/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/qtree-and-lct/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -328,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/some-thoughts-1/" itemprop="url">「一些其他的数据结构与算法」简单小结（一）</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/qtree-and-lct/" itemprop="url">「树链剖分与动态树」详解</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-27T11:15:34+08:00">
-                2019-06-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-10T11:15:34+08:00">
+                2019-07-10
               </time>
             
 
@@ -387,30 +375,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/dsaa/some-thoughts-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/some-thoughts-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/dsaa/some-thoughts-1/" class="leancloud_visitors" data-flag-title="「一些其他的数据结构与算法」简单小结（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -433,12 +400,17 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>逐渐将当年学的各算法与数据结构复习了一遍，模板题也刷到NOI难度，有点做不动了，因为之后也没有过硬的对比较稀有的数据结构与算法的OI需求了（而更需要一些解题能力），这里基本不再频繁更新模板库了，只是对这些数据结构与算法进行简单小结。<strong>（本系列不涉及任何实现细节，更没有模板代码，只讨论用什么样的东西解决什么样的问题，效率如何之类的。）</strong></p>
-<p>本篇作为本系列第一篇，简单介绍FFT（快速傅里叶变换）、平衡树与树链剖分。</p>
-<h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><del>虽然是详解，然而并没有写代码。</del></p>
+<p>前面有一篇文章简单提到树链剖分（简称树剖），这里详细介绍一波，另外与动态树做联系。</p>
+<h2 id="树链剖分"><a href="#树链剖分" class="headerlink" title="树链剖分"></a>树链剖分</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>前面提到过，树剖可以操作以下四个步骤：将树从x到y结点最短路径上所有节点的值都加上z，求树从x到y结点最短路径上所有节点的值之和，将以x为根节点的子树内所有节点值都加上z，求以x为根节点的子树内所有节点值之和。其实这只是树剖的一个应用，完整地说，树剖用于解决树上的区间操作，包含两点之间的或者以某个点为根结点的子树。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>先是有以下的定义：</p>
+<p>重儿子：对于每一个非叶子节点，它的儿子中以那个儿子为根的子树节点数最大的儿子为该节点的重儿子<br>轻儿子：对于每一个非叶子节点，它的儿子中非重儿子的剩下所有儿子即为轻儿子<br>重边：一个父亲连接他的重儿子的边称为重边<br>轻边：剩下的即为轻边<br>重链：相邻重边连起来的连接一条重儿子的链叫重链（对于叶子节点，若其为轻儿子，则有一条以自己为起点的长度为1的链，每一条重链以轻儿子为起点）</p>
+<p>然后进行两个dfs操作，第一次分别求出deep、fa、size、重儿子编号，第二次标记每个点的新编号，维护每个点所在链的信息，要保证先处理重儿子再处理轻儿子，这样可以保证：1、每一条重链的新编号是连续的；2、每一个子树的新编号也是连续的。于是以上提到的操作就可以变成区间操作啦，区间可以用线段树维护。</p>
+<p>对于两点之间路径：设所在链顶端的深度更深的那个点为x点，处理x点到x所在链顶端这一段区间，把x跳到x所在链顶端的那个点的上面一个点，然后不停执行这两个步骤，直到两个点处于一条链上，这时再处理此时两个点的区间即可。首先最多跳O(logN)次，因为轻边儿子size永远小于等于其父亲数量的一半，那么树中任意两个节点之间的路径中轻边的条数（也就是跳的次数）不会超过O(logN)，又每一段区间在线段树上的操作为O(logN)级别，因此单次操作复杂度为O((logN)^2)。</p>
+<p>对于某点的子树：记录了每个非叶子节点的子树大小，并且每个子树的新编号都是连续的，于是直接线段树区间查询即可，时间复杂度为O(logN)。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/some-thoughts-1/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/qtree-and-lct/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -489,16 +461,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/cantor-expansion/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -508,7 +480,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/cantor-expansion/" itemprop="url">「康托展开」详解</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-3/" itemprop="url">「一些其他的数据结构与算法」简单小结（三）</a></h1>
         
 
         <div class="post-meta">
@@ -520,8 +492,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-26T11:15:34+08:00">
-                2019-06-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-09T11:15:34+08:00">
+                2019-07-09
               </time>
             
 
@@ -567,30 +539,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/dsaa/cantor-expansion/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/cantor-expansion/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/dsaa/cantor-expansion/" class="leancloud_visitors" data-flag-title="「康托展开」详解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -613,12 +564,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>这东西……emmm……名字很高大上，实则就是求全排列的名次。其实N方就好，不过用树状数组可以优化到O(NlogN)。</p>
-<p>另外根据名次求全排列是逆展开，同样的思路，此处略。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第三篇，简单介绍可持续化并查集、可持续化平衡树、后缀自动机、严格次小生成树、扩展BSGS算法与扩展Lucas定理。</p>
+<p><del>预警，本篇水分大，写（看）完跟没写（看）一样。</del></p>
+<h2 id="可持续化并查集"><a href="#可持续化并查集" class="headerlink" title="可持续化并查集"></a>可持续化并查集</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>n个集合、m个操作、操作包括：<br>1、合并a,b所在集合<br>2、k回到第k次操作之后的状态(查询算作操作)<br>3、询问a,b是否属于同一集合，是则输出1否则输出0</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>结合之前一篇分析过可持久化数据结构的文章，运用用可持久化数据结构共用一些点来达到节省空间的效果。首先先是要用不带路径压缩的并查集，这样对于每一次合并只会改一个点的父亲，所以一个版本的相对于上一个版本只会改一个点。其次如果并查集退化成一条链，find复杂度会很高，因此使用启发式合并（深度或者子树结点个数）。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/cantor-expansion/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-3/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -669,16 +621,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/suffix-array/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -688,7 +640,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/suffix-array/" itemprop="url">「后缀数组」深入理解</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-2/" itemprop="url">「一些其他的数据结构与算法」简单小结（二）</a></h1>
         
 
         <div class="post-meta">
@@ -700,8 +652,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T11:15:34+08:00">
-                2019-06-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-08T11:15:34+08:00">
+                2019-07-08
               </time>
             
 
@@ -747,30 +699,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/dsaa/suffix-array/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/dsaa/suffix-array/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/dsaa/suffix-array/" class="leancloud_visitors" data-flag-title="「后缀数组」深入理解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -793,18 +724,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>这东西每次看都能把自己绕晕。这里主要说倍增算法（O(NlogN)）。DC3算法（O(N)）常数比较大且编码难度大，此处略去<del>（当然也是因为本人太菜了根本学不动）</del>。</p>
-<h3 id="后缀排序之倍增"><a href="#后缀排序之倍增" class="headerlink" title="后缀排序之倍增"></a>后缀排序之倍增</h3><p>先说说后缀排序，即求sa（大概是suffix array的简称）的过程，一般后缀数组都会先求出这个数组。sa[i]表示排名为i的后缀位置，另外还求一个sa的逆数组rk（rank），rk[i]表示第i个位置的后缀排名（为方便起见，这里sa和rk以及下面提到的桶数组cnt的下标i都是从1开始标号）。一般都知道sa和rk是互逆的，但这只是说最终求完的状态，在中间结果，sa始终是将1到n（n为字符串长度）映射到1到n，rk则是将1到n映射到某个值域，满足大小的相对顺序（包括相等关系）一定满足，一般是1到可能的排名个数（下面用m表示，其实只有第一轮是其字符值）。</p>
-<p>倍增算法（简称da，doubling algorithm）其实实现细节不一定唯一，但一般思想差不多，且都涉及基数排序（这里的基数排序其实更趋向于说是每轮一个不同的桶排序）。先进行一个初始化过程，将初始字符串先入桶（下面的cnt数组）做一个基数排序，排序依据先是其前半段rk值，然后是后半段rk值（可能没有，就被认为是最小值），这里用了一个数组pre[i]表示后半段rk值为i的位置（n-w+1到n）设为rk为1到w（即pre[1…w]为[n-w+1…n]，这应该是整个算法最绕的两个部分之一），然后再基数排序时逆序枚举pre，就能保证正确排序的情况下，相等rk的位置保持原始的相对顺序（这是整个算法最绕的第二个部分），总归用下面的做法保证了这个性质。之后更新rk，看看如果rk个数达到n个就说明已经都有序了（小于n说明还有相等的rk，需要进一步判断）。</p>
-<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>后缀排序只是后缀数组的一个基本操作罢了，运用这个东西还能实现更强大的功能，比如height数组。</p>
-<p>height[i]定义为排名为i的后缀（sa[i]）与排名为i−1的后缀（sa[i-1]）的最长公共前缀长度（简称lcp，后同），height数组可以线性求，需要用到一个证明，先令H[i]为height[rk[i]] ，即位置i的后缀与它前一名的后缀的lcp。有H[i]≥H[i−1]−1，首先H[i−1]≤1时显然成立，考虑H[i−1]&gt;1，令k为位置i-1的前一名位置，即H[i−1]为位置k与位置i-1后缀的lcp，那么因为H[i−1]&gt;1，位置k+1一定正好是位置i的前一名，则H[i]即为位置k+1与位置i后缀的lcp，显然大于等于H[i−1]-1。证毕。因此求height只需依次从1到n求H即可。</p>
-<h3 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h3><p>不必过度迷信DC3，倍增除了有一点点时间劣势外，常数小、空间小、编码难度低。下面是罗穗骞的集训队论文：后缀数组——处理字符串的有力工具中的实验结果（后面的应用也是参考了这篇论文，值得一看）：</p>
-<p>N的规模 ——- 倍增（ms） ——- DC3（ms）<br>200000 ——- 192 ——- 140<br>300000 ——- 367 ——- 244<br>500000 ——- 750 ——- 499<br>1000000 ——- 1693 ——- 1248</p>
-<p>可见N足够大时，DC3算法所快的对数级复杂度也只有不到2的常数优化效果。在对算法效率要求极致，不在乎空间<del>（且自己不那么菜）</del>时再去考虑钻研DC3吧。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第二篇，简单介绍欧拉函数、CDQ分治、2-SAT。</p>
+<h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>给定三个正整数，a,m,b，需要求：a^b mod m。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>首先，<strong>欧拉定理</strong>：a与m互质，则a^phi(m) mod m = 1。<br>然后，<strong>扩展欧拉定理</strong>（对应这个问题，a与m不一定互质）：a^b mod m同余于<br>1、a^b（当b小于phi(m)）；<br>2、a^(b mod phi(m) + phi(m))（当b大于等于phi(m)）。</p>
+<p>而phi(n)，即n的欧拉函数（小于等于n的质数个数），为n*(1-1/p1)*(1-1/p2)*…*(1-1/pn)，其中pi为n的质因数。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/suffix-array/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-2/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -846,7 +772,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/83/">83</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/85/">85</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -882,10 +808,10 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/Tashi711.jpg"
-                alt="Tashi711" />
+                src="/images/xiaotuo.jpg"
+                alt="XIAO TUO" />
             
-              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-author-name" itemprop="name">XIAO TUO</p>
               <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
           </div>
 
@@ -896,7 +822,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">249</span>
+                  <span class="site-state-item-count">253</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -917,22 +843,15 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">164</span>
+                
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
-                </a>
+                
               </div>
             
 
           </nav>
 
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
           
 
           
@@ -966,7 +885,7 @@
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+  <span class="author" itemprop="copyrightHolder">XIAO TUO</span>
 
   
 </div>
@@ -1129,28 +1048,6 @@
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
-        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
-        placeholder: '',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
@@ -1173,113 +1070,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 

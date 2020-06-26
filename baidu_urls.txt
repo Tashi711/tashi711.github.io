@@ -1,3 +1,6 @@
+http://tashi711.top/maboroshi/normaljibun/beijing/
+http://tashi711.top/omoshirosa/koeirogen/in-time/
+http://tashi711.top/omoshirosa/koeirogen/digital-monster-x-evolution/
 http://tashi711.top/maboroshi/normaljibun/kioku/
 http://tashi711.top/nihongonokoto/kanakashi/kuyashisahadane/
 http://tashi711.top/maboroshi/normaljibun/bokutozju/
@@ -5,8 +8,9 @@ http://tashi711.top/omoshirosa/koeirogen/the-giver-and-so-on/
 http://tashi711.top/maboroshi/chuunikyoku/sangatsu/
 http://tashi711.top/nihongonokoto/azaazu/n2-notes/
 http://tashi711.top/programming/others/ms-iv/
-http://tashi711.top/omoshirosa/koeirogen/the-maze-runner/
+http://tashi711.top/maboroshi/normaljibun/diary-3/
 http://tashi711.top/nihongonokoto/kanakashi/claris-konekuto/
+http://tashi711.top/omoshirosa/koeirogen/the-maze-runner/
 http://tashi711.top/omoshirosa/koeirogen/the-hunger-games/
 http://tashi711.top/omoshirosa/koeirogen/divergent/
 http://tashi711.top/omoshirosa/koeirogen/equilibrium/
@@ -94,7 +98,3 @@ http://tashi711.top/programming/dsaa/suffix-array/
 http://tashi711.top/programming/dsaa/persistable-tree/
 http://tashi711.top/programming/dsaa/chairman-tree/
 http://tashi711.top/programming/dsaa/cost-flow/
-http://tashi711.top/programming/dsaa/leftist-heap/
-http://tashi711.top/programming/dsaa/graham-redo/
-http://tashi711.top/programming/dsaa/ac-automaton/
-http://tashi711.top/programming/dsaa/linear-basis/

@@ -81,8 +81,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Tashi711的博客" type="application/atom+xml" />
-
 
 
 
@@ -90,13 +88,13 @@
 
 <meta name="description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tashi711的博客">
+<meta property="og:title" content="小拓の小窝">
 <meta property="og:url" content="http://tashi711.top/page/17/index.html">
-<meta property="og:site_name" content="Tashi711的博客">
+<meta property="og:site_name" content="小拓の小窝">
 <meta property="og:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tashi711的博客">
+<meta name="twitter:title" content="小拓の小窝">
 <meta name="twitter:description" content="不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。">
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <title>Tashi711的博客</title>
+  <title>小拓の小窝</title>
   
 
 
@@ -164,7 +162,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tashi711的博客</span>
+        <span class="site-title">小拓の小窝</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -215,16 +213,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -309,16 +297,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/padding/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/singleton-more/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -328,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/padding/" itemprop="url">「内存对齐」问题探究</a></h1>
+                <a class="post-title-link" href="/programming/others/singleton-more/" itemprop="url">「单例模式」再探</a></h1>
         
 
         <div class="post-meta">
@@ -340,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T11:15:34+08:00">
-                2019-08-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-11T11:15:34+08:00">
+                2019-09-11
               </time>
             
 
@@ -387,30 +375,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/padding/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/padding/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/others/padding/" class="leancloud_visitors" data-flag-title="「内存对齐」问题探究">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -433,13 +400,18 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>每个特定平台上的编译器都有自己的默认“对齐系数”(也叫对齐模数)。程序员可以通过预编译命令#pragma pack(n)，n=1,2,4,8,16,…来改变这一系数，其中的n就是需要指定的“对齐系数”。</p>
-<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>1.对于结构的各个成员，第一个成员位于偏移为0的位置，以后的每个数据成员的偏移量必须是min(#pragma pack指定的数,这个数据成员的自身长度)的倍数。</p>
-<p>2.在所有的数据成员完成各自对齐之后，结构或联合体本身也要进行对齐，对齐将按照 #pragram pack指定的数值和结构或者联合体最大数据成员长度中比较小的那个，也就是min(#pragram pack, 长度最长的数据成员)。</p>
-<p>（结合1、2可推断：当#pragma pack的n值等于或超过所有数据成员长度的时候，这个n值的大小将不产生任何效果。）</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>对最近学的设计模式进行总结与深入。本文主要讲单例模式</p>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="懒汉式（线程不安全）"><a href="#懒汉式（线程不安全）" class="headerlink" title="懒汉式（线程不安全）"></a>懒汉式（线程不安全）</h3><p>以下实现中，私有静态变量被延迟实例化，这样做的好处是，如果没有用到该类，那么就不会实例化，从而节约资源。这个实现在多线程环境下是不安全的，如果多个线程能够同时进入if，并且此时指针为空，那么会有多个线程执行new语句，这将导致实例化多次。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">singleton</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">static</span> singleton* <span class="title">get_unique_instance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (unique_instance == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">      <span class="built_in">cout</span> &lt;&lt; <span class="string">"init"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      unique_instance = <span class="keyword">new</span> singleton;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> unique_instance;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"f()"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> singleton *unique_instance;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">singleton *singleton::unique_instance = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag1"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">auto</span> p1 = singleton::get_unique_instance();</span><br><span class="line">  p1-&gt;f();</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag2"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">auto</span> p2 = singleton::get_unique_instance();</span><br><span class="line">  p2-&gt;f();</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag3"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="饿汉式（线程安全）"><a href="#饿汉式（线程安全）" class="headerlink" title="饿汉式（线程安全）"></a>饿汉式（线程安全）</h3><p>线程不安全问题主要是由于实例化多次，采取直接实例化的方式就不会产生线程不安全问题。但是直接实例化的方式也丢失了延迟实例化带来的节约资源的好处。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">singleton</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">static</span> singleton* <span class="title">get_unique_instance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> unique_instance;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"f()"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> singleton *unique_instance;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">singleton *singleton::unique_instance = <span class="keyword">new</span> singleton;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag1"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">auto</span> p1 = singleton::get_unique_instance();</span><br><span class="line">  p1-&gt;f();</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag2"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">auto</span> p2 = singleton::get_unique_instance();</span><br><span class="line">  p2-&gt;f();</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"flag3"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="懒汉式（线程安全）"><a href="#懒汉式（线程安全）" class="headerlink" title="懒汉式（线程安全）"></a>懒汉式（线程安全）</h3><p>只需要对get方法加锁，那么在一个时间点只能有一个线程能够进入该方法，从而避免了实例化多次。但是当一个线程进入该方法之后，其它试图进入该方法的线程都必须等待，即使指针已经被实例化了。这会让线程阻塞时间过长，因此该方法有性能问题，不推荐使用。</p>
+<p>（代码略）</p>
+<h3 id="双重校验锁（线程安全）"><a href="#双重校验锁（线程安全）" class="headerlink" title="双重校验锁（线程安全）"></a>双重校验锁（线程安全）</h3><p>指针只需要被实例化一次，之后就可以直接使用了。加锁操作只需要对实例化那部分的代码进行，只有当指针没有被实例化时，才需要进行加锁。双重校验锁先判断指针是否已经被实例化，如果没有被实例化，那么才对实例化语句进行加锁。</p>
+<p>（代码略）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/padding/#more" rel="contents">
+            <a class="btn" href="/programming/others/singleton-more/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -490,16 +462,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/strategy/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/others/pdd-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -509,7 +481,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/strategy/" itemprop="url">设计模式之「策略模式」</a></h1>
+                <a class="post-title-link" href="/programming/reports/others/pdd-1/" itemprop="url">「拼多多服务端研发工程师」笔试小结</a></h1>
         
 
         <div class="post-meta">
@@ -521,8 +493,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-16T11:15:34+08:00">
-                2019-08-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T09:57:24+08:00">
+                2019-09-01
               </time>
             
 
@@ -555,7 +527,18 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/其他/" itemprop="url" rel="index">
                     <span itemprop="name">其他</span>
                   </a>
                 </span>
@@ -568,30 +551,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/strategy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/strategy/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/others/strategy/" class="leancloud_visitors" data-flag-title="设计模式之「策略模式」">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -614,10 +576,15 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>策略模式（Strategy Pattern）：定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式（Policy）。策略模式是一种对象行为型模式。</p>
+          <h2 id="暗影吐槽"><a href="#暗影吐槽" class="headerlink" title="暗影吐槽"></a><del>暗影吐槽</del></h2><p><del>大概快两个星期拖更，最近太忙了，结束实习项目以及应付各种笔试面试，这大概是我第一次在牛客笔试上AK（2小时4道题用了1小时20分钟，当然主要是题目太水），然后剩下的时间难得的写下题解吧。</del></p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="1、优先偶数的有序TopN"><a href="#1、优先偶数的有序TopN" class="headerlink" title="1、优先偶数的有序TopN"></a>1、优先偶数的有序TopN</h3><p>读入数列和N，返回优先级最高点N个数，满足：1、偶数优先于奇数；2、同奇偶性数值大优先。数据量最多100。</p>
+<p>输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">555503,772867,756893,339138,399447,40662,859037,628085,855723,974471,599631,636153,581541,174761,948135,411485,554033,858627,402833,546467,574367,360461,566480,755523,222921,164287,420256,40043,977167,543295,944841,917125,331763,188173,353275,175757,950417,284578,617621,546561,913416,258741,260569,630583,252845;10</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">913416,566480,420256,339138,284578,40662,977167,974471,950417,948135</span><br></pre></td></tr></table></figure></p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>很水，做法很多，我这里直接定义一个二元lambda谓词作为sort的比较参数：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> cmp = [](<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</span><br><span class="line">  <span class="keyword">if</span> ((x &amp; <span class="number">1</span>) == <span class="number">0</span> &amp;&amp; (y &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((x &amp; <span class="number">1</span>) == <span class="number">1</span> &amp;&amp; (y &amp; <span class="number">1</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x &gt; y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>注意下输入格式就好，我直接用cin了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/strategy/#more" rel="contents">
+            <a class="btn" href="/programming/reports/others/pdd-1/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -668,16 +635,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/state/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/coin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tashi711">
+      <meta itemprop="name" content="XIAO TUO">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/Tashi711.jpg">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tashi711的博客">
+      <meta itemprop="name" content="小拓の小窝">
     </span>
 
     
@@ -687,7 +654,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/state/" itemprop="url">设计模式之「状态模式」</a></h1>
+                <a class="post-title-link" href="/programming/others/coin/" itemprop="url">「真假硬币」——一道有趣的概率题</a></h1>
         
 
         <div class="post-meta">
@@ -699,8 +666,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-15T11:15:34+08:00">
-                2019-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-19T11:15:34+08:00">
+                2019-08-19
               </time>
             
 
@@ -746,30 +713,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/programming/others/state/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/programming/others/state/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/programming/others/state/" class="leancloud_visitors" data-flag-title="设计模式之「状态模式」">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -792,10 +738,12 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>状态模式（State Pattern）：允许一个对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类。其别名为状态对象（Objects for States），状态模式是一种对象行为型模式。</p>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>在看面筋时遇到这样一道题：真硬币m个，假币n个。假币只有正面。真币投掷正面概率为p。其中某硬币投掷k次都是正面，求它为真币概率。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>想了蛮久，才发现这是道条件概率。P(x=1 | k) = P(x=1 and k) / P(k)。其中P(x=1 and k) = m/(n+m) * p^k，P(k) = n/(n+m) + m/(n+m) * p^k。</p>
+<p><del>他也没给标答呀，各位帮忙检查下？</del></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/state/#more" rel="contents">
+            <a class="btn" href="/programming/others/coin/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -837,7 +785,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/83/">83</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/85/">85</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -873,10 +821,10 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/Tashi711.jpg"
-                alt="Tashi711" />
+                src="/images/xiaotuo.jpg"
+                alt="XIAO TUO" />
             
-              <p class="site-author-name" itemprop="name">Tashi711</p>
+              <p class="site-author-name" itemprop="name">XIAO TUO</p>
               <p class="site-description motion-element" itemprop="description">不要忘了那份感动与羁绊、不放弃追逐梦想的脚步、让他们在心中不随时间消逝。</p>
           </div>
 
@@ -887,7 +835,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">249</span>
+                  <span class="site-state-item-count">253</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -908,22 +856,15 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">164</span>
+                
+                  <span class="site-state-item-count">163</span>
                   <span class="site-state-item-name">标签</span>
-                </a>
+                
               </div>
             
 
           </nav>
 
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
           
 
           
@@ -957,7 +898,7 @@
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tashi711</span>
+  <span class="author" itemprop="copyrightHolder">XIAO TUO</span>
 
   
 </div>
@@ -1120,28 +1061,6 @@
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz',
-        appKey: 'VVHyyPnQHHKm1dxBq2rq1sNe',
-        placeholder: '',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
@@ -1164,113 +1083,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("F7ac8BPnvhgqhAzqXASCNgwH-gzGzoHsz", "VVHyyPnQHHKm1dxBq2rq1sNe");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
