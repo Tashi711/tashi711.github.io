@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/base_hash/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/matrix-quick-power/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/base_hash/" itemprop="url">「进制哈希」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/matrix-quick-power/" itemprop="url">「矩阵快速幂」模板</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-22T11:15:34+08:00">
-                2019-05-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-27T11:15:34+08:00">
+                2019-05-27
               </time>
             
 
@@ -400,11 +400,11 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>进制哈希主要用于字符串，在base与modulus选的得当的情况下基本可以认为无冲突。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>之前分别写过矩阵乘法与快速幂的模板，现在将两者结合起来。<br>在原矩阵模板中增加：<br>1、初始化为单位矩阵（一定要是在初始化，因为没有做清零操作）。<br>2、*=模板。<br>3、快速幂模板。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/base_hash/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/matrix-quick-power/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -455,7 +455,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/heap/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/bit-extend/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -474,7 +474,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/heap/" itemprop="url">「堆」简单实现</a></h1>
+                <a class="post-title-link" href="/programming/others/bit-extend/" itemprop="url">「树状数组」扩展</a></h1>
         
 
         <div class="post-meta">
@@ -486,8 +486,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-21T11:15:34+08:00">
-                2019-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T11:15:34+08:00">
+                2019-05-26
               </time>
             
 
@@ -520,8 +520,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -558,12 +558,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>其实手写堆的意义已经不大了，这里写一写主要是想稍微熟悉下堆的运作方式。为了与一般对堆的认知保持一致，这里数组里面加了一个pivot，让下标从1开始，以此方便计算父亲与儿子的下标。</p>
-<p>下面的代码可以更加完善一点，例如重载比较实现切换大根、小根堆，以及完善线性时间用一段数组初始化堆等功能（但没必要，STL里面有这些heap相关算法了，甚至priority_queue可以完全取代）。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>已知一个数列，你需要进行下面两种操作：1、将某区间每一个数数加上k，2、求出某一个数的值。<br>看起来是要用线段树了，其实只需要树状数组即可，bit只需要表示其差分即可。<br>设数组a[]，其差分数组b[i]=a[i]-a[i-1]，其中a[0]=0，易得a[i]=b[1]+….+b[i]。<br>对区间[x,y]加k，只用修改b[x]与b[y+1]：b[x]=b[x]+k，b[y+1]=b[y+1]-k。</p>
+<h3 id="模板题"><a href="#模板题" class="headerlink" title="模板题"></a>模板题</h3><p><a href="https://www.luogu.org/problemnew/show/P3368" target="_blank" rel="noopener">洛谷 3368 - 树状数组 2</a></p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/heap/#more" rel="contents">
+            <a class="btn" href="/programming/others/bit-extend/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -614,7 +614,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/prime/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/trichotomy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -633,7 +633,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/prime/" itemprop="url">「质数」相关算法讨论</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/trichotomy/" itemprop="url">「三分法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -645,8 +645,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T11:15:34+08:00">
-                2019-05-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-25T11:15:34+08:00">
+                2019-05-25
               </time>
             
 
@@ -717,12 +717,11 @@
 
       
         
-          <h2 id="快速质数判定"><a href="#快速质数判定" class="headerlink" title="快速质数判定"></a>快速质数判定</h2><p>只需考虑6k-1与6k+1，比传统质数判定算法快3倍左右。</p>
-<h3 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">fast_is_prime</span><span class="params">(T n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (n == <span class="number">2</span> || n == <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (n % <span class="number">6</span> != <span class="number">1</span> &amp;&amp; n % <span class="number">6</span> != <span class="number">5</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (T i = <span class="number">5</span>; i * i &lt;= n; i += <span class="number">6</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (n % i == <span class="number">0</span> || n % (i + <span class="number">2</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="欧拉筛法"><a href="#欧拉筛法" class="headerlink" title="欧拉筛法"></a>欧拉筛法</h2>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>其实不是严格的三分法，复杂度像是二分，却又不是单纯的（梯度）二分，但其实思想差不多。<br>单纯的三分是三等分，每次只缩三分之一，而这个算法将中间两个点缩到足够近，可以认为是每次对半分了。<br>求多项式可以用如下秦九韶算法。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/prime/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/trichotomy/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -764,7 +763,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/88/">88</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/45/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/47/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -814,7 +813,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">263</span>
+                  <span class="site-state-item-count">268</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/directed-tarjan/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/ac-automaton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/directed-tarjan/" itemprop="url">「缩点」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/ac-automaton/" itemprop="url">「AC自动机」摸索</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T11:15:34+08:00">
-                2019-06-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-14T11:15:34+08:00">
+                2019-06-14
               </time>
             
 
@@ -400,11 +400,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3387 - 缩点。<br>所谓的“缩点”是针对有向图的强连通分量的。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3808、3796 - AC自动机。</p>
+<p>这东西竞赛搞完后就再也没碰过了，其实竞赛也没碰过几次。<br>一般的说法AC自动机是在trie上做kmp，但其实个人感觉只能说是跟kmp思想比较接近，但原理还是稍有些不同。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/directed-tarjan/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/ac-automaton/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -455,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/gaussian-elimination/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/linear-basis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -474,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/gaussian-elimination/" itemprop="url">「高斯消元」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/linear-basis/" itemprop="url">「线性基」思考</a></h1>
         
 
         <div class="post-meta">
@@ -486,8 +487,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-08T11:15:34+08:00">
-                2019-06-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-13T11:15:34+08:00">
+                2019-06-13
               </time>
             
 
@@ -558,11 +559,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3389 - 高斯消元法。<br>基本就注意两点：一是无解判断为绝对值小于EPS（double精度）；二是先处理最大绝对值保证精度。</p>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3812 - 线性基。</p>
+<p>其实之前都没听说过这个东西，无意中刷到，然后研究了下。其实不难，很容易看懂，而且貌似比较强大，目前除了模板题的求最大值，还能看到有查询某数的用法，甚至更强的应用，这里没有深入去探索了。</p>
+<p>总而言之就是将原来的数组空间映射到另一个线性空间（注意这里的线性并非线性组合，而是异或），那么保证原数组的异或空间与线性基的异或空间一致（也就是很多文章里面说的值域不变）。而线性基最多有$\log_2n$个，其中每个都拥有唯一的最高位。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/gaussian-elimination/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/linear-basis/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -613,7 +616,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/monotone-queue/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/bipartite-graph/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -632,7 +635,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/monotone-queue/" itemprop="url">「单调队列」应用</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/bipartite-graph/" itemprop="url">「二分图匹配」再探</a></h1>
         
 
         <div class="post-meta">
@@ -644,8 +647,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-07T11:15:34+08:00">
-                2019-06-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-12T11:15:34+08:00">
+                2019-06-12
               </time>
             
 
@@ -678,8 +681,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -716,11 +719,11 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>单调队列可以用于线性优化一些序列的问题，它可能并不是一个真正的队列，有时表现为栈，但通常具有deque的性质（queue与stack都可以看成是deque）。这里讲几个应用。</p>
-<h3 id="1、长度不超过k的最大连续子序列"><a href="#1、长度不超过k的最大连续子序列" class="headerlink" title="1、长度不超过k的最大连续子序列"></a>1、长度不超过k的最大连续子序列</h3>
+          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3386 - 二分图匹配。<br>之前用匈牙利算法实现过，改良了一番，见下代码1。<br>最近写了下网络流，试着用网络流解bgm，因为传说中Dinic比匈牙利更快，试了下果然快一点。<br>但没想到的是被说在二分图中比Dinic慢的ISAP居然实际比Dinic快不少。<br>由此可见ISAP几乎算是万能最大流算法了，甚至可以取代匈牙利。<br>毕竟本身已经能证明Dinic复杂度上限比匈牙利小，而ISAP又是Dinic的改良。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/monotone-queue/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/bipartite-graph/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -762,7 +765,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/39/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/88/">88</a><a class="extend next" rel="next" href="/page/41/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/39/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/41/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -812,7 +815,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">263</span>
+                  <span class="site-state-item-count">268</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

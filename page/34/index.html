@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-4/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-2945/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/some-thoughts-4/" itemprop="url">「一些其他的数据结构与算法」简单小结（四、告别篇）</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-2945/" itemprop="url">「洛谷 2945 - [USACO09MAR]沙堡Sand Castle」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T11:15:34+08:00">
-                2019-07-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T11:57:02+08:00">
+                2019-07-15
               </time>
             
 
@@ -362,8 +362,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
+                    <span itemprop="name">洛谷</span>
                   </a>
                 </span>
 
@@ -400,12 +411,12 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第四篇，也是最后一篇，简单介绍最小树形图、跳舞链、树套树。</p>
-<h2 id="最小树形图"><a href="#最小树形图" class="headerlink" title="最小树形图"></a>最小树形图</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>给定包含n个结点，m条有向边的一个图。试求一棵以结点r为根的最小树形图，并输出最小树形图每条边的权值之和，或者给出不存在的判断。</p>
-<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>这基本是个除了做模板就没有用的算法了，一般用朱-刘算法（当然据说有更快的O(M+NlogN)的tarjan）。因为一个合法的树形图的每个点都只有一条入边，所以贪心地对每个点都选择一条通向它的最短的边（没有的话就无解）。这样连出来的图有n-1条边，但不一定是树。不过，这个图最多只有几个简单环，因为每个点只连入1条边。所以将这些环搜出并缩起来，然后在缩完后的边（经过处理，减去环中以那个点为终点的边的权值，因为已经统计过但是实际是不需要这条边的）中继续跑最小树形图直到选择的边构成树。时间复杂度O(NM)，但是一般情况会快很多。</p>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P2945" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>简单证明一下不难发现排序后按顺序变一定是最优的。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> &#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">int</span> MAXN = <span class="number">100000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAXN + <span class="number">1</span>], b[MAXN + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">int</span> n, x, y;</span><br><span class="line">  nyuuryoku(n, x, y);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    nyuuryoku(a[i], b[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  sort(a + <span class="number">1</span>, a + n + <span class="number">1</span>);</span><br><span class="line">  sort(b + <span class="number">1</span>, b + n + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">auto</span> calc = [x, y](<span class="keyword">int</span> u, <span class="keyword">int</span> v) &#123;</span><br><span class="line">    <span class="keyword">return</span> u &lt; v ? (v - u) * x : (u - v) * y;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">    ans += calc(a[i], b[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  shutsuryokul(ans);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/some-thoughts-4/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-2945/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -456,7 +467,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/qtree-and-lct/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/luogu/luogu-1008/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -475,7 +486,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/qtree-and-lct/" itemprop="url">「树链剖分与动态树」详解</a></h1>
+                <a class="post-title-link" href="/programming/reports/luogu/luogu-1008/" itemprop="url">「洛谷 1008 - 三连击」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -487,8 +498,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-10T11:15:34+08:00">
-                2019-07-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T11:57:02+08:00">
+                2019-07-14
               </time>
             
 
@@ -521,8 +532,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/洛谷/" itemprop="url" rel="index">
+                    <span itemprop="name">洛谷</span>
                   </a>
                 </span>
 
@@ -559,17 +581,12 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><del>虽然是详解，然而并没有写代码。</del></p>
-<p>前面有一篇文章简单提到树链剖分（简称树剖），这里详细介绍一波，另外与动态树做联系。</p>
-<h2 id="树链剖分"><a href="#树链剖分" class="headerlink" title="树链剖分"></a>树链剖分</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>前面提到过，树剖可以操作以下四个步骤：将树从x到y结点最短路径上所有节点的值都加上z，求树从x到y结点最短路径上所有节点的值之和，将以x为根节点的子树内所有节点值都加上z，求以x为根节点的子树内所有节点值之和。其实这只是树剖的一个应用，完整地说，树剖用于解决树上的区间操作，包含两点之间的或者以某个点为根结点的子树。</p>
-<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>先是有以下的定义：</p>
-<p>重儿子：对于每一个非叶子节点，它的儿子中以那个儿子为根的子树节点数最大的儿子为该节点的重儿子<br>轻儿子：对于每一个非叶子节点，它的儿子中非重儿子的剩下所有儿子即为轻儿子<br>重边：一个父亲连接他的重儿子的边称为重边<br>轻边：剩下的即为轻边<br>重链：相邻重边连起来的连接一条重儿子的链叫重链（对于叶子节点，若其为轻儿子，则有一条以自己为起点的长度为1的链，每一条重链以轻儿子为起点）</p>
-<p>然后进行两个dfs操作，第一次分别求出deep、fa、size、重儿子编号，第二次标记每个点的新编号，维护每个点所在链的信息，要保证先处理重儿子再处理轻儿子，这样可以保证：1、每一条重链的新编号是连续的；2、每一个子树的新编号也是连续的。于是以上提到的操作就可以变成区间操作啦，区间可以用线段树维护。</p>
-<p>对于两点之间路径：设所在链顶端的深度更深的那个点为x点，处理x点到x所在链顶端这一段区间，把x跳到x所在链顶端的那个点的上面一个点，然后不停执行这两个步骤，直到两个点处于一条链上，这时再处理此时两个点的区间即可。首先最多跳O(logN)次，因为轻边儿子size永远小于等于其父亲数量的一半，那么树中任意两个节点之间的路径中轻边的条数（也就是跳的次数）不会超过O(logN)，又每一段区间在线段树上的操作为O(logN)级别，因此单次操作复杂度为O((logN)^2)。</p>
-<p>对于某点的子树：记录了每个非叶子节点的子树大小，并且每个子树的新编号都是连续的，于是直接线段树区间查询即可，时间复杂度为O(logN)。</p>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.org/problemnew/show/P1008" target="_blank" rel="noopener">传送门</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>好水呀、居然交了3次<del>（捂脸）</del>。</p>
+<h3 id="AC代码（C-17）"><a href="#AC代码（C-17）" class="headerlink" title="AC代码（C++17）"></a>AC代码（C++17）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; f(<span class="number">10</span>, <span class="literal">false</span>);</span><br><span class="line">  f[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">auto</span> ok = [&amp;f](<span class="keyword">int</span> x) &#123;</span><br><span class="line">    <span class="keyword">if</span> (f[x % <span class="number">10</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x % <span class="number">10</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (f[x / <span class="number">10</span> % <span class="number">10</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x / <span class="number">10</span> % <span class="number">10</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (f[x / <span class="number">100</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f[x / <span class="number">100</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> ok(a) &amp;&amp; ok(b) &amp;&amp; ok(c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> tashi711;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">123</span>; i &lt; <span class="number">333</span>; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> u = i * <span class="number">2</span>, v = i * <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">if</span> (check(i, u, v)) &#123;</span><br><span class="line">      shutsuryokul(i, u, v);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/qtree-and-lct/#more" rel="contents">
+            <a class="btn" href="/programming/reports/luogu/luogu-1008/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -620,7 +637,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-3/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-581-617-621/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -639,7 +656,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/some-thoughts-3/" itemprop="url">「一些其他的数据结构与算法」简单小结（三）</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-581-617-621/" itemprop="url">「LeetCode 581、617、621」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -651,8 +668,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-09T11:15:34+08:00">
-                2019-07-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T23:57:02+08:00">
+                2019-07-13
               </time>
             
 
@@ -685,8 +702,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -723,13 +751,13 @@
 
       
         
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第三篇，简单介绍可持续化并查集、可持续化平衡树、后缀自动机、严格次小生成树、扩展BSGS算法与扩展Lucas定理。</p>
-<p><del>预警，本篇水分大，写（看）完跟没写（看）一样。</del></p>
-<h2 id="可持续化并查集"><a href="#可持续化并查集" class="headerlink" title="可持续化并查集"></a>可持续化并查集</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>n个集合、m个操作、操作包括：<br>1、合并a,b所在集合<br>2、k回到第k次操作之后的状态(查询算作操作)<br>3、询问a,b是否属于同一集合，是则输出1否则输出0</p>
-<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>结合之前一篇分析过可持久化数据结构的文章，运用用可持久化数据结构共用一些点来达到节省空间的效果。首先先是要用不带路径压缩的并查集，这样对于每一次合并只会改一个点的父亲，所以一个版本的相对于上一个版本只会改一个点。其次如果并查集退化成一条链，find复杂度会很高，因此使用启发式合并（深度或者子树结点个数）。</p>
+          <h2 id="581-Shortest-Unsorted-Continuous-Subarray"><a href="#581-Shortest-Unsorted-Continuous-Subarray" class="headerlink" title="581. Shortest Unsorted Continuous Subarray"></a><a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray/" target="_blank" rel="noopener">581. Shortest Unsorted Continuous Subarray</a></h2><p>Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order, too.</p>
+<p>You need to find the shortest such subarray and output its length.</p>
+<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>水题一道，很容易想出线性算法，不过额外空间常数需要思考（参照标解），下面是一种O(N)空间与时间的解法。</p>
+<h3 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">findUnsortedSubarray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = nums.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; min_back(n + <span class="number">1</span>);</span><br><span class="line">    min_back[n] = numeric_limits&lt;<span class="keyword">int</span>&gt;::max();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; ~i; --i) &#123;</span><br><span class="line">      min_back[i] = min(min_back[i + <span class="number">1</span>], nums[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> pu = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">      <span class="keyword">if</span> (min_back[i + <span class="number">1</span>] &lt; nums[i]) &#123;</span><br><span class="line">        pu = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pu == n - <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; max_front(n + <span class="number">1</span>);</span><br><span class="line">    max_front[<span class="number">0</span>] = numeric_limits&lt;<span class="keyword">int</span>&gt;::min();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">      max_front[i] = max(max_front[i - <span class="number">1</span>], nums[i - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> pv = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">      <span class="keyword">if</span> (max_front[i] &gt; nums[i]) &#123;</span><br><span class="line">        pv = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pv - pu - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/some-thoughts-3/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-581-617-621/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -771,7 +799,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/88/">88</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -821,7 +849,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">263</span>
+                  <span class="site-state-item-count">268</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
