@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/flyweight/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/coin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/flyweight/" itemprop="url">设计模式之「享元模式」</a></h1>
+                <a class="post-title-link" href="/programming/others/coin/" itemprop="url">「真假硬币」——一道有趣的概率题</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T11:15:34+08:00">
-                2019-08-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-19T11:15:34+08:00">
+                2019-08-19
               </time>
             
 
@@ -400,10 +400,12 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>享元模式（Flyweight Pattern）：运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为<strong>轻量级模式</strong>，它是一种对象结构型模式。</p>
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>在看面筋时遇到这样一道题：真硬币m个，假币n个。假币只有正面。真币投掷正面概率为p。其中某硬币投掷k次都是正面，求它为真币概率。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>想了蛮久，才发现这是道条件概率。P(x=1 | k) = P(x=1 and k) / P(k)。其中P(x=1 and k) = m/(n+m) * p^k，P(k) = n/(n+m) + m/(n+m) * p^k。</p>
+<p><del>他也没给标答呀，各位帮忙检查下？</del></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/flyweight/#more" rel="contents">
+            <a class="btn" href="/programming/others/coin/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -454,7 +456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/oop/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-287/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -473,7 +475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/oop/" itemprop="url">「面向对象编程」思想</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-287/" itemprop="url">「LeetCode 287」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -485,8 +487,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-08T11:15:34+08:00">
-                2019-08-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T23:57:02+08:00">
+                2019-08-18
               </time>
             
 
@@ -519,8 +521,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -557,15 +570,14 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>面向对象程序设计（Object Oriented Programming，OOP）其本质是以建立模型体现出来的抽象思维过程和面向对象的方法。模型是用来反映现实世界中事物特征的。任何一个模型都不可能反映客观事物的一切具体特征，只能对事物特征和变化规律的一种抽象，且在它所涉及的范围内更普遍、更集中、更深刻地描述客体的特征。通过建立模型而达到的抽象是人们对客体认识的深化。（From 百度百科）</p>
-<h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。</p>
-<p><strong>优点：</strong><br>减少耦合：可以独立地开发、测试、优化、使用、理解和修改<br>减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块<br>有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能<br>提高软件的可重用性<br>降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的</p>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承实现了 IS-A 关系，例如 Cat 和 Animal 就是一种 IS-A 关系，因此 Cat 可以继承自 Animal，从而获得 Animal 非 private 的属性和方法。<br>继承应该遵循<strong>里氏替换原则</strong>（见后），子类对象必须能够替换掉所有父类对象。<br>Cat 可以当做 Animal 来使用，也就是说可以使用 Animal 引用 Cat 对象。父类引用指向子类对象称为<strong>向上转型</strong>。</p>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态分为编译时多态和运行时多态：<br>编译时多态主要指方法的重载<br>运行时多态指程序中定义的对象引用所指向的具体类型在运行期间才确定</p>
-<p>运行时多态有三个条件：<br>继承<br>覆盖（重写）<br>向上转型</p>
+          <h2 id="287-Find-the-Duplicate-Number"><a href="#287-Find-the-Duplicate-Number" class="headerlink" title="287. Find the Duplicate Number"></a><a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank" rel="noopener">287. Find the Duplicate Number</a></h2><p>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
+<p>You must not modify the array (assume the array is read only).<br>You must use only constant, O(1) extra space.<br>Your runtime complexity should be less than O(n2).<br>There is only one duplicate number in the array, but it could be repeated more than once.</p>
+<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p><del>top100肝不动了、随便看看有意思的题目吧。</del></p>
+<p>这题蛮有意思，一开始我怎么也想不到一个好的方法来满足题目要求。看了下高赞回答（的证明），学习一波，首先容易证明有且仅有一个圈，用快慢指针的方法先进圈，假设走了s（慢）步，圈长c，则有2s = s + n*c =&gt; s = n*c。然后假设起点到入圈点长度为x，则s = x+a =&gt; x+a = s = n*c =&gt; x+a = n*c =&gt; x+a = (n-1)*c+c =&gt; x = (n-1)*c+c-a，其中c-a为入圈点到见面点的长度，因此就有了官方Solution的做法，即同时从起点和见面点分别出发，最后一定在入圈点汇聚。</p>
+<h3 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h3>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/oop/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-287/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -616,7 +628,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/facade/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/padding/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -635,7 +647,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/facade/" itemprop="url">设计模式之「外观模式」</a></h1>
+                <a class="post-title-link" href="/programming/others/padding/" itemprop="url">「内存对齐」问题探究</a></h1>
         
 
         <div class="post-meta">
@@ -647,8 +659,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-07T11:15:34+08:00">
-                2019-08-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T11:15:34+08:00">
+                2019-08-17
               </time>
             
 
@@ -719,10 +731,13 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>外观模式（Facade Pattern）：外部与一个子系统的通信必须通过一个统一的外观对象进行，为子系统中的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。外观模式又称为门面模式，它是一种对象结构型模式。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>每个特定平台上的编译器都有自己的默认“对齐系数”(也叫对齐模数)。程序员可以通过预编译命令#pragma pack(n)，n=1,2,4,8,16,…来改变这一系数，其中的n就是需要指定的“对齐系数”。</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>1.对于结构的各个成员，第一个成员位于偏移为0的位置，以后的每个数据成员的偏移量必须是min(#pragma pack指定的数,这个数据成员的自身长度)的倍数。</p>
+<p>2.在所有的数据成员完成各自对齐之后，结构或联合体本身也要进行对齐，对齐将按照 #pragram pack指定的数值和结构或者联合体最大数据成员长度中比较小的那个，也就是min(#pragram pack, 长度最长的数据成员)。</p>
+<p>（结合1、2可推断：当#pragma pack的n值等于或超过所有数据成员长度的时候，这个n值的大小将不产生任何效果。）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/others/facade/#more" rel="contents">
+            <a class="btn" href="/programming/others/padding/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -764,7 +779,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -814,7 +829,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">268</span>
+                  <span class="site-state-item-count">278</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -825,7 +840,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

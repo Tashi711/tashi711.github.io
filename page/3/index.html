@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/maboroshi/normaljibun/november/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/maboroshi/normaljibun/november/" itemprop="url">十一月 & 十二月 あの遥か彼方へ</a></h1>
+                <a class="post-title-link" href="/java/leetcode-4/" itemprop="url">「リートコード - 4. Median of Two Sorted Arrays」</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-17T12:00:00+08:00">
-                2021-01-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-27T12:00:00+08:00">
+                2021-07-27
               </time>
             
 
@@ -351,19 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/" itemprop="url" rel="index">
-                    <span itemprop="name">奇幻の私</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/ノーマルジブン/" itemprop="url" rel="index">
-                    <span itemprop="name">ノーマルジブン</span>
+                  <a href="/categories/ジャバ/" itemprop="url" rel="index">
+                    <span itemprop="name">ジャバ</span>
                   </a>
                 </span>
 
@@ -400,11 +389,10 @@
 
       
         
-          <h2 id="ねぇ、ジュウイチガツ"><a href="#ねぇ、ジュウイチガツ" class="headerlink" title="ねぇ、ジュウイチガツ"></a>ねぇ、ジュウイチガツ</h2><p>11月18日了，没有动力更新的两个星期，没想到这个月就这么走了一大半。文字记录的动力正在逐渐消退，本来想试试vlog，结果自己把自己嘴堵住了，面对镜头半句话讲不出来。也是奇怪，录歌什么的一个人毫不胆怯，一到自己对自己对话就直接自闭。想了想肯定这个量得两个月管够了，最近倒是有一些事情发生，还是应该在百无聊赖之际记录记录的，不过没关系，现在开始慢慢清理flag也好，至少视频的给抹除了，因为自身条件不行。至于这个标题，我也合并了吧，感觉剩下一个半月的心境也是相通的，准备好元旦去到遥远的地方换换心情。</p>
-<p>11月28日，两周更，不知不觉已经月底了，最近确实是没什么动力更。主要是基本是在舒适圈里，然后周末有姐姐看，想出门一趟，哪怕很冷。准备再加个一月进来了，然后把去浪的经历给写进来，希望一切顺利吧。最近也努力在拔flag，瑜伽垫买来已经是不行了，哪怕一个月期限也拯救不了了，再说吧，但是java已经开始了，已经我化了两次妆，都是翻车翻惨了，下次我做些功课吧，感觉粉底液卡粉，到时候也换下色号试试，但是画眉毛什么的，真的好难，感觉我的手法完全做不到。总之继续加油吧，保持的同时加油开始锻炼起来。</p>
+          <h2 id="ジャバソリューション"><a href="#ジャバソリューション" class="headerlink" title="ジャバソリューション"></a>ジャバソリューション</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums1.length, m = nums2.length;</span><br><span class="line">        <span class="keyword">if</span> (n &gt; m) &#123;</span><br><span class="line">            <span class="keyword">return</span> findMedianSortedArrays(nums2, nums1);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = (n+m+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> u = <span class="number">0</span>, v = n;</span><br><span class="line">        <span class="keyword">while</span> (u &lt; v) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (u+v+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums1[mid-<span class="number">1</span>] &lt; nums2[left-mid]) &#123;</span><br><span class="line">                u = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                v = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ((n + m) % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> u == <span class="number">0</span> ? nums2[left-u-<span class="number">1</span>] : left - u == <span class="number">0</span> ? nums1[u-<span class="number">1</span>] : Math.max(nums1[u-<span class="number">1</span>], nums2[left-u-<span class="number">1</span>]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">double</span> x = u == <span class="number">0</span> ? nums2[left-u-<span class="number">1</span>] : left - u == <span class="number">0</span> ? nums1[u-<span class="number">1</span>] : Math.max(nums1[u-<span class="number">1</span>], nums2[left-u-<span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">double</span> y = u == n ? nums2[left-u] : left - u == m ? nums1[u] : Math.min(nums1[u], nums2[left-u]);</span><br><span class="line">            <span class="keyword">return</span> (x + y) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/maboroshi/normaljibun/november/#more" rel="contents">
+            <a class="btn" href="/java/leetcode-4/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -455,7 +443,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/nihongonokoto/kanakashi/sid-rain/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -474,7 +462,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/nihongonokoto/kanakashi/sid-rain/" itemprop="url">「シド - レイン」仮名歌詞</a></h1>
+                <a class="post-title-link" href="/java/leetcode-3/" itemprop="url">「リートコード - 3. Longest Substring Without Repeating Characters」</a></h1>
         
 
         <div class="post-meta">
@@ -486,8 +474,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-21T12:00:00+08:00">
-                2020-11-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-21T12:00:00+08:00">
+                2021-07-21
               </time>
             
 
@@ -509,19 +497,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ニホンゴのこと/" itemprop="url" rel="index">
-                    <span itemprop="name">ニホンゴのこと</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ニホンゴのこと/カナカシ/" itemprop="url" rel="index">
-                    <span itemprop="name">カナカシ</span>
+                  <a href="/categories/ジャバ/" itemprop="url" rel="index">
+                    <span itemprop="name">ジャバ</span>
                   </a>
                 </span>
 
@@ -558,18 +535,10 @@
 
       
         
-          <h2 id="歌曲信息"><a href="#歌曲信息" class="headerlink" title="歌曲信息"></a>歌曲信息</h2><blockquote>
-<ul>
-<li>歌曲：レイン </li>
-<li>歌手：シド</li>
-<li>作词：マオ</li>
-<li>作曲：ゆうや</li>
-</ul>
-</blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>《钢之炼金术师 FULLMETAL ALCHEMIST》TV动画片头曲。</p>
+          <h2 id="ジャバソリューション"><a href="#ジャバソリューション" class="headerlink" title="ジャバソリューション"></a>ジャバソリューション</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = s.length();</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;Character, Boolean&gt; have = <span class="keyword">new</span> HashMap&lt;Character, Boolean&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            have.put(s.charAt(i), <span class="keyword">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> u = <span class="number">0</span>, v = <span class="number">0</span>;</span><br><span class="line">        have.put(s.charAt(<span class="number">0</span>), <span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">while</span> (v + <span class="number">1</span> &lt; n &amp;&amp; !have.get(s.charAt(v + <span class="number">1</span>))) &#123;</span><br><span class="line">            ++v;</span><br><span class="line">            have.put(s.charAt(v), <span class="keyword">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = v + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">boolean</span> test = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (v &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">            ++v;</span><br><span class="line">            <span class="keyword">while</span> (!have.get(s.charAt(v)) &amp;&amp; v + <span class="number">1</span> &lt; n) &#123;</span><br><span class="line">                have.put(s.charAt(v), <span class="keyword">true</span>);</span><br><span class="line">                ++v;</span><br><span class="line">            &#125;</span><br><span class="line">            res = Math.max(res, v - u);</span><br><span class="line">            <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (v == n - <span class="number">1</span> &amp;&amp; !have.get(s.charAt(v))) &#123;</span><br><span class="line">                res = Math.max(res, v - u + <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                    System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(s.charAt(u) != s.charAt(v)) &#123;</span><br><span class="line">                have.put(s.charAt(u), <span class="keyword">false</span>);</span><br><span class="line">                ++u;</span><br><span class="line">            &#125;</span><br><span class="line">            ++u;</span><br><span class="line">            res = Math.max(res, v - u + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/nihongonokoto/kanakashi/sid-rain/#more" rel="contents">
+            <a class="btn" href="/java/leetcode-3/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -620,7 +589,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/maboroshi/normaljibun/september/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -639,7 +608,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/maboroshi/normaljibun/september/" itemprop="url">九月、未知のカウントダウン & 十月、次のどこ</a></h1>
+                <a class="post-title-link" href="/java/leetcode-2/" itemprop="url">「リートコード - 2. Add Two Numbers」</a></h1>
         
 
         <div class="post-meta">
@@ -651,8 +620,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-31T12:00:00+08:00">
-                2020-10-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-20T12:00:00+08:00">
+                2021-07-20
               </time>
             
 
@@ -674,19 +643,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/" itemprop="url" rel="index">
-                    <span itemprop="name">奇幻の私</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/ノーマルジブン/" itemprop="url" rel="index">
-                    <span itemprop="name">ノーマルジブン</span>
+                  <a href="/categories/ジャバ/" itemprop="url" rel="index">
+                    <span itemprop="name">ジャバ</span>
                   </a>
                 </span>
 
@@ -723,11 +681,10 @@
 
       
         
-          <h2 id="ねぇ、クガツ"><a href="#ねぇ、クガツ" class="headerlink" title="ねぇ、クガツ"></a>ねぇ、クガツ</h2><p>9月1日，不知觉的，9月已经到来，送走了忙碌的8月，在自己的舒适圈中沉静了下来。今天也是困乏的一天，最近在追青春环游记2，感觉是个很不错的综艺，之前居然没有追，现在一口气看下来感觉很不错，追到目前有两集很感慨，一个是杨迪妈妈那集，然后是慢综那集，感觉自己确实越来约好哭了。此外就是自己游戏也慢慢打的少了，上个月完成赛季目标之后基本就每天偶尔碰一下就停手了。慢慢的想找点其他事做，虽然也不怎么找得到吧，自己立的各种flag还一个都没有开始。现在每天的工作状态就是不定，有时候很迷糊，有时候又很focus，感觉状态也不知道被什么影响，很神奇，自己的生活感觉慢慢变得单一，也不知道怎样去增添色彩了。怎么形容呢，就像是沉底在舒适圈的石头，很难有所动摇，一丁点改变可能需要耗费很大的体力那种。不过还是感觉晚上有点睡晚了，有时候真的觉得每天都好累，却不知道为什么，于是晚上就更舍不得睡觉，有种奇怪的信念在操控着大脑。而且我发现，自己真的每天晚上都会做梦，每次醒来都能记得梦境，感觉是真的很累了，因为以前怎么也只是频繁，现在几乎是每天。真的睡眠质量很低，但是自己又不知道为什么，已经该怎样去改变。</p>
-<p>未知的9月就这样慢慢开启了吧。我给9月起了个countdown（カウントダウン），是为了迎接10月的长假，但是中间所会发生的一切都是未知的吧。不知道会有啥，会发生啥，会出现啥。因为自己的感情生活已经有所波动，稳定下来的只有那种毕竟死沉的生活节奏。很难想象有个什么能够改变一下，因为上个月所说的发生的那件事情，然这个本该充满这个一些东西的countdown变得有点难受，甚至找不到理由去干什么了。希望有一些灵感与动力吧，真的，感觉好难。</p>
+          <h2 id="ジャバソリューション"><a href="#ジャバソリューション" class="headerlink" title="ジャバソリューション"></a>ジャバソリューション</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode res = <span class="keyword">new</span> ListNode((l1.val + l2.val) % <span class="number">10</span>), tail = res;</span><br><span class="line">        <span class="keyword">int</span> carry = (l1.val + l2.val) / <span class="number">10</span>;</span><br><span class="line">        ListNode u = l1.next, v = l2.next;</span><br><span class="line">        <span class="keyword">while</span> (carry != <span class="number">0</span> || u != <span class="keyword">null</span> || v != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = carry;</span><br><span class="line">            <span class="keyword">if</span> (u != <span class="keyword">null</span>) &#123;</span><br><span class="line">                sum += u.val;</span><br><span class="line">                u = u.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (v != <span class="keyword">null</span>) &#123;</span><br><span class="line">                sum += v.val;</span><br><span class="line">                v = v.next;</span><br><span class="line">            &#125;</span><br><span class="line">            tail.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>);</span><br><span class="line">            tail = tail.next;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/maboroshi/normaljibun/september/#more" rel="contents">
+            <a class="btn" href="/java/leetcode-2/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -769,7 +726,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -819,7 +776,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">268</span>
+                  <span class="site-state-item-count">278</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -830,7 +787,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

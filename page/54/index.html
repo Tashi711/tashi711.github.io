@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/triangle-directed-area/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/prim/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/others/triangle-directed-area/" itemprop="url">「三角形有向面积」计算</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/prim/" itemprop="url">「Prim算法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -328,167 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T11:15:34+08:00">
-                2019-05-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>三角形有向面积，逆时针为正。</p>
-<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>(x0 * y1 + x2 * y0 + x1 * y2 - x2 * y1 - x0 * y2 - x1 * y0) / 2。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/others/triangle-directed-area/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/graham-scan/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO TUO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaotuo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小拓の小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/programming/dsaa/graham-scan/" itemprop="url">「Graham扫描算法」模板</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-03T11:17:59+08:00">
-                2019-05-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-13T11:15:34+08:00">
+                2019-05-13
               </time>
             
 
@@ -559,12 +400,13 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>之前写了一篇文章专门讲平面凸包，这里将Graham扫描算法的细节实现为模板。</p>
-<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p>1、实现成template，可以做整数点与浮点数点（注意判断直线的细节，浮点叉乘会出现精度问题）。<br>2、实现了需不需要输出直线上的点两种，通过调整传参的flag，注意当不需要输出直线上的点时，可以不用最后的逆序操作，且注意第二个点可能会被弹出，因此需要判断当前是否至少两个点，否则直接push当前正在判断的点。<br>3、可以执行调整init方式（点为pair）。</p>
-<h2 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h2>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Prim算法解决最小生成树问题。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>本算法仅实现了最基本框架，可扩展以下几个方面：</p>
+<p>1、返回构成最小生成树的边（或者其序号）。<br>2、用堆优化（类似于Dijkstra算法的堆优化思想），可将复杂度从O(N)降到O(M+NlogN)。<br>3、加入连通性判断（关系到是否有解）。</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/graham-scan/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/prim/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -615,7 +457,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/manacher/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/eulerian-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -634,7 +476,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/manacher/" itemprop="url">「Manacher算法」模板</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/eulerian-path/" itemprop="url">「欧拉路径算法」模板</a></h1>
         
 
         <div class="post-meta">
@@ -646,8 +488,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T11:15:34+08:00">
-                2019-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T11:15:34+08:00">
+                2019-05-12
               </time>
             
 
@@ -718,23 +560,171 @@
 
       
         
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>线性时间解决最长回文子串。</p>
-<h3 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h3><p>在前面有一篇题解中写过，这里简单回顾下：</p>
-<p>1、插入kSpetialChar（#，可修改），使其长度变为2n+1。</p>
-<p>2、求len数组：当前为中心最长回文子串的半径（包括自己，最长回文子串长度一定为奇数），其在原串中最长回文子串为len-1。</p>
-<p>3、依次求当前len[i]，记录并维护到目前为止回文子串的最右边（下面right记录的是最右边再往右一个位置）与此子串的中点（mid），此时right等于mid+len[mid]，找到i关于mid的对称点j，分四种情况（注意这里很多资料没说清楚，仔细分清楚才能与下面程序联系好并证明其正确性与效率）：</p>
-<ul>
-<li>一是i在最右边（right-1）之前或之上（i&lt;right）且len[j]延伸不到最右边（比right-i小），此时len[i]等于len[j]不能更多（试想看假如更多由对称性len[j]也能再延伸）。</li>
-<li>二是i在最右边（right-1）之前或之上（i&lt;right）且len[j]延伸超过最右边（比right-i大），此时len[i]最多延伸到最右边（为right-i）不能更多（试想看假如更多，那么len[mid]可以再被延伸）。</li>
-<li>三是i在最右边（right-1）之前或之上（i&lt;right）且len[j]刚好延伸到最右边（等于right-i），此时len[i]最少为len[j]（或者right-i），可能更多，需要试着扩张。</li>
-<li>四是i在最右边之后（i&gt;=right），此时len[i]至少为1，可能更多，需要试着扩张。</li>
-</ul>
-<p>4、上面四种情况理清楚后可以写出下面代码（否则光看下面代码很难理解清楚），并且之所以这个算法是个线性复杂度的，是因为只有上面后两种情况会进入第二个循环，而此时right也一定随着增大，因此最多增加n次，均摊可得。</p>
-<p>5、注意边界即可，加pivot不是必须的。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>欧拉路径算法</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>1、可处理重边、自环<br>2、若加入顺序合理，可控制输出顺序。</p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/manacher/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/eulerian-path/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/combinatorial-math/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO TUO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小拓の小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/programming/dsaa/combinatorial-math/" itemprop="url">「组合数学相关算法」模板</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T11:15:34+08:00">
+                2019-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>组合数学相关算法</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>1、组合<br>2、排列<br>3、集合拆分<br>4、正整数拆分</p>
+<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/dsaa/combinatorial-math/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -776,7 +766,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/53/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/">53</a><span class="page-number current">54</span><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/55/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/53/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/">53</a><span class="page-number current">54</span><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/55/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -826,7 +816,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">268</span>
+                  <span class="site-state-item-count">278</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -837,7 +827,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/ac-automaton/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -316,7 +316,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/ac-automaton/" itemprop="url">「AC自动机」摸索</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-2/" itemprop="url">「一些其他的数据结构与算法」简单小结（二）</a></h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-14T11:15:34+08:00">
-                2019-06-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-08T11:15:34+08:00">
+                2019-07-08
               </time>
             
 
@@ -400,12 +400,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3808、3796 - AC自动机。</p>
-<p>这东西竞赛搞完后就再也没碰过了，其实竞赛也没碰过几次。<br>一般的说法AC自动机是在trie上做kmp，但其实个人感觉只能说是跟kmp思想比较接近，但原理还是稍有些不同。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本篇作为本系列第二篇，简单介绍欧拉函数、CDQ分治、2-SAT。</p>
+<h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>给定三个正整数，a,m,b，需要求：a^b mod m。</p>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p>首先，<strong>欧拉定理</strong>：a与m互质，则a^phi(m) mod m = 1。<br>然后，<strong>扩展欧拉定理</strong>（对应这个问题，a与m不一定互质）：a^b mod m同余于<br>1、a^b（当b小于phi(m)）；<br>2、a^(b mod phi(m) + phi(m))（当b大于等于phi(m)）。</p>
+<p>而phi(n)，即n的欧拉函数（小于等于n的质数个数），为n*(1-1/p1)*(1-1/p2)*…*(1-1/pn)，其中pi为n的质因数。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/ac-automaton/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-2/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -456,7 +457,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/linear-basis/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/reports/leetcode/leetcode-647-739-771/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -475,7 +476,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/linear-basis/" itemprop="url">「线性基」思考</a></h1>
+                <a class="post-title-link" href="/programming/reports/leetcode/leetcode-647-739-771/" itemprop="url">「LeetCode 647、739、771」解题报告</a></h1>
         
 
         <div class="post-meta">
@@ -487,8 +488,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-13T11:15:34+08:00">
-                2019-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-07T11:57:02+08:00">
+                2019-07-07
               </time>
             
 
@@ -521,8 +522,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/编程/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/解题报告/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -559,13 +571,13 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3812 - 线性基。</p>
-<p>其实之前都没听说过这个东西，无意中刷到，然后研究了下。其实不难，很容易看懂，而且貌似比较强大，目前除了模板题的求最大值，还能看到有查询某数的用法，甚至更强的应用，这里没有深入去探索了。</p>
-<p>总而言之就是将原来的数组空间映射到另一个线性空间（注意这里的线性并非线性组合，而是异或），那么保证原数组的异或空间与线性基的异或空间一致（也就是很多文章里面说的值域不变）。而线性基最多有$\log_2n$个，其中每个都拥有唯一的最高位。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="647-Palindromic-Substrings"><a href="#647-Palindromic-Substrings" class="headerlink" title="647. Palindromic Substrings"></a>647. Palindromic Substrings</h2><p>Given a string, your task is to count how many palindromic substrings in this string.</p>
+<p>The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.</p>
+<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>水题一道，两个循环数一数奇数偶数的情况即可，标答用一个循环搞定，此外貌似马拉车也能做？感觉没必要。n方复杂度。</p>
+<h3 id="AC代码（C-）"><a href="#AC代码（C-）" class="headerlink" title="AC代码（C++）"></a>AC代码（C++）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">countSubstrings</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = s.size();</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">      ++res;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; <span class="literal">true</span>; ++j) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = i - j, v = i + j;</span><br><span class="line">        <span class="keyword">if</span> (u &gt;= <span class="number">0</span> &amp;&amp; v &lt; n &amp;&amp; s[u] == s[v]) &#123;</span><br><span class="line">          ++res;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; <span class="literal">true</span>; ++j) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = i - j + <span class="number">1</span>, v = i + j;</span><br><span class="line">        <span class="keyword">if</span> (u &gt;= <span class="number">0</span> &amp;&amp; v &lt; n &amp;&amp; s[u] == s[v]) &#123;</span><br><span class="line">          ++res;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/linear-basis/#more" rel="contents">
+            <a class="btn" href="/programming/reports/leetcode/leetcode-647-739-771/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -616,7 +628,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/bipartite-graph/">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/dsaa/some-thoughts-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO TUO">
@@ -635,7 +647,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/programming/dsaa/bipartite-graph/" itemprop="url">「二分图匹配」再探</a></h1>
+                <a class="post-title-link" href="/programming/dsaa/some-thoughts-1/" itemprop="url">「一些其他的数据结构与算法」简单小结（一）</a></h1>
         
 
         <div class="post-meta">
@@ -647,8 +659,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-12T11:15:34+08:00">
-                2019-06-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-27T11:15:34+08:00">
+                2019-06-27
               </time>
             
 
@@ -719,11 +731,12 @@
 
       
         
-          <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>洛谷模板题3386 - 二分图匹配。<br>之前用匈牙利算法实现过，改良了一番，见下代码1。<br>最近写了下网络流，试着用网络流解bgm，因为传说中Dinic比匈牙利更快，试了下果然快一点。<br>但没想到的是被说在二分图中比Dinic慢的ISAP居然实际比Dinic快不少。<br>由此可见ISAP几乎算是万能最大流算法了，甚至可以取代匈牙利。<br>毕竟本身已经能证明Dinic复杂度上限比匈牙利小，而ISAP又是Dinic的改良。</p>
-<h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>逐渐将当年学的各算法与数据结构复习了一遍，模板题也刷到NOI难度，有点做不动了，因为之后也没有过硬的对比较稀有的数据结构与算法的OI需求了（而更需要一些解题能力），这里基本不再频繁更新模板库了，只是对这些数据结构与算法进行简单小结。<strong>（本系列不涉及任何实现细节，更没有模板代码，只讨论用什么样的东西解决什么样的问题，效率如何之类的。）</strong></p>
+<p>本篇作为本系列第一篇，简单介绍FFT（快速傅里叶变换）、平衡树与树链剖分。</p>
+<h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/programming/dsaa/bipartite-graph/#more" rel="contents">
+            <a class="btn" href="/programming/dsaa/some-thoughts-1/#more" rel="contents">
               続きを読む &raquo;
             </a>
           </div>
@@ -765,7 +778,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/39/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/90/">90</a><a class="extend next" rel="next" href="/page/41/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/39/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/41/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -815,7 +828,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">268</span>
+                  <span class="site-state-item-count">278</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -826,7 +839,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
