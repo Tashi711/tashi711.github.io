@@ -297,6 +297,298 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO TUO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小拓の小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/java/leetcode-3/" itemprop="url">「リートコード - 3. Longest Substring Without Repeating Characters」</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-21T12:00:00+08:00">
+                2021-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ジャバ/" itemprop="url" rel="index">
+                    <span itemprop="name">ジャバ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="ジャバソリューション"><a href="#ジャバソリューション" class="headerlink" title="ジャバソリューション"></a>ジャバソリューション</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = s.length();</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;Character, Boolean&gt; have = <span class="keyword">new</span> HashMap&lt;Character, Boolean&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            have.put(s.charAt(i), <span class="keyword">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> u = <span class="number">0</span>, v = <span class="number">0</span>;</span><br><span class="line">        have.put(s.charAt(<span class="number">0</span>), <span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">while</span> (v + <span class="number">1</span> &lt; n &amp;&amp; !have.get(s.charAt(v + <span class="number">1</span>))) &#123;</span><br><span class="line">            ++v;</span><br><span class="line">            have.put(s.charAt(v), <span class="keyword">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = v + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">boolean</span> test = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (v &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">            ++v;</span><br><span class="line">            <span class="keyword">while</span> (!have.get(s.charAt(v)) &amp;&amp; v + <span class="number">1</span> &lt; n) &#123;</span><br><span class="line">                have.put(s.charAt(v), <span class="keyword">true</span>);</span><br><span class="line">                ++v;</span><br><span class="line">            &#125;</span><br><span class="line">            res = Math.max(res, v - u);</span><br><span class="line">            <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (v == n - <span class="number">1</span> &amp;&amp; !have.get(s.charAt(v))) &#123;</span><br><span class="line">                res = Math.max(res, v - u + <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                    System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(s.charAt(u) != s.charAt(v)) &#123;</span><br><span class="line">                have.put(s.charAt(u), <span class="keyword">false</span>);</span><br><span class="line">                ++u;</span><br><span class="line">            &#125;</span><br><span class="line">            ++u;</span><br><span class="line">            res = Math.max(res, v - u + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (test) &#123;</span><br><span class="line">                System.out.println(res + <span class="string">", "</span> + u + <span class="string">", "</span> + v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/java/leetcode-3/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO TUO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小拓の小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/java/leetcode-2/" itemprop="url">「リートコード - 2. Add Two Numbers」</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-20T12:00:00+08:00">
+                2021-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ジャバ/" itemprop="url" rel="index">
+                    <span itemprop="name">ジャバ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="ジャバソリューション"><a href="#ジャバソリューション" class="headerlink" title="ジャバソリューション"></a>ジャバソリューション</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode res = <span class="keyword">new</span> ListNode((l1.val + l2.val) % <span class="number">10</span>), tail = res;</span><br><span class="line">        <span class="keyword">int</span> carry = (l1.val + l2.val) / <span class="number">10</span>;</span><br><span class="line">        ListNode u = l1.next, v = l2.next;</span><br><span class="line">        <span class="keyword">while</span> (carry != <span class="number">0</span> || u != <span class="keyword">null</span> || v != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = carry;</span><br><span class="line">            <span class="keyword">if</span> (u != <span class="keyword">null</span>) &#123;</span><br><span class="line">                sum += u.val;</span><br><span class="line">                u = u.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (v != <span class="keyword">null</span>) &#123;</span><br><span class="line">                sum += v.val;</span><br><span class="line">                v = v.next;</span><br><span class="line">            &#125;</span><br><span class="line">            tail.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>);</span><br><span class="line">            tail = tail.next;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/java/leetcode-2/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tashi711.top/java/leetcode-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -430,330 +722,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/maboroshi/normaljibun/2021-restart/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO TUO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaotuo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小拓の小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/maboroshi/normaljibun/2021-restart/" itemprop="url">2021、启程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-18T12:00:00+08:00">
-                2021-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/" itemprop="url" rel="index">
-                    <span itemprop="name">奇幻の私</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/ノーマルジブン/" itemprop="url" rel="index">
-                    <span itemprop="name">ノーマルジブン</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>终于，属于2021农历新年的第一篇文章算是开始了吧。满满记录一些点滴吧。</p>
-<p>3月到来，春节过后的综合征似乎没有持续多久，很快回复了工作节奏，最近也比较顺利，只是遇到很多难解决的事。今天接到个诈骗电话，印象中人生第一次吧，一开始还真信了，只是后面越聊越离谱，就跟他聊着玩了。最近慢慢的对游戏开始免疫，觉得自己应该开始点不一样的。股市基金似乎都跌得很惨，正好开始做了点功课开始慢慢定投，其实现在开始应该算正好吧。看到杨丞琳参加浪姐，太兴奋了，双厨狂喜。三八节又买了好多吃的，最近还买了好多书，准备开始看富爸爸，然后买了听力训练，总的来说算是开始某些flag了吧。</p>
-<p>4月开始，这也说明又是一个月过去了，清明一个期待也算是结束了。至于什么活动，反正是再次作死吧，无所谓了。因为这些东西说过多少次了，不过这应该算是结果完最平静的一次吧，感觉不像是改变了啥，更像是自己忍耐程度提高了。至少让我觉得rz的就那上一次吧，有了对比之后觉得无所谓了，可能以后，谁或者什么时候情况场合都很难会有了吧，只希望自己更加自由一点，其实最近那种感觉的消失，也是让自己更平和了许多吧。其实有时候年纪大了阅历多了，会真正听懂歌词中的那些情结。这两天对绿团的再遇见有了好高的共鸣。可能我跟他，以后就是再遇见的那种故事了吧。而且我又想起了另外那个人，果然回忆留下最深刻的还是他，毕竟初次恋爱的感觉还是难以磨灭。还能有再遇见的机缘吗。青丝成雪的那刻，或许也会是人生的一大感叹吧。快要逐渐消逝的感觉，或许直截了当的看穿那股不适合吧，反而释怀了一些，是的吧，还是无所谓了。终究是擦身而过，只是庆幸还没有沦陷到伤害。一开始的那天，哪怕胃炎快要倒下，却还是正常的氛围，只是后面，转折成了当初那种感觉，熟悉的痛，只是时间的短暂与心里的麻木吧，抑制了喷发。再往前走，自己对工作第一次产生了怀疑，感觉有些力不从心，快要一年了，却感觉快要有种不太对劲的感觉，希望能稍微恢复下吧，毕竟自己还没有做好很多准备。下个月或许还能有一次比较长跟大的事件，不过应该是没有烧心事情发生了，但愿自己能够好好休息下身心吧，今年这两件事，也确实让自己费心了，只希望自己能加油跟振作一点。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/maboroshi/normaljibun/2021-restart/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/maboroshi/shishousetsu/bokunoshishousetsu-6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO TUO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaotuo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小拓の小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/maboroshi/shishousetsu/bokunoshishousetsu-6/" itemprop="url">「当彩虹失去一种颜色」第六章——重生、我还会回去吗（未完结）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-07T12:00:00+08:00">
-                2021-06-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/" itemprop="url" rel="index">
-                    <span itemprop="name">奇幻の私</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/奇幻の私/シショウセツ/" itemprop="url" rel="index">
-                    <span itemprop="name">シショウセツ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="第六章——重生、我还会回去吗"><a href="#第六章——重生、我还会回去吗" class="headerlink" title="第六章——重生、我还会回去吗"></a>第六章——重生、我还会回去吗</h2><p>（Years later…）</p>
-<p>刺眼的光照进房间、小溪缓缓有了意识、看来是白天了、又是经历过不知道成千上百天的一觉醒来的感觉了、大脑需要从完全空白中迅速拿到此刻人生的上下文。可是越想越不对劲，宿舍的床可不是这个样子，自己怎么睡在家，放假？不对，没有这样的短期记忆，昨天还是上着课的。小溪愣在那里，许久也无法像往常那样得到关于上下文的信息。这时被家人创进房间，宣告着为什么还不起床以及赶紧出门准备买进大学要的东西。这一天，小溪似乎有了那么点记忆，有点像杯具的那段，但是，这明明不合常理，小溪这时候已经都别说进大学，快要完成硕士的毕业论文了。虽然那些对话深深印在脑海里几年不足以被完全忘却，但是，这发生在眼前，小溪觉得，这，大概是梦吧。能在梦里这么清楚的认识到自己在做梦，好像又有点魔幻的感觉。</p>
-<p>大概几个钟头的洗漱，对话，出门，思索，小溪觉得，不对，一切都是那么的真实，真实的让人害怕，真的可以这么贴近现实吗。这么多个小时，总感觉就是一分一秒在身上流逝掉了。小溪好像越发觉得这就是现实了起来。其实，这就是现实了吧。</p>
-<p>过了好几天，经历了那么多那么多不可能在一夜间发生的事，小溪明白，自己是在某种程度上穿越了。尽管这是个科学的时代，但是小溪还是很愿意相信，一定是老天想要让自己经历点什么，发生这样的事，大概不足以哭天喊地叫警察吧。小溪慢慢意识到，很多未卜先知的东西，好像可以有所准备，甚至改变自己所经历过的一切，或是跃入另一个平行时空？很多事情真的是注定好了的，这个时间点，经历的这么多，又有了足够的成长，充分的心理去准备，又不至于太靠前，以至于连高考都不会或许一步走偏了太远，那完全经历不同的人生也是没有参考意义的。是的，让自己重新弥补什么，可能是问题所在吧。但那是什么呢，可能还需要这么多这么多年，去寻找吧，不过，稳赚不赔不是吗，有这么多年呢。只是，真的要是到了刚回来的那个点，<strong>我还会回去吗</strong>？还是会从今以后都切换到新的时空了。不过不管回不回去，都是要好好弥补，与为潜在的未来所铺垫不是吗。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/maboroshi/shishousetsu/bokunoshishousetsu-6/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/94/">94</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -803,7 +776,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">278</span>
+                  <span class="site-state-item-count">280</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -862,7 +835,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>

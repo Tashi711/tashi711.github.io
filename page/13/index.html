@@ -297,6 +297,320 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/programming/others/ms-iv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO TUO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小拓の小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/programming/others/ms-iv/" itemprop="url">「MS」面筋</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-25T12:00:00+08:00">
+                2020-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="第一轮"><a href="#第一轮" class="headerlink" title="第一轮"></a>第一轮</h2><p>给一棵二叉树的root，结点定义如下<br>struct Node  {<br>  Int val;<br>  Node *left;<br>  Node *right;<br>}<br>实现 int find(Node* root, int sum) 返回这颗树有多少从根到叶子路径和为sum<br>大概实现了个递归，面试官追问假如树很深，递归会爆栈怎么解决<br>答用一个数组记录宽搜的访问顺序，宽搜用队避免递归，再从访问顺序逆序求上去，写到一半面试官问是不是没有必要求两遍<br>想了下确实在求访问顺序的时候顺便记录剩余的sum，到0直接ans++就好，其实遍历一遍就能做完，blabla写完<br>面试官追问假如现在换一个题目，find返回的是这棵树有多少段路径和为sum，不一定从根开始，也不一定到叶子结点<br>我准备直接在上面改被面试官打断说没这么简单，可以想清楚再写<br>我追问这次需不需要考虑爆栈道情况，面试官说不用，我又问了下val的范围是不是int整型，他说是的<br>于是我就写了一个树形dp，维护了子树到当前根节点的和的集合<br>面试官让我在一个例子上表示一下这个集合的内容，我就表示了一下<br>然后面试官问我复杂度，我说n方，他让我确认是不是n方，我确认了是的，然后他想了想说确实是的，结束<br>最后临走的时候我试探的问一下这道题是不是有O(n)的解法，得到了肯定答复</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/others/ms-iv/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tashi711.top/maboroshi/normaljibun/diary-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XIAO TUO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaotuo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小拓の小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/maboroshi/normaljibun/diary-3/" itemprop="url">ダイアリー——ラスト</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-17T12:00:00+08:00">
+                2020-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/奇幻の私/" itemprop="url" rel="index">
+                    <span itemprop="name">奇幻の私</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/奇幻の私/ノーマルジブン/" itemprop="url" rel="index">
+                    <span itemprop="name">ノーマルジブン</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><p>最后在家的这段日子记录一下，之后就停掉这个系列了。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/maboroshi/normaljibun/diary-3/#more" rel="contents">
+              続きを読む &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tashi711.top/nihongonokoto/kanakashi/claris-konekuto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -450,325 +764,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/omoshirosa/koeirogen/the-maze-runner/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO TUO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaotuo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小拓の小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/omoshirosa/koeirogen/the-maze-runner/" itemprop="url">「移动迷宫」声色言</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-15T12:00:00+08:00">
-                2020-03-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/オモシロサ/" itemprop="url" rel="index">
-                    <span itemprop="name">オモシロサ</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/オモシロサ/コエ、イロとゲン/" itemprop="url" rel="index">
-                    <span itemprop="name">コエ、イロとゲン</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="移动迷宫1"><a href="#移动迷宫1" class="headerlink" title="移动迷宫1"></a>移动迷宫1</h2><p>答辩结束，终于可以开始浪了，当然好像上次写饥饿游戏的时候写太多关于日记的东西了，以后会少一点，只讨论作品本身。还依稀记得本科的时候看移动迷宫1时候那种澎湃的心情，感觉跟刚入坑变形金刚时候一样，恨不得一口气看完，而且那个时候只出了1和2，一直期待着3赶紧出。第1部的剧情应该说跟第2、3部完全不同画风，这一部完全是展现一个迷宫的世界观，描绘人物性格。移动迷宫的评价似乎不是很高，但是自己非常喜欢，尤其刚才说到的那种心情，真的很少很少遇到，以后可能也再也遇不到了。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/omoshirosa/koeirogen/the-maze-runner/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tashi711.top/omoshirosa/koeirogen/the-hunger-games/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XIAO TUO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaotuo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小拓の小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/omoshirosa/koeirogen/the-hunger-games/" itemprop="url">「饥饿游戏」声色言</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-13T12:00:00+08:00">
-                2020-03-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/オモシロサ/" itemprop="url" rel="index">
-                    <span itemprop="name">オモシロサ</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/オモシロサ/コエ、イロとゲン/" itemprop="url" rel="index">
-                    <span itemprop="name">コエ、イロとゲン</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="饥饿游戏1"><a href="#饥饿游戏1" class="headerlink" title="饥饿游戏1"></a>饥饿游戏1</h2><p>本来最近不该开始看了，但是答辩突然就推迟了，所以也就看下去了。饥饿游戏曾经断断续续看过一遍，大概本科的时候，而那时候基本才开始上映，所以也就看的没啥连续性，所以重新回味一遍感觉也挺好，其实很多细节都不记得了，比如中途主角的“mentor”为了帮助他们拿药去讨好那些相关的人之类的剧情。总的来说，这绝对算是这类题材里面数一数二质量的了吧，刚看了第一部，只是我记得最后结尾好像有点不尽人意，也不太记得了，不过这类电影一般第一部都是最好看的吧，明天尽量在把答辩PPT准备好之后看第二部吧。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/omoshirosa/koeirogen/the-hunger-games/#more" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/94/">94</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -818,7 +818,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">278</span>
+                  <span class="site-state-item-count">280</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -877,7 +877,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
