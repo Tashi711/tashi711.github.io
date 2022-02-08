@@ -1,3 +1,5 @@
+http://tashi711.top/maboroshi/normaljibun/2022-1/
+http://tashi711.top/java/leetcode-2129-2132/
 http://tashi711.top/nihongonokoto/kanakashi/first-riders/
 http://tashi711.top/maboroshi/normaljibun/2021-past/
 http://tashi711.top/maboroshi/normaljibun/2021-end/
@@ -96,5 +98,3 @@ http://tashi711.top/programming/others/constructor/
 http://tashi711.top/programming/others/cpp-virtual/
 http://tashi711.top/programming/dsaa/balance-tree/
 http://tashi711.top/programming/others/factory/
-http://tashi711.top/programming/reports/leetcode/leetcode-438-448-494/
-http://tashi711.top/programming/reports/luogu/luogu-1732/
